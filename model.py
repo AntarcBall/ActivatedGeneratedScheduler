@@ -85,7 +85,7 @@ class Model:
     def __init__(self):
         self.config = Config()
         self.current_page = 0
-        self.total_pages = 7
+        self.total_pages = 8
         self.all_lectures = []
         
         # === 핵심 수정 사항: resource_path를 사용하여 파일 경로를 가져오도록 변경 ===

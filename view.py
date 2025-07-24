@@ -92,8 +92,8 @@ class View:
         title_frame = ttk.Frame(parent_frame)
         title_frame.pack(expand=True, fill='both')
 
-        title_label = ttk.Label(title_frame, text="Welcome to the Lecture Scheduler!",
-                                font=("Arial", 24, "bold"),
+        title_label = ttk.Label(title_frame, text="Welcome to the Activated-Generated Scheduler!\n\n20250724",
+                                font=("Arial", 26, "bold"),
                                 anchor='center')
         title_label.pack(expand=True, fill='both')
 
@@ -110,7 +110,13 @@ class View:
         disclaimer_frame = ttk.Frame(parent_frame)
         disclaimer_frame.place(relx=0.5, rely=0.35, relwidth=0.9, relheight=0.7, anchor='center')
 
-        disclaimer_label = ttk.Label(disclaimer_frame, text="use well", 
+        disclaimer_label = ttk.Label(disclaimer_frame, text="""본 소프트웨어를 사용하는 것은 위 면책 조항의 모든 내용에 동의하는 것으로 간주합니다.
+                                     면책 조항 (Disclaimer)
+이 소프트웨어는 사용자들의 편의를 위해 제작된 비공식 프로그램이며, DGIST와는 딱히 아무런 관련이 없습니다.
+
+1. 보증의 부인 (AS-IS): 이 소프트웨어는 어떠한 종류의 명시적 혹은 묵시적 보증 없이 "있는 그대로" 제공됩니다. 제작자는 소프트웨어의 완전성, 정확성, 신뢰성, 특정 목적에의 적합성 또는 상품성에 대해 보증하지 않습니다. 다만 오류가 있다면 issue에서 알려주시기 바랍니다.
+
+2. 책임의 제한 (Limitation of Liability): 이 소프트웨어의 사용으로 인해 발생하는 모든 위험은 전적으로 사용자 본인에게 있습니다.고의적인 해킹 스크립트는 전혀 없지만, \n제작자는 이 소프트웨어의 사용 또는 사용 불능으로 인해 발생하는 모든 직접적, 간접적, 부수적, 결과적, 특별 또는 징벌적 손해(데이터 손실, 수강신청 실패, 금전적 손실 등을 포함하되 이에 국한되지 않음)에 대해 어떠한 경우에도 책임을 지지 않습니다. """, 
                                      font=self.config.FONT_DESCRIPTION, 
                                      wraplength=self.root.winfo_width()*0.8,
                                      justify='center',
