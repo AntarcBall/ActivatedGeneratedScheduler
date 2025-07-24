@@ -54,7 +54,7 @@ class View:
         self.main_container.place(relx=0.5, rely=0.5, anchor='center',
                                   relwidth=self.config.CONTENT_REL_WIDTH,
                                   relheight=self.config.CONTENT_REL_HEIGHT)
-        for i in range(1, 7):
+        for i in range(0, 7):
             self.frames[i] = ttk.Frame(self.main_container, relief="solid", borderwidth=1)
             self.frames[i].place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -62,7 +62,7 @@ class View:
         frame = self.frames.get(page_num)
         if frame:
             # Save scroll position if leaving page 1
-            if self.controller.model.current_page == 1:
+            if self.controller.model.current_page == 1 and page_num != 1:
                 current_page_frame = self.frames.get(1)
                 if current_page_frame:
                     # Find the Treeview widget in the current page 1 frame
@@ -77,11 +77,53 @@ class View:
 
             for widget in frame.winfo_children():
                 widget.destroy()
-            page_creator = getattr(self, f'_create_page{page_num}', None)
+            
+            if page_num == 1: # The disclaimer page is now page 1
+                page_creator = self._create_disclaimer_page
+            else:
+                page_creator = getattr(self, f'_create_page{page_num}', None)
+            
             if callable(page_creator):
                 page_creator(frame)
             frame.tkraise()
 
+    def _create_page0(self, parent_frame):
+        # Title Frame
+        title_frame = ttk.Frame(parent_frame)
+        title_frame.pack(expand=True, fill='both')
+
+        title_label = ttk.Label(title_frame, text="Welcome to the Lecture Scheduler!",
+                                font=("Arial", 24, "bold"),
+                                anchor='center')
+        title_label.pack(expand=True, fill='both')
+
+        # Next Button at bottom right
+        next_button_frame = ttk.Frame(parent_frame)
+        next_button_frame.pack(side="bottom", fill="x", padx=20, pady=20)
+        next_button_frame.grid_columnconfigure(0, weight=1) # Allow column to expand
+
+        next_button = ttk.Button(next_button_frame, text="Next", command=self.controller.next_page)
+        next_button.grid(row=0, column=0, sticky="se") # Stick to south-east (bottom-right)
+
+    def _create_disclaimer_page(self, parent_frame):
+        # Disclaimer Frame
+        disclaimer_frame = ttk.Frame(parent_frame)
+        disclaimer_frame.place(relx=0.5, rely=0.35, relwidth=0.9, relheight=0.7, anchor='center')
+
+        disclaimer_label = ttk.Label(disclaimer_frame, text="use well", 
+                                     font=self.config.FONT_DESCRIPTION, 
+                                     wraplength=self.root.winfo_width()*0.8,
+                                     justify='center',
+                                     anchor='center')
+        disclaimer_label.pack(expand=True, fill='both')
+
+        # Navigation Frame
+        nav_frame = ttk.Frame(parent_frame)
+        nav_frame.pack(side="bottom", fill="x", pady=20)
+
+        agree_button = ttk.Button(nav_frame, text="I agree", command=self.controller.next_page)
+        agree_button.pack()
+        
     def _create_page_template(self, parent_frame, page_num):
         desc = ttk.Label(parent_frame, text=self.config.PAGE_DESCRIPTIONS.get(page_num, ""),
                          font=self.config.FONT_DESCRIPTION, wraplength=self.root.winfo_width()*0.8)
@@ -90,7 +132,7 @@ class View:
         content_frame.pack(expand=True, fill="both", padx=20, pady=10)
         nav_frame = ttk.Frame(parent_frame)
         nav_frame.pack(side="bottom", fill="x", padx=20, pady=10)
-        ttk.Label(nav_frame, text=f"Page {page_num}/{len(self.frames)}").pack(side="left")
+        ttk.Label(nav_frame, text=f"Page {page_num}/{len(self.frames)-1}").pack(side="left")
         ttk.Button(nav_frame, text="Next", command=self.controller.next_page).pack(side="right")
         ttk.Button(nav_frame, text="Prev", command=self.controller.prev_page).pack(side="right", padx=5)
         return content_frame
@@ -108,14 +150,23 @@ class View:
         
         tree.tag_configure("selected_lecture", background=self.config.COLOR_SELECTED_ROW)
         
+        tree.pack(expand=True, fill="both")
+        
+        # Schedule the tree population to allow the UI to draw itself first
+        self.root.after(50, self._populate_p1_tree, tree)
+
+        tree.bind("<Button-1>", lambda e: self.controller.on_p1_lecture_select(e, tree))
+
+    def _populate_p1_tree(self, tree):
+        # Clear any existing items first
+        for i in tree.get_children():
+            tree.delete(i)
+
         lectures = self.controller.get_all_lectures()
         for lec in lectures:
             values = (lec.name, lec.prof, lec.section, lec.get_time_string())
             tags = ("selected_lecture",) if lec.selected else ()
             tree.insert("", "end", iid=lec.id, text="", values=values, tags=tags)
-        
-        tree.bind("<Button-1>", lambda e: self.controller.on_p1_lecture_select(e, tree))
-        tree.pack(expand=True, fill="both")
 
         # Restore scroll position
         if self.p1_tree_scroll_pos != 0.0:

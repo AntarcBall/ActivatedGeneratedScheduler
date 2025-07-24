@@ -84,8 +84,8 @@ class Model:
     """
     def __init__(self):
         self.config = Config()
-        self.current_page = 1
-        self.total_pages = 6
+        self.current_page = 0
+        self.total_pages = 7
         self.all_lectures = []
         
         # === 핵심 수정 사항: resource_path를 사용하여 파일 경로를 가져오도록 변경 ===
@@ -189,5 +189,5 @@ class Model:
             self.current_page += 1
 
     def prev_page(self):
-        if self.current_page > 1:
+        if self.current_page > 0:
             self.current_page -= 1
