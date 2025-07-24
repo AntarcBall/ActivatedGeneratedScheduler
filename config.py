@@ -24,7 +24,7 @@ class Config:
     # 시간표 폰트 설정 (P6용)
     TIMETABLE_HEADER_FONT_SIZE = 12        # 헤더 폰트 크기
     TIMETABLE_TIME_FONT_SIZE = 10          # 시간 열 폰트 크기
-    TIMETABLE_LECTURE_MIN_FONT_SIZE = 4    # 강의 텍스트 최소 폰트 크기
+    TIMETABLE_LECTURE_MIN_FONT_SIZE = 6    # 강의 텍스트 최소 폰트 크기
     TIMETABLE_LECTURE_MAX_FONT_SIZE = 13   # 강의 텍스트 최대 폰트 크기
     
     # 페이지 설명
