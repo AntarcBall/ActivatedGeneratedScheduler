@@ -302,6 +302,11 @@ class View:
         lr_frame.pack(pady=5)
         ttk.Button(lr_frame, text="< Prev Result", command=self.controller.show_prev_timetable).pack(side='left', padx=10)
         ttk.Button(lr_frame, text="Next Result >", command=self.controller.show_next_timetable).pack(side='right', padx=10)
+        
+        lr_fast_frame = ttk.Frame(content_frame)
+        lr_fast_frame.pack(pady=5)
+        ttk.Button(lr_fast_frame, text="< Prev Result +10", command=self.controller.show_prev_timetable_fast).pack(side='left', padx=10)
+        ttk.Button(lr_fast_frame, text="Next Result +10 >", command=self.controller.show_next_timetable_fast).pack(side='right', padx=10)
 
     def _generate_distinct_colors(self, n):
         """서로 다른 n개의 색상을 생성합니다."""

@@ -72,6 +72,16 @@ class Controller:
             self.model.current_timetable_index += 1
             self.display_current_timetable()
 
+    def show_prev_timetable_fast(self):
+        if self.model.generated_timetables:
+            self.model.current_timetable_index = max(0, self.model.current_timetable_index - 10)
+            self.display_current_timetable()
+
+    def show_next_timetable_fast(self):
+        if self.model.generated_timetables:
+            self.model.current_timetable_index = min(len(self.model.generated_timetables) - 1, self.model.current_timetable_index + 10)
+            self.display_current_timetable()
+
     def on_p1_lecture_select(self, event, tree):
         # === 수정된 부분: 강의 ID 기반으로 선택 로직 통일 ===
         # identify_region으로 클릭된 영역이 유효한지 확인
