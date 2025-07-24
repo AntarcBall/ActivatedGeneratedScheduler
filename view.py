@@ -54,7 +54,7 @@ class View:
         self.main_container.place(relx=0.5, rely=0.5, anchor='center',
                                   relwidth=self.config.CONTENT_REL_WIDTH,
                                   relheight=self.config.CONTENT_REL_HEIGHT)
-        for i in range(0, 7):
+        for i in range(0, 8):
             self.frames[i] = ttk.Frame(self.main_container, relief="solid", borderwidth=1)
             self.frames[i].place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -78,10 +78,13 @@ class View:
             for widget in frame.winfo_children():
                 widget.destroy()
             
-            if page_num == 1: # The disclaimer page is now page 1
+            page_creator = None
+            if page_num == 0: # Title page
+                page_creator = self._create_page0
+            elif page_num == 1: # Disclaimer page
                 page_creator = self._create_disclaimer_page
-            else:
-                page_creator = getattr(self, f'_create_page{page_num}', None)
+            elif page_num >= 2: # Shifted pages (e.g., page 2 should call _create_page1)
+                page_creator = getattr(self, f'_create_page{page_num - 1}', None)
             
             if callable(page_creator):
                 page_creator(frame)
@@ -265,6 +268,26 @@ class View:
         # 클릭 이벤트 바인딩
         tree.bind("<Button-1>", lambda e: self.controller.on_timeslot_click(e, tree, page_num))
         tree.pack(expand=True, fill="both")
+
+    def update_timetable_grid_display(self, tree, page_num):
+        """P3, P4의 시간표 그리드를 업데이트합니다."""
+        # Clear existing items
+        for i in tree.get_children():
+            tree.delete(i)
+
+        # Repopulate based on current model data
+        slots_data = self.controller.get_timeslots(page_num)
+        headers = self.config.TIMETABLE_HEADERS
+
+        for i in range(30):
+            hour, minute = 9 + i // 2, "00" if i % 2 == 0 else "30"
+            row_values = [f"{hour:02d}:{minute}"]
+            for day in headers[1:]:
+                if i in slots_data.get(day, set()):
+                    row_values.append("■")
+                else:
+                    row_values.append("")
+            tree.insert("", "end", values=tuple(row_values), iid=i)
 
     def _create_page5(self, parent_frame):
         content_frame = self._create_page_template(parent_frame, 5)

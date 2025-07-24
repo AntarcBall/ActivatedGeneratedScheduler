@@ -22,7 +22,7 @@ class Controller:
     def next_page(self):
         self.model.next_page() # Increment page first
         self.view.show_page(self.model.current_page)
-        if self.model.current_page == 6: # If we just moved to page 6 (from page 5)
+        if self.model.current_page == 7: # If we just moved to page 7 (from page 6)
             self.view.root.after(100, self._run_scheduler_and_display)
 
     def prev_page(self):
@@ -182,8 +182,8 @@ class Controller:
         # 모델의 시간 슬롯 업데이트 (Set으로 단일 인덱스 전달)
         self.model.update_time_slots(page_num, day, {time_index})
         
-        # 변경사항을 반영하기 위해 페이지 새로고침
-        self.view.show_page(page_num)
+        # 변경사항을 반영하기 위해 Treeview만 업데이트
+        self.view.update_timetable_grid_display(tree, page_num)
     # =======================================================
 
     # === 수정된 부분: 드래그 관련 메서드 제거 ===
