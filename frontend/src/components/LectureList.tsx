@@ -6,8 +6,11 @@ export const LectureList = () => {
     const { allLectures, selectedLectureIds, toggleLectureSelection } = useApp();
     const [searchTerm, setSearchTerm] = useState('');
     
-    // Filter States
+    // UI Visibility States
+    const [isSearchEnabled, setIsSearchEnabled] = useState(false);
     const [isFilterEnabled, setIsFilterEnabled] = useState(false);
+    
+    // Filter States
     const [filters, setFilters] = useState({
         basicMandatory: false, // 기초필수
         math: false,           // 수학
@@ -61,13 +64,33 @@ export const LectureList = () => {
     return (
         <div className="flex flex-col h-full">
             <div className="mb-4 space-y-3">
-                <input 
-                    type="text" 
-                    placeholder="Search by name or professor..." 
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
+                {/* Search Toggle and Input */}
+                <div className="flex flex-col space-y-2">
+                    <div className="flex items-center space-x-2">
+                        <input 
+                            type="checkbox" 
+                            id="enableSearch"
+                            checked={isSearchEnabled}
+                            onChange={(e) => {
+                                setIsSearchEnabled(e.target.checked);
+                                if (!e.target.checked) setSearchTerm('');
+                            }}
+                            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                        />
+                        <label htmlFor="enableSearch" className="text-sm font-medium text-gray-700 select-none cursor-pointer">
+                            검색창 보기 (Show Search)
+                        </label>
+                    </div>
+                    {isSearchEnabled && (
+                        <input 
+                            type="text" 
+                            placeholder="Search by name or professor..." 
+                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    )}
+                </div>
                 
                 {/* Filter Toggle */}
                 <div className="flex items-center space-x-2">
@@ -185,8 +208,18 @@ export const LectureList = () => {
                 </table>
             </div>
             
-            <div className="mt-4 text-sm text-gray-500">
-                Selected: <span className="font-bold text-blue-600">{selectedLectureIds.length}</span> lectures
+            <div className="mt-4 text-sm text-gray-500 flex justify-between items-center">
+                <div>
+                    Selected: <span className="font-bold text-blue-600">{selectedLectureIds.length}</span> lectures
+                </div>
+                <div>
+                    Total Credits: <span className="font-bold text-green-600">
+                        {allLectures
+                            .filter(l => selectedLectureIds.includes(l.id))
+                            .reduce((sum, l) => sum + (l.credit || 0), 0)
+                            .toFixed(1)}
+                    </span>
+                </div>
             </div>
         </div>
     );

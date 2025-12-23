@@ -50,6 +50,8 @@ def parse_csv_to_json(csv_path, json_path):
                 prof = row[6]
                 classification = row[7]
                 category = row[12]
+                credit_str = row[16]
+                credit = float(credit_str) if credit_str.replace('.', '', 1).isdigit() else 0.0
                 time_str = row[21]
                 
                 time_slots = []
@@ -87,6 +89,7 @@ def parse_csv_to_json(csv_path, json_path):
                     "prof": prof,
                     "classification": classification,
                     "category": category,
+                    "credit": credit,
                     "time_slots": time_slots
                 })
             except ValueError as e:

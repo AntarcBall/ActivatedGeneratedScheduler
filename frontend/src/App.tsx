@@ -33,14 +33,8 @@ const Content = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center p-8">
-      <div className="w-full max-w-5xl bg-white shadow-lg rounded-xl overflow-hidden flex flex-col h-[85vh]">
-        {/* Header */}
-        <div className="bg-blue-600 text-white p-6">
-          <h1 className="text-2xl font-bold">Activated-Generative Scheduler</h1>
-          <p className="opacity-80 text-sm mt-1">AGS for DGIST made by H.J.</p>
-        </div>
-
+    <div className="h-screen bg-gray-50 flex flex-col items-center p-8 overflow-hidden">
+      <div className="w-full max-w-5xl bg-white shadow-lg rounded-xl overflow-hidden flex flex-col h-full">
         {/* Progress Bar */}
         <div className="w-full bg-gray-200 h-2">
           <div 
@@ -56,18 +50,24 @@ const Content = () => {
         </div>
 
         {/* Footer / Navigation */}
-        <div className="p-6 border-t bg-gray-50 flex justify-between">
-          <button 
-            onClick={prevPage} 
-            disabled={currentPage === 1 || isGenerating}
-            className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-              currentPage === 1 
-                ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
-                : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
-            }`}
-          >
-            Previous
-          </button>
+        <div className="p-4 border-t bg-gray-50 flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <button 
+              onClick={prevPage} 
+              disabled={currentPage === 1 || isGenerating}
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                currentPage === 1 
+                  ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
+                  : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              Previous
+            </button>
+            <div className="hidden sm:block">
+               <h1 className="text-sm font-bold text-gray-700">AGS for DGIST</h1>
+               <p className="text-[10px] text-gray-400">by H.J.</p>
+            </div>
+          </div>
 
           <button 
             onClick={handleNext} 

@@ -30,6 +30,7 @@ export const parseLecture = (raw: RawLecture): Lecture => {
         prof: raw.prof,
         classification: raw.classification,
         category: raw.category,
+        credit: raw.credit || 0,
         time_slots,
         selected: false,
         preference: 0
