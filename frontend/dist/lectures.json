@@ -1,0 +1,1006 @@
+[
+    {
+        "id": 1,
+        "section": 1,
+        "name": "현대 사회와 윤리",
+        "prof": "김병재",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "section": 1,
+        "name": "한국어 Ⅱ",
+        "prof": "장근영",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 19,
+                "end_index": 21
+            },
+            {
+                "day": "목",
+                "start_index": 19,
+                "end_index": 21
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "section": 1,
+        "name": "한국어 Ⅰ",
+        "prof": "정효정",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 19,
+                "end_index": 21
+            },
+            {
+                "day": "목",
+                "start_index": 19,
+                "end_index": 21
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "section": 1,
+        "name": "한국 정치의 이해",
+        "prof": "윤지성",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "section": 5,
+        "name": "학술 글쓰기",
+        "prof": "전계성",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "section": 2,
+        "name": "학술 글쓰기",
+        "prof": "임희현",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "section": 1,
+        "name": "학술 글쓰기",
+        "prof": "배하은",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "section": 4,
+        "name": "학술 글쓰기",
+        "prof": "전계성",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "section": 3,
+        "name": "학술 글쓰기",
+        "prof": "임희현",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "section": 1,
+        "name": "프로그래밍",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 19,
+                "end_index": 26
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "section": 1,
+        "name": "진로탐색 및 전공설계 II",
+        "prof": "최한경",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "section": 1,
+        "name": "일변수 미적분학",
+        "prof": "안흥주",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            },
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "section": 4,
+        "name": "일반화학실험Ⅰ",
+        "prof": "민은선",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "section": 3,
+        "name": "일반화학실험Ⅰ",
+        "prof": "민은선",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "section": 5,
+        "name": "일반화학실험Ⅰ",
+        "prof": "민은선",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "section": 2,
+        "name": "일반화학실험Ⅰ",
+        "prof": "민은선",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "section": 1,
+        "name": "일반화학실험Ⅰ",
+        "prof": "민은선",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "section": 2,
+        "name": "일반화학Ⅱ",
+        "prof": "서상원",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "section": 1,
+        "name": "일반화학Ⅱ",
+        "prof": "홍선기",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "section": 1,
+        "name": "일반생물학Ⅱ",
+        "prof": "서병창, 이상임",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "section": 2,
+        "name": "일반생물학Ⅱ",
+        "prof": "조용철, 최일규",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "section": 1,
+        "name": "일반생물학Ⅰ",
+        "prof": "박포정, 유성운",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "section": 4,
+        "name": "일반생물학 실험",
+        "prof": "박포정",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "section": 3,
+        "name": "일반생물학 실험",
+        "prof": "이석규",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 2,
+                "end_index": 5
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "section": 5,
+        "name": "일반생물학 실험",
+        "prof": "조정아",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "section": 2,
+        "name": "일반생물학 실험",
+        "prof": "이송이",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "section": 6,
+        "name": "일반생물학 실험",
+        "prof": "조정아",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "section": 1,
+        "name": "일반생물학 실험",
+        "prof": "이송이",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 3,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "section": 4,
+        "name": "일반물리실험Ⅱ",
+        "prof": "김동렬",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "section": 5,
+        "name": "일반물리실험Ⅱ",
+        "prof": "박기성",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "section": 2,
+        "name": "일반물리실험Ⅱ",
+        "prof": "김동렬",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "section": 3,
+        "name": "일반물리실험Ⅱ",
+        "prof": "김동렬",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "section": 1,
+        "name": "일반물리실험Ⅱ",
+        "prof": "김동렬",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "section": 3,
+        "name": "일반물리Ⅱ",
+        "prof": "DEVECIOGLU DENIZ OLGU",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "section": 2,
+        "name": "일반물리Ⅱ",
+        "prof": "DEVECIOGLU DENIZ OLGU",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "section": 1,
+        "name": "일반물리Ⅱ",
+        "prof": "DEVECIOGLU DENIZ OLGU",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "section": 1,
+        "name": "인류학의 이해",
+        "prof": "이정덕",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "section": 1,
+        "name": "인간과 종교",
+        "prof": "박범석",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "section": 1,
+        "name": "심리학으로의 여행",
+        "prof": "곽금주",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "section": 1,
+        "name": "생명과학개론",
+        "prof": "예경무",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "section": 1,
+        "name": "사회학의 이해",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "section": 1,
+        "name": "비교역사학",
+        "prof": "문준영",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 9
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "section": 1,
+        "name": "법과 사회",
+        "prof": "김현희",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "section": 1,
+        "name": "미래소양강좌",
+        "prof": "최한경",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 17,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "section": 5,
+        "name": "다변수 미적분학",
+        "prof": "Hudson Thomas Bryan",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 7
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "section": 1,
+        "name": "다변수 미적분학",
+        "prof": "이두석",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 7
+            },
+            {
+                "day": "금",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "section": 2,
+        "name": "다변수 미적분학",
+        "prof": "안흥주",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 7
+            },
+            {
+                "day": "금",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "section": 4,
+        "name": "다변수 미적분학",
+        "prof": "이두석",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "section": 3,
+        "name": "다변수 미적분학",
+        "prof": "강효상",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 7
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "section": 1,
+        "name": "글로벌 문화와 의사소통",
+        "prof": "이정아",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "section": 1,
+        "name": "과학기술과 현대사회",
+        "prof": "장하원",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 9
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "section": 1,
+        "name": "공학수학Ⅰ",
+        "prof": "Carlos Scarinci",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 7
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "section": 1,
+        "name": "경제학 입문",
+        "prof": "김선구",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 12,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "section": 1,
+        "name": "Introduction to Traditional Korean Culture - 영어강의",
+        "prof": "배하은",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 17
+            },
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "section": 1,
+        "name": "Introduction to Philosophy - 영어강의",
+        "prof": "김병재",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "section": 2,
+        "name": "Academic English: Research and Writing",
+        "prof": "Aaron Cumberledge",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "section": 10,
+        "name": "Academic English: Research and Writing",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "section": 5,
+        "name": "Academic English: Research and Writing",
+        "prof": "Benjamin Wilson Riley",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "section": 3,
+        "name": "Academic English: Research and Writing",
+        "prof": "Aaron Cumberledge",
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "section": 7,
+        "name": "Academic English: Research and Writing",
+        "prof": "Benjamin Wilson Riley",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "section": 13,
+        "name": "Academic English: Research and Writing",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "section": 8,
+        "name": "Academic English: Research and Writing",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "section": 6,
+        "name": "Academic English: Research and Writing",
+        "prof": "Benjamin Wilson Riley",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "section": 9,
+        "name": "Academic English: Research and Writing",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "section": 11,
+        "name": "Academic English: Research and Writing",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "section": 1,
+        "name": "Academic English: Research and Writing",
+        "prof": "Aaron Cumberledge",
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "section": 12,
+        "name": "Academic English: Research and Writing",
+        "prof": "미배정",
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "section": 4,
+        "name": "Academic English: Research and Writing",
+        "prof": "Benjamin Wilson Riley",
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    }
+]
