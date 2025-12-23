@@ -4,6 +4,8 @@
         "section": 1,
         "name": "프로그래밍",
         "prof": "목지수",
+        "classification": "기초필수",
+        "category": "컴퓨터공학",
         "time_slots": [
             {
                 "day": "화",
@@ -22,6 +24,8 @@
         "section": 1,
         "name": "데이터사이언스기초",
         "prof": "장준기",
+        "classification": "기초필수",
+        "category": "컴퓨터공학",
         "time_slots": [
             {
                 "day": "화",
@@ -40,6 +44,8 @@
         "section": 2,
         "name": "데이터사이언스기초",
         "prof": "길현재",
+        "classification": "기초필수",
+        "category": "컴퓨터공학",
         "time_slots": [
             {
                 "day": "월",
@@ -58,6 +64,8 @@
         "section": 1,
         "name": "창의기계설계",
         "prof": "박준혁",
+        "classification": "기초필수",
+        "category": "공학선택",
         "time_slots": [
             {
                 "day": "금",
@@ -71,6 +79,8 @@
         "section": 2,
         "name": "창의기계설계",
         "prof": "송석호",
+        "classification": "기초필수",
+        "category": "공학선택",
         "time_slots": [
             {
                 "day": "월",
@@ -84,6 +94,8 @@
         "section": 1,
         "name": "회로이론과 계측법(이론)",
         "prof": "이정협",
+        "classification": "기초필수",
+        "category": "공학선택",
         "time_slots": [
             {
                 "day": "목",
@@ -97,6 +109,8 @@
         "section": 2,
         "name": "회로이론과 계측법(이론)",
         "prof": "송민영",
+        "classification": "기초필수",
+        "category": "공학선택",
         "time_slots": [
             {
                 "day": "화",
@@ -110,6 +124,8 @@
         "section": 1,
         "name": "뇌과학실험Ⅰ(이)",
         "prof": "조용철, 김규형, 오용석",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "금",
@@ -123,6 +139,8 @@
         "section": 1,
         "name": "신경재생 및 퇴행(이)",
         "prof": "조용철",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -141,6 +159,8 @@
         "section": 1,
         "name": "학습과 기억(이)",
         "prof": "박포정",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -159,6 +179,8 @@
         "section": 1,
         "name": "공학수학Ⅰ",
         "prof": "안흥주",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -177,6 +199,8 @@
         "section": 2,
         "name": "공학수학Ⅰ",
         "prof": "Hudson Thomas Bryan",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -195,6 +219,8 @@
         "section": 3,
         "name": "공학수학Ⅰ",
         "prof": "Carlos Scarinci",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "월",
@@ -213,6 +239,8 @@
         "section": 4,
         "name": "공학수학Ⅰ",
         "prof": "Carlos Scarinci",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "월",
@@ -231,6 +259,8 @@
         "section": 5,
         "name": "공학수학Ⅰ",
         "prof": "미배정",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -249,6 +279,8 @@
         "section": 1,
         "name": "일반물리Ⅰ",
         "prof": "DEVECIOGLU DENIZ OLGU",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "화",
@@ -267,6 +299,8 @@
         "section": 2,
         "name": "일반물리Ⅰ",
         "prof": "DEVECIOGLU DENIZ OLGU",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "화",
@@ -285,6 +319,8 @@
         "section": 3,
         "name": "일반물리Ⅰ",
         "prof": "DEVECIOGLU DENIZ OLGU",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "화",
@@ -303,6 +339,8 @@
         "section": 1,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "월",
@@ -316,6 +354,8 @@
         "section": 2,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "수",
@@ -329,6 +369,8 @@
         "section": 3,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "월",
@@ -342,6 +384,8 @@
         "section": 4,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "월",
@@ -355,6 +399,8 @@
         "section": 5,
         "name": "일반물리실험Ⅰ",
         "prof": "박기성",
+        "classification": "기초필수",
+        "category": "물리",
         "time_slots": [
             {
                 "day": "화",
@@ -368,6 +414,8 @@
         "section": 1,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "수",
@@ -381,6 +429,8 @@
         "section": 2,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "월",
@@ -394,6 +444,8 @@
         "section": 3,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "월",
@@ -407,6 +459,8 @@
         "section": 4,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "월",
@@ -420,6 +474,8 @@
         "section": 5,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "수",
@@ -433,6 +489,8 @@
         "section": 1,
         "name": "생명과학개론",
         "prof": "이석규",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "화",
@@ -451,6 +509,8 @@
         "section": 2,
         "name": "생명과학개론",
         "prof": "이효상",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "월",
@@ -469,6 +529,8 @@
         "section": 1,
         "name": "일반생물학 실험",
         "prof": "김유리",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "월",
@@ -482,6 +544,8 @@
         "section": 2,
         "name": "일반생물학 실험",
         "prof": "조정아",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "수",
@@ -495,6 +559,8 @@
         "section": 3,
         "name": "일반생물학 실험",
         "prof": "조정아",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "화",
@@ -508,6 +574,8 @@
         "section": 4,
         "name": "일반생물학 실험",
         "prof": "조정아",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "목",
@@ -521,6 +589,8 @@
         "section": 5,
         "name": "일반생물학 실험",
         "prof": "조정아",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "수",
@@ -534,6 +604,8 @@
         "section": 6,
         "name": "일반생물학 실험",
         "prof": "조정아",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "수",
@@ -547,6 +619,8 @@
         "section": 7,
         "name": "일반생물학 실험",
         "prof": "조정아",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "수",
@@ -560,6 +634,8 @@
         "section": 1,
         "name": "일반생물학Ⅰ",
         "prof": "정찬, 곽준명, 김민식",
+        "classification": "기초필수",
+        "category": "생명과학",
         "time_slots": [
             {
                 "day": "월",
@@ -578,6 +654,8 @@
         "section": 1,
         "name": "일반화학Ⅰ",
         "prof": "인수일",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "월",
@@ -591,6 +669,8 @@
         "section": 2,
         "name": "일반화학Ⅰ",
         "prof": "상가라쥬샨무감",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "화",
@@ -609,6 +689,8 @@
         "section": 3,
         "name": "일반화학Ⅰ",
         "prof": "미배정",
+        "classification": "기초필수",
+        "category": "화학",
         "time_slots": [
             {
                 "day": "수",
@@ -627,6 +709,8 @@
         "section": 1,
         "name": "확률과 통계 및 실습",
         "prof": "김주한",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -645,6 +729,8 @@
         "section": 2,
         "name": "확률과 통계 및 실습",
         "prof": "김주한",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -663,6 +749,8 @@
         "section": 1,
         "name": "선형대수학",
         "prof": "한강진",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "월",
@@ -681,6 +769,8 @@
         "section": 2,
         "name": "선형대수학",
         "prof": "한강진",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -699,6 +789,8 @@
         "section": 3,
         "name": "선형대수학",
         "prof": "이두석",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "월",
@@ -717,6 +809,8 @@
         "section": 4,
         "name": "선형대수학",
         "prof": "미배정",
+        "classification": "기초필수",
+        "category": "수학",
         "time_slots": [
             {
                 "day": "화",
@@ -735,6 +829,8 @@
         "section": 1,
         "name": "화학공학열역학(공)",
         "prof": "고서진",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -753,6 +849,8 @@
         "section": 1,
         "name": "고분자개론(이,공)",
         "prof": "호동해",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -771,6 +869,8 @@
         "section": 1,
         "name": "화학 제품 및 공정 설계(공)",
         "prof": "김찬연",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -789,6 +889,8 @@
         "section": 1,
         "name": "분석화학(이,공)",
         "prof": "이호춘",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -807,6 +909,8 @@
         "section": 1,
         "name": "유기화학Ⅰ(이,공)",
         "prof": "정병혁",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -825,6 +929,8 @@
         "section": 1,
         "name": "일반화학실험Ⅱ(이)",
         "prof": "이윤구",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -838,6 +944,8 @@
         "section": 1,
         "name": "심화화학실험Ⅰ(이)",
         "prof": "홍선기, 인수일",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -851,6 +959,8 @@
         "section": 1,
         "name": "무기화학Ⅱ(이,공)",
         "prof": "김성균",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -869,6 +979,8 @@
         "section": 1,
         "name": "물리화학Ⅱ(이,공)",
         "prof": "성주영",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -887,6 +999,8 @@
         "section": 1,
         "name": "계산화학(이)",
         "prof": "장윤희",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -905,6 +1019,8 @@
         "section": 1,
         "name": "한국어 Ⅰ",
         "prof": "장근영",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -923,6 +1039,8 @@
         "section": 1,
         "name": "한국어 Ⅱ",
         "prof": "정효정",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -941,6 +1059,8 @@
         "section": 1,
         "name": "자료구조(이,공)",
         "prof": "김선준",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -959,6 +1079,8 @@
         "section": 1,
         "name": "기계학습개론(이,공)",
         "prof": "박상현",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -977,6 +1099,8 @@
         "section": 1,
         "name": "컴퓨터구조(공)",
         "prof": "미배정",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -995,6 +1119,8 @@
         "section": 1,
         "name": "시스템 프로그래밍(공)",
         "prof": "이용우",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -1013,6 +1139,8 @@
         "section": 1,
         "name": "프로그래밍 언어(이,공)",
         "prof": "전민석",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1031,6 +1159,8 @@
         "section": 1,
         "name": "강화학습(이,공)",
         "prof": "이두석",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -1049,6 +1179,8 @@
         "section": 1,
         "name": "컴퓨터 비전 개론(공)",
         "prof": "임성훈",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1067,6 +1199,8 @@
         "section": 1,
         "name": "컴퓨터보안개론(공)",
         "prof": "최원석",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -1085,6 +1219,8 @@
         "section": 1,
         "name": "신호 및 시스템(공)",
         "prof": "최재호",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1103,6 +1239,8 @@
         "section": 1,
         "name": "전자회로 이론(공)",
         "prof": "윤종혁",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1121,6 +1259,8 @@
         "section": 1,
         "name": "반도체물성 개론(공)",
         "prof": "이상훈",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1139,6 +1279,8 @@
         "section": 1,
         "name": "디지털 신호처리(공)",
         "prof": "황재윤",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1157,6 +1299,8 @@
         "section": 1,
         "name": "디지털통신(공)",
         "prof": "서대원",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -1175,6 +1319,8 @@
         "section": 1,
         "name": "반도체공정개론(공)",
         "prof": "권혁준",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -1193,6 +1339,8 @@
         "section": 1,
         "name": "지능형제어시스템(공)",
         "prof": "김경대, 이성민",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -1211,6 +1359,8 @@
         "section": 1,
         "name": "디지털집적회로설계(공)",
         "prof": "김가인",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -1229,6 +1379,8 @@
         "section": 1,
         "name": "기업가 정신과 사회적 책임",
         "prof": "미배정",
+        "classification": "심화선택",
+        "category": "창업",
         "time_slots": [
             {
                 "day": "월",
@@ -1247,6 +1399,8 @@
         "section": 1,
         "name": "회계학 원론",
         "prof": "조성표",
+        "classification": "심화선택",
+        "category": "창업",
         "time_slots": [
             {
                 "day": "화",
@@ -1260,6 +1414,8 @@
         "section": 1,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "화",
@@ -1273,6 +1429,8 @@
         "section": 2,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "월",
@@ -1286,6 +1444,8 @@
         "section": 3,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "월",
@@ -1299,6 +1459,8 @@
         "section": 4,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "화",
@@ -1312,6 +1474,8 @@
         "section": 5,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "수",
@@ -1325,6 +1489,8 @@
         "section": 6,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "목",
@@ -1338,6 +1504,8 @@
         "section": 7,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "목",
@@ -1351,6 +1519,8 @@
         "section": 8,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "수",
@@ -1364,6 +1534,8 @@
         "section": 9,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "수",
@@ -1377,6 +1549,8 @@
         "section": 10,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "월",
@@ -1390,6 +1564,8 @@
         "section": 11,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "수",
@@ -1403,6 +1579,8 @@
         "section": 12,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Andrew John Miller",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "금",
@@ -1416,6 +1594,8 @@
         "section": 13,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Andrew John Miller",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "금",
@@ -1429,6 +1609,8 @@
         "section": 14,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "이정아",
+        "classification": "기초필수",
+        "category": "영어",
         "time_slots": [
             {
                 "day": "화",
@@ -1442,6 +1624,8 @@
         "section": 1,
         "name": "경제학 입문 - 영어강좌",
         "prof": "김선구",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "수",
@@ -1455,6 +1639,8 @@
         "section": 1,
         "name": "과학기술과 현대사회",
         "prof": "장하원",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1468,6 +1654,8 @@
         "section": 1,
         "name": "법과 사회",
         "prof": "김현희",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "금",
@@ -1481,6 +1669,8 @@
         "section": 1,
         "name": "소설의 이해",
         "prof": "배하은",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1499,6 +1689,8 @@
         "section": 1,
         "name": "비교정치학",
         "prof": "윤지성",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1517,6 +1709,8 @@
         "section": 1,
         "name": "언어학입문",
         "prof": "이정아",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "금",
@@ -1530,6 +1724,8 @@
         "section": 1,
         "name": "비교역사학",
         "prof": "문준영",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1543,6 +1739,8 @@
         "section": 1,
         "name": "학술 글쓰기",
         "prof": "배하은",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1561,6 +1759,8 @@
         "section": 2,
         "name": "학술 글쓰기",
         "prof": "임희현",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1574,6 +1774,8 @@
         "section": 3,
         "name": "학술 글쓰기",
         "prof": "임희현",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1587,6 +1789,8 @@
         "section": 4,
         "name": "학술 글쓰기",
         "prof": "전계성",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1600,6 +1804,8 @@
         "section": 5,
         "name": "학술 글쓰기",
         "prof": "전계성",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "금",
@@ -1613,6 +1819,8 @@
         "section": 1,
         "name": "사회학의 이해",
         "prof": "최태섭",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1626,6 +1834,8 @@
         "section": 1,
         "name": "지리학 입문",
         "prof": "숀센",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1639,6 +1849,8 @@
         "section": 1,
         "name": "심리학으로의 여행",
         "prof": "곽금주",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1652,6 +1864,8 @@
         "section": 1,
         "name": "인류학의 이해",
         "prof": "이정덕",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1665,6 +1879,8 @@
         "section": 1,
         "name": "인간과 종교",
         "prof": "박범석",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1678,6 +1894,8 @@
         "section": 1,
         "name": "미래소양강좌",
         "prof": "최한경",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "금",
@@ -1691,6 +1909,8 @@
         "section": 1,
         "name": "진로탐색 및 전공설계Ⅰ",
         "prof": "최한경",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "수",
@@ -1704,6 +1924,8 @@
         "section": 1,
         "name": "Introduction to Traditional Korean Culture - 영어강좌",
         "prof": "배하은",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1717,6 +1939,8 @@
         "section": 1,
         "name": "Introduction to Philosophy - 영어강좌",
         "prof": "김병재",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1730,6 +1954,8 @@
         "section": 1,
         "name": "과학기술사의 주요 장면",
         "prof": "장하원",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1743,6 +1969,8 @@
         "section": 1,
         "name": "과학철학의 쟁점",
         "prof": "강유진",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "수",
@@ -1756,6 +1984,8 @@
         "section": 1,
         "name": "근대 사회와 사상",
         "prof": "문준영",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1769,6 +1999,8 @@
         "section": 1,
         "name": "글로벌 정치경제 - 영어 강좌",
         "prof": "윤지성",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1787,6 +2019,8 @@
         "section": 1,
         "name": "커뮤니케이션 특강 - 영어 강좌",
         "prof": "조성겸",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1800,6 +2034,8 @@
         "section": 1,
         "name": "철학 고전의 이해",
         "prof": "김병재",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1818,6 +2054,8 @@
         "section": 1,
         "name": "권리변동의 일반",
         "prof": "함상범",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1831,6 +2069,8 @@
         "section": 1,
         "name": "도시지리학",
         "prof": "숀센",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1849,6 +2089,8 @@
         "section": 1,
         "name": "세계종교입문",
         "prof": "박범석",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1862,6 +2104,8 @@
         "section": 1,
         "name": "사회과학 특강Ⅰ",
         "prof": "곽금주",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1875,6 +2119,8 @@
         "section": 1,
         "name": "사회과학 특강Ⅱ - 인류 진화와 문화",
         "prof": "이정덕",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "수",
@@ -1888,6 +2134,8 @@
         "section": 2,
         "name": "사회과학 특강Ⅱ - 문화와 사회",
         "prof": "최태섭",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "목",
@@ -1901,6 +2149,8 @@
         "section": 1,
         "name": "심리철학 - 영어 강좌",
         "prof": "김병재",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1919,6 +2169,8 @@
         "section": 1,
         "name": "Scientific Writing",
         "prof": "이정아",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "화",
@@ -1937,6 +2189,8 @@
         "section": 2,
         "name": "Scientific Writing",
         "prof": "Mark Silverlock",
+        "classification": "기초필수",
+        "category": "쓰기·읽기 중점",
         "time_slots": [
             {
                 "day": "월",
@@ -1955,6 +2209,8 @@
         "section": 1,
         "name": "국내 인턴십Ⅰ",
         "prof": "김소희",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -1968,6 +2224,8 @@
         "section": 1,
         "name": "국내 인턴십Ⅱ",
         "prof": "김소희",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -1981,6 +2239,8 @@
         "section": 1,
         "name": "국내 인턴십Ⅲ",
         "prof": "김소희",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -1994,6 +2254,8 @@
         "section": 1,
         "name": "국내 인턴십Ⅳ",
         "prof": "김소희",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2007,6 +2269,8 @@
         "section": 1,
         "name": "해외 인턴십Ⅴ",
         "prof": "김회준",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2020,6 +2284,8 @@
         "section": 1,
         "name": "해외 인턴십Ⅵ",
         "prof": "김회준",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2033,6 +2299,8 @@
         "section": 1,
         "name": "해외 인턴십Ⅶ",
         "prof": "김회준",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2046,6 +2314,8 @@
         "section": 1,
         "name": "해외 인턴십Ⅷ",
         "prof": "김회준",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2059,6 +2329,8 @@
         "section": 1,
         "name": "국내 인턴십 Ⅴ",
         "prof": "김소희",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2072,6 +2344,8 @@
         "section": 1,
         "name": "국내 인턴십 Ⅵ",
         "prof": "김소희",
+        "classification": "심화필수",
+        "category": "인턴십",
         "time_slots": [
             {
                 "day": "토",
@@ -2085,6 +2359,8 @@
         "section": 1,
         "name": "세포생물학 실험(이)",
         "prof": "이창훈, 정찬, 조정아",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2103,6 +2379,8 @@
         "section": 2,
         "name": "세포생물학 실험(이)",
         "prof": "정찬, 이창훈, 조정아",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2121,6 +2399,8 @@
         "section": 3,
         "name": "세포생물학 실험(이)",
         "prof": "조정아, 정찬, 이창훈",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2139,6 +2419,8 @@
         "section": 1,
         "name": "세포생물학(이)",
         "prof": "백명인, 정영태",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2157,6 +2439,8 @@
         "section": 2,
         "name": "세포생물학(이)",
         "prof": "백명인, 정영태",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2175,6 +2459,8 @@
         "section": 1,
         "name": "생명체의 다양성과 유기적 관계(이)",
         "prof": "이상임",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2193,6 +2479,8 @@
         "section": 1,
         "name": "신경과학Ⅰ(이)",
         "prof": "서병창, 엄지원",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2211,6 +2499,8 @@
         "section": 1,
         "name": "신경과학Ⅱ(이)",
         "prof": "현정호, 이효상, 최한경",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2229,6 +2519,8 @@
         "section": 1,
         "name": "생화학Ⅰ(이)",
         "prof": "김진해, 김유리, 이종찬, 이재민",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2247,6 +2539,8 @@
         "section": 1,
         "name": "의약품공학(이)",
         "prof": "예경무, 이병훈",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2260,6 +2554,8 @@
         "section": 1,
         "name": "생명과학 노벨상 수상의  위대한 발견(이)",
         "prof": "이병훈, 이송이",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2278,6 +2574,8 @@
         "section": 1,
         "name": "발생 및 발달생물학(이)",
         "prof": "백명인, 유성운, 곽준명",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2296,6 +2594,8 @@
         "section": 1,
         "name": "의생명공학(이,공)",
         "prof": "이광",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "금",
@@ -2309,6 +2609,8 @@
         "section": 1,
         "name": "인체생리학(이)",
         "prof": "이재민, 김은경",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2327,6 +2629,8 @@
         "section": 1,
         "name": "현대 미생물학(이)",
         "prof": "김유리, 정찬",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2345,6 +2649,8 @@
         "section": 1,
         "name": "계산뇌과학입문(이)",
         "prof": "유우경, 김민환",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2363,6 +2669,8 @@
         "section": 1,
         "name": "뇌질환(이)",
         "prof": "이성배",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2381,6 +2689,8 @@
         "section": 1,
         "name": "고체역학(공)",
         "prof": "장경인",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2399,6 +2709,8 @@
         "section": 1,
         "name": "인간과 공학(공)",
         "prof": "김회준, 이성민, 박준혁, 남강현, 정소현, 김기섭",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "금",
@@ -2412,6 +2724,8 @@
         "section": 1,
         "name": "진동공학(공)",
         "prof": "임용섭",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2430,6 +2744,8 @@
         "section": 1,
         "name": "자동제어시스템(공)",
         "prof": "박석호",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2448,6 +2764,8 @@
         "section": 1,
         "name": "유체역학(공)",
         "prof": "정소현",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "수",
@@ -2461,6 +2779,8 @@
         "section": 1,
         "name": "로봇전자공학(공)",
         "prof": "박경서",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2479,6 +2799,8 @@
         "section": 1,
         "name": "로봇동역학 및 제어(공)",
         "prof": "황민호",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2497,6 +2819,8 @@
         "section": 1,
         "name": "마이크로/나노공학(공)",
         "prof": "이재홍",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2515,6 +2839,8 @@
         "section": 1,
         "name": "열전달(공)",
         "prof": "최경호",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2533,6 +2859,8 @@
         "section": 1,
         "name": "모빌리티공학개론(공)",
         "prof": "이성민",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2551,6 +2879,8 @@
         "section": 1,
         "name": "재료공학개론Ⅰ(이,공)",
         "prof": "이주혁",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2569,6 +2899,8 @@
         "section": 1,
         "name": "재료공학실험(공)",
         "prof": "김진수, 이성원, 이주혁, 이종수, 이신범",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "수",
@@ -2587,6 +2919,8 @@
         "section": 1,
         "name": "재료상변태(공)",
         "prof": "김진수",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "수",
@@ -2605,6 +2939,8 @@
         "section": 1,
         "name": "재료의 기계적 거동(공)",
         "prof": "김영규",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2623,6 +2959,8 @@
         "section": 1,
         "name": "해석역학Ⅰ(이,공)",
         "prof": "이재동",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2641,6 +2979,8 @@
         "section": 1,
         "name": "현대물리(이)",
         "prof": "김소연",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2659,6 +2999,8 @@
         "section": 1,
         "name": "고급물리 실험(이)",
         "prof": "미배정",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2677,6 +3019,8 @@
         "section": 1,
         "name": "양자역학Ⅰ(이,공)",
         "prof": "박기성",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2695,6 +3039,8 @@
         "section": 1,
         "name": "수리물리(이)",
         "prof": "최승호",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2713,6 +3059,8 @@
         "section": 1,
         "name": "전기역학Ⅱ(이)",
         "prof": "조창희",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2731,6 +3079,8 @@
         "section": 1,
         "name": "현대광학(이,공)",
         "prof": "이기준",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2749,6 +3099,8 @@
         "section": 1,
         "name": "고체물리Ⅱ(이,공)",
         "prof": "홍정일",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "월",
@@ -2767,6 +3119,8 @@
         "section": 1,
         "name": "생물물리학(이,공)",
         "prof": "이종찬",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "금",
@@ -2780,6 +3134,8 @@
         "section": 1,
         "name": "전산물리(이)",
         "prof": "강준구",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2798,6 +3154,8 @@
         "section": 1,
         "name": "원자분자물리학(이,공)",
         "prof": "미배정",
+        "classification": "심화필수",
+        "category": "트랙",
         "time_slots": [
             {
                 "day": "화",
@@ -2816,6 +3174,8 @@
         "section": 1,
         "name": "Thesis",
         "prof": "문제일",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2829,6 +3189,8 @@
         "section": 2,
         "name": "Thesis",
         "prof": "유성운",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2842,6 +3204,8 @@
         "section": 3,
         "name": "Thesis",
         "prof": "김은경",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2855,6 +3219,8 @@
         "section": 4,
         "name": "Thesis",
         "prof": "서병창",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2868,6 +3234,8 @@
         "section": 5,
         "name": "Thesis",
         "prof": "김규형",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2881,6 +3249,8 @@
         "section": 6,
         "name": "Thesis",
         "prof": "이석규",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2894,6 +3264,8 @@
         "section": 7,
         "name": "Thesis",
         "prof": "이성배",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2907,6 +3279,8 @@
         "section": 8,
         "name": "Thesis",
         "prof": "오용석",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2920,6 +3294,8 @@
         "section": 9,
         "name": "Thesis",
         "prof": "이효상",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2933,6 +3309,8 @@
         "section": 10,
         "name": "Thesis",
         "prof": "최한경",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2946,6 +3324,8 @@
         "section": 11,
         "name": "Thesis",
         "prof": "유우경",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2959,6 +3339,8 @@
         "section": 12,
         "name": "Thesis",
         "prof": "고재원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2972,6 +3354,8 @@
         "section": 13,
         "name": "Thesis",
         "prof": "엄지원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2985,6 +3369,8 @@
         "section": 14,
         "name": "Thesis",
         "prof": "백명인",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -2998,6 +3384,8 @@
         "section": 15,
         "name": "Thesis",
         "prof": "이광",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3011,6 +3399,8 @@
         "section": 16,
         "name": "Thesis",
         "prof": "현정호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3024,6 +3414,8 @@
         "section": 17,
         "name": "Thesis",
         "prof": "조용철",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3037,6 +3429,8 @@
         "section": 18,
         "name": "Thesis",
         "prof": "김민환",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3050,6 +3444,8 @@
         "section": 19,
         "name": "Thesis",
         "prof": "박포정",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3063,6 +3459,8 @@
         "section": 1,
         "name": "Thesis",
         "prof": "구재형",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3076,6 +3474,8 @@
         "section": 2,
         "name": "Thesis",
         "prof": "이창훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3089,6 +3489,8 @@
         "section": 3,
         "name": "Thesis",
         "prof": "남창훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3102,6 +3504,8 @@
         "section": 4,
         "name": "Thesis",
         "prof": "우혜련",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3115,6 +3519,8 @@
         "section": 5,
         "name": "Thesis",
         "prof": "곽준명",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3128,6 +3534,8 @@
         "section": 6,
         "name": "Thesis",
         "prof": "이영삼",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3141,6 +3549,8 @@
         "section": 7,
         "name": "Thesis",
         "prof": "이상임",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3154,6 +3564,8 @@
         "section": 8,
         "name": "Thesis",
         "prof": "이병훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3167,6 +3579,8 @@
         "section": 9,
         "name": "Thesis",
         "prof": "김민석",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3180,6 +3594,8 @@
         "section": 10,
         "name": "Thesis",
         "prof": "이재민",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3193,6 +3609,8 @@
         "section": 11,
         "name": "Thesis",
         "prof": "예경무",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3206,6 +3624,8 @@
         "section": 12,
         "name": "Thesis",
         "prof": "김진해",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3219,6 +3639,8 @@
         "section": 13,
         "name": "Thesis",
         "prof": "이종찬",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3232,6 +3654,8 @@
         "section": 14,
         "name": "Thesis",
         "prof": "정영태",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3245,6 +3669,8 @@
         "section": 15,
         "name": "Thesis",
         "prof": "김민식",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3258,6 +3684,8 @@
         "section": 16,
         "name": "Thesis",
         "prof": "기영훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3271,6 +3699,8 @@
         "section": 17,
         "name": "Thesis",
         "prof": "김유리",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3284,6 +3714,8 @@
         "section": 18,
         "name": "Thesis",
         "prof": "정찬",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3297,6 +3729,8 @@
         "section": 19,
         "name": "Thesis",
         "prof": "최일규",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3310,6 +3744,8 @@
         "section": 20,
         "name": "Thesis",
         "prof": "김태완",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3323,6 +3759,8 @@
         "section": 21,
         "name": "Thesis",
         "prof": "이송이",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3336,6 +3774,8 @@
         "section": 22,
         "name": "Thesis",
         "prof": "Felix Jonas",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3349,6 +3789,8 @@
         "section": 1,
         "name": "Thesis",
         "prof": "오세훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3362,6 +3804,8 @@
         "section": 2,
         "name": "Thesis",
         "prof": "김기섭",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3375,6 +3819,8 @@
         "section": 3,
         "name": "Thesis",
         "prof": "김동욱",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3388,6 +3834,8 @@
         "section": 4,
         "name": "Thesis",
         "prof": "김봉훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3401,6 +3849,8 @@
         "section": 5,
         "name": "Thesis",
         "prof": "김소희",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3414,6 +3864,8 @@
         "section": 6,
         "name": "Thesis",
         "prof": "김회준",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3427,6 +3879,8 @@
         "section": 7,
         "name": "Thesis",
         "prof": "남강현",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3440,6 +3894,8 @@
         "section": 8,
         "name": "Thesis",
         "prof": "문인규",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3453,6 +3909,8 @@
         "section": 9,
         "name": "Thesis",
         "prof": "박경서",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3466,6 +3924,8 @@
         "section": 10,
         "name": "Thesis",
         "prof": "박상현",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3479,6 +3939,8 @@
         "section": 11,
         "name": "Thesis",
         "prof": "박석호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3492,6 +3954,8 @@
         "section": 12,
         "name": "Thesis",
         "prof": "박준혁",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3505,6 +3969,8 @@
         "section": 13,
         "name": "Thesis",
         "prof": "송석호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3518,6 +3984,8 @@
         "section": 14,
         "name": "Thesis",
         "prof": "송철",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3531,6 +3999,8 @@
         "section": 15,
         "name": "Thesis",
         "prof": "유재석",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3544,6 +4014,8 @@
         "section": 16,
         "name": "Thesis",
         "prof": "윤동원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3557,6 +4029,8 @@
         "section": 17,
         "name": "Thesis",
         "prof": "이상훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3570,6 +4044,8 @@
         "section": 18,
         "name": "Thesis",
         "prof": "이성민",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3583,6 +4059,8 @@
         "section": 19,
         "name": "Thesis",
         "prof": "이아형",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3596,6 +4074,8 @@
         "section": 20,
         "name": "Thesis",
         "prof": "이옥균",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3609,6 +4089,8 @@
         "section": 21,
         "name": "Thesis",
         "prof": "이재홍",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3622,6 +4104,8 @@
         "section": 22,
         "name": "Thesis",
         "prof": "임용섭",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3635,6 +4119,8 @@
         "section": 23,
         "name": "Thesis",
         "prof": "장경인",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3648,6 +4134,8 @@
         "section": 24,
         "name": "Thesis",
         "prof": "정소현",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3661,6 +4149,8 @@
         "section": 25,
         "name": "Thesis",
         "prof": "한상윤",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3674,6 +4164,8 @@
         "section": 26,
         "name": "Thesis",
         "prof": "황민호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3687,6 +4179,8 @@
         "section": 1,
         "name": "Thesis",
         "prof": "홍정일",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3700,6 +4194,8 @@
         "section": 2,
         "name": "Thesis",
         "prof": "박기성",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3713,6 +4209,8 @@
         "section": 3,
         "name": "Thesis",
         "prof": "김성균",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3726,6 +4224,8 @@
         "section": 4,
         "name": "Thesis",
         "prof": "정낙천",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3739,6 +4239,8 @@
         "section": 5,
         "name": "Thesis",
         "prof": "조창희",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3752,6 +4254,8 @@
         "section": 6,
         "name": "Thesis",
         "prof": "서정필",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3765,6 +4269,8 @@
         "section": 7,
         "name": "Thesis",
         "prof": "김철기",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3778,6 +4284,8 @@
         "section": 8,
         "name": "Thesis",
         "prof": "정병혁",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3791,6 +4299,8 @@
         "section": 9,
         "name": "Thesis",
         "prof": "강준구",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3804,6 +4314,8 @@
         "section": 10,
         "name": "Thesis",
         "prof": "박진희",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3817,6 +4329,8 @@
         "section": 11,
         "name": "Thesis",
         "prof": "이성원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3830,6 +4344,8 @@
         "section": 12,
         "name": "Thesis",
         "prof": "이신범",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3843,6 +4359,8 @@
         "section": 13,
         "name": "Thesis",
         "prof": "홍선기",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3856,6 +4374,8 @@
         "section": 14,
         "name": "Thesis",
         "prof": "이성기",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3869,6 +4389,8 @@
         "section": 15,
         "name": "Thesis",
         "prof": "성주영",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3882,6 +4404,8 @@
         "section": 16,
         "name": "Thesis",
         "prof": "김아람",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3895,6 +4419,8 @@
         "section": 17,
         "name": "Thesis",
         "prof": "서상원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3908,6 +4434,8 @@
         "section": 18,
         "name": "Thesis",
         "prof": "김종구",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3921,6 +4449,8 @@
         "section": 19,
         "name": "Thesis",
         "prof": "김소연",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3934,6 +4464,8 @@
         "section": 20,
         "name": "Thesis",
         "prof": "문혜원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3947,6 +4479,8 @@
         "section": 1,
         "name": "Thesis",
         "prof": "이호춘",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3960,6 +4494,8 @@
         "section": 2,
         "name": "Thesis",
         "prof": "이윤구",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3973,6 +4509,8 @@
         "section": 3,
         "name": "Thesis",
         "prof": "상가라쥬샨무감",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3986,6 +4524,8 @@
         "section": 4,
         "name": "Thesis",
         "prof": "이종수",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -3999,6 +4539,8 @@
         "section": 5,
         "name": "Thesis",
         "prof": "인수일",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4012,6 +4554,8 @@
         "section": 6,
         "name": "Thesis",
         "prof": "최승호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4025,6 +4569,8 @@
         "section": 7,
         "name": "Thesis",
         "prof": "장윤희",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4038,6 +4584,8 @@
         "section": 8,
         "name": "Thesis",
         "prof": "이주혁",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4051,6 +4599,8 @@
         "section": 9,
         "name": "Thesis",
         "prof": "양지웅",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4064,6 +4614,8 @@
         "section": 10,
         "name": "Thesis",
         "prof": "김찬연",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4077,6 +4629,8 @@
         "section": 11,
         "name": "Thesis",
         "prof": "호동해",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4090,6 +4644,8 @@
         "section": 12,
         "name": "Thesis",
         "prof": "김운혁",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4103,6 +4659,8 @@
         "section": 13,
         "name": "Thesis",
         "prof": "김진수",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4116,6 +4674,8 @@
         "section": 14,
         "name": "Thesis",
         "prof": "이종민",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4129,6 +4689,8 @@
         "section": 15,
         "name": "Thesis",
         "prof": "고서진",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4142,6 +4704,8 @@
         "section": 16,
         "name": "Thesis",
         "prof": "김승현",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4155,6 +4719,8 @@
         "section": 1,
         "name": "Thesis",
         "prof": "장재은",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4168,6 +4734,8 @@
         "section": 2,
         "name": "Thesis",
         "prof": "박경준",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4181,6 +4749,8 @@
         "section": 3,
         "name": "Thesis",
         "prof": "은용순",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4194,6 +4764,8 @@
         "section": 4,
         "name": "Thesis",
         "prof": "이기준",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4207,6 +4779,8 @@
         "section": 5,
         "name": "Thesis",
         "prof": "황재윤",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4220,6 +4794,8 @@
         "section": 6,
         "name": "Thesis",
         "prof": "이정협",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4233,6 +4809,8 @@
         "section": 7,
         "name": "Thesis",
         "prof": "권혁준",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4246,6 +4824,8 @@
         "section": 8,
         "name": "Thesis",
         "prof": "김경대",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4259,6 +4839,8 @@
         "section": 9,
         "name": "Thesis",
         "prof": "신동훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4272,6 +4854,8 @@
         "section": 10,
         "name": "Thesis",
         "prof": "임성훈",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4285,6 +4869,8 @@
         "section": 11,
         "name": "Thesis",
         "prof": "김선준",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4298,6 +4884,8 @@
         "section": 12,
         "name": "Thesis",
         "prof": "장진호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4311,6 +4899,8 @@
         "section": 13,
         "name": "Thesis",
         "prof": "김예성",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4324,6 +4914,8 @@
         "section": 14,
         "name": "Thesis",
         "prof": "윤종혁",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4337,6 +4929,8 @@
         "section": 15,
         "name": "Thesis",
         "prof": "김백규",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4350,6 +4944,8 @@
         "section": 16,
         "name": "Thesis",
         "prof": "서대원",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4363,6 +4959,8 @@
         "section": 17,
         "name": "Thesis",
         "prof": "김가인",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4376,6 +4974,8 @@
         "section": 18,
         "name": "Thesis",
         "prof": "송민영",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4389,6 +4989,8 @@
         "section": 19,
         "name": "Thesis",
         "prof": "김영식",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4402,6 +5004,8 @@
         "section": 20,
         "name": "Thesis",
         "prof": "이경태",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4415,6 +5019,8 @@
         "section": 21,
         "name": "Thesis",
         "prof": "소진현",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4428,6 +5034,8 @@
         "section": 22,
         "name": "Thesis",
         "prof": "이병권",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4441,6 +5049,8 @@
         "section": 23,
         "name": "Thesis",
         "prof": "이병문",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4454,6 +5064,8 @@
         "section": 24,
         "name": "Thesis",
         "prof": "최재호",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4467,6 +5079,8 @@
         "section": 25,
         "name": "Thesis",
         "prof": "박대희",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4480,6 +5094,8 @@
         "section": 26,
         "name": "Thesis",
         "prof": "최원석",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4493,6 +5109,8 @@
         "section": 27,
         "name": "Thesis",
         "prof": "이용우",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4506,6 +5124,8 @@
         "section": 28,
         "name": "Thesis",
         "prof": "김기섭",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4519,6 +5139,8 @@
         "section": 29,
         "name": "Thesis",
         "prof": "최상현",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4532,6 +5154,8 @@
         "section": 30,
         "name": "Thesis",
         "prof": "전민석",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4545,6 +5169,8 @@
         "section": 31,
         "name": "Thesis",
         "prof": "길현재",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4558,6 +5184,8 @@
         "section": 32,
         "name": "Thesis",
         "prof": "장준기",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4571,6 +5199,8 @@
         "section": 33,
         "name": "Thesis",
         "prof": "목지수",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4584,6 +5214,8 @@
         "section": 34,
         "name": "Thesis",
         "prof": "이민선",
+        "classification": "심화선택",
+        "category": "Thesis",
         "time_slots": [
             {
                 "day": "토",
@@ -4597,6 +5229,8 @@
         "section": 1,
         "name": "URP",
         "prof": "문제일",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4610,6 +5244,8 @@
         "section": 2,
         "name": "URP",
         "prof": "유성운",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4623,6 +5259,8 @@
         "section": 3,
         "name": "URP",
         "prof": "김은경",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4636,6 +5274,8 @@
         "section": 4,
         "name": "URP",
         "prof": "서병창",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4649,6 +5289,8 @@
         "section": 5,
         "name": "URP",
         "prof": "김규형",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4662,6 +5304,8 @@
         "section": 6,
         "name": "URP",
         "prof": "이석규",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4675,6 +5319,8 @@
         "section": 7,
         "name": "URP",
         "prof": "이성배",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4688,6 +5334,8 @@
         "section": 8,
         "name": "URP",
         "prof": "오용석",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4701,6 +5349,8 @@
         "section": 9,
         "name": "URP",
         "prof": "이효상",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4714,6 +5364,8 @@
         "section": 10,
         "name": "URP",
         "prof": "최한경",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4727,6 +5379,8 @@
         "section": 100,
         "name": "URP",
         "prof": "김운혁",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4740,6 +5394,8 @@
         "section": 101,
         "name": "URP",
         "prof": "김진수",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4753,6 +5409,8 @@
         "section": 102,
         "name": "URP",
         "prof": "이종민",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4766,6 +5424,8 @@
         "section": 103,
         "name": "URP",
         "prof": "고서진",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4779,6 +5439,8 @@
         "section": 104,
         "name": "URP",
         "prof": "김승현",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4792,6 +5454,8 @@
         "section": 105,
         "name": "URP",
         "prof": "장재은",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4805,6 +5469,8 @@
         "section": 106,
         "name": "URP",
         "prof": "박경준",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4818,6 +5484,8 @@
         "section": 107,
         "name": "URP",
         "prof": "은용순",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4831,6 +5499,8 @@
         "section": 108,
         "name": "URP",
         "prof": "이기준",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4844,6 +5514,8 @@
         "section": 109,
         "name": "URP",
         "prof": "황재윤",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4857,6 +5529,8 @@
         "section": 11,
         "name": "URP",
         "prof": "유우경",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4870,6 +5544,8 @@
         "section": 110,
         "name": "URP",
         "prof": "이정협",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4883,6 +5559,8 @@
         "section": 111,
         "name": "URP",
         "prof": "권혁준",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4896,6 +5574,8 @@
         "section": 112,
         "name": "URP",
         "prof": "김경대",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4909,6 +5589,8 @@
         "section": 113,
         "name": "URP",
         "prof": "신동훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4922,6 +5604,8 @@
         "section": 114,
         "name": "URP",
         "prof": "임성훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4935,6 +5619,8 @@
         "section": 115,
         "name": "URP",
         "prof": "김선준",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4948,6 +5634,8 @@
         "section": 116,
         "name": "URP",
         "prof": "장진호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4961,6 +5649,8 @@
         "section": 117,
         "name": "URP",
         "prof": "김예성",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4974,6 +5664,8 @@
         "section": 118,
         "name": "URP",
         "prof": "윤종혁",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -4987,6 +5679,8 @@
         "section": 119,
         "name": "URP",
         "prof": "김백규",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5000,6 +5694,8 @@
         "section": 12,
         "name": "URP",
         "prof": "고재원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5013,6 +5709,8 @@
         "section": 120,
         "name": "URP",
         "prof": "서대원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5026,6 +5724,8 @@
         "section": 121,
         "name": "URP",
         "prof": "김가인",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5039,6 +5739,8 @@
         "section": 122,
         "name": "URP",
         "prof": "송민영",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5052,6 +5754,8 @@
         "section": 123,
         "name": "URP",
         "prof": "김영식",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5065,6 +5769,8 @@
         "section": 124,
         "name": "URP",
         "prof": "이경태",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5078,6 +5784,8 @@
         "section": 125,
         "name": "URP",
         "prof": "소진현",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5091,6 +5799,8 @@
         "section": 126,
         "name": "URP",
         "prof": "이병권",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5104,6 +5814,8 @@
         "section": 127,
         "name": "URP",
         "prof": "이병문",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5117,6 +5829,8 @@
         "section": 128,
         "name": "URP",
         "prof": "최재호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5130,6 +5844,8 @@
         "section": 129,
         "name": "URP",
         "prof": "박대희",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5143,6 +5859,8 @@
         "section": 13,
         "name": "URP",
         "prof": "엄지원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5156,6 +5874,8 @@
         "section": 130,
         "name": "URP",
         "prof": "최일규",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5169,6 +5889,8 @@
         "section": 131,
         "name": "URP",
         "prof": "이용우",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5182,6 +5904,8 @@
         "section": 132,
         "name": "URP",
         "prof": "김기섭",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5195,6 +5919,8 @@
         "section": 133,
         "name": "URP",
         "prof": "최상현",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5208,6 +5934,8 @@
         "section": 134,
         "name": "URP",
         "prof": "전민석",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5221,6 +5949,8 @@
         "section": 135,
         "name": "URP",
         "prof": "길현재",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5234,6 +5964,8 @@
         "section": 136,
         "name": "URP",
         "prof": "장준기",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5247,6 +5979,8 @@
         "section": 137,
         "name": "URP",
         "prof": "목지수",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5260,6 +5994,8 @@
         "section": 138,
         "name": "URP",
         "prof": "이민선",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5273,6 +6009,8 @@
         "section": 14,
         "name": "URP",
         "prof": "백명인",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5286,6 +6024,8 @@
         "section": 15,
         "name": "URP",
         "prof": "이광",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5299,6 +6039,8 @@
         "section": 16,
         "name": "URP",
         "prof": "현정호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5312,6 +6054,8 @@
         "section": 17,
         "name": "URP",
         "prof": "조용철",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5325,6 +6069,8 @@
         "section": 18,
         "name": "URP",
         "prof": "김민환",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5338,6 +6084,8 @@
         "section": 19,
         "name": "URP",
         "prof": "박포정",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5351,6 +6099,8 @@
         "section": 20,
         "name": "URP",
         "prof": "구재형",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5364,6 +6114,8 @@
         "section": 21,
         "name": "URP",
         "prof": "이창훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5377,6 +6129,8 @@
         "section": 22,
         "name": "URP",
         "prof": "남창훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5390,6 +6144,8 @@
         "section": 23,
         "name": "URP",
         "prof": "우혜련",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5403,6 +6159,8 @@
         "section": 24,
         "name": "URP",
         "prof": "곽준명",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5416,6 +6174,8 @@
         "section": 25,
         "name": "URP",
         "prof": "이영삼",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5429,6 +6189,8 @@
         "section": 26,
         "name": "URP",
         "prof": "이상임",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5442,6 +6204,8 @@
         "section": 27,
         "name": "URP",
         "prof": "이병훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5455,6 +6219,8 @@
         "section": 28,
         "name": "URP",
         "prof": "김민석",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5468,6 +6234,8 @@
         "section": 29,
         "name": "URP",
         "prof": "이재민",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5481,6 +6249,8 @@
         "section": 30,
         "name": "URP",
         "prof": "예경무",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5494,6 +6264,8 @@
         "section": 31,
         "name": "URP",
         "prof": "김진해",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5507,6 +6279,8 @@
         "section": 32,
         "name": "URP",
         "prof": "이종찬",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5520,6 +6294,8 @@
         "section": 33,
         "name": "URP",
         "prof": "정영태",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5533,6 +6309,8 @@
         "section": 34,
         "name": "URP",
         "prof": "김민식",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5546,6 +6324,8 @@
         "section": 35,
         "name": "URP",
         "prof": "기영훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5559,6 +6339,8 @@
         "section": 36,
         "name": "URP",
         "prof": "김유리",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5572,6 +6354,8 @@
         "section": 37,
         "name": "URP",
         "prof": "정찬",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5585,6 +6369,8 @@
         "section": 38,
         "name": "URP",
         "prof": "최일규",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5598,6 +6384,8 @@
         "section": 39,
         "name": "URP",
         "prof": "김태완",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5611,6 +6399,8 @@
         "section": 40,
         "name": "URP",
         "prof": "이송이",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5624,6 +6414,8 @@
         "section": 41,
         "name": "URP",
         "prof": "Felix Jonas",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5637,6 +6429,8 @@
         "section": 42,
         "name": "URP",
         "prof": "오세훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5650,6 +6444,8 @@
         "section": 43,
         "name": "URP",
         "prof": "김기섭",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5663,6 +6459,8 @@
         "section": 44,
         "name": "URP",
         "prof": "김동욱",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5676,6 +6474,8 @@
         "section": 45,
         "name": "URP",
         "prof": "김봉훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5689,6 +6489,8 @@
         "section": 46,
         "name": "URP",
         "prof": "김소희",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5702,6 +6504,8 @@
         "section": 47,
         "name": "URP",
         "prof": "김회준",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5715,6 +6519,8 @@
         "section": 48,
         "name": "URP",
         "prof": "남강현",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5728,6 +6534,8 @@
         "section": 49,
         "name": "URP",
         "prof": "문인규",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5741,6 +6549,8 @@
         "section": 50,
         "name": "URP",
         "prof": "박경서",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5754,6 +6564,8 @@
         "section": 51,
         "name": "URP",
         "prof": "박상현",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5767,6 +6579,8 @@
         "section": 52,
         "name": "URP",
         "prof": "박석호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5780,6 +6594,8 @@
         "section": 53,
         "name": "URP",
         "prof": "박준혁",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5793,6 +6609,8 @@
         "section": 54,
         "name": "URP",
         "prof": "송석호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5806,6 +6624,8 @@
         "section": 55,
         "name": "URP",
         "prof": "송철",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5819,6 +6639,8 @@
         "section": 56,
         "name": "URP",
         "prof": "유재석",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5832,6 +6654,8 @@
         "section": 57,
         "name": "URP",
         "prof": "윤동원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5845,6 +6669,8 @@
         "section": 58,
         "name": "URP",
         "prof": "이상훈",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5858,6 +6684,8 @@
         "section": 59,
         "name": "URP",
         "prof": "이성민",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5871,6 +6699,8 @@
         "section": 60,
         "name": "URP",
         "prof": "이아형",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5884,6 +6714,8 @@
         "section": 61,
         "name": "URP",
         "prof": "이옥균",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5897,6 +6729,8 @@
         "section": 62,
         "name": "URP",
         "prof": "이재홍",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5910,6 +6744,8 @@
         "section": 63,
         "name": "URP",
         "prof": "임용섭",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5923,6 +6759,8 @@
         "section": 64,
         "name": "URP",
         "prof": "장경인",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5936,6 +6774,8 @@
         "section": 65,
         "name": "URP",
         "prof": "정소현",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5949,6 +6789,8 @@
         "section": 66,
         "name": "URP",
         "prof": "한상윤",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5962,6 +6804,8 @@
         "section": 67,
         "name": "URP",
         "prof": "황민호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5975,6 +6819,8 @@
         "section": 69,
         "name": "URP",
         "prof": "홍정일",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -5988,6 +6834,8 @@
         "section": 70,
         "name": "URP",
         "prof": "박기성",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6001,6 +6849,8 @@
         "section": 71,
         "name": "URP",
         "prof": "김성균",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6014,6 +6864,8 @@
         "section": 72,
         "name": "URP",
         "prof": "정낙천",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6027,6 +6879,8 @@
         "section": 73,
         "name": "URP",
         "prof": "조창희",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6040,6 +6894,8 @@
         "section": 74,
         "name": "URP",
         "prof": "서정필",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6053,6 +6909,8 @@
         "section": 75,
         "name": "URP",
         "prof": "김철기",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6066,6 +6924,8 @@
         "section": 76,
         "name": "URP",
         "prof": "정병혁",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6079,6 +6939,8 @@
         "section": 77,
         "name": "URP",
         "prof": "강준구",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6092,6 +6954,8 @@
         "section": 78,
         "name": "URP",
         "prof": "박진희",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6105,6 +6969,8 @@
         "section": 79,
         "name": "URP",
         "prof": "이성원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6118,6 +6984,8 @@
         "section": 80,
         "name": "URP",
         "prof": "이신범",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6131,6 +6999,8 @@
         "section": 81,
         "name": "URP",
         "prof": "홍선기",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6144,6 +7014,8 @@
         "section": 82,
         "name": "URP",
         "prof": "이성기",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6157,6 +7029,8 @@
         "section": 83,
         "name": "URP",
         "prof": "성주영",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6170,6 +7044,8 @@
         "section": 84,
         "name": "URP",
         "prof": "김아람",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6183,6 +7059,8 @@
         "section": 85,
         "name": "URP",
         "prof": "서상원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6196,6 +7074,8 @@
         "section": 86,
         "name": "URP",
         "prof": "김종구",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6209,6 +7089,8 @@
         "section": 87,
         "name": "URP",
         "prof": "김소연",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6222,6 +7104,8 @@
         "section": 88,
         "name": "URP",
         "prof": "문혜원",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6235,6 +7119,8 @@
         "section": 89,
         "name": "URP",
         "prof": "이호춘",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6248,6 +7134,8 @@
         "section": 90,
         "name": "URP",
         "prof": "이윤구",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6261,6 +7149,8 @@
         "section": 91,
         "name": "URP",
         "prof": "상가라쥬샨무감",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6274,6 +7164,8 @@
         "section": 92,
         "name": "URP",
         "prof": "이종수",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6287,6 +7179,8 @@
         "section": 93,
         "name": "URP",
         "prof": "인수일",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6300,6 +7194,8 @@
         "section": 94,
         "name": "URP",
         "prof": "최승호",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6313,6 +7209,8 @@
         "section": 95,
         "name": "URP",
         "prof": "장윤희",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6326,6 +7224,8 @@
         "section": 96,
         "name": "URP",
         "prof": "이주혁",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6339,6 +7239,8 @@
         "section": 97,
         "name": "URP",
         "prof": "양지웅",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6352,6 +7254,8 @@
         "section": 98,
         "name": "URP",
         "prof": "김찬연",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6365,6 +7269,8 @@
         "section": 99,
         "name": "URP",
         "prof": "호동해",
+        "classification": "심화선택",
+        "category": "URP",
         "time_slots": [
             {
                 "day": "토",
@@ -6378,6 +7284,8 @@
         "section": 1,
         "name": "디자인 사고",
         "prof": "박종래",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "월",
@@ -6391,6 +7299,8 @@
         "section": 1,
         "name": "도심항공교통개론(이,공)",
         "prof": "인수일",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "월",
@@ -6404,6 +7314,8 @@
         "section": 1,
         "name": "커뮤니케이션과 현대사회",
         "prof": "조성겸",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "금",
@@ -6417,6 +7329,8 @@
         "section": 1,
         "name": "게임이론",
         "prof": "김선구",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "수",
@@ -6430,6 +7344,8 @@
         "section": 1,
         "name": "UX디자인",
         "prof": "박종래",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "수",
@@ -6443,6 +7359,8 @@
         "section": 1,
         "name": "생명에 대한 융합적 이해",
         "prof": "남창훈",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "화",
@@ -6456,6 +7374,8 @@
         "section": 1,
         "name": "학부생을 위한 해석학 개론",
         "prof": "안흥주",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "화",
@@ -6474,6 +7394,8 @@
         "section": 1,
         "name": "현대대수학 개론",
         "prof": "Hudson Thomas Bryan",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "화",
@@ -6492,6 +7414,8 @@
         "section": 1,
         "name": "텐서들의 기하학과 그 응용(이,공)",
         "prof": "한강진",
+        "classification": "심화필수",
+        "category": "비트랙/융합",
         "time_slots": [
             {
                 "day": "화",

@@ -48,6 +48,8 @@ def parse_csv_to_json(csv_path, json_path):
                 section = int(section_str) if section_str.isdigit() else 0
                 name = row[5]
                 prof = row[6]
+                classification = row[7]
+                category = row[12]
                 time_str = row[21]
                 
                 time_slots = []
@@ -83,6 +85,8 @@ def parse_csv_to_json(csv_path, json_path):
                     "section": section,
                     "name": name,
                     "prof": prof,
+                    "classification": classification,
+                    "category": category,
                     "time_slots": time_slots
                 })
             except ValueError as e:
@@ -95,4 +99,4 @@ def parse_csv_to_json(csv_path, json_path):
     print(f"Successfully converted {len(lectures)} lectures to {json_path}")
 
 if __name__ == "__main__":
-    parse_csv_to_json("upload.csv", "lectures.json")
+    parse_csv_to_json("lectures.csv", "lectures.json")
