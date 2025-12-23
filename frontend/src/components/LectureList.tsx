@@ -1,6 +1,7 @@
 import { useApp } from '../context/AppContext';
 import { useState, useMemo } from 'react';
 import { formatTimeString } from '../utils/lectureUtils';
+import { Lecture } from '../types';
 
 export const LectureList = () => {
     const { allLectures, selectedLectureIds, toggleLectureSelection } = useApp();
@@ -22,8 +23,21 @@ export const LectureList = () => {
         nonTrackConvergence: false // 비트랙/융합
     });
 
+    // Group Expansion State
+    const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
+
     const toggleFilter = (key: keyof typeof filters) => {
         setFilters(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const toggleGroup = (name: string, e: React.MouseEvent) => {
+        e.stopPropagation();
+        setExpandedGroups(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(name)) newSet.delete(name);
+            else newSet.add(name);
+            return newSet;
+        });
     };
 
     const filteredLectures = useMemo(() => {
@@ -37,8 +51,6 @@ export const LectureList = () => {
 
             // 2. Category Filter (if enabled)
             if (isFilterEnabled) {
-                // If no filters are checked, usually show nothing or all? 
-                // "다음 중 하나라도 해당하는 것들만 보기" implies if none are checked, none are shown.
                 const hasAnyFilterChecked = Object.values(filters).some(v => v);
                 if (!hasAnyFilterChecked) return false;
 
@@ -60,6 +72,29 @@ export const LectureList = () => {
             return true;
         });
     }, [allLectures, searchTerm, isFilterEnabled, filters]);
+
+    // Grouping Logic
+    const groupedLectures = useMemo(() => {
+        const groups: Record<string, Lecture[]> = {};
+        filteredLectures.forEach(lec => {
+            if (!groups[lec.name]) groups[lec.name] = [];
+            groups[lec.name].push(lec);
+        });
+        
+        // Sort keys to ensure consistent order (though user input implies existing order)
+        // We'll preserve filteredLectures order by using a Set to track seen names
+        const orderedGroups: { name: string, lectures: Lecture[] }[] = [];
+        const seenNames = new Set<string>();
+
+        filteredLectures.forEach(lec => {
+            if (!seenNames.has(lec.name)) {
+                seenNames.add(lec.name);
+                orderedGroups.push({ name: lec.name, lectures: groups[lec.name] });
+            }
+        });
+
+        return orderedGroups;
+    }, [filteredLectures]);
 
     return (
         <div className="flex flex-col h-full">
@@ -100,9 +135,6 @@ export const LectureList = () => {
                         checked={isFilterEnabled}
                         onChange={(e) => {
                             setIsFilterEnabled(e.target.checked);
-                            // If disabled, maybe reset filters? Or keep them? User said "체크하는 순간 박스 내부체크박스들은 기본적으로 모두 꺼져있게 된다."
-                            // This implies reset when enabling? Or just initial state?
-                            // "체크하는 순간... 모두 꺼져있게 된다" -> implies reset on enable.
                             if (e.target.checked) {
                                 setFilters({
                                     basicMandatory: false,
@@ -118,7 +150,7 @@ export const LectureList = () => {
                         }}
                         className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                     />
-                    <label htmlFor="enableFilter" className="text-sm font-medium text-gray-700 select-none">
+                    <label htmlFor="enableFilter" className="text-sm font-medium text-gray-700 select-none cursor-pointer">
                         다음 중 하나라도 해당하는 것들만 보기 (Show matches only)
                     </label>
                 </div>
@@ -164,7 +196,7 @@ export const LectureList = () => {
             
             <div className="flex-1 overflow-y-auto border rounded-lg">
                 <table className="w-full text-left border-collapse">
-                    <thead className="bg-gray-100 sticky top-0">
+                    <thead className="bg-gray-100 sticky top-0 z-10">
                         <tr>
                             <th className="p-3 border-b font-semibold">Select</th>
                             <th className="p-3 border-b font-semibold">Name</th>
@@ -174,28 +206,79 @@ export const LectureList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredLectures.map(lec => {
-                            const isSelected = selectedLectureIds.includes(lec.id);
-                            return (
-                                <tr 
-                                    key={lec.id} 
-                                    onClick={() => toggleLectureSelection(lec.id)}
-                                    className={`cursor-pointer hover:bg-blue-50 transition-colors ${isSelected ? 'bg-blue-100' : ''}`}
-                                >
-                                    <td className="p-3 border-b text-center">
-                                        <input 
-                                            type="checkbox" 
-                                            checked={isSelected} 
-                                            readOnly 
-                                            className="w-4 h-4 text-blue-600"
-                                        />
-                                    </td>
-                                    <td className="p-3 border-b font-medium">{lec.name}</td>
-                                    <td className="p-3 border-b text-gray-600">{lec.prof}</td>
-                                    <td className="p-3 border-b text-center">{lec.section}</td>
-                                    <td className="p-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
-                                </tr>
-                            );
+                        {groupedLectures.map(group => {
+                            // If group has only 1 lecture, render normally
+                            if (group.lectures.length === 1) {
+                                const lec = group.lectures[0];
+                                const isSelected = selectedLectureIds.includes(lec.id);
+                                return (
+                                    <tr 
+                                        key={lec.id} 
+                                        onClick={() => toggleLectureSelection(lec.id)}
+                                        className={`cursor-pointer hover:bg-blue-50 transition-colors ${isSelected ? 'bg-blue-100' : ''}`}
+                                    >
+                                        <td className="p-3 border-b text-center">
+                                            <input 
+                                                type="checkbox" 
+                                                checked={isSelected} 
+                                                readOnly 
+                                                className="w-4 h-4 text-blue-600"
+                                            />
+                                        </td>
+                                        <td className="p-3 border-b font-medium">{lec.name}</td>
+                                        <td className="p-3 border-b text-gray-600">{lec.prof}</td>
+                                        <td className="p-3 border-b text-center">{lec.section}</td>
+                                        <td className="p-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
+                                    </tr>
+                                );
+                            } else {
+                                // Group Header
+                                const isExpanded = expandedGroups.has(group.name);
+                                return (
+                                    <>
+                                        <tr 
+                                            key={`group-${group.name}`}
+                                            onClick={(e) => toggleGroup(group.name, e)}
+                                            className="cursor-pointer bg-gray-50 hover:bg-gray-100 border-b font-semibold text-gray-700"
+                                        >
+                                            <td colSpan={5} className="p-3 pl-4">
+                                                <div className="flex items-center">
+                                                    <span className="mr-2 transform transition-transform duration-200" style={{ transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                                                        ▶
+                                                    </span>
+                                                    {group.name} 
+                                                    <span className="ml-2 text-xs font-normal text-gray-500 bg-white px-2 py-0.5 rounded border">
+                                                        {group.lectures.length} sections
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {isExpanded && group.lectures.map(lec => {
+                                            const isSelected = selectedLectureIds.includes(lec.id);
+                                            return (
+                                                <tr 
+                                                    key={lec.id} 
+                                                    onClick={() => toggleLectureSelection(lec.id)}
+                                                    className={`cursor-pointer hover:bg-blue-50 transition-colors ${isSelected ? 'bg-blue-100' : 'bg-gray-50/30'}`}
+                                                >
+                                                    <td className="p-3 border-b text-center pl-8">
+                                                        <input 
+                                                            type="checkbox" 
+                                                            checked={isSelected} 
+                                                            readOnly 
+                                                            className="w-4 h-4 text-blue-600"
+                                                        />
+                                                    </td>
+                                                    <td className="p-3 border-b font-medium pl-8">{lec.name}</td>
+                                                    <td className="p-3 border-b text-gray-600">{lec.prof}</td>
+                                                    <td className="p-3 border-b text-center">{lec.section}</td>
+                                                    <td className="p-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </>
+                                );
+                            }
                         })}
                         {filteredLectures.length === 0 && (
                             <tr>
