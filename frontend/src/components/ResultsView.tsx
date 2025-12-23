@@ -56,17 +56,17 @@ export const ResultsView = () => {
 
             {/* Timetable Grid */}
             <div className="flex-1 overflow-auto border rounded-lg bg-white relative">
-                <table className="w-full border-collapse table-fixed h-full min-h-[840px]">
+                <table className="w-full border-collapse table-fixed h-full min-h-[500px]">
                     <thead className="bg-gray-50 sticky top-0 z-20">
                         <tr>
-                            <th className="w-16 border p-1 text-xs">Time</th>
-                            {DAYS.map(day => <th key={day} className="border p-1 text-xs">{day}</th>)}
+                            <th className="w-16 border py-0.5 px-1 text-xs">Time</th>
+                            {DAYS.map(day => <th key={day} className="border py-0.5 px-1 text-xs">{day}</th>)}
                         </tr>
                     </thead>
                     <tbody>
                         {timeSlots.map((time, idx) => (
-                            <tr key={idx} className="h-14">
-                                <td className="border p-1 text-[10px] text-center text-gray-400 align-top">{time}</td>
+                            <tr key={idx} className="h-[22px]">
+                                <td className="border px-1 text-[9px] text-center text-gray-400 align-middle leading-none">{time}</td>
                                 {DAYS.map(day => (
                                     <td key={day} className="border relative p-0" />
                                 ))}
@@ -94,17 +94,19 @@ export const ResultsView = () => {
                         if (dayIdx === -1) return null;
 
                         // Calculate position
-                        // Header is approx 25px
-                        // Each row is h-14 (56px)
-                        const top = 25 + (slot.start_index * 56);
-                        const height = (slot.end_index - slot.start_index + 1) * 56;
+                        // Header is approx 18px (reduced from 25)
+                        // Each row is 22px (reduced from 56)
+                        const rowHeight = 22;
+                        const headerHeight = 18;
+                        const top = headerHeight + (slot.start_index * rowHeight);
+                        const height = (slot.end_index - slot.start_index + 1) * rowHeight;
                         const left = `calc(4rem + ${(dayIdx / 5) * 100}% - ${dayIdx * 0.2}px)`; // Offset for time column
                         const width = `calc((100% - 4rem) / 5)`;
 
                         return (
                             <div 
                                 key={`${lIdx}-${sIdx}`}
-                                className={`absolute border-l-4 p-1 overflow-hidden flex flex-col justify-center items-center text-center shadow-sm z-10 ${colorClass}`}
+                                className={`absolute border-l-2 p-0.5 overflow-hidden flex flex-col justify-center items-center text-center shadow-sm z-10 ${colorClass}`}
                                 style={{
                                     top: `${top}px`,
                                     height: `${height}px`,
@@ -112,8 +114,8 @@ export const ResultsView = () => {
                                     width: width,
                                 }}
                             >
-                                <div className="text-[10px] font-bold truncate w-full">{lec.name}</div>
-                                <div className="text-[8px] truncate">{lec.prof}</div>
+                                <div className="text-[9px] font-bold truncate w-full leading-tight">{lec.name}</div>
+                                <div className="text-[7px] truncate leading-none">{lec.prof}</div>
                             </div>
                         );
                     });
