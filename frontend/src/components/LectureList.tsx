@@ -2,10 +2,12 @@ import { useApp } from '../context/AppContext';
 import { useState, useMemo } from 'react';
 import { formatTimeString } from '../utils/lectureUtils';
 import { Lecture } from '../types';
+import { HelpCircle, X } from 'lucide-react';
 
 export const LectureList = () => {
     const { allLectures, selectedLectureIds, toggleLectureSelection } = useApp();
     const [searchTerm, setSearchTerm] = useState('');
+    const [showHelp, setShowHelp] = useState(false);
     
     // UI Visibility States
     const [isSearchEnabled, setIsSearchEnabled] = useState(false);
@@ -122,6 +124,81 @@ export const LectureList = () => {
 
     return (
         <div className="flex flex-col h-full relative">
+            {/* Help Button */}
+            <button 
+                onClick={() => setShowHelp(true)}
+                className="absolute top-0 right-32 p-1 text-gray-400 hover:text-blue-600 transition-colors z-30"
+                title="사용법 가이드"
+            >
+                <HelpCircle size={20} />
+            </button>
+
+            {/* Help Modal */}
+            {showHelp && (
+                <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-black/20 backdrop-blur-sm rounded-xl" onClick={() => setShowHelp(false)} />
+                    <div className="bg-white w-full max-w-lg max-h-[90%] overflow-y-auto rounded-xl shadow-2xl border border-gray-200 relative animate-fade-in p-6 text-sm">
+                        <button 
+                            onClick={() => setShowHelp(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-700"
+                        >
+                            <X size={20} />
+                        </button>
+                        
+                        <h3 className="text-lg font-bold text-gray-800 mb-4">사용법 가이드 (User Guide)</h3>
+                        
+                        <div className="space-y-4 text-gray-600">
+                            <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">
+                                <h4 className="font-bold text-blue-700 mb-1">✨ 핵심 기능: 자동 최적화 마법사</h4>
+                                <p>
+                                    같은 과목(예: 공학수학)이라도 <strong>교수님이나 시간이 다른 여러 분반을 모두 체크</strong>해두세요!<br/>
+                                    마법사(알고리즘)가 시간 충돌, 공강 배치, 선호도 등을 고려해 <strong>그중 딱 하나를 자동으로 선택</strong>해줍니다.
+                                </p>
+                            </div>
+
+                            <hr />
+
+                            <div>
+                                <h4 className="font-bold text-gray-800 mb-1">Step 1: 강의 선택</h4>
+                                <p>듣고 싶은 후보 강의들을 모두 체크하세요. 검색과 필터를 활용하면 편합니다.</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold text-gray-800 mb-1">Step 2: 선호도 설정</h4>
+                                <p>
+                                    꼭 듣고 싶은 교수님은 <span className="text-green-600 font-bold">(+)</span>, 
+                                    피하고 싶은 분반은 <span className="text-red-600 font-bold">(-)</span> 점수를 주세요.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold text-gray-800 mb-1">Step 3 & 4: 시간 설정</h4>
+                                <ul className="list-disc pl-5 space-y-1">
+                                    <li><strong>Good Slots:</strong> 수업이 배치되면 좋은 시간 (점심 시간, 오후 등)</li>
+                                    <li><strong>Bad Slots:</strong> 수업을 피하고 싶은 시간 (아침 9시, 금요일 오후 등)</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold text-gray-800 mb-1">Step 5: 가중치(Weight) 조절</h4>
+                                <p>
+                                    무엇이 더 중요한지 설정합니다.
+                                    <br/>"공강(Break Time)을 줄이는 게 중요한가?", "선호 교수님(Preference)을 듣는 게 중요한가?" 등을 조절하세요.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold text-gray-800 mb-1">Step 6: 결과 확인</h4>
+                                <p>
+                                    불만족도(Loss)가 가장 낮은 최적의 시간표들을 보여줍니다. 
+                                    Loss가 0에 가까울수록 완벽한 시간표입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Floating Summary Info */}
             <div className="absolute top-0 right-0 z-30 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-blue-100 flex flex-col items-end text-xs sm:text-sm">
                 <div className="text-gray-500">

@@ -59,7 +59,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     // Load Data
     useEffect(() => {
-        fetch('/lectures.json?t=' + Date.now())
+        const baseUrl = import.meta.env?.BASE_URL || '/';
+        fetch(`${baseUrl}lectures.json?t=${Date.now()}`)
             .then(res => res.json())
             .then(data => {
                 const parsed = data.map((d: any) => parseLecture(d));
