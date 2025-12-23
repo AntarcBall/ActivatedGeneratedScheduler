@@ -30,8 +30,53 @@ export const ResultsView = () => {
         return `${h}:${m}`;
     });
 
+    // Histogram Calculation
+    const scores = generatedTimetables.map(t => t.score);
+    const minScore = Math.min(...scores);
+    const maxScore = Math.max(...scores);
+    const binCount = 40;
+    const range = maxScore - minScore || 1; // avoid div by zero
+    const bins = new Array(binCount).fill(0);
+    
+    scores.forEach(s => {
+        const binIdx = Math.min(
+            Math.floor(((s - minScore) / range) * binCount),
+            binCount - 1
+        );
+        bins[binIdx]++;
+    });
+    const maxFreq = Math.max(...bins, 1);
+
+    const currentScore = current.score;
+    const currentBinIdx = Math.min(
+        Math.floor(((currentScore - minScore) / range) * binCount),
+        binCount - 1
+    );
+
     return (
         <div className="flex flex-col h-full">
+            {/* Loss Distribution Chart */}
+            <div className="mb-4 bg-white p-3 rounded-lg border shadow-sm">
+                <div className="flex justify-between items-end mb-1 text-xs text-gray-500">
+                    <span>Loss Distribution</span>
+                    <span>Min: {minScore.toFixed(1)} ~ Max: {maxScore.toFixed(1)}</span>
+                </div>
+                <div className="h-16 w-full flex items-end space-x-[1px]">
+                    {bins.map((count, idx) => {
+                        const height = (count / maxFreq) * 100;
+                        const isCurrent = idx === currentBinIdx;
+                        return (
+                            <div 
+                                key={idx} 
+                                className={`flex-1 rounded-t-sm transition-all ${isCurrent ? 'bg-blue-500' : 'bg-gray-200'}`}
+                                style={{ height: `${height}%` }}
+                                title={`Range: ${(minScore + (idx/binCount)*range).toFixed(1)} - ${(minScore + ((idx+1)/binCount)*range).toFixed(1)}\nCount: ${count}`}
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+
             {/* Controls */}
             <div className="flex items-center justify-between mb-4 bg-gray-100 p-3 rounded-lg">
                 <button 
