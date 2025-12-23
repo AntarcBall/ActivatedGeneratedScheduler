@@ -121,7 +121,30 @@ export const LectureList = () => {
     }, [filteredLectures]);
 
     return (
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full relative">
+            {/* Floating Summary Info */}
+            <div className="absolute top-0 right-0 z-30 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-blue-100 flex flex-col items-end text-xs sm:text-sm">
+                <div className="text-gray-500">
+                    Selected: <span className="font-bold text-blue-600">{selectedLectureIds.length}</span>
+                </div>
+                <div className="text-gray-500">
+                    Credits: <span className="font-bold text-green-600">
+                        {(() => {
+                            const selectedLectures = allLectures.filter(l => selectedLectureIds.includes(l.id));
+                            const uniqueNames = new Set<string>();
+                            let totalCredits = 0;
+                            selectedLectures.forEach(l => {
+                                if (!uniqueNames.has(l.name)) {
+                                    uniqueNames.add(l.name);
+                                    totalCredits += l.credit || 0;
+                                }
+                            });
+                            return totalCredits.toFixed(1);
+                        })()}
+                    </span>
+                </div>
+            </div>
+
             <div className="mb-4 space-y-3">
                 {/* Search Toggle and Input */}
                 <div className="flex flex-col space-y-2">
@@ -243,11 +266,11 @@ export const LectureList = () => {
                 <table className="w-full text-left border-collapse">
                     <thead className="bg-gray-100 sticky top-0 z-10">
                         <tr>
-                            <th className="p-3 border-b font-semibold">Select</th>
-                            <th className="p-3 border-b font-semibold">Name</th>
-                            <th className="p-3 border-b font-semibold">Prof</th>
-                            <th className="p-3 border-b font-semibold">Section</th>
-                            <th className="p-3 border-b font-semibold">Time</th>
+                            <th className="py-1 px-3 border-b font-semibold">Select</th>
+                            <th className="py-1 px-3 border-b font-semibold">Name</th>
+                            <th className="py-1 px-3 border-b font-semibold">Prof</th>
+                            <th className="py-1 px-3 border-b font-semibold">Section</th>
+                            <th className="py-1 px-3 border-b font-semibold">Time</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -262,7 +285,7 @@ export const LectureList = () => {
                                         onClick={() => toggleLectureSelection(lec.id)}
                                         className={`cursor-pointer hover:bg-blue-50 transition-colors ${isSelected ? 'bg-blue-100' : ''}`}
                                     >
-                                        <td className="p-3 border-b text-center">
+                                        <td className="py-1 px-3 border-b text-center">
                                             <input 
                                                 type="checkbox" 
                                                 checked={isSelected} 
@@ -270,10 +293,10 @@ export const LectureList = () => {
                                                 className="w-4 h-4 text-blue-600"
                                             />
                                         </td>
-                                        <td className="p-3 border-b font-medium">{lec.name}</td>
-                                        <td className="p-3 border-b text-gray-600">{lec.prof}</td>
-                                        <td className="p-3 border-b text-center">{lec.section}</td>
-                                        <td className="p-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
+                                        <td className="py-1 px-3 border-b font-medium">{lec.name}</td>
+                                        <td className="py-1 px-3 border-b text-gray-600">{lec.prof}</td>
+                                        <td className="py-1 px-3 border-b text-center">{lec.section}</td>
+                                        <td className="py-1 px-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
                                     </tr>
                                 );
                             } else {
@@ -286,7 +309,7 @@ export const LectureList = () => {
                                             onClick={(e) => toggleGroup(group.name, e)}
                                             className="cursor-pointer bg-gray-50 hover:bg-gray-100 border-b font-semibold text-gray-700"
                                         >
-                                            <td colSpan={5} className="p-3 pl-4">
+                                            <td colSpan={5} className="py-1 px-3 pl-4">
                                                 <div className="flex items-center">
                                                     <span className="mr-2 transform transition-transform duration-200" style={{ transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)' }}>
                                                         ▶
@@ -306,7 +329,7 @@ export const LectureList = () => {
                                                     onClick={() => toggleLectureSelection(lec.id)}
                                                     className={`cursor-pointer hover:bg-blue-50 transition-colors ${isSelected ? 'bg-blue-100' : 'bg-gray-50/30'}`}
                                                 >
-                                                    <td className="p-3 border-b text-center pl-8">
+                                                    <td className="py-1 px-3 border-b text-center pl-8">
                                                         <input 
                                                             type="checkbox" 
                                                             checked={isSelected} 
@@ -314,10 +337,10 @@ export const LectureList = () => {
                                                             className="w-4 h-4 text-blue-600"
                                                         />
                                                     </td>
-                                                    <td className="p-3 border-b font-medium pl-8">{lec.name}</td>
-                                                    <td className="p-3 border-b text-gray-600">{lec.prof}</td>
-                                                    <td className="p-3 border-b text-center">{lec.section}</td>
-                                                    <td className="p-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
+                                                    <td className="py-1 px-3 border-b font-medium pl-8">{lec.name}</td>
+                                                    <td className="py-1 px-3 border-b text-gray-600">{lec.prof}</td>
+                                                    <td className="py-1 px-3 border-b text-center">{lec.section}</td>
+                                                    <td className="py-1 px-3 border-b text-sm text-gray-500">{formatTimeString(lec.time_slots)}</td>
                                                 </tr>
                                             );
                                         })}
@@ -334,20 +357,6 @@ export const LectureList = () => {
                         )}
                     </tbody>
                 </table>
-            </div>
-            
-            <div className="mt-4 text-sm text-gray-500 flex justify-between items-center">
-                <div>
-                    Selected: <span className="font-bold text-blue-600">{selectedLectureIds.length}</span> lectures
-                </div>
-                <div>
-                    Total Credits: <span className="font-bold text-green-600">
-                        {allLectures
-                            .filter(l => selectedLectureIds.includes(l.id))
-                            .reduce((sum, l) => sum + (l.credit || 0), 0)
-                            .toFixed(1)}
-                    </span>
-                </div>
             </div>
         </div>
     );
