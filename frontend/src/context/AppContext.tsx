@@ -59,7 +59,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     // Load Data
     useEffect(() => {
-        fetch('/lectures.json')
+        fetch('/lectures.json?t=' + Date.now())
             .then(res => res.json())
             .then(data => {
                 const parsed = data.map((d: any) => parseLecture(d));

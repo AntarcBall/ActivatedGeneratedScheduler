@@ -50,6 +50,16 @@ def parse_csv_to_json(csv_path, json_path):
                 prof = row[6]
                 classification = row[7]
                 category = row[12]
+                major_track_str = row[13]
+                
+                # Parse major/track atoms
+                # Remove (*) and split by /
+                major_tracks = []
+                if major_track_str.strip():
+                    cleaned = major_track_str.replace('(*)', '')
+                    parts = cleaned.split('/')
+                    major_tracks = [p.strip() for p in parts if p.strip()]
+
                 credit_str = row[16]
                 credit = float(credit_str) if credit_str.replace('.', '', 1).isdigit() else 0.0
                 time_str = row[21]
@@ -89,6 +99,7 @@ def parse_csv_to_json(csv_path, json_path):
                     "prof": prof,
                     "classification": classification,
                     "category": category,
+                    "major_tracks": major_tracks,
                     "credit": credit,
                     "time_slots": time_slots
                 })
@@ -103,3 +114,5 @@ def parse_csv_to_json(csv_path, json_path):
 
 if __name__ == "__main__":
     parse_csv_to_json("lectures.csv", "lectures.json")
+    # Also save to frontend public folder for development
+    parse_csv_to_json("lectures.csv", "frontend/public/lectures.json")

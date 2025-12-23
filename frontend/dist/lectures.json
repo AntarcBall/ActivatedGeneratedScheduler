@@ -6,6 +6,7 @@
         "prof": "목지수",
         "classification": "기초필수",
         "category": "컴퓨터공학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -27,6 +28,7 @@
         "prof": "장준기",
         "classification": "기초필수",
         "category": "컴퓨터공학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -48,6 +50,7 @@
         "prof": "길현재",
         "classification": "기초필수",
         "category": "컴퓨터공학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -69,6 +72,7 @@
         "prof": "박준혁",
         "classification": "기초필수",
         "category": "공학선택",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -85,6 +89,7 @@
         "prof": "송석호",
         "classification": "기초필수",
         "category": "공학선택",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -101,6 +106,7 @@
         "prof": "이정협",
         "classification": "기초필수",
         "category": "공학선택",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -117,6 +123,7 @@
         "prof": "송민영",
         "classification": "기초필수",
         "category": "공학선택",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -133,6 +140,9 @@
         "prof": "조용철, 김규형, 오용석",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -149,6 +159,9 @@
         "prof": "조용철",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -170,6 +183,9 @@
         "prof": "박포정",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -191,6 +207,7 @@
         "prof": "안흥주",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -212,6 +229,7 @@
         "prof": "Hudson Thomas Bryan",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -233,6 +251,7 @@
         "prof": "Carlos Scarinci",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -254,6 +273,7 @@
         "prof": "Carlos Scarinci",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -275,6 +295,7 @@
         "prof": "미배정",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -296,6 +317,7 @@
         "prof": "DEVECIOGLU DENIZ OLGU",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -317,6 +339,7 @@
         "prof": "DEVECIOGLU DENIZ OLGU",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -338,6 +361,7 @@
         "prof": "DEVECIOGLU DENIZ OLGU",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -359,6 +383,7 @@
         "prof": "김동렬",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -375,6 +400,7 @@
         "prof": "김동렬",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -391,6 +417,7 @@
         "prof": "김동렬",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -407,6 +434,7 @@
         "prof": "김동렬",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -423,6 +451,7 @@
         "prof": "박기성",
         "classification": "기초필수",
         "category": "물리",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -439,6 +468,7 @@
         "prof": "민은선",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -455,6 +485,7 @@
         "prof": "민은선",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -471,6 +502,7 @@
         "prof": "민은선",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -487,6 +519,7 @@
         "prof": "민은선",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -503,6 +536,7 @@
         "prof": "민은선",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -519,6 +553,7 @@
         "prof": "이석규",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -540,6 +575,7 @@
         "prof": "이효상",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -561,6 +597,7 @@
         "prof": "김유리",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -577,6 +614,7 @@
         "prof": "조정아",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -593,6 +631,7 @@
         "prof": "조정아",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -609,6 +648,7 @@
         "prof": "조정아",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -625,6 +665,7 @@
         "prof": "조정아",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -641,6 +682,7 @@
         "prof": "조정아",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -657,6 +699,7 @@
         "prof": "조정아",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -673,6 +716,7 @@
         "prof": "정찬, 곽준명, 김민식",
         "classification": "기초필수",
         "category": "생명과학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -694,6 +738,7 @@
         "prof": "인수일",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -710,6 +755,7 @@
         "prof": "상가라쥬샨무감",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -731,6 +777,7 @@
         "prof": "미배정",
         "classification": "기초필수",
         "category": "화학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -752,6 +799,7 @@
         "prof": "김주한",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -773,6 +821,7 @@
         "prof": "김주한",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -794,6 +843,7 @@
         "prof": "한강진",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -815,6 +865,7 @@
         "prof": "한강진",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -836,6 +887,7 @@
         "prof": "이두석",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -857,6 +909,7 @@
         "prof": "미배정",
         "classification": "기초필수",
         "category": "수학",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -878,6 +931,9 @@
         "prof": "고서진",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -899,6 +955,10 @@
         "prof": "호동해",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학공학",
+            "화학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -920,6 +980,9 @@
         "prof": "김찬연",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -941,6 +1004,11 @@
         "prof": "이호춘",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학",
+            "재료공학",
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -962,6 +1030,11 @@
         "prof": "정병혁",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학",
+            "재료공학",
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -983,6 +1056,9 @@
         "prof": "이윤구",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학"
+        ],
         "credit": 1.0,
         "time_slots": [
             {
@@ -999,6 +1075,9 @@
         "prof": "홍선기, 인수일",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1015,6 +1094,10 @@
         "prof": "김성균",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학",
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1036,6 +1119,10 @@
         "prof": "성주영",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학",
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1057,6 +1144,9 @@
         "prof": "장윤희",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "화학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1078,6 +1168,7 @@
         "prof": "장근영",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 0.0,
         "time_slots": [
             {
@@ -1099,6 +1190,7 @@
         "prof": "정효정",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 0.0,
         "time_slots": [
             {
@@ -1120,6 +1212,10 @@
         "prof": "김선준",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학",
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1141,6 +1237,9 @@
         "prof": "박상현",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1162,6 +1261,10 @@
         "prof": "미배정",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학",
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1183,6 +1286,9 @@
         "prof": "이용우",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1204,6 +1310,9 @@
         "prof": "전민석",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1225,6 +1334,10 @@
         "prof": "이두석",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학",
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1246,6 +1359,9 @@
         "prof": "임성훈",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1267,6 +1383,9 @@
         "prof": "최원석",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "컴퓨터공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1288,6 +1407,9 @@
         "prof": "최재호",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1309,6 +1431,9 @@
         "prof": "윤종혁",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1330,6 +1455,11 @@
         "prof": "이상훈",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학",
+            "물리학",
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1351,6 +1481,10 @@
         "prof": "황재윤",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학",
+            "컴퓨터공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1372,6 +1506,9 @@
         "prof": "서대원",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1393,6 +1530,9 @@
         "prof": "권혁준",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1414,6 +1554,9 @@
         "prof": "김경대, 이성민",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1435,6 +1578,9 @@
         "prof": "김가인",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1456,6 +1602,7 @@
         "prof": "미배정",
         "classification": "심화선택",
         "category": "창업",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1477,6 +1624,7 @@
         "prof": "조성표",
         "classification": "심화선택",
         "category": "창업",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1493,6 +1641,7 @@
         "prof": "Aaron Cumberledge",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1509,6 +1658,7 @@
         "prof": "Aaron Cumberledge",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1525,6 +1675,7 @@
         "prof": "Aaron Cumberledge",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1541,6 +1692,7 @@
         "prof": "Aaron Cumberledge",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1557,6 +1709,7 @@
         "prof": "Benjamin Wilson Riley",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1573,6 +1726,7 @@
         "prof": "Benjamin Wilson Riley",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1589,6 +1743,7 @@
         "prof": "Benjamin Wilson Riley",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1605,6 +1760,7 @@
         "prof": "Benjamin Wilson Riley",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1621,6 +1777,7 @@
         "prof": "Mark Silverlock",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1637,6 +1794,7 @@
         "prof": "Mark Silverlock",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1653,6 +1811,7 @@
         "prof": "Mark Silverlock",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1669,6 +1828,7 @@
         "prof": "Andrew John Miller",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1685,6 +1845,7 @@
         "prof": "Andrew John Miller",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1701,6 +1862,7 @@
         "prof": "이정아",
         "classification": "기초필수",
         "category": "영어",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1717,6 +1879,7 @@
         "prof": "김선구",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1733,6 +1896,7 @@
         "prof": "장하원",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1749,6 +1913,7 @@
         "prof": "김현희",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1765,6 +1930,7 @@
         "prof": "배하은",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1786,6 +1952,7 @@
         "prof": "윤지성",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1807,6 +1974,7 @@
         "prof": "이정아",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1823,6 +1991,7 @@
         "prof": "문준영",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1839,6 +2008,7 @@
         "prof": "배하은",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1860,6 +2030,7 @@
         "prof": "임희현",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1876,6 +2047,7 @@
         "prof": "임희현",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1892,6 +2064,7 @@
         "prof": "전계성",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1908,6 +2081,7 @@
         "prof": "전계성",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1924,6 +2098,7 @@
         "prof": "최태섭",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1940,6 +2115,7 @@
         "prof": "숀센",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1956,6 +2132,7 @@
         "prof": "곽금주",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1972,6 +2149,7 @@
         "prof": "이정덕",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1988,6 +2166,7 @@
         "prof": "박범석",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2004,6 +2183,7 @@
         "prof": "최한경",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -2020,6 +2200,7 @@
         "prof": "최한경",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -2036,6 +2217,7 @@
         "prof": "배하은",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2052,6 +2234,7 @@
         "prof": "김병재",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2068,6 +2251,7 @@
         "prof": "장하원",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2084,6 +2268,7 @@
         "prof": "강유진",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2100,6 +2285,7 @@
         "prof": "문준영",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2116,6 +2302,7 @@
         "prof": "윤지성",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2137,6 +2324,7 @@
         "prof": "조성겸",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2153,6 +2341,7 @@
         "prof": "김병재",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2174,6 +2363,7 @@
         "prof": "함상범",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2190,6 +2380,7 @@
         "prof": "숀센",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2211,6 +2402,7 @@
         "prof": "박범석",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2227,6 +2419,7 @@
         "prof": "곽금주",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2243,6 +2436,7 @@
         "prof": "이정덕",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2259,6 +2453,7 @@
         "prof": "최태섭",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2275,6 +2470,7 @@
         "prof": "김병재",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2296,6 +2492,7 @@
         "prof": "이정아",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2317,6 +2514,7 @@
         "prof": "Mark Silverlock",
         "classification": "기초필수",
         "category": "쓰기·읽기 중점",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2338,6 +2536,7 @@
         "prof": "김소희",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -2354,6 +2553,7 @@
         "prof": "김소희",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -2370,6 +2570,7 @@
         "prof": "김소희",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2386,6 +2587,7 @@
         "prof": "김소희",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2402,6 +2604,7 @@
         "prof": "김회준",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2418,6 +2621,7 @@
         "prof": "김회준",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2434,6 +2638,7 @@
         "prof": "김회준",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2450,6 +2655,7 @@
         "prof": "김회준",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2466,6 +2672,7 @@
         "prof": "김소희",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2482,6 +2689,7 @@
         "prof": "김소희",
         "classification": "심화필수",
         "category": "인턴십",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2498,6 +2706,10 @@
         "prof": "이창훈, 정찬, 조정아",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2519,6 +2731,10 @@
         "prof": "정찬, 이창훈, 조정아",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2540,6 +2756,10 @@
         "prof": "조정아, 정찬, 이창훈",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2561,6 +2781,10 @@
         "prof": "백명인, 정영태",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2582,6 +2806,10 @@
         "prof": "백명인, 정영태",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2603,6 +2831,9 @@
         "prof": "이상임",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2624,6 +2855,10 @@
         "prof": "서병창, 엄지원",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2645,6 +2880,10 @@
         "prof": "현정호, 이효상, 최한경",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2666,6 +2905,10 @@
         "prof": "김진해, 김유리, 이종찬, 이재민",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2687,6 +2930,9 @@
         "prof": "예경무, 이병훈",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2703,6 +2949,9 @@
         "prof": "이병훈, 이송이",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2724,6 +2973,10 @@
         "prof": "백명인, 유성운, 곽준명",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2745,6 +2998,9 @@
         "prof": "이광",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2761,6 +3017,9 @@
         "prof": "이재민, 김은경",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2782,6 +3041,9 @@
         "prof": "김유리, 정찬",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2803,6 +3065,10 @@
         "prof": "유우경, 김민환",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2824,6 +3090,10 @@
         "prof": "이성배",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "생명과학",
+            "뇌과학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2845,6 +3115,9 @@
         "prof": "장경인",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2866,6 +3139,9 @@
         "prof": "김회준, 이성민, 박준혁, 남강현, 정소현, 김기섭",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2882,6 +3158,9 @@
         "prof": "임용섭",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2903,6 +3182,10 @@
         "prof": "박석호",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학",
+            "전자공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2924,6 +3207,10 @@
         "prof": "정소현",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학",
+            "화학공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2940,6 +3227,9 @@
         "prof": "박경서",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2961,6 +3251,9 @@
         "prof": "황민호",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2982,6 +3275,9 @@
         "prof": "이재홍",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3003,6 +3299,9 @@
         "prof": "최경호",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3024,6 +3323,9 @@
         "prof": "이성민",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "기계공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3045,6 +3347,10 @@
         "prof": "이주혁",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "재료공학",
+            "화학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3066,6 +3372,9 @@
         "prof": "김진수, 이성원, 이주혁, 이종수, 이신범",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "재료공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3087,6 +3396,10 @@
         "prof": "김진수",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "재료공학",
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3108,6 +3421,9 @@
         "prof": "김영규",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "재료공학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3129,6 +3445,9 @@
         "prof": "이재동",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3150,6 +3469,9 @@
         "prof": "김소연",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3171,6 +3493,9 @@
         "prof": "미배정",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -3192,6 +3517,9 @@
         "prof": "박기성",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3213,6 +3541,9 @@
         "prof": "최승호",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3234,6 +3565,9 @@
         "prof": "조창희",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3255,6 +3589,9 @@
         "prof": "이기준",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3276,6 +3613,9 @@
         "prof": "홍정일",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3297,6 +3637,9 @@
         "prof": "이종찬",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3313,6 +3656,9 @@
         "prof": "강준구",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3334,6 +3680,9 @@
         "prof": "미배정",
         "classification": "심화필수",
         "category": "트랙",
+        "major_tracks": [
+            "물리학"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3355,6 +3704,7 @@
         "prof": "문제일",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3371,6 +3721,7 @@
         "prof": "유성운",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3387,6 +3738,7 @@
         "prof": "김은경",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3403,6 +3755,7 @@
         "prof": "서병창",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3419,6 +3772,7 @@
         "prof": "김규형",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3435,6 +3789,7 @@
         "prof": "이석규",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3451,6 +3806,7 @@
         "prof": "이성배",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3467,6 +3823,7 @@
         "prof": "오용석",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3483,6 +3840,7 @@
         "prof": "이효상",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3499,6 +3857,7 @@
         "prof": "최한경",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3515,6 +3874,7 @@
         "prof": "유우경",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3531,6 +3891,7 @@
         "prof": "고재원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3547,6 +3908,7 @@
         "prof": "엄지원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3563,6 +3925,7 @@
         "prof": "백명인",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3579,6 +3942,7 @@
         "prof": "이광",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3595,6 +3959,7 @@
         "prof": "현정호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3611,6 +3976,7 @@
         "prof": "조용철",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3627,6 +3993,7 @@
         "prof": "김민환",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3643,6 +4010,7 @@
         "prof": "박포정",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3659,6 +4027,7 @@
         "prof": "구재형",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3675,6 +4044,7 @@
         "prof": "이창훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3691,6 +4061,7 @@
         "prof": "남창훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3707,6 +4078,7 @@
         "prof": "우혜련",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3723,6 +4095,7 @@
         "prof": "곽준명",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3739,6 +4112,7 @@
         "prof": "이영삼",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3755,6 +4129,7 @@
         "prof": "이상임",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3771,6 +4146,7 @@
         "prof": "이병훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3787,6 +4163,7 @@
         "prof": "김민석",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3803,6 +4180,7 @@
         "prof": "이재민",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3819,6 +4197,7 @@
         "prof": "예경무",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3835,6 +4214,7 @@
         "prof": "김진해",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3851,6 +4231,7 @@
         "prof": "이종찬",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3867,6 +4248,7 @@
         "prof": "정영태",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3883,6 +4265,7 @@
         "prof": "김민식",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3899,6 +4282,7 @@
         "prof": "기영훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3915,6 +4299,7 @@
         "prof": "김유리",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3931,6 +4316,7 @@
         "prof": "정찬",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3947,6 +4333,7 @@
         "prof": "최일규",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3963,6 +4350,7 @@
         "prof": "김태완",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3979,6 +4367,7 @@
         "prof": "이송이",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -3995,6 +4384,7 @@
         "prof": "Felix Jonas",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4011,6 +4401,7 @@
         "prof": "오세훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4027,6 +4418,7 @@
         "prof": "김기섭",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4043,6 +4435,7 @@
         "prof": "김동욱",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4059,6 +4452,7 @@
         "prof": "김봉훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4075,6 +4469,7 @@
         "prof": "김소희",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4091,6 +4486,7 @@
         "prof": "김회준",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4107,6 +4503,7 @@
         "prof": "남강현",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4123,6 +4520,7 @@
         "prof": "문인규",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4139,6 +4537,7 @@
         "prof": "박경서",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4155,6 +4554,7 @@
         "prof": "박상현",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4171,6 +4571,7 @@
         "prof": "박석호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4187,6 +4588,7 @@
         "prof": "박준혁",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4203,6 +4605,7 @@
         "prof": "송석호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4219,6 +4622,7 @@
         "prof": "송철",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4235,6 +4639,7 @@
         "prof": "유재석",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4251,6 +4656,7 @@
         "prof": "윤동원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4267,6 +4673,7 @@
         "prof": "이상훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4283,6 +4690,7 @@
         "prof": "이성민",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4299,6 +4707,7 @@
         "prof": "이아형",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4315,6 +4724,7 @@
         "prof": "이옥균",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4331,6 +4741,7 @@
         "prof": "이재홍",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4347,6 +4758,7 @@
         "prof": "임용섭",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4363,6 +4775,7 @@
         "prof": "장경인",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4379,6 +4792,7 @@
         "prof": "정소현",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4395,6 +4809,7 @@
         "prof": "한상윤",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4411,6 +4826,7 @@
         "prof": "황민호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4427,6 +4843,7 @@
         "prof": "홍정일",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4443,6 +4860,7 @@
         "prof": "박기성",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4459,6 +4877,7 @@
         "prof": "김성균",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4475,6 +4894,7 @@
         "prof": "정낙천",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4491,6 +4911,7 @@
         "prof": "조창희",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4507,6 +4928,7 @@
         "prof": "서정필",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4523,6 +4945,7 @@
         "prof": "김철기",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4539,6 +4962,7 @@
         "prof": "정병혁",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4555,6 +4979,7 @@
         "prof": "강준구",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4571,6 +4996,7 @@
         "prof": "박진희",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4587,6 +5013,7 @@
         "prof": "이성원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4603,6 +5030,7 @@
         "prof": "이신범",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4619,6 +5047,7 @@
         "prof": "홍선기",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4635,6 +5064,7 @@
         "prof": "이성기",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4651,6 +5081,7 @@
         "prof": "성주영",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4667,6 +5098,7 @@
         "prof": "김아람",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4683,6 +5115,7 @@
         "prof": "서상원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4699,6 +5132,7 @@
         "prof": "김종구",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4715,6 +5149,7 @@
         "prof": "김소연",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4731,6 +5166,7 @@
         "prof": "문혜원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4747,6 +5183,7 @@
         "prof": "이호춘",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4763,6 +5200,7 @@
         "prof": "이윤구",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4779,6 +5217,7 @@
         "prof": "상가라쥬샨무감",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4795,6 +5234,7 @@
         "prof": "이종수",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4811,6 +5251,7 @@
         "prof": "인수일",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4827,6 +5268,7 @@
         "prof": "최승호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4843,6 +5285,7 @@
         "prof": "장윤희",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4859,6 +5302,7 @@
         "prof": "이주혁",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4875,6 +5319,7 @@
         "prof": "양지웅",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4891,6 +5336,7 @@
         "prof": "김찬연",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4907,6 +5353,7 @@
         "prof": "호동해",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4923,6 +5370,7 @@
         "prof": "김운혁",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4939,6 +5387,7 @@
         "prof": "김진수",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4955,6 +5404,7 @@
         "prof": "이종민",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4971,6 +5421,7 @@
         "prof": "고서진",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -4987,6 +5438,7 @@
         "prof": "김승현",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5003,6 +5455,7 @@
         "prof": "장재은",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5019,6 +5472,7 @@
         "prof": "박경준",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5035,6 +5489,7 @@
         "prof": "은용순",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5051,6 +5506,7 @@
         "prof": "이기준",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5067,6 +5523,7 @@
         "prof": "황재윤",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5083,6 +5540,7 @@
         "prof": "이정협",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5099,6 +5557,7 @@
         "prof": "권혁준",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5115,6 +5574,7 @@
         "prof": "김경대",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5131,6 +5591,7 @@
         "prof": "신동훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5147,6 +5608,7 @@
         "prof": "임성훈",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5163,6 +5625,7 @@
         "prof": "김선준",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5179,6 +5642,7 @@
         "prof": "장진호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5195,6 +5659,7 @@
         "prof": "김예성",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5211,6 +5676,7 @@
         "prof": "윤종혁",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5227,6 +5693,7 @@
         "prof": "김백규",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5243,6 +5710,7 @@
         "prof": "서대원",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5259,6 +5727,7 @@
         "prof": "김가인",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5275,6 +5744,7 @@
         "prof": "송민영",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5291,6 +5761,7 @@
         "prof": "김영식",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5307,6 +5778,7 @@
         "prof": "이경태",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5323,6 +5795,7 @@
         "prof": "소진현",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5339,6 +5812,7 @@
         "prof": "이병권",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5355,6 +5829,7 @@
         "prof": "이병문",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5371,6 +5846,7 @@
         "prof": "최재호",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5387,6 +5863,7 @@
         "prof": "박대희",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5403,6 +5880,7 @@
         "prof": "최원석",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5419,6 +5897,7 @@
         "prof": "이용우",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5435,6 +5914,7 @@
         "prof": "김기섭",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5451,6 +5931,7 @@
         "prof": "최상현",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5467,6 +5948,7 @@
         "prof": "전민석",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5483,6 +5965,7 @@
         "prof": "길현재",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5499,6 +5982,7 @@
         "prof": "장준기",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5515,6 +5999,7 @@
         "prof": "목지수",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5531,6 +6016,7 @@
         "prof": "이민선",
         "classification": "심화선택",
         "category": "Thesis",
+        "major_tracks": [],
         "credit": 1.0,
         "time_slots": [
             {
@@ -5547,6 +6033,7 @@
         "prof": "문제일",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5563,6 +6050,7 @@
         "prof": "유성운",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5579,6 +6067,7 @@
         "prof": "김은경",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5595,6 +6084,7 @@
         "prof": "서병창",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5611,6 +6101,7 @@
         "prof": "김규형",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5627,6 +6118,7 @@
         "prof": "이석규",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5643,6 +6135,7 @@
         "prof": "이성배",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5659,6 +6152,7 @@
         "prof": "오용석",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5675,6 +6169,7 @@
         "prof": "이효상",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5691,6 +6186,7 @@
         "prof": "최한경",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5707,6 +6203,7 @@
         "prof": "김운혁",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5723,6 +6220,7 @@
         "prof": "김진수",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5739,6 +6237,7 @@
         "prof": "이종민",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5755,6 +6254,7 @@
         "prof": "고서진",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5771,6 +6271,7 @@
         "prof": "김승현",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5787,6 +6288,7 @@
         "prof": "장재은",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5803,6 +6305,7 @@
         "prof": "박경준",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5819,6 +6322,7 @@
         "prof": "은용순",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5835,6 +6339,7 @@
         "prof": "이기준",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5851,6 +6356,7 @@
         "prof": "황재윤",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5867,6 +6373,7 @@
         "prof": "유우경",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5883,6 +6390,7 @@
         "prof": "이정협",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5899,6 +6407,7 @@
         "prof": "권혁준",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5915,6 +6424,7 @@
         "prof": "김경대",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5931,6 +6441,7 @@
         "prof": "신동훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5947,6 +6458,7 @@
         "prof": "임성훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5963,6 +6475,7 @@
         "prof": "김선준",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5979,6 +6492,7 @@
         "prof": "장진호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -5995,6 +6509,7 @@
         "prof": "김예성",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6011,6 +6526,7 @@
         "prof": "윤종혁",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6027,6 +6543,7 @@
         "prof": "김백규",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6043,6 +6560,7 @@
         "prof": "고재원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6059,6 +6577,7 @@
         "prof": "서대원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6075,6 +6594,7 @@
         "prof": "김가인",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6091,6 +6611,7 @@
         "prof": "송민영",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6107,6 +6628,7 @@
         "prof": "김영식",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6123,6 +6645,7 @@
         "prof": "이경태",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6139,6 +6662,7 @@
         "prof": "소진현",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6155,6 +6679,7 @@
         "prof": "이병권",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6171,6 +6696,7 @@
         "prof": "이병문",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6187,6 +6713,7 @@
         "prof": "최재호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6203,6 +6730,7 @@
         "prof": "박대희",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6219,6 +6747,7 @@
         "prof": "엄지원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6235,6 +6764,7 @@
         "prof": "최일규",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6251,6 +6781,7 @@
         "prof": "이용우",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6267,6 +6798,7 @@
         "prof": "김기섭",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6283,6 +6815,7 @@
         "prof": "최상현",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6299,6 +6832,7 @@
         "prof": "전민석",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6315,6 +6849,7 @@
         "prof": "길현재",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6331,6 +6866,7 @@
         "prof": "장준기",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6347,6 +6883,7 @@
         "prof": "목지수",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6363,6 +6900,7 @@
         "prof": "이민선",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6379,6 +6917,7 @@
         "prof": "백명인",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6395,6 +6934,7 @@
         "prof": "이광",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6411,6 +6951,7 @@
         "prof": "현정호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6427,6 +6968,7 @@
         "prof": "조용철",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6443,6 +6985,7 @@
         "prof": "김민환",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6459,6 +7002,7 @@
         "prof": "박포정",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6475,6 +7019,7 @@
         "prof": "구재형",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6491,6 +7036,7 @@
         "prof": "이창훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6507,6 +7053,7 @@
         "prof": "남창훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6523,6 +7070,7 @@
         "prof": "우혜련",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6539,6 +7087,7 @@
         "prof": "곽준명",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6555,6 +7104,7 @@
         "prof": "이영삼",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6571,6 +7121,7 @@
         "prof": "이상임",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6587,6 +7138,7 @@
         "prof": "이병훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6603,6 +7155,7 @@
         "prof": "김민석",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6619,6 +7172,7 @@
         "prof": "이재민",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6635,6 +7189,7 @@
         "prof": "예경무",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6651,6 +7206,7 @@
         "prof": "김진해",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6667,6 +7223,7 @@
         "prof": "이종찬",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6683,6 +7240,7 @@
         "prof": "정영태",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6699,6 +7257,7 @@
         "prof": "김민식",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6715,6 +7274,7 @@
         "prof": "기영훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6731,6 +7291,7 @@
         "prof": "김유리",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6747,6 +7308,7 @@
         "prof": "정찬",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6763,6 +7325,7 @@
         "prof": "최일규",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6779,6 +7342,7 @@
         "prof": "김태완",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6795,6 +7359,7 @@
         "prof": "이송이",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6811,6 +7376,7 @@
         "prof": "Felix Jonas",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6827,6 +7393,7 @@
         "prof": "오세훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6843,6 +7410,7 @@
         "prof": "김기섭",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6859,6 +7427,7 @@
         "prof": "김동욱",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6875,6 +7444,7 @@
         "prof": "김봉훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6891,6 +7461,7 @@
         "prof": "김소희",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6907,6 +7478,7 @@
         "prof": "김회준",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6923,6 +7495,7 @@
         "prof": "남강현",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6939,6 +7512,7 @@
         "prof": "문인규",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6955,6 +7529,7 @@
         "prof": "박경서",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6971,6 +7546,7 @@
         "prof": "박상현",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -6987,6 +7563,7 @@
         "prof": "박석호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7003,6 +7580,7 @@
         "prof": "박준혁",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7019,6 +7597,7 @@
         "prof": "송석호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7035,6 +7614,7 @@
         "prof": "송철",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7051,6 +7631,7 @@
         "prof": "유재석",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7067,6 +7648,7 @@
         "prof": "윤동원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7083,6 +7665,7 @@
         "prof": "이상훈",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7099,6 +7682,7 @@
         "prof": "이성민",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7115,6 +7699,7 @@
         "prof": "이아형",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7131,6 +7716,7 @@
         "prof": "이옥균",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7147,6 +7733,7 @@
         "prof": "이재홍",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7163,6 +7750,7 @@
         "prof": "임용섭",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7179,6 +7767,7 @@
         "prof": "장경인",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7195,6 +7784,7 @@
         "prof": "정소현",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7211,6 +7801,7 @@
         "prof": "한상윤",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7227,6 +7818,7 @@
         "prof": "황민호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7243,6 +7835,7 @@
         "prof": "홍정일",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7259,6 +7852,7 @@
         "prof": "박기성",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7275,6 +7869,7 @@
         "prof": "김성균",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7291,6 +7886,7 @@
         "prof": "정낙천",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7307,6 +7903,7 @@
         "prof": "조창희",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7323,6 +7920,7 @@
         "prof": "서정필",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7339,6 +7937,7 @@
         "prof": "김철기",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7355,6 +7954,7 @@
         "prof": "정병혁",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7371,6 +7971,7 @@
         "prof": "강준구",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7387,6 +7988,7 @@
         "prof": "박진희",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7403,6 +8005,7 @@
         "prof": "이성원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7419,6 +8022,7 @@
         "prof": "이신범",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7435,6 +8039,7 @@
         "prof": "홍선기",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7451,6 +8056,7 @@
         "prof": "이성기",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7467,6 +8073,7 @@
         "prof": "성주영",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7483,6 +8090,7 @@
         "prof": "김아람",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7499,6 +8107,7 @@
         "prof": "서상원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7515,6 +8124,7 @@
         "prof": "김종구",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7531,6 +8141,7 @@
         "prof": "김소연",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7547,6 +8158,7 @@
         "prof": "문혜원",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7563,6 +8175,7 @@
         "prof": "이호춘",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7579,6 +8192,7 @@
         "prof": "이윤구",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7595,6 +8209,7 @@
         "prof": "상가라쥬샨무감",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7611,6 +8226,7 @@
         "prof": "이종수",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7627,6 +8243,7 @@
         "prof": "인수일",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7643,6 +8260,7 @@
         "prof": "최승호",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7659,6 +8277,7 @@
         "prof": "장윤희",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7675,6 +8294,7 @@
         "prof": "이주혁",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7691,6 +8311,7 @@
         "prof": "양지웅",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7707,6 +8328,7 @@
         "prof": "김찬연",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7723,6 +8345,7 @@
         "prof": "호동해",
         "classification": "심화선택",
         "category": "URP",
+        "major_tracks": [],
         "credit": 2.0,
         "time_slots": [
             {
@@ -7739,6 +8362,7 @@
         "prof": "박종래",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7755,6 +8379,7 @@
         "prof": "인수일",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7771,6 +8396,7 @@
         "prof": "조성겸",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7787,6 +8413,7 @@
         "prof": "김선구",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7803,6 +8430,7 @@
         "prof": "박종래",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7819,6 +8447,7 @@
         "prof": "남창훈",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7835,6 +8464,7 @@
         "prof": "안흥주",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7856,6 +8486,7 @@
         "prof": "Hudson Thomas Bryan",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {
@@ -7877,6 +8508,7 @@
         "prof": "한강진",
         "classification": "심화필수",
         "category": "비트랙/융합",
+        "major_tracks": [],
         "credit": 3.0,
         "time_slots": [
             {

@@ -26,8 +26,30 @@ export const LectureList = () => {
     // Group Expansion State
     const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
 
+    // Dynamic Major Tracks Filter
+    const [selectedMajors, setSelectedMajors] = useState<Set<string>>(new Set());
+
+    const uniqueMajors = useMemo(() => {
+        const majors = new Set<string>();
+        allLectures.forEach(lec => {
+            if (lec.major_tracks) {
+                lec.major_tracks.forEach(track => majors.add(track));
+            }
+        });
+        return Array.from(majors).sort();
+    }, [allLectures]);
+
     const toggleFilter = (key: keyof typeof filters) => {
         setFilters(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const toggleMajor = (major: string) => {
+        setSelectedMajors(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(major)) newSet.delete(major);
+            else newSet.add(major);
+            return newSet;
+        });
     };
 
     const toggleGroup = (name: string, e: React.MouseEvent) => {
@@ -51,7 +73,7 @@ export const LectureList = () => {
 
             // 2. Category Filter (if enabled)
             if (isFilterEnabled) {
-                const hasAnyFilterChecked = Object.values(filters).some(v => v);
+                const hasAnyFilterChecked = Object.values(filters).some(v => v) || selectedMajors.size > 0;
                 if (!hasAnyFilterChecked) return false;
 
                 const classification = lec.classification || '';
@@ -66,12 +88,14 @@ export const LectureList = () => {
                 const matchesWrite = filters.writingReading && category === '쓰기·읽기 중점';
                 const matchesNonTrack = filters.nonTrackConvergence && category === '비트랙/융합';
 
-                return matchesBasic || matchesMath || matchesPhy || matchesChem || matchesBio || matchesTrack || matchesWrite || matchesNonTrack;
+                const matchesMajor = lec.major_tracks ? lec.major_tracks.some(track => selectedMajors.has(track)) : false;
+
+                return matchesBasic || matchesMath || matchesPhy || matchesChem || matchesBio || matchesTrack || matchesWrite || matchesNonTrack || matchesMajor;
             }
 
             return true;
         });
-    }, [allLectures, searchTerm, isFilterEnabled, filters]);
+    }, [allLectures, searchTerm, isFilterEnabled, filters, selectedMajors]);
 
     // Grouping Logic
     const groupedLectures = useMemo(() => {
@@ -146,6 +170,7 @@ export const LectureList = () => {
                                     writingReading: false,
                                     nonTrackConvergence: false
                                 });
+                                setSelectedMajors(new Set());
                             }
                         }}
                         className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
@@ -190,6 +215,26 @@ export const LectureList = () => {
                             <input type="checkbox" checked={filters.nonTrackConvergence} onChange={() => toggleFilter('nonTrackConvergence')} className="text-blue-600 rounded" />
                             <span>비트랙/융합 (Non-Track/Convergence)</span>
                         </label>
+                        
+                        {/* Dynamic Major/Track Filters */}
+                        {uniqueMajors.length > 0 && (
+                            <div className="col-span-2 md:col-span-4 border-t my-1 pt-2">
+                                <span className="font-semibold text-gray-600 block mb-2">전공/트랙 (Majors/Tracks)</span>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                                    {uniqueMajors.map(major => (
+                                        <label key={major} className="flex items-center space-x-2 cursor-pointer">
+                                            <input 
+                                                type="checkbox" 
+                                                checked={selectedMajors.has(major)} 
+                                                onChange={() => toggleMajor(major)} 
+                                                className="text-blue-600 rounded" 
+                                            />
+                                            <span>{major}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

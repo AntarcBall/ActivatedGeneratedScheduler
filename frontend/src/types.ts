@@ -21,6 +21,7 @@ export interface RawLecture {
     prof: string;
     classification?: string;
     category?: string;
+    major_tracks?: string[];
     credit?: number;
     time_slots: RawTimeSlot[];
 }
@@ -32,6 +33,7 @@ export interface Lecture {
     prof: string;
     classification?: string;
     category?: string;
+    major_tracks?: string[];
     credit?: number;
     time_slots: TimeSlot[];
     selected: boolean;
