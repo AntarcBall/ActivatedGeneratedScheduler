@@ -48,28 +48,28 @@ export const TimeSelector = ({ type }: TimeSelectorProps) => {
     };
 
     return (
-        <div className="space-y-6" onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+        <div className="flex flex-col h-full space-y-3 min-h-0" onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <div className="bg-white rounded-xl p-3 border border-gray-100 shadow-sm flex-shrink-0">
+                <h3 className="text-lg font-bold text-gray-900 mb-0.5">
                     {type === 'good' ? t.goodTitle : t.badTitle}
                 </h3>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-500 text-[10px]">
                     {type === 'good' ? t.goodDesc : t.badDesc}
                 </p>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden select-none">
-                <div className="grid grid-cols-[80px_repeat(5,1fr)] divide-x divide-gray-100">
-                    <div className="bg-gray-50 py-4"></div>
+            <div className="flex-1 bg-white rounded-2xl border border-gray-100 shadow-xl overflow-y-auto custom-scrollbar select-none min-h-0">
+                <div className="grid grid-cols-[60px_repeat(5,1fr)] divide-x divide-gray-100">
+                    <div className="bg-gray-50 py-2 sticky top-0 z-10 border-b border-gray-100"></div>
                     {DAYS.map(day => (
-                        <div key={day} className="bg-gray-50 py-4 text-center font-bold text-gray-600 text-sm">
+                        <div key={day} className="bg-gray-50 py-2 text-center font-bold text-gray-600 text-[10px] uppercase tracking-wider sticky top-0 z-10 border-b border-gray-100">
                             {day}
                         </div>
                     ))}
 
                     {SLOTS.map(slot => (
                         <React.Fragment key={slot}>
-                            <div className="py-2 px-3 text-right text-[10px] font-bold text-gray-400 bg-gray-50/50 flex items-center justify-end">
+                            <div className="py-1.5 px-2 text-right text-[9px] font-black text-gray-300 bg-gray-50/50 flex items-center justify-end border-b border-gray-50">
                                 {formatSingleSlotTime(slot)}
                             </div>
                             {DAYS.map(day => (
@@ -77,7 +77,7 @@ export const TimeSelector = ({ type }: TimeSelectorProps) => {
                                     key={`${day}-${slot}`}
                                     onMouseDown={() => handleMouseDown(day, slot)}
                                     onMouseEnter={() => handleMouseEnter(day, slot)}
-                                    className={`h-10 cursor-pointer transition-all duration-100 border-t border-gray-50 ${
+                                    className={`h-8 cursor-pointer transition-all duration-75 border-b border-gray-50 ${
                                         selectedSlots[day].includes(slot)
                                             ? type === 'good' 
                                                 ? 'bg-blue-500 shadow-inner' 

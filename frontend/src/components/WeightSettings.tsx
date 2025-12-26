@@ -11,29 +11,29 @@ export const WeightSettings = () => {
     const labels = [t.fitGood, t.fitBad, t.breakTime, t.preferLectures];
 
     return (
-        <div className="space-y-8 max-w-3xl mx-auto">
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm flex items-center justify-between">
+        <div className="flex flex-col h-full space-y-4 max-w-3xl mx-auto min-h-0">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm flex items-center justify-between flex-shrink-0">
                 <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">{t.title}</h3>
-                    <p className="text-gray-500 text-sm">{t.desc}</p>
+                    <h3 className="text-lg font-bold text-gray-900">{t.title}</h3>
+                    <p className="text-gray-500 text-[10px]">{t.desc}</p>
                 </div>
                 <button 
                     onClick={() => setShowHelp(true)}
-                    className="p-3 bg-blue-50 text-blue-600 rounded-xl hover:bg-blue-100 transition-colors shadow-sm"
+                    className="p-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors shadow-sm"
                 >
-                    <HelpCircle className="w-6 h-6" />
+                    <HelpCircle className="w-5 h-5" />
                 </button>
             </div>
 
-            <div className="grid gap-6">
+            <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar space-y-3 pb-4">
                 {weights.map((w, i) => (
-                    <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm space-y-6">
+                    <div key={i} className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm space-y-4">
                         <div className="flex items-center justify-between">
-                            <span className="text-lg font-bold text-gray-800">{labels[i]}</span>
-                            <div className="flex items-center gap-4 bg-gray-50 p-1 rounded-xl border border-gray-100">
+                            <span className="text-base font-bold text-gray-800">{labels[i]}</span>
+                            <div className="flex items-center gap-3 bg-gray-50 p-1 rounded-lg border border-gray-100">
                                 <button 
                                     onClick={() => toggleRss(i)}
-                                    className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                                    className={`px-3 py-1 rounded-md text-[9px] font-black transition-all ${
                                         w.rss 
                                             ? 'bg-blue-600 text-white shadow-md' 
                                             : 'text-gray-400 hover:text-gray-600'
@@ -41,16 +41,16 @@ export const WeightSettings = () => {
                                 >
                                     RSS (Squared)
                                 </button>
-                                <span className="pr-4 text-blue-600 font-black text-xl w-8 text-center">{w.weight}</span>
+                                <span className="pr-2 text-blue-600 font-black text-lg w-6 text-center">{w.weight}</span>
                             </div>
                         </div>
                         <input 
                             type="range" min="0" max="10" step="1"
                             value={w.weight}
                             onChange={(e) => setWeight(i, parseInt(e.target.value))}
-                            className="w-full h-2 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
                         />
-                        <div className="flex justify-between text-[10px] font-black text-gray-300 uppercase tracking-widest">
+                        <div className="flex justify-between text-[8px] font-black text-gray-300 uppercase tracking-widest">
                             <span>Relaxed</span>
                             <span>Strict</span>
                         </div>
