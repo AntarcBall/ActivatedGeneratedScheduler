@@ -4,6 +4,24 @@ import { formatSingleSlotTime } from '../utils/lectureUtils';
 import { ChevronLeft, ChevronRight, Trophy, BookOpen, Clock } from 'lucide-react';
 import { translations } from '../translations';
 
+const COLORS = [
+    'bg-red-100 text-red-900 border-red-200',
+    'bg-orange-100 text-orange-900 border-orange-200',
+    'bg-amber-100 text-amber-900 border-amber-200',
+    'bg-lime-100 text-lime-900 border-lime-200',
+    'bg-emerald-100 text-emerald-900 border-emerald-200',
+    'bg-teal-100 text-teal-900 border-teal-200',
+    'bg-cyan-100 text-cyan-900 border-cyan-200',
+    'bg-sky-100 text-sky-900 border-sky-200',
+    'bg-blue-100 text-blue-900 border-blue-200',
+    'bg-indigo-100 text-indigo-900 border-indigo-200',
+    'bg-violet-100 text-violet-900 border-violet-200',
+    'bg-purple-100 text-purple-900 border-purple-200',
+    'bg-fuchsia-100 text-fuchsia-900 border-fuchsia-200',
+    'bg-pink-100 text-pink-900 border-pink-200',
+    'bg-rose-100 text-rose-900 border-rose-200',
+];
+
 export const ResultsView = () => {
     const { generatedTimetables, language } = useApp();
     const t = translations[language].results;
@@ -70,33 +88,55 @@ export const ResultsView = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 {/* Timetable Grid */}
-                <div className="lg:col-span-8 bg-white rounded-3xl border border-gray-100 shadow-2xl overflow-hidden p-6">
-                    <div className="grid grid-cols-[60px_repeat(5,1fr)] gap-2">
-                        <div className="h-10" />
+                <div className="lg:col-span-8 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden p-4">
+                    <div className="grid grid-cols-[50px_repeat(5,1fr)] gap-0 border-l border-t border-gray-100">
+                        <div className="h-8 bg-gray-50 border-r border-b border-gray-100" />
                         {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map(day => (
-                            <div key={day} className="h-10 flex items-center justify-center font-black text-xs text-gray-400 uppercase tracking-widest">
+                            <div key={day} className="h-8 flex items-center justify-center font-black text-[10px] text-gray-400 uppercase tracking-widest bg-gray-50 border-r border-b border-gray-100">
                                 {day}
                             </div>
                         ))}
                         
                         {Array.from({ length: 24 }).map((_, slotIdx) => (
                             <React.Fragment key={slotIdx}>
-                                <div className="h-12 flex items-center justify-end pr-3 text-[10px] font-bold text-gray-300">
+                                <div key={`t-${slotIdx}`} className="h-[22px] flex items-center justify-end pr-2 text-[8px] font-bold text-gray-300 bg-gray-50/30 border-r border-b border-gray-100">
                                     {formatSingleSlotTime(slotIdx)}
                                 </div>
                                 {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map(day => {
                                     const lecture = current.lectures.find(l => 
                                         l.time_slots.some(s => s.day === day && slotIdx >= s.start_index && slotIdx <= s.end_index)
                                     );
+                                    
+                                    const slot = lecture?.time_slots.find(s => s.day === day && slotIdx >= s.start_index && slotIdx <= s.end_index);
+                                    const isStart = slot && slot.start_index === slotIdx;
+                                    const isEnd = slot && slot.end_index === slotIdx;
+                                    
+                                    const colorClass = lecture 
+                                        ? COLORS[current.lectures.indexOf(lecture) % COLORS.length] 
+                                        : 'bg-white';
+
+                                    const borderClass = lecture
+                                        ? `border-l border-r ${isStart ? 'border-t' : 'border-t-0'} ${isEnd ? 'border-b' : 'border-b-0'} ${colorClass.split(' ').pop().replace('border-', 'border-opacity-50 border-')}`
+                                        : 'border-r border-b border-gray-50';
+
                                     return (
                                         <div 
                                             key={`${day}-${slotIdx}`} 
-                                            className={`h-12 rounded-lg border border-transparent transition-all ${
-                                                lecture ? 'bg-blue-600 shadow-lg shadow-blue-100 border-blue-400/20' : 'bg-gray-50/50'
-                                            }`}
-                                        />
+                                            className={`h-[22px] transition-all overflow-hidden ${colorClass} ${borderClass} ${lecture ? 'z-10' : ''}`}
+                                        >
+                                            {isStart && lecture && (
+                                                <div className="px-1 py-0.5 h-full flex flex-col justify-center leading-[1.1]">
+                                                    <div className="font-bold text-[8px] truncate text-gray-900">
+                                                        {lecture.name}
+                                                    </div>
+                                                    <div className="text-[7px] opacity-90 truncate font-medium">
+                                                        S{lecture.section} · {lecture.prof}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
                                     );
                                 })}
                             </React.Fragment>
@@ -116,25 +156,30 @@ export const ResultsView = () => {
                         </div>
                     </div>
 
-                    {current.lectures.map(lec => (
-                        <div key={lec.id} className="group bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                            <div className="flex items-start justify-between mb-3">
-                                <span className="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-black rounded-lg uppercase tracking-wider">
-                                    Section {lec.section}
-                                </span>
-                                <span className="text-[10px] font-bold text-gray-300">{lec.credit} Credits</span>
-                            </div>
-                            <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{lec.name}</h4>
-                            <p className="text-sm text-gray-500 font-medium">{lec.prof}</p>
-                            <div className="mt-4 pt-4 border-t border-gray-50 flex flex-wrap gap-2">
-                                {lec.time_slots.map((s, i) => (
-                                    <span key={i} className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">
-                                        {s.day} {formatSingleSlotTime(s.start_index)}
+                    <div className="space-y-4 max-h-[600px] overflow-y-auto custom-scrollbar pr-2">
+                        {current.lectures.map((lec, idx) => (
+                            <div key={lec.id} className={`group bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden`}>
+                                <div className={`absolute top-0 left-0 w-1.5 h-full ${COLORS[idx % COLORS.length].split(' ')[0]}`} />
+                                <div className="flex items-start justify-between mb-3 pl-3">
+                                    <span className="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-black rounded-lg uppercase tracking-wider">
+                                        Section {lec.section}
                                     </span>
-                                ))}
+                                    <span className="text-[10px] font-bold text-gray-300">{lec.credit} Credits</span>
+                                </div>
+                                <div className="pl-3">
+                                    <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{lec.name}</h4>
+                                    <p className="text-sm text-gray-500 font-medium">{lec.prof}</p>
+                                    <div className="mt-4 pt-4 border-t border-gray-50 flex flex-wrap gap-2">
+                                        {lec.time_slots.map((s, i) => (
+                                            <span key={i} className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">
+                                                {s.day} {formatSingleSlotTime(s.start_index)}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
