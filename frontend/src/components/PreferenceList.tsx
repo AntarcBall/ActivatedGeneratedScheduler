@@ -1,5 +1,5 @@
 import { useApp } from '../context/AppContext';
-import { formatTimeString } from '../utils/lectureUtils';
+import { formatSingleSlotTime } from '../utils/lectureUtils';
 import { useMemo } from 'react';
 import { translations } from '../translations';
 import { Minus, Plus } from 'lucide-react';
@@ -50,7 +50,7 @@ export const PreferenceList = () => {
                                             <div className="text-sm text-gray-400">
                                                 {lec.time_slots.map((s, i) => (
                                                     <span key={i}>
-                                                        {s.day} {formatTimeString(s.start_index)}-{formatTimeString(s.end_index + 1)}
+                                                        {s.day} {formatSingleSlotTime(s.start_index)}-{formatSingleSlotTime(s.end_index + 1)}
                                                         {i < lec.time_slots.length - 1 && ', '}
                                                     </span>
                                                 ))}
