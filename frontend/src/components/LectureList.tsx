@@ -13,23 +13,11 @@ export const LectureList = () => {
     const [isSearchEnabled, setIsSearchEnabled] = useState(false);
     const [isFilterEnabled, setIsFilterEnabled] = useState(false);
     
-    // Filter States
-    const [filters, setFilters] = useState({
-        basicMandatory: false, // 기초필수
-        math: false,           // 수학
-        physics: false,        // 물리
-        chemistry: false,      // 화학
-        biology: false,        // 생명과학
-        track: false,          // 트랙
-        writingReading: false, // 쓰기·읽기 중점
-        nonTrackConvergence: false // 비트랙/융합
-    });
+    // Filter State (Single selection for Radio behavior)
+    const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
     // Group Expansion State
     const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
-
-    // Dynamic Major Tracks Filter
-    const [selectedMajors, setSelectedMajors] = useState<Set<string>>(new Set());
 
     const uniqueMajors = useMemo(() => {
         const majors = new Set<string>();
@@ -41,17 +29,8 @@ export const LectureList = () => {
         return Array.from(majors).sort();
     }, [allLectures]);
 
-    const toggleFilter = (key: keyof typeof filters) => {
-        setFilters(prev => ({ ...prev, [key]: !prev[key] }));
-    };
-
-    const toggleMajor = (major: string) => {
-        setSelectedMajors(prev => {
-            const newSet = new Set(prev);
-            if (newSet.has(major)) newSet.delete(major);
-            else newSet.add(major);
-            return newSet;
-        });
+    const handleFilterChange = (filter: string) => {
+        setActiveFilter(filter);
     };
 
     const toggleGroup = (name: string, e: React.MouseEvent) => {
@@ -75,29 +54,31 @@ export const LectureList = () => {
 
             // 2. Category Filter (if enabled)
             if (isFilterEnabled) {
-                const hasAnyFilterChecked = Object.values(filters).some(v => v) || selectedMajors.size > 0;
-                if (!hasAnyFilterChecked) return false;
+                if (!activeFilter) return false;
 
                 const classification = lec.classification || '';
                 const category = lec.category || '';
 
-                const matchesBasic = filters.basicMandatory && classification === '기초필수';
-                const matchesMath = filters.math && category === '수학';
-                const matchesPhy = filters.physics && category === '물리';
-                const matchesChem = filters.chemistry && category === '화학';
-                const matchesBio = filters.biology && category === '생명과학';
-                const matchesTrack = filters.track && category === '트랙';
-                const matchesWrite = filters.writingReading && category === '쓰기·읽기 중점';
-                const matchesNonTrack = filters.nonTrackConvergence && category === '비트랙/융합';
+                if (activeFilter === 'basicMandatory') return classification === '기초필수';
+                if (activeFilter === 'math') return category === '수학';
+                if (activeFilter === 'physics') return category === '물리';
+                if (activeFilter === 'chemistry') return category === '화학';
+                if (activeFilter === 'biology') return category === '생명과학';
+                if (activeFilter === 'track') return category === '트랙';
+                if (activeFilter === 'writingReading') return category === '쓰기·읽기 중점';
+                if (activeFilter === 'nonTrackConvergence') return category === '비트랙/융합';
+                
+                // Check if it matches a major track
+                if (lec.major_tracks && lec.major_tracks.includes(activeFilter)) {
+                    return true;
+                }
 
-                const matchesMajor = lec.major_tracks ? lec.major_tracks.some(track => selectedMajors.has(track)) : false;
-
-                return matchesBasic || matchesMath || matchesPhy || matchesChem || matchesBio || matchesTrack || matchesWrite || matchesNonTrack || matchesMajor;
+                return false;
             }
 
             return true;
         });
-    }, [allLectures, searchTerm, isFilterEnabled, filters, selectedMajors]);
+    }, [allLectures, searchTerm, isFilterEnabled, activeFilter]);
 
     // Grouping Logic
     const groupedLectures = useMemo(() => {
@@ -121,6 +102,40 @@ export const LectureList = () => {
 
         return orderedGroups;
     }, [filteredLectures]);
+
+    // Calculate Info Box Stats
+    const stats = useMemo(() => {
+        const selectedLectures = allLectures.filter(l => selectedLectureIds.includes(l.id));
+        const groups: Record<string, number> = {};
+        let credits = 0;
+        const uniqueNames = new Set<string>();
+
+        selectedLectures.forEach(l => {
+            if (!uniqueNames.has(l.name)) {
+                uniqueNames.add(l.name);
+                credits += l.credit || 0;
+            }
+            groups[l.name] = (groups[l.name] || 0) + 1;
+        });
+
+        const nameCount = uniqueNames.size;
+        
+        let combinations = 1;
+        if (selectedLectures.length === 0) {
+            combinations = 0;
+        } else {
+            Object.values(groups).forEach(count => {
+                combinations *= count;
+            });
+        }
+
+        return {
+            count: selectedLectures.length,
+            credits: credits.toFixed(1),
+            maxCombinations: combinations,
+            nameCount: nameCount
+        };
+    }, [allLectures, selectedLectureIds]);
 
     return (
         <div className="flex flex-col h-full relative">
@@ -202,23 +217,16 @@ export const LectureList = () => {
             {/* Floating Summary Info */}
             <div className="absolute top-0 right-0 z-30 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-blue-100 flex flex-col items-end text-xs sm:text-sm">
                 <div className="text-gray-500">
-                    Selected: <span className="font-bold text-blue-600">{selectedLectureIds.length}</span>
+                    Selected: <span className="font-bold text-blue-600">{stats.count}</span>
                 </div>
                 <div className="text-gray-500">
-                    Credits: <span className="font-bold text-green-600">
-                        {(() => {
-                            const selectedLectures = allLectures.filter(l => selectedLectureIds.includes(l.id));
-                            const uniqueNames = new Set<string>();
-                            let totalCredits = 0;
-                            selectedLectures.forEach(l => {
-                                if (!uniqueNames.has(l.name)) {
-                                    uniqueNames.add(l.name);
-                                    totalCredits += l.credit || 0;
-                                }
-                            });
-                            return totalCredits.toFixed(1);
-                        })()}
-                    </span>
+                    Credits: <span className="font-bold text-green-600">{stats.credits}</span>
+                </div>
+                <div className="text-gray-500">
+                    Names: <span className="font-bold text-purple-600">{stats.nameCount}</span>
+                </div>
+                <div className="text-gray-500">
+                    Cases: <span className="font-bold text-orange-600">{stats.maxCombinations}</span>
                 </div>
             </div>
 
@@ -260,17 +268,11 @@ export const LectureList = () => {
                         onChange={(e) => {
                             setIsFilterEnabled(e.target.checked);
                             if (e.target.checked) {
-                                setFilters({
-                                    basicMandatory: false,
-                                    math: false,
-                                    physics: false,
-                                    chemistry: false,
-                                    biology: false,
-                                    track: false,
-                                    writingReading: false,
-                                    nonTrackConvergence: false
-                                });
-                                setSelectedMajors(new Set());
+                                // Default to first filter or null (user must select)
+                                // Keeping null so user has to choose, as per "matches only"
+                                setActiveFilter(null);
+                            } else {
+                                setActiveFilter(null);
                             }
                         }}
                         className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
@@ -284,35 +286,83 @@ export const LectureList = () => {
                 {isFilterEnabled && (
                     <div className="p-3 bg-gray-50 border rounded-lg grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.basicMandatory} onChange={() => toggleFilter('basicMandatory')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'basicMandatory'} 
+                                onChange={() => handleFilterChange('basicMandatory')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>기초필수 (Basic Mandatory)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.math} onChange={() => toggleFilter('math')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'math'} 
+                                onChange={() => handleFilterChange('math')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>수학 (Math)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.physics} onChange={() => toggleFilter('physics')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'physics'} 
+                                onChange={() => handleFilterChange('physics')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>물리 (Physics)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.chemistry} onChange={() => toggleFilter('chemistry')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'chemistry'} 
+                                onChange={() => handleFilterChange('chemistry')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>화학 (Chemistry)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.biology} onChange={() => toggleFilter('biology')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'biology'} 
+                                onChange={() => handleFilterChange('biology')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>생명과학 (Biology)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.track} onChange={() => toggleFilter('track')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'track'} 
+                                onChange={() => handleFilterChange('track')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>트랙 (Track)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.writingReading} onChange={() => toggleFilter('writingReading')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'writingReading'} 
+                                onChange={() => handleFilterChange('writingReading')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>쓰기·읽기 중점 (Writing/Reading)</span>
                         </label>
                         <label className="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" checked={filters.nonTrackConvergence} onChange={() => toggleFilter('nonTrackConvergence')} className="text-blue-600 rounded" />
+                            <input 
+                                type="radio" 
+                                name="lectureFilter"
+                                checked={activeFilter === 'nonTrackConvergence'} 
+                                onChange={() => handleFilterChange('nonTrackConvergence')} 
+                                className="text-blue-600 focus:ring-blue-500" 
+                            />
                             <span>비트랙/융합 (Non-Track/Convergence)</span>
                         </label>
                         
@@ -324,10 +374,11 @@ export const LectureList = () => {
                                     {uniqueMajors.map(major => (
                                         <label key={major} className="flex items-center space-x-2 cursor-pointer">
                                             <input 
-                                                type="checkbox" 
-                                                checked={selectedMajors.has(major)} 
-                                                onChange={() => toggleMajor(major)} 
-                                                className="text-blue-600 rounded" 
+                                                type="radio" 
+                                                name="lectureFilter"
+                                                checked={activeFilter === major} 
+                                                onChange={() => handleFilterChange(major)} 
+                                                className="text-blue-600 focus:ring-blue-500" 
                                             />
                                             <span>{major}</span>
                                         </label>
