@@ -63,14 +63,15 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     // Load Data
     useEffect(() => {
         const baseUrl = import.meta.env?.BASE_URL || '/';
-        fetch(`${baseUrl}lectures.json?t=${Date.now()}`)
+        const filename = language === 'en' ? 'lectures_eng.json' : 'lectures.json';
+        fetch(`${baseUrl}${filename}?t=${Date.now()}`)
             .then(res => res.json())
             .then(data => {
                 const parsed = data.map((d: any) => parseLecture(d));
                 setAllLectures(parsed);
             })
-            .catch(err => console.error("Failed to load lectures:", err));
-    }, []);
+            .catch(err => console.error(`Failed to load lectures (${language}):`, err));
+    }, [language]);
 
     const toggleLectureSelection = (id: number) => {
         setSelectedLectureIds(prev => {

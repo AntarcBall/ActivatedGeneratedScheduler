@@ -1,170 +1,141 @@
-import { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
-import { DAYS } from '../types';
+import { formatSingleSlotTime } from '../utils/lectureUtils';
+import { ChevronLeft, ChevronRight, Trophy, BookOpen, Clock } from 'lucide-react';
+import { translations } from '../translations';
 
 export const ResultsView = () => {
-    const { generatedTimetables } = useApp();
+    const { generatedTimetables, language } = useApp();
+    const t = translations[language].results;
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const current = generatedTimetables[currentIndex];
+
+    const maxScore = useMemo(() => Math.max(...generatedTimetables.map(t => t.totalLoss), 1), [generatedTimetables]);
+    const minScore = useMemo(() => Math.min(...generatedTimetables.map(t => t.totalLoss), 0), [generatedTimetables]);
 
     if (generatedTimetables.length === 0) {
         return (
-            <div className="flex flex-col items-center justify-center h-full text-gray-500 space-y-4">
-                <div className="text-4xl">☹️</div>
-                <p>No valid timetables found without collisions.</p>
-                <button 
-                    onClick={() => window.location.reload()} 
-                    className="text-blue-500 underline"
-                >
-                    Try again with fewer lectures
-                </button>
+            <div className="flex flex-col items-center justify-center min-h-[400px] text-center p-12 bg-white rounded-3xl border-2 border-dashed border-gray-100">
+                <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+                    <BookOpen className="w-10 h-10 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">No Results</h3>
+                <p className="text-gray-400 max-w-sm leading-relaxed">
+                    {t.noResults}
+                </p>
             </div>
         );
     }
 
-    const current = generatedTimetables[currentIndex];
-    
-    // Time grid 9:00 to 21:00 (24 slots)
-    const timeSlots = Array.from({ length: 24 }, (_, i) => {
-        const h = 9 + Math.floor(i / 2);
-        const m = i % 2 === 0 ? "00" : "30";
-        return `${h}:${m}`;
-    });
-
-    // Histogram Calculation
-    const scores = generatedTimetables.map(t => t.score);
-    const minScore = Math.min(...scores);
-    const maxScore = Math.max(...scores);
-    const binCount = 40;
-    const range = maxScore - minScore || 1; // avoid div by zero
-    const bins = new Array(binCount).fill(0);
-    
-    scores.forEach(s => {
-        const binIdx = Math.min(
-            Math.floor(((s - minScore) / range) * binCount),
-            binCount - 1
-        );
-        bins[binIdx]++;
-    });
-    const maxFreq = Math.max(...bins, 1);
-
-    const currentScore = current.score;
-    const currentBinIdx = Math.min(
-        Math.floor(((currentScore - minScore) / range) * binCount),
-        binCount - 1
-    );
+    const next = () => setCurrentIndex(prev => (prev + 1) % generatedTimetables.length);
+    const prev = () => setCurrentIndex(prev => (prev - 1 + generatedTimetables.length) % generatedTimetables.length);
 
     return (
-        <div className="flex flex-col h-full">
-            {/* Loss Distribution Chart */}
-            <div className="mb-4 bg-white p-3 rounded-lg border shadow-sm">
-                <div className="flex justify-between items-end mb-1 text-xs text-gray-500">
-                    <span>Loss Distribution</span>
-                    <span>Min: {minScore.toFixed(1)} ~ Max: {maxScore.toFixed(1)}</span>
+        <div className="space-y-8 animate-in fade-in zoom-in-95 duration-500">
+            {/* Header / Stats */}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
+                <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-100 rotate-3">
+                        <Trophy className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-black text-yellow-600 uppercase tracking-widest">{t.rank} #{currentIndex + 1}</span>
+                            <span className="w-1 h-1 bg-gray-200 rounded-full" />
+                            <span className="text-sm font-bold text-gray-400">{generatedTimetables.length} Total</span>
+                        </div>
+                        <h3 className="text-2xl font-black text-gray-900">
+                            {t.loss}: <span className="text-blue-600">{current.totalLoss.toFixed(2)}</span>
+                        </h3>
+                    </div>
                 </div>
-                <div className="h-16 w-full flex items-end space-x-[1px]">
-                    {bins.map((count, idx) => {
-                        const height = (count / maxFreq) * 100;
-                        const isCurrent = idx === currentBinIdx;
-                        return (
+
+                <div className="flex items-center gap-4 bg-gray-50 p-2 rounded-2xl border border-gray-100">
+                    <button onClick={prev} className="p-3 hover:bg-white hover:shadow-md rounded-xl transition-all active:scale-95">
+                        <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <div className="px-6 py-2 text-center min-w-[100px]">
+                        <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Score</div>
+                        <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
                             <div 
-                                key={idx} 
-                                className={`flex-1 rounded-t-sm transition-all ${isCurrent ? 'bg-blue-500' : 'bg-gray-200'}`}
-                                style={{ height: `${height}%` }}
-                                title={`Range: ${(minScore + (idx/binCount)*range).toFixed(1)} - ${(minScore + ((idx+1)/binCount)*range).toFixed(1)}\nCount: ${count}`}
+                                className="bg-blue-600 h-full transition-all duration-1000" 
+                                style={{ width: `${100 - ((current.totalLoss - minScore) / (maxScore - minScore || 1) * 100)}%` }}
                             />
-                        );
-                    })}
+                        </div>
+                    </div>
+                    <button onClick={next} className="p-3 hover:bg-white hover:shadow-md rounded-xl transition-all active:scale-95">
+                        <ChevronRight className="w-6 h-6" />
+                    </button>
                 </div>
             </div>
 
-            {/* Controls */}
-            <div className="flex items-center justify-between mb-4 bg-gray-100 p-3 rounded-lg">
-                <button 
-                    onClick={() => setCurrentIndex(p => Math.max(0, p - 1))}
-                    disabled={currentIndex === 0}
-                    className="px-4 py-1 bg-white border rounded shadow disabled:opacity-30"
-                >
-                    ← Previous
-                </button>
-                <div className="text-center">
-                    <div className="font-bold">Option {currentIndex + 1} / {generatedTimetables.length}</div>
-                    <div className="text-xs text-gray-500">Loss: {current.score.toFixed(2)}</div>
-                </div>
-                <button 
-                    onClick={() => setCurrentIndex(p => Math.min(generatedTimetables.length - 1, p + 1))}
-                    disabled={currentIndex === generatedTimetables.length - 1}
-                    className="px-4 py-1 bg-white border rounded shadow disabled:opacity-30"
-                >
-                    Next →
-                </button>
-            </div>
-
-            {/* Timetable Grid */}
-            <div className="flex-1 overflow-auto border rounded-lg bg-white relative">
-                <table className="w-full border-collapse table-fixed h-full min-h-[500px]">
-                    <thead className="bg-gray-50 sticky top-0 z-20">
-                        <tr>
-                            <th className="w-16 border py-0.5 px-1 text-xs">Time</th>
-                            {DAYS.map(day => <th key={day} className="border py-0.5 px-1 text-xs">{day}</th>)}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {timeSlots.map((time, idx) => (
-                            <tr key={idx} className="h-[22px]">
-                                <td className="border px-1 text-[9px] text-center text-gray-400 align-middle leading-none">{time}</td>
-                                {DAYS.map(day => (
-                                    <td key={day} className="border relative p-0" />
-                                ))}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-
-                {/* Overlaid Lectures */}
-                {current.lectures.map((lec, lIdx) => {
-                    const colors = [
-                        'bg-blue-100 border-blue-400 text-blue-800',
-                        'bg-green-100 border-green-400 text-green-800',
-                        'bg-purple-100 border-purple-400 text-purple-800',
-                        'bg-yellow-100 border-yellow-400 text-yellow-800',
-                        'bg-pink-100 border-pink-400 text-pink-800',
-                        'bg-indigo-100 border-indigo-400 text-indigo-800',
-                        'bg-orange-100 border-orange-400 text-orange-800',
-                        'bg-teal-100 border-teal-400 text-teal-800',
-                    ];
-                    const colorClass = colors[lIdx % colors.length];
-
-                    return lec.time_slots.map((slot, sIdx) => {
-                        const dayIdx = DAYS.indexOf(slot.day);
-                        if (dayIdx === -1) return null;
-
-                        // Calculate position
-                        // Header is approx 18px (reduced from 25)
-                        // Each row is 22px (reduced from 56)
-                        const rowHeight = 22;
-                        const headerHeight = 18;
-                        const top = headerHeight + (slot.start_index * rowHeight);
-                        const height = (slot.end_index - slot.start_index + 1) * rowHeight;
-                        const left = `calc(4rem + ${(dayIdx / 5) * 100}% - ${dayIdx * 0.2}px)`; // Offset for time column
-                        const width = `calc((100% - 4rem) / 5)`;
-
-                        return (
-                            <div 
-                                key={`${lIdx}-${sIdx}`}
-                                className={`absolute border-l-2 p-0.5 overflow-hidden flex flex-col justify-center items-center text-center shadow-sm z-10 ${colorClass}`}
-                                style={{
-                                    top: `${top}px`,
-                                    height: `${height}px`,
-                                    left: left,
-                                    width: width,
-                                }}
-                            >
-                                <div className="text-[9px] font-bold truncate w-full leading-tight">{lec.name}</div>
-                                <div className="text-[7px] truncate leading-none">{lec.prof}</div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                {/* Timetable Grid */}
+                <div className="lg:col-span-8 bg-white rounded-3xl border border-gray-100 shadow-2xl overflow-hidden p-6">
+                    <div className="grid grid-cols-[60px_repeat(5,1fr)] gap-2">
+                        <div className="h-10" />
+                        {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map(day => (
+                            <div key={day} className="h-10 flex items-center justify-center font-black text-xs text-gray-400 uppercase tracking-widest">
+                                {day}
                             </div>
-                        );
-                    });
-                })}
+                        ))}
+                        
+                        {Array.from({ length: 24 }).map((_, slotIdx) => (
+                            <React.Fragment key={slotIdx}>
+                                <div className="h-12 flex items-center justify-end pr-3 text-[10px] font-bold text-gray-300">
+                                    {formatSingleSlotTime(slotIdx)}
+                                </div>
+                                {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map(day => {
+                                    const lecture = current.lectures.find(l => 
+                                        l.time_slots.some(s => s.day === day && slotIdx >= s.start_index && slotIdx <= s.end_index)
+                                    );
+                                    return (
+                                        <div 
+                                            key={`${day}-${slotIdx}`} 
+                                            className={`h-12 rounded-lg border border-transparent transition-all ${
+                                                lecture ? 'bg-blue-600 shadow-lg shadow-blue-100 border-blue-400/20' : 'bg-gray-50/50'
+                                            }`}
+                                        />
+                                    );
+                                })}
+                            </React.Fragment>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Lecture Detail Cards */}
+                <div className="lg:col-span-4 space-y-4">
+                    <div className="bg-gray-900 rounded-3xl p-6 text-white mb-6">
+                        <div className="flex items-center gap-3 mb-2">
+                            <Clock className="w-5 h-5 text-blue-400" />
+                            <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">{t.totalCredits}</span>
+                        </div>
+                        <div className="text-4xl font-black">
+                            {current.lectures.reduce((sum, l) => sum + l.credit, 0).toFixed(1)}
+                        </div>
+                    </div>
+
+                    {current.lectures.map(lec => (
+                        <div key={lec.id} className="group bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <div className="flex items-start justify-between mb-3">
+                                <span className="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-black rounded-lg uppercase tracking-wider">
+                                    Section {lec.section}
+                                </span>
+                                <span className="text-[10px] font-bold text-gray-300">{lec.credit} Credits</span>
+                            </div>
+                            <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{lec.name}</h4>
+                            <p className="text-sm text-gray-500 font-medium">{lec.prof}</p>
+                            <div className="mt-4 pt-4 border-t border-gray-50 flex flex-wrap gap-2">
+                                {lec.time_slots.map((s, i) => (
+                                    <span key={i} className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">
+                                        {s.day} {formatSingleSlotTime(s.start_index)}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -40,10 +40,17 @@ export const parseLecture = (raw: RawLecture): Lecture => {
 
 export const formatTimeString = (slots: TimeSlot[]): string => {
     return slots.map(slot => {
-        const startH = 9 + Math.floor(slot.start_index / 2);
-        const startM = slot.start_index % 2 === 0 ? "00" : "30";
-        const endH = 9 + Math.floor((slot.end_index + 1) / 2);
-        const endM = (slot.end_index + 1) % 2 === 0 ? "00" : "30";
-        return `${slot.day} ${startH}:${startM}~${endH}:${endM}`;
+        const start = formatSingleSlotTime(slot.start_index);
+        const end = formatSingleSlotTime(slot.end_index + 1);
+        return `${slot.day} ${start}~${end}`;
     }).join(', ');
+};
+
+export const formatSingleSlotTime = (slotIdx: number): string => {
+    // slotIdx 1 is 9:00
+    // But after parseLecture, start_index = slot.start_index - 1
+    // So if raw was 1, parsed is 0. 0 -> 9:00
+    const h = 9 + Math.floor(slotIdx / 2);
+    const m = slotIdx % 2 === 0 ? "00" : "30";
+    return `${h}:${m}`;
 };

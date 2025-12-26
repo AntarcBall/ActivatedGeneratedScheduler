@@ -1,61 +1,94 @@
+import React, { useState, useRef } from 'react';
 import { useApp } from '../context/AppContext';
-import { DAYS } from '../types';
+import { DayOfWeek } from '../types';
+import { formatSingleSlotTime } from '../utils/lectureUtils';
+import { translations } from '../translations';
 
 interface TimeSelectorProps {
     type: 'good' | 'bad';
 }
 
-export const TimeSelector = ({ type }: TimeSelectorProps) => {
-    const { goodSlots, badSlots, toggleSlot } = useApp();
-    
-    // 9:00 (index 0) to 21:00 (index 24) - 30 min intervals
-    const timeSlots = Array.from({ length: 25 }, (_, i) => {
-        const h = 9 + Math.floor(i / 2);
-        const m = i % 2 === 0 ? "00" : "30";
-        return `${h}:${m}`;
-    });
+const DAYS: DayOfWeek[] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+const SLOTS = Array.from({ length: 24 }, (_, i) => i); // 0 (9:00) to 23 (20:30)
 
-    const activeSlots = type === 'good' ? goodSlots : badSlots;
-    const activeColor = type === 'good' ? 'bg-green-400' : 'bg-red-400';
-    const hoverColor = type === 'good' ? 'hover:bg-green-100' : 'hover:bg-red-100';
+export const TimeSelector = ({ type }: TimeSelectorProps) => {
+    const { goodSlots, badSlots, toggleSlot, language } = useApp();
+    const t = translations[language].timeSelector;
+    const selectedSlots = type === 'good' ? goodSlots : badSlots;
+    
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragType, setDragType] = useState<'add' | 'remove' | null>(null);
+    const lastToggled = useRef<string | null>(null);
+
+    const handleMouseDown = (day: DayOfWeek, slot: number) => {
+        setIsDragging(true);
+        const exists = selectedSlots[day].includes(slot);
+        setDragType(exists ? 'remove' : 'add');
+        toggleSlot(type, day, slot);
+        lastToggled.current = `${day}-${slot}`;
+    };
+
+    const handleMouseEnter = (day: DayOfWeek, slot: number) => {
+        if (!isDragging || !dragType) return;
+        
+        const key = `${day}-${slot}`;
+        if (lastToggled.current === key) return;
+
+        const exists = selectedSlots[day].includes(slot);
+        if ((dragType === 'add' && !exists) || (dragType === 'remove' && exists)) {
+            toggleSlot(type, day, slot);
+            lastToggled.current = key;
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+        setDragType(null);
+        lastToggled.current = null;
+    };
 
     return (
-        <div className="flex flex-col h-full">
-            <div className="flex-1 overflow-auto border rounded-lg">
-                <table className="w-full border-collapse table-fixed">
-                    <thead className="bg-gray-100 sticky top-0 z-10">
-                        <tr>
-                            <th className="p-2 border border-gray-200 w-20">Time</th>
-                            {DAYS.map(day => (
-                                <th key={day} className="p-2 border border-gray-200">{day}</th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {timeSlots.map((time, idx) => (
-                            <tr key={idx} className="h-8">
-                                <td className="p-1 border border-gray-200 text-xs text-center text-gray-500 bg-gray-50">
-                                    {time}
-                                </td>
-                                {DAYS.map(day => {
-                                    const isSelected = activeSlots[day].includes(idx);
-                                    return (
-                                        <td 
-                                            key={day}
-                                            onClick={() => toggleSlot(type, day, idx)}
-                                            className={`border border-gray-200 cursor-pointer transition-colors ${
-                                                isSelected ? activeColor : hoverColor
-                                            }`}
-                                        />
-                                    );
-                                })}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+        <div className="space-y-6" onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {type === 'good' ? t.goodTitle : t.badTitle}
+                </h3>
+                <p className="text-gray-500 text-sm">
+                    {type === 'good' ? t.goodDesc : t.badDesc}
+                </p>
             </div>
-            <div className="mt-2 text-xs text-gray-400">
-                * Click cells to toggle. {type === 'good' ? 'Greens' : 'Reds'} are {type === 'good' ? 'preferred' : 'avoided'} times.
+
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden select-none">
+                <div className="grid grid-cols-[80px_repeat(5,1fr)] divide-x divide-gray-100">
+                    <div className="bg-gray-50 py-4"></div>
+                    {DAYS.map(day => (
+                        <div key={day} className="bg-gray-50 py-4 text-center font-bold text-gray-600 text-sm">
+                            {day}
+                        </div>
+                    ))}
+
+                    {SLOTS.map(slot => (
+                        <React.Fragment key={slot}>
+                            <div className="py-2 px-3 text-right text-[10px] font-bold text-gray-400 bg-gray-50/50 flex items-center justify-end">
+                                {formatSingleSlotTime(slot)}
+                            </div>
+                            {DAYS.map(day => (
+                                <div 
+                                    key={`${day}-${slot}`}
+                                    onMouseDown={() => handleMouseDown(day, slot)}
+                                    onMouseEnter={() => handleMouseEnter(day, slot)}
+                                    className={`h-10 cursor-pointer transition-all duration-100 border-t border-gray-50 ${
+                                        selectedSlots[day].includes(slot)
+                                            ? type === 'good' 
+                                                ? 'bg-blue-500 shadow-inner' 
+                                                : 'bg-red-500 shadow-inner'
+                                            : 'hover:bg-gray-100'
+                                    }`}
+                                />
+                            ))}
+                        </React.Fragment>
+                    ))}
+                </div>
             </div>
         </div>
     );
