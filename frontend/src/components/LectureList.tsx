@@ -104,7 +104,16 @@ export const LectureList = () => {
     const stats = useMemo(() => {
         let credits = 0;
         const selected = allLectures.filter(l => selectedLectureIds.includes(l.id));
-        selected.forEach(l => credits += l.credit);
+        
+        // Group by name to sum credits only once per course
+        const uniqueCourses = new Set<string>();
+        selected.forEach(l => {
+            if (!uniqueCourses.has(l.name)) {
+                uniqueCourses.add(l.name);
+                credits += l.credit;
+            }
+        });
+        
         return { count: selected.length, credits };
     }, [allLectures, selectedLectureIds]);
 

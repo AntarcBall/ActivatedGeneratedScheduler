@@ -42,7 +42,7 @@ export interface Lecture {
 
 export interface Timetable {
     lectures: Lecture[];
-    score: number;
+    totalLoss: number;
     details?: {
         fitGood: number;
         fitBad: number;

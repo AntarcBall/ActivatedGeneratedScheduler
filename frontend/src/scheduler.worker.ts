@@ -26,7 +26,7 @@ self.onmessage = (e: MessageEvent<SchedulerInput>) => {
             
             if (!checkCollision(currentCombo)) {
                 const loss = calculateLoss(currentCombo, goodSlots, badSlots, weights);
-                validTimetables.push({ lectures: [...currentCombo], score: loss });
+                validTimetables.push({ lectures: [...currentCombo], totalLoss: loss });
             }
             
             // Increment indices
@@ -42,7 +42,7 @@ self.onmessage = (e: MessageEvent<SchedulerInput>) => {
     }
 
     // Sort by score (Loss) ascending
-    validTimetables.sort((a, b) => a.score - b.score);
+    validTimetables.sort((a, b) => a.totalLoss - b.totalLoss);
 
     self.postMessage(validTimetables);
 };

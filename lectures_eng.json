@@ -197,7 +197,7 @@
     {
         "id": 11,
         "section": 1,
-        "name": "Engineering MathematicsⅠ",
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Ahn, Heung Ju",
         "classification": "Basic compulsory course",
         "category": "Mathematics",
@@ -219,7 +219,7 @@
     {
         "id": 12,
         "section": 2,
-        "name": "Engineering MathematicsⅠ",
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Hudson Thomas Bryan",
         "classification": "Basic compulsory course",
         "category": "Mathematics",
@@ -241,7 +241,7 @@
     {
         "id": 13,
         "section": 3,
-        "name": "Engineering MathematicsⅠ",
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Carlos Scarinci",
         "classification": "Basic compulsory course",
         "category": "Mathematics",
@@ -263,7 +263,7 @@
     {
         "id": 14,
         "section": 4,
-        "name": "Engineering MathematicsⅠ",
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Carlos Scarinci",
         "classification": "Basic compulsory course",
         "category": "Mathematics",
@@ -285,7 +285,7 @@
     {
         "id": 15,
         "section": 5,
-        "name": "Engineering MathematicsⅠ",
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Unassigned",
         "classification": "Basic compulsory course",
         "category": "Mathematics",
@@ -2117,7 +2117,7 @@
     {
         "id": 111,
         "section": 1,
-        "name": "General Theory of Rights change",
+        "name": "General Theory of Rights change - General Theory of Rights Change",
         "prof": "Ham, Sang beom",
         "classification": "Basic compulsory course",
         "category": "Writing·Reading",
@@ -2173,7 +2173,7 @@
     {
         "id": 114,
         "section": 1,
-        "name": "Special Topics in Social Sciences Ⅰ",
+        "name": "Special Topics in Social Sciences Ⅰ - Special Topics in Social Sciences Ⅰ: Mapping your life across 20s",
         "prof": "Kwak, Keum-joo",
         "classification": "Basic compulsory course",
         "category": "Writing·Reading",
@@ -2190,7 +2190,7 @@
     {
         "id": 115,
         "section": 1,
-        "name": "Special Topics in Social Sciences Ⅱ",
+        "name": "Special Topics in Social Sciences Ⅱ - Human Evolution and Culture",
         "prof": "Yi, Jeong-duk",
         "classification": "Basic compulsory course",
         "category": "Writing·Reading",
@@ -2207,7 +2207,7 @@
     {
         "id": 116,
         "section": 2,
-        "name": "Special Topics in Social Sciences Ⅱ",
+        "name": "Special Topics in Social Sciences Ⅱ - Culture and Society",
         "prof": "Choi, Tae Seob",
         "classification": "Basic compulsory course",
         "category": "Writing·Reading",
@@ -3188,7 +3188,7 @@
     {
         "id": 164,
         "section": 1,
-        "name": "Quantum MechanicsⅠ",
+        "name": "Quantum MechanicsⅠ - Quantum Mechanics I",
         "prof": "Park, Keeseong",
         "classification": "Advanced compulsory course",
         "category": "Track",
@@ -3232,7 +3232,7 @@
     {
         "id": 166,
         "section": 1,
-        "name": "ElectrodynamicsⅡ",
+        "name": "ElectrodynamicsⅡ - Electrodynamics II",
         "prof": "Chang-Hee Cho",
         "classification": "Advanced compulsory course",
         "category": "Track",
@@ -3527,7 +3527,7 @@
     {
         "id": 181,
         "section": 1,
-        "name": "Introduction to Semiconductor Fabrication",
+        "name": "Introduction to Semiconductor Fabrication - Device Fabrication Process for Nanotechnology",
         "prof": "Kwon, Hyuk Jun",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
@@ -3593,7 +3593,7 @@
     {
         "id": 184,
         "section": 1,
-        "name": "Semiconductor  Fabrication Lab",
+        "name": "Semiconductor  Fabrication Lab - Semiconductor Fabrication Lab",
         "prof": "Jang, Jae Eun, Sanghyeon Choi",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",

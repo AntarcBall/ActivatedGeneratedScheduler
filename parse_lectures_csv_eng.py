@@ -43,18 +43,22 @@ def parse_csv_eng_to_json(csv_path, json_path):
                 section_str = row[4]
                 section = int(section_str) if section_str.isdigit() else 0
                 
-                # Course Title often has "Name - Name" or just "Name"
+                # Logic to handle "Name - Name" vs "Name - Subtitle"
                 name_full = row[5]
                 if " - " in name_full:
-                    name = name_full.split(" - ")[0].strip()
+                    parts = name_full.split(" - ")
+                    # If it's a repetition "A - A", use "A"
+                    if len(parts) >= 2 and parts[0].strip() == parts[1].strip():
+                        name = parts[0].strip()
+                    else:
+                        # Keep full name for "A - B" (different subtitle)
+                        # or non-identical repetitions (to be safe)
+                        name = name_full.strip()
                 else:
                     name = name_full.strip()
                 
                 prof = row[6]
                 classification = row[7]
-                # In eng csv, category might be in Course Areas (col 12) or Course Category (col 10)
-                # Looking at lectures.csv: row[12] was category (교과영역)
-                # Courses_eng.csv col 12 is Course Areas
                 category = row[12]
                 
                 major_track_str = row[13] # Track
@@ -73,11 +77,10 @@ def parse_csv_eng_to_json(csv_path, json_path):
                     parts = time_str.split(',')
                     for part in parts:
                         part = part.strip()
-                        # Regex for English days: Mon, Tue, Wed, Thu, Fri
                         match = re.search(r'(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(\d{1,2}:\d{2})-(\d{1,2}:\d{2})', part)
                         if match:
                             eng_day = match.group(1)
-                            day = DAY_MAP.get(eng_day, eng_day) # Convert to Korean '월', '화' to match internal logic or keep it consistent
+                            day = DAY_MAP.get(eng_day, eng_day)
                             
                             start_time = match.group(2)
                             end_time = match.group(3)
