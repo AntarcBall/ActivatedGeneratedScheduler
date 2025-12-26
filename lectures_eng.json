@@ -140,7 +140,9 @@
         "prof": "Cho, Yongcheol, Kim, Kyu Hyung , Oh, Yong Seok",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -157,7 +159,9 @@
         "prof": "Cho, Yongcheol",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -179,7 +183,9 @@
         "prof": "Pojeong Park",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -925,7 +931,9 @@
         "prof": "Seo-Jin Ko",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -947,7 +955,10 @@
         "prof": "Dong Hae Ho",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemical Engineering",
+            "Chemistry"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -969,7 +980,9 @@
         "prof": "Kim, Chan Yeon",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -991,7 +1004,11 @@
         "prof": "Lee, Hochun",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry",
+            "Materials Science & Engineering",
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1013,7 +1030,11 @@
         "prof": "Jung, Byung Hyuck",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry",
+            "Materials Science & Engineering",
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1035,7 +1056,9 @@
         "prof": "Lee, Youn Gu",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry"
+        ],
         "credit": 1.0,
         "time_slots": [
             {
@@ -1052,7 +1075,9 @@
         "prof": "Seonki Hong, In, Su Il",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1069,7 +1094,10 @@
         "prof": "SEONG KYUN KIM",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry",
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1091,7 +1119,10 @@
         "prof": "Sung Jooyoung",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry",
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1113,7 +1144,9 @@
         "prof": "Jang, Yun Hee ",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Chemistry"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1179,7 +1212,10 @@
         "prof": "Unassigned",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering",
+            "Electronic Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1201,7 +1237,9 @@
         "prof": "Yongwoo Lee",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1223,7 +1261,10 @@
         "prof": "Minseok Jeon",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering",
+            "Electronic Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1245,7 +1286,9 @@
         "prof": "Im, Sung Hoon",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1267,7 +1310,9 @@
         "prof": "Wonseok Choi",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1289,7 +1334,10 @@
         "prof": "Jae-Ho Choi",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering",
+            "Electronic Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1311,7 +1359,9 @@
         "prof": "Hwang, Jae Youn",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1333,7 +1383,9 @@
         "prof": "Seo, Dae Won",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Computer Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1355,7 +1407,9 @@
         "prof": "Kim Kyoung Dae, Seongmin Lee",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1377,7 +1431,9 @@
         "prof": "KIM, GAIN",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -1399,7 +1455,11 @@
         "prof": "Aaron Cumberledge",
         "classification": "Basic compulsory course",
         "category": "English",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering",
+            "Physics",
+            "Chemical Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1416,7 +1476,10 @@
         "prof": "Aaron Cumberledge",
         "classification": "Basic compulsory course",
         "category": "English",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering",
+            "Computer Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1433,7 +1496,9 @@
         "prof": "Aaron Cumberledge",
         "classification": "Basic compulsory course",
         "category": "English",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1450,7 +1515,9 @@
         "prof": "Aaron Cumberledge",
         "classification": "Basic compulsory course",
         "category": "English",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1467,7 +1534,9 @@
         "prof": "Benjamin Wilson Riley",
         "classification": "Basic compulsory course",
         "category": "English",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -1484,7 +1553,9 @@
         "prof": "Benjamin Wilson Riley",
         "classification": "Basic compulsory course",
         "category": "English",
-        "major_tracks": [],
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -2640,7 +2711,10 @@
         "prof": "Kim, Jin Hae, Kim, Yoo Ri, Lee, Jong Chan, Lee, Jae Min",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2662,7 +2736,10 @@
         "prof": "Yea, Kyung Moo, Lee, Byung Hoon",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2679,7 +2756,10 @@
         "prof": "Lee, Byung Hoon, Song-Yi Lee",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2701,7 +2781,10 @@
         "prof": "Baek, Myung In, Yu, Seong-Woon, Kwak, June Myoung",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2723,7 +2806,10 @@
         "prof": "Lee Kwang",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2740,7 +2826,9 @@
         "prof": "Lee, Jae Min, KIM, EUN-KYOUNG",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2762,7 +2850,10 @@
         "prof": "Kim, Yoo Ri, Chan Chung",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2784,7 +2875,10 @@
         "prof": "Yu, Woo Kyung, Mean-Hwan Kim",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2806,7 +2900,10 @@
         "prof": "Lee, Sung Bae",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2828,7 +2925,9 @@
         "prof": "Kyung In, Jang",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2850,7 +2949,9 @@
         "prof": "Kim, Hoe Joon, Seongmin Lee, Joon-Hyuk Park, Nam, Kanghyun, Sohyun Jung, Giseop Kim",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2867,7 +2968,10 @@
         "prof": "Lim, Yong Seob",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2889,7 +2993,9 @@
         "prof": "Park, Suk Ho",
         "classification": "Advanced compulsory course",
         "category": "Major Advanced",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2911,7 +3017,9 @@
         "prof": "Sohyun Jung",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2928,7 +3036,9 @@
         "prof": "Park, Kyungseo",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2950,7 +3060,10 @@
         "prof": "Hwang, Min Ho",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2972,7 +3085,10 @@
         "prof": "Lee, Jae Hong",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -2994,7 +3110,9 @@
         "prof": "Choi, Gyeung Ho",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3016,7 +3134,9 @@
         "prof": "Seongmin Lee",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3038,7 +3158,9 @@
         "prof": "Lee, Ju Hyuck",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3060,7 +3182,10 @@
         "prof": "Jinsoo Kim, Sungwon Lee, Lee, Ju Hyuck, Lee, Jong-Soo, LEE, SHINBUHM",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering",
+            "Electronic Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3082,7 +3207,10 @@
         "prof": "Jinsoo Kim",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering",
+            "Chemical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3104,7 +3232,9 @@
         "prof": "Younggyu Kim",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3126,7 +3256,9 @@
         "prof": "Lee, Jae Dong",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3148,7 +3280,9 @@
         "prof": "Kim, Soyeun",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3170,7 +3304,9 @@
         "prof": "Unassigned",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 2.0,
         "time_slots": [
             {
@@ -3192,7 +3328,9 @@
         "prof": "Park, Keeseong",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3214,7 +3352,10 @@
         "prof": "Choe, Seung Ho",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Materials Science & Engineering",
+            "Chemistry"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3236,7 +3377,9 @@
         "prof": "Chang-Hee Cho",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Materials Science & Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3258,7 +3401,10 @@
         "prof": "Lee, Ki Joon",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Materials Science & Engineering",
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3280,7 +3426,9 @@
         "prof": "Hong, Jung Il ",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Materials Science & Engineering"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3302,7 +3450,9 @@
         "prof": "Lee, Jong Chan",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3319,7 +3469,9 @@
         "prof": "Kang, Joongoo",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3341,7 +3493,9 @@
         "prof": "Unassigned",
         "classification": "Advanced compulsory course",
         "category": "Track",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3363,7 +3517,9 @@
         "prof": "Park, Jong Rae",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3380,7 +3536,9 @@
         "prof": "In, Su Il",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3397,7 +3555,9 @@
         "prof": "Cho, Sung-kyum ",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3414,7 +3574,9 @@
         "prof": "Kim, Son-ku",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3431,7 +3593,9 @@
         "prof": "Park, Jong Rae",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3448,7 +3612,9 @@
         "prof": "Nam, Chang Hoon",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3465,7 +3631,9 @@
         "prof": "Ahn, Heung Ju",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
@@ -3487,7 +3655,9 @@
         "prof": "Hudson Thomas Bryan",
         "classification": "Advanced compulsory course",
         "category": "Non-Track/Convergence",
-        "major_tracks": [],
+        "major_tracks": [
+            "Physics"
+        ],
         "credit": 3.0,
         "time_slots": [
             {
