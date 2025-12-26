@@ -1,0 +1,3780 @@
+[
+    {
+        "id": 1,
+        "section": 1,
+        "name": "Introduction to Programming",
+        "prof": "Jisoo Mok",
+        "classification": "Basic compulsory course",
+        "category": "Computer Engineering",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 4
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "section": 1,
+        "name": "Introduction to Data Science",
+        "prof": "Jun-Gi Jang",
+        "classification": "Basic compulsory course",
+        "category": "Computer Engineering",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 12
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "section": 2,
+        "name": "Introduction to Data Science",
+        "prof": "Hyunjae Gil",
+        "classification": "Basic compulsory course",
+        "category": "Computer Engineering",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 16
+            },
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "section": 1,
+        "name": "Creative mechanical design",
+        "prof": "Joon-Hyuk Park",
+        "classification": "Basic compulsory course",
+        "category": "Engineering Selection",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "section": 2,
+        "name": "Creative mechanical design",
+        "prof": "Sukho Song",
+        "classification": "Basic compulsory course",
+        "category": "Engineering Selection",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 12,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "section": 1,
+        "name": "Circuit Theory and Measurement (Lecture)",
+        "prof": "Lee, Jung Hyup",
+        "classification": "Basic compulsory course",
+        "category": "Engineering Selection",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 17,
+                "end_index": 20
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "section": 2,
+        "name": "Circuit Theory and Measurement (Lecture)",
+        "prof": "Song, Minyoung",
+        "classification": "Basic compulsory course",
+        "category": "Engineering Selection",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 17,
+                "end_index": 20
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "section": 1,
+        "name": "Brain Science LabⅠ",
+        "prof": "Cho, Yongcheol, Kim, Kyu Hyung , Oh, Yong Seok",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "section": 1,
+        "name": "Neuroregeneration and Degeneration",
+        "prof": "Cho, Yongcheol",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "section": 1,
+        "name": "Learning and Memory",
+        "prof": "Pojeong Park",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "section": 1,
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
+        "prof": "Ahn, Heung Ju",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 12
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "section": 2,
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
+        "prof": "Hudson Thomas Bryan",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 19
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 19
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "section": 3,
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
+        "prof": "Carlos Scarinci",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 4
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "section": 4,
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
+        "prof": "Carlos Scarinci",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "section": 5,
+        "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
+        "prof": "Unassigned",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 8
+            },
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "section": 1,
+        "name": "General PhysicsⅠ",
+        "prof": "DEVECIOGLU DENIZ OLGU",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "section": 2,
+        "name": "General PhysicsⅠ",
+        "prof": "DEVECIOGLU DENIZ OLGU",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 7
+            },
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "section": 3,
+        "name": "General PhysicsⅠ",
+        "prof": "DEVECIOGLU DENIZ OLGU",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 17,
+                "end_index": 19
+            },
+            {
+                "day": "목",
+                "start_index": 17,
+                "end_index": 19
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "section": 1,
+        "name": "General Physics LabⅠ",
+        "prof": "Kim, Dong Lyeul",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "section": 2,
+        "name": "General Physics LabⅠ",
+        "prof": "Kim, Dong Lyeul",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "section": 3,
+        "name": "General Physics LabⅠ",
+        "prof": "Kim, Dong Lyeul",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "section": 4,
+        "name": "General Physics LabⅠ",
+        "prof": "Kim, Dong Lyeul",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "section": 5,
+        "name": "General Physics LabⅠ",
+        "prof": "Park, Keeseong",
+        "classification": "Basic compulsory course",
+        "category": "Physics",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "section": 1,
+        "name": "General Chemistry Lab Ⅰ",
+        "prof": "Min, Eun Seon",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "section": 2,
+        "name": "General Chemistry Lab Ⅰ",
+        "prof": "Min, Eun Seon",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "section": 3,
+        "name": "General Chemistry Lab Ⅰ",
+        "prof": "Min, Eun Seon",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "section": 4,
+        "name": "General Chemistry Lab Ⅰ",
+        "prof": "Min, Eun Seon",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "section": 5,
+        "name": "General Chemistry Lab Ⅰ",
+        "prof": "Min, Eun Seon",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "section": 1,
+        "name": "Introduction to Biology",
+        "prof": "Sukkyoo Lee",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 7
+            },
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "section": 2,
+        "name": "Introduction to Biology",
+        "prof": "Lee, Hyo Sang",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "section": 1,
+        "name": "General Biology Lab",
+        "prof": "Kim, Yoo Ri",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "section": 2,
+        "name": "General Biology Lab",
+        "prof": "Cho, Jeong A",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 5,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "section": 3,
+        "name": "General Biology Lab",
+        "prof": "Cho, Jeong A",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "section": 4,
+        "name": "General Biology Lab",
+        "prof": "Cho, Jeong A",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "section": 5,
+        "name": "General Biology Lab",
+        "prof": "Cho, Jeong A",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "section": 6,
+        "name": "General Biology Lab",
+        "prof": "Cho, Jeong A",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "section": 7,
+        "name": "General Biology Lab",
+        "prof": "Cho, Jeong A",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "section": 1,
+        "name": "General Biology I",
+        "prof": "Chan Chung, Kwak, June Myoung, Kim, Min Sik",
+        "classification": "Basic compulsory course",
+        "category": "Biology",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "section": 1,
+        "name": "General chemistryⅠ",
+        "prof": "In, Su Il",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "section": 2,
+        "name": "General chemistryⅠ",
+        "prof": "SANGARAJU SHANMUGAM",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 11,
+                "end_index": 13
+            },
+            {
+                "day": "목",
+                "start_index": 11,
+                "end_index": 13
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "section": 3,
+        "name": "General chemistryⅠ",
+        "prof": "Unassigned",
+        "classification": "Basic compulsory course",
+        "category": "Chemistry",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "section": 1,
+        "name": "Introduction to Probability and Mathematical Statistics with R",
+        "prof": "Kim, Ju Han",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 8,
+                "end_index": 11
+            },
+            {
+                "day": "수",
+                "start_index": 8,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "section": 2,
+        "name": "Introduction to Probability and Mathematical Statistics with R",
+        "prof": "Kim, Ju Han",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 15,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "section": 1,
+        "name": "Linear Algebra",
+        "prof": "Han, Kang Jin",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "section": 2,
+        "name": "Linear Algebra",
+        "prof": "Han, Kang Jin",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 15,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 15,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "section": 3,
+        "name": "Linear Algebra",
+        "prof": "Lee, Doo Seok",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 4
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 4
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "section": 4,
+        "name": "Linear Algebra",
+        "prof": "Unassigned",
+        "classification": "Basic compulsory course",
+        "category": "Mathematics",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 12
+            },
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "section": 1,
+        "name": "Chemical engineering thermodynamics",
+        "prof": "Seo-Jin Ko",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "section": 1,
+        "name": "Introduction to Polymer Science and Engineering",
+        "prof": "Dong Hae Ho",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemical Engineering",
+            "Chemistry"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "section": 1,
+        "name": "Chemical Product and Process Design",
+        "prof": "Kim, Chan Yeon",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "수",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "section": 1,
+        "name": "Analytical Chemistry",
+        "prof": "Lee, Hochun",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry",
+            "Materials Science & Engineering",
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "section": 1,
+        "name": "Organic Chemistry I",
+        "prof": "Jung, Byung Hyuck",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry",
+            "Materials Science & Engineering",
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "section": 1,
+        "name": "General chemistry laboratoryⅡ",
+        "prof": "Lee, Youn Gu",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry"
+        ],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "section": 1,
+        "name": "Advanced Chemistry Lab I (Analytical and Organic Chemistry)",
+        "prof": "Seonki Hong, In, Su Il",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 8,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "section": 1,
+        "name": "Inorganic Chemistry II",
+        "prof": "SEONG KYUN KIM",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry",
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "section": 1,
+        "name": "Physical Chemistry II",
+        "prof": "Sung Jooyoung",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry",
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "section": 1,
+        "name": "Computational Chemistry",
+        "prof": "Jang, Yun Hee ",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Chemistry"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "section": 1,
+        "name": "Data Structure",
+        "prof": "Kim, Sunjun",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 5,
+                "end_index": 7
+            },
+            {
+                "day": "수",
+                "start_index": 5,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "section": 1,
+        "name": "Introduction to Machine Learning",
+        "prof": "Sang Hyun, Park",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "section": 1,
+        "name": "Computer Architecture",
+        "prof": "Unassigned",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [
+            "Computer Engineering",
+            "Electronic Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "section": 1,
+        "name": "System Programming",
+        "prof": "Yongwoo Lee",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [
+            "Computer Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "section": 1,
+        "name": "Programming Languages",
+        "prof": "Minseok Jeon",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Computer Engineering",
+            "Electronic Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "section": 1,
+        "name": "Introduction to Computer Vision",
+        "prof": "Im, Sung Hoon",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Computer Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "section": 1,
+        "name": "Introduction to Computer Security",
+        "prof": "Wonseok Choi",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Computer Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "section": 1,
+        "name": "Signals and Systems",
+        "prof": "Jae-Ho Choi",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [
+            "Computer Engineering",
+            "Electronic Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "section": 1,
+        "name": "Digital Signal Processing",
+        "prof": "Hwang, Jae Youn",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [
+            "Computer Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "section": 1,
+        "name": "Digital Communications",
+        "prof": "Seo, Dae Won",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Computer Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "section": 1,
+        "name": "Intelligent Control Systems",
+        "prof": "Kim Kyoung Dae, Seongmin Lee",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 69,
+        "section": 1,
+        "name": "Digital Integrated Circuit Design",
+        "prof": "KIM, GAIN",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "section": 1,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Aaron Cumberledge",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [
+            "Electronic Engineering",
+            "Physics",
+            "Chemical Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 14,
+                "end_index": 19
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "section": 2,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Aaron Cumberledge",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [
+            "Electronic Engineering",
+            "Computer Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "section": 3,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Aaron Cumberledge",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "section": 4,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Aaron Cumberledge",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "section": 5,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Benjamin Wilson Riley",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "section": 6,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Benjamin Wilson Riley",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [
+            "Electronic Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "section": 7,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Benjamin Wilson Riley",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 14,
+                "end_index": 19
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "section": 8,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Benjamin Wilson Riley",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "section": 9,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Mark Silverlock",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "section": 10,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Mark Silverlock",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "section": 11,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Mark Silverlock",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "section": 12,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Andrew John Miller",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "section": 13,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Andrew John Miller",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 2,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "section": 14,
+        "name": "Academic English: Speaking and Correspondence",
+        "prof": "Lee, Jeong Ah",
+        "classification": "Basic compulsory course",
+        "category": "English",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "section": 1,
+        "name": "Introduction to Economics",
+        "prof": "Kim, Son-ku",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 3,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "section": 1,
+        "name": "Science and Technology in Modern Society",
+        "prof": " Chang, Ha Won",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 3,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "section": 1,
+        "name": "Law and Society",
+        "prof": "Kim, Hyun hee",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "section": 1,
+        "name": "Introduction to Fiction",
+        "prof": "Bae, Haeun",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "section": 1,
+        "name": "Comparative Politics",
+        "prof": "Yoon, Ji Sung",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 15,
+                "end_index": 17
+            },
+            {
+                "day": "목",
+                "start_index": 15,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "section": 1,
+        "name": "Introduction to Linguistics",
+        "prof": "Lee, Jeong Ah",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "section": 1,
+        "name": "Comparative History",
+        "prof": "Moon, Jun Young",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 3,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "section": 1,
+        "name": "Academic Writing",
+        "prof": "Bae, Haeun",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "section": 2,
+        "name": "Academic Writing",
+        "prof": "Lim, Hee hyun",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 3,
+                "end_index": 8
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "section": 3,
+        "name": "Academic Writing",
+        "prof": "Lim, Hee hyun",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "section": 4,
+        "name": "Academic Writing",
+        "prof": "Jeon, Gye Seong",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "section": 5,
+        "name": "Academic Writing",
+        "prof": "Jeon, Gye Seong",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "section": 1,
+        "name": "Introduction to Sociology",
+        "prof": "Choi, Tae Seob",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 97,
+        "section": 1,
+        "name": "Introduction to Geography",
+        "prof": "Shen Shawn",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 19,
+                "end_index": 24
+            }
+        ]
+    },
+    {
+        "id": 98,
+        "section": 1,
+        "name": "Journey to Psychology",
+        "prof": "Kwak, Keum-joo",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "section": 1,
+        "name": "Understanding Anthropology",
+        "prof": "Yi, Jeong-duk",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "section": 1,
+        "name": "Humans and Religions",
+        "prof": "Park, Beom Seok",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "section": 1,
+        "name": "Seminar for Comprehensive Competency Cultivation",
+        "prof": "HAN KYOUNG CHOE",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "section": 1,
+        "name": "Career Exploration and Major Design I",
+        "prof": "HAN KYOUNG CHOE",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 10
+            }
+        ]
+    },
+    {
+        "id": 103,
+        "section": 1,
+        "name": "Introduction to Traditional Korean Culture",
+        "prof": "Bae, Haeun",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "section": 1,
+        "name": "Introduction to Philosophy",
+        "prof": "Kim, Byoungjae",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 105,
+        "section": 1,
+        "name": "Basic Issues in History of Science and Technology",
+        "prof": " Chang, Ha Won",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 106,
+        "section": 1,
+        "name": "Issues in Philosophy of Science",
+        "prof": "Kang, Eugene ",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "section": 1,
+        "name": "Social and Political Thoughts in Modern Society",
+        "prof": "Moon, Jun Young",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 108,
+        "section": 1,
+        "name": "Global Political Economy",
+        "prof": "Yoon, Ji Sung",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 5,
+                "end_index": 7
+            },
+            {
+                "day": "목",
+                "start_index": 5,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 109,
+        "section": 1,
+        "name": "Introduction to Communication Studies",
+        "prof": "Cho, Sung-kyum ",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "section": 1,
+        "name": "Classics in Philosophy",
+        "prof": "Kim, Byoungjae",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "section": 1,
+        "name": "General Theory of Rights change - General Theory of Rights Change",
+        "prof": "Ham, Sang beom",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "section": 1,
+        "name": "Urban Geography",
+        "prof": "Shen Shawn",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "section": 1,
+        "name": "Introduction to the Religions in the World",
+        "prof": "Park, Beom Seok",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 114,
+        "section": 1,
+        "name": "Special Topics in Social Sciences Ⅰ - Special Topics in Social Sciences Ⅰ: Mapping your life across 20s",
+        "prof": "Kwak, Keum-joo",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 11,
+                "end_index": 16
+            }
+        ]
+    },
+    {
+        "id": 115,
+        "section": 1,
+        "name": "Special Topics in Social Sciences Ⅱ - Human Evolution and Culture",
+        "prof": "Yi, Jeong-duk",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 116,
+        "section": 2,
+        "name": "Special Topics in Social Sciences Ⅱ - Culture and Society",
+        "prof": "Choi, Tae Seob",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 117,
+        "section": 1,
+        "name": "Philosophy of Mind",
+        "prof": "Kim, Byoungjae",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "수",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 118,
+        "section": 1,
+        "name": "Scientific Writing",
+        "prof": "Lee, Jeong Ah",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 119,
+        "section": 2,
+        "name": "Scientific Writing",
+        "prof": "Mark Silverlock",
+        "classification": "Basic compulsory course",
+        "category": "Writing·Reading",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 19,
+                "end_index": 21
+            },
+            {
+                "day": "수",
+                "start_index": 19,
+                "end_index": 21
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "section": 1,
+        "name": "internshipⅠ",
+        "prof": "Kim, Sohee",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 17,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 121,
+        "section": 1,
+        "name": "internshipⅡ",
+        "prof": "Kim, Sohee",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 1.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 17,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 122,
+        "section": 1,
+        "name": "internshipⅢ",
+        "prof": "Kim, Sohee",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 17,
+                "end_index": 20
+            }
+        ]
+    },
+    {
+        "id": 123,
+        "section": 1,
+        "name": "internshipⅣ",
+        "prof": "Kim, Sohee",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 17,
+                "end_index": 20
+            }
+        ]
+    },
+    {
+        "id": 124,
+        "section": 1,
+        "name": "Global InternshipⅤ",
+        "prof": "Kim, Hoe Joon",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 10,
+                "end_index": 29
+            }
+        ]
+    },
+    {
+        "id": 125,
+        "section": 1,
+        "name": "Global InternshipⅥ",
+        "prof": "Kim, Hoe Joon",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 10,
+                "end_index": 29
+            }
+        ]
+    },
+    {
+        "id": 126,
+        "section": 1,
+        "name": "Global InternshipⅦ",
+        "prof": "Kim, Hoe Joon",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 10,
+                "end_index": 29
+            }
+        ]
+    },
+    {
+        "id": 127,
+        "section": 1,
+        "name": "Global InternshipⅧ",
+        "prof": "Kim, Hoe Joon",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 10,
+                "end_index": 29
+            }
+        ]
+    },
+    {
+        "id": 128,
+        "section": 1,
+        "name": "internshipⅤ",
+        "prof": "Kim, Sohee",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 10,
+                "end_index": 29
+            }
+        ]
+    },
+    {
+        "id": 129,
+        "section": 1,
+        "name": "internshipⅥ",
+        "prof": "Kim, Sohee",
+        "classification": "Advanced compulsory course",
+        "category": "Internship",
+        "major_tracks": [],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "토",
+                "start_index": 10,
+                "end_index": 29
+            }
+        ]
+    },
+    {
+        "id": 130,
+        "section": 1,
+        "name": "Cell Biology Lab",
+        "prof": "Lee, Chang-Hun, Chan Chung, Cho, Jeong A",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 16,
+                "end_index": 21
+            },
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 21
+            }
+        ]
+    },
+    {
+        "id": 131,
+        "section": 2,
+        "name": "Cell Biology Lab",
+        "prof": "Chan Chung, Lee, Chang-Hun, Cho, Jeong A",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 14,
+                "end_index": 19
+            },
+            {
+                "day": "목",
+                "start_index": 14,
+                "end_index": 19
+            }
+        ]
+    },
+    {
+        "id": 132,
+        "section": 3,
+        "name": "Cell Biology Lab",
+        "prof": "Cho, Jeong A, Chan Chung, Lee, Chang-Hun",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 133,
+        "section": 1,
+        "name": "Cell Biology",
+        "prof": "Baek, Myung In, Jeong, Young Tae",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 13,
+                "end_index": 15
+            },
+            {
+                "day": "목",
+                "start_index": 13,
+                "end_index": 15
+            }
+        ]
+    },
+    {
+        "id": 134,
+        "section": 2,
+        "name": "Cell Biology",
+        "prof": "Baek, Myung In, Jeong, Young Tae",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 135,
+        "section": 1,
+        "name": "Ecology and Evolution",
+        "prof": "LEE, SANGIM",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 136,
+        "section": 1,
+        "name": "Neuroscience Ⅰ",
+        "prof": "Suh, Byung Chang, Um, JI Won",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 137,
+        "section": 1,
+        "name": "Neuroscience Ⅱ",
+        "prof": "Hyun, Jung Ho, Lee, Hyo Sang, HAN KYOUNG CHOE",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "수",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 138,
+        "section": 1,
+        "name": "Biochemistry I",
+        "prof": "Kim, Jin Hae, Kim, Yoo Ri, Lee, Jong Chan, Lee, Jae Min",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 139,
+        "section": 1,
+        "name": "Technology for drug development",
+        "prof": "Yea, Kyung Moo, Lee, Byung Hoon",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 140,
+        "section": 1,
+        "name": "Nobel Prize Winning Discoveries in Life Sciences",
+        "prof": "Lee, Byung Hoon, Song-Yi Lee",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 141,
+        "section": 1,
+        "name": "Principles of Development",
+        "prof": "Baek, Myung In, Yu, Seong-Woon, Kwak, June Myoung",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 142,
+        "section": 1,
+        "name": "Biomedical Engineering",
+        "prof": "Lee Kwang",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 143,
+        "section": 1,
+        "name": "Human Physiology",
+        "prof": "Lee, Jae Min, KIM, EUN-KYOUNG",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 144,
+        "section": 1,
+        "name": "Microbiology",
+        "prof": "Kim, Yoo Ri, Chan Chung",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "수",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 145,
+        "section": 1,
+        "name": "Introduction to Computational Brain Science",
+        "prof": "Yu, Woo Kyung, Mean-Hwan Kim",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 146,
+        "section": 1,
+        "name": "Neurobiology of Disease",
+        "prof": "Lee, Sung Bae",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 147,
+        "section": 1,
+        "name": "Solid Mechanics",
+        "prof": "Kyung In, Jang",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 148,
+        "section": 1,
+        "name": "Robots for Human",
+        "prof": "Kim, Hoe Joon, Seongmin Lee, Joon-Hyuk Park, Nam, Kanghyun, Sohyun Jung, Giseop Kim",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 149,
+        "section": 1,
+        "name": "Engineering Vibration",
+        "prof": "Lim, Yong Seob",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 150,
+        "section": 1,
+        "name": "Introduction to Control Engineering (Lecture)",
+        "prof": "Park, Suk Ho",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [
+            "Life Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 151,
+        "section": 1,
+        "name": "Fluid dynamics",
+        "prof": "Sohyun Jung",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 152,
+        "section": 1,
+        "name": "Electronics for Robotics",
+        "prof": "Park, Kyungseo",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 17
+            },
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 153,
+        "section": 1,
+        "name": "Robot Dynamics and Control",
+        "prof": "Hwang, Min Ho",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 154,
+        "section": 1,
+        "name": "Micro/Nano Engineering",
+        "prof": "Lee, Jae Hong",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Life Science",
+            "Brain Science"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 155,
+        "section": 1,
+        "name": "Fundamental of Heat Transfer",
+        "prof": "Choi, Gyeung Ho",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 156,
+        "section": 1,
+        "name": "Introduction to  Mobile System",
+        "prof": "Seongmin Lee",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 16,
+                "end_index": 18
+            },
+            {
+                "day": "목",
+                "start_index": 16,
+                "end_index": 18
+            }
+        ]
+    },
+    {
+        "id": 157,
+        "section": 1,
+        "name": "Introduction to materials science & engineeringⅠ",
+        "prof": "Lee, Ju Hyuck",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 158,
+        "section": 1,
+        "name": "Experiment in Materials Science & Engineering",
+        "prof": "Jinsoo Kim, Sungwon Lee, Lee, Ju Hyuck, Lee, Jong-Soo, LEE, SHINBUHM",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering",
+            "Electronic Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 16,
+                "end_index": 21
+            },
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 159,
+        "section": 1,
+        "name": "Phase Transformations",
+        "prof": "Jinsoo Kim",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering",
+            "Chemical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "금",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 160,
+        "section": 1,
+        "name": "Mechanical Behavior  of Materials",
+        "prof": "Younggyu Kim",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 10,
+                "end_index": 12
+            },
+            {
+                "day": "수",
+                "start_index": 10,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 161,
+        "section": 1,
+        "name": "Analytical MechanicsⅠ",
+        "prof": "Lee, Jae Dong",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 17
+            },
+            {
+                "day": "수",
+                "start_index": 15,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 162,
+        "section": 1,
+        "name": "Modern Physics",
+        "prof": "Kim, Soyeun",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 5,
+                "end_index": 7
+            },
+            {
+                "day": "수",
+                "start_index": 5,
+                "end_index": 7
+            }
+        ]
+    },
+    {
+        "id": 163,
+        "section": 1,
+        "name": "Advanced Physics Lab",
+        "prof": "Unassigned",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 2.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 12
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 12
+            }
+        ]
+    },
+    {
+        "id": 164,
+        "section": 1,
+        "name": "Quantum MechanicsⅠ - Quantum Mechanics I",
+        "prof": "Park, Keeseong",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Mechanical Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "수",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 165,
+        "section": 1,
+        "name": "Mathematical Physics",
+        "prof": "Choe, Seung Ho",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Materials Science & Engineering",
+            "Chemistry"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 166,
+        "section": 1,
+        "name": "ElectrodynamicsⅡ - Electrodynamics II",
+        "prof": "Chang-Hee Cho",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Materials Science & Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 167,
+        "section": 1,
+        "name": "Modern Optics",
+        "prof": "Lee, Ki Joon",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Materials Science & Engineering",
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 168,
+        "section": 1,
+        "name": "Solid State Physics Ⅱ",
+        "prof": "Hong, Jung Il ",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Materials Science & Engineering"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 169,
+        "section": 1,
+        "name": "Biophysics",
+        "prof": "Lee, Jong Chan",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 170,
+        "section": 1,
+        "name": "Computational Physics",
+        "prof": "Kang, Joongoo",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 171,
+        "section": 1,
+        "name": "Atomic & Molecular Physics",
+        "prof": "Unassigned",
+        "classification": "Advanced compulsory course",
+        "category": "Track",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 172,
+        "section": 1,
+        "name": "Design Thinking",
+        "prof": "Park, Jong Rae",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 173,
+        "section": 1,
+        "name": "Introduction to Urban Air Mobility",
+        "prof": "In, Su Il",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 15,
+                "end_index": 20
+            }
+        ]
+    },
+    {
+        "id": 174,
+        "section": 1,
+        "name": "Communication and Modern Society",
+        "prof": "Cho, Sung-kyum ",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 175,
+        "section": 1,
+        "name": "Game Theory",
+        "prof": "Kim, Son-ku",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 12,
+                "end_index": 17
+            }
+        ]
+    },
+    {
+        "id": 176,
+        "section": 1,
+        "name": "User experience design",
+        "prof": "Park, Jong Rae",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "수",
+                "start_index": 4,
+                "end_index": 9
+            }
+        ]
+    },
+    {
+        "id": 177,
+        "section": 1,
+        "name": "Integrative understanding of life",
+        "prof": "Nam, Chang Hoon",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 178,
+        "section": 1,
+        "name": "Introduction to Mathematical Analysis for the Undergraduate",
+        "prof": "Ahn, Heung Ju",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 179,
+        "section": 1,
+        "name": "Modern Algebra",
+        "prof": "Hudson Thomas Bryan",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [
+            "Physics"
+        ],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 1,
+                "end_index": 3
+            },
+            {
+                "day": "목",
+                "start_index": 1,
+                "end_index": 3
+            }
+        ]
+    },
+    {
+        "id": 180,
+        "section": 1,
+        "name": "Geometry of Tensors and Applications",
+        "prof": "Han, Kang Jin",
+        "classification": "Advanced compulsory course",
+        "category": "Non-Track/Convergence",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "목",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 181,
+        "section": 1,
+        "name": "Introduction to Semiconductor Fabrication - Device Fabrication Process for Nanotechnology",
+        "prof": "Kwon, Hyuk Jun",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "월",
+                "start_index": 9,
+                "end_index": 11
+            },
+            {
+                "day": "수",
+                "start_index": 9,
+                "end_index": 11
+            }
+        ]
+    },
+    {
+        "id": 182,
+        "section": 1,
+        "name": "Fundamentals of Electronic Devices",
+        "prof": "Byeongmoon Lee",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 4,
+                "end_index": 6
+            },
+            {
+                "day": "목",
+                "start_index": 4,
+                "end_index": 6
+            }
+        ]
+    },
+    {
+        "id": 183,
+        "section": 1,
+        "name": "Introduction to Electronic Circuits",
+        "prof": "Lee, Jung Hyup",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "화",
+                "start_index": 12,
+                "end_index": 14
+            },
+            {
+                "day": "목",
+                "start_index": 12,
+                "end_index": 14
+            }
+        ]
+    },
+    {
+        "id": 184,
+        "section": 1,
+        "name": "Semiconductor  Fabrication Lab - Semiconductor Fabrication Lab",
+        "prof": "Jang, Jae Eun, Sanghyeon Choi",
+        "classification": "Advanced compulsory course",
+        "category": "Major Advanced",
+        "major_tracks": [],
+        "credit": 3.0,
+        "time_slots": [
+            {
+                "day": "금",
+                "start_index": 9,
+                "end_index": 14
+            }
+        ]
+    }
+]
