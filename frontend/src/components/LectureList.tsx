@@ -8,7 +8,6 @@ import { translations } from '../translations';
 export const LectureList = () => {
     const { allLectures, selectedLectureIds, toggleLectureSelection, language } = useApp();
     const t = translations[language].lectureList;
-    const tc = translations[language].common;
 
     const [searchTerm, setSearchTerm] = useState('');
     const [showHelp, setShowHelp] = useState(false);
@@ -110,7 +109,7 @@ export const LectureList = () => {
         selected.forEach(l => {
             if (!uniqueCourses.has(l.name)) {
                 uniqueCourses.add(l.name);
-                credits += l.credit;
+                credits += (l.credit || 0);
             }
         });
         

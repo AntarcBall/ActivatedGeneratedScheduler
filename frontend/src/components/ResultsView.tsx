@@ -117,8 +117,9 @@ export const ResultsView = () => {
                                         ? COLORS[current.lectures.indexOf(lecture) % COLORS.length] 
                                         : 'bg-white';
 
+                                    const borderPart = colorClass.split(' ').pop() || '';
                                     const borderClass = lecture
-                                        ? `border-l border-r ${isStart ? 'border-t' : 'border-t-0'} ${isEnd ? 'border-b' : 'border-b-0'} ${colorClass.split(' ').pop().replace('border-', 'border-opacity-50 border-')}`
+                                        ? `border-l border-r ${isStart ? 'border-t' : 'border-t-0'} ${isEnd ? 'border-b' : 'border-b-0'} ${borderPart.replace('border-', 'border-opacity-50 border-')}`
                                         : 'border-r border-b border-gray-50';
 
                                     return (
@@ -152,7 +153,7 @@ export const ResultsView = () => {
                             <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">{t.totalCredits}</span>
                         </div>
                         <div className="text-4xl font-black">
-                            {current.lectures.reduce((sum, l) => sum + l.credit, 0).toFixed(1)}
+                            {current.lectures.reduce((sum, l) => sum + (l.credit || 0), 0).toFixed(1)}
                         </div>
                     </div>
 

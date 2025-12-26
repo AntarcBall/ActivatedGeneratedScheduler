@@ -4,7 +4,6 @@ import { translations } from '../translations';
 export default function LandingPage() {
     const { language, setLanguage, nextPage } = useApp();
     const t = translations[language].landing;
-    const tc = translations[language].common;
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
