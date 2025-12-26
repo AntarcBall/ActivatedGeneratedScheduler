@@ -85,7 +85,7 @@ const Content = () => {
               {t.common.prev}
             </button>
             <div className="hidden sm:block">
-               <h1 className="text-xs font-bold text-gray-700">AGS for DGIST</h1>
+               <h1 className="text-xs font-bold text-gray-700">AGS for DGIST by H. Jeong</h1>
             </div>
           </div>
 
