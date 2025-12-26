@@ -50,31 +50,33 @@ const Content = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-50 flex flex-col items-center p-8 overflow-hidden">
-      <div className="w-full max-w-5xl bg-white shadow-lg rounded-xl overflow-hidden flex flex-col h-full">
+    <div className="h-screen bg-gray-50 flex flex-col items-center p-2 md:p-4 overflow-hidden">
+      <div className="w-full max-w-7xl bg-white shadow-lg rounded-xl overflow-hidden flex flex-col h-full">
         {/* Progress Bar */}
-        <div className="w-full bg-gray-200 h-2">
+        <div className="w-full bg-gray-200 h-1.5 flex-shrink-0">
           <div 
-            className="bg-blue-500 h-2 transition-all duration-300"
+            className="bg-blue-500 h-1.5 transition-all duration-300"
             style={{ width: `${(currentPage / totalPages) * 100}%` }}
           />
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 p-6 overflow-y-auto">
-          <h2 className="text-xl font-bold mb-4">
+        <div className="flex-1 p-3 md:p-4 overflow-hidden flex flex-col">
+          <h2 className="text-lg font-bold mb-2 flex-shrink-0">
               {currentPage === 0 ? t.landing.title : `Step ${currentPage}: ${getPageTitle(currentPage)}`}
           </h2>
-          {renderStep()}
+          <div className="flex-1 min-h-0">
+            {renderStep()}
+          </div>
         </div>
 
         {/* Footer / Navigation */}
-        <div className="p-4 border-t bg-gray-50 flex items-center justify-between">
+        <div className="p-2 md:p-3 border-t bg-gray-50 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <button 
               onClick={prevPage} 
               disabled={currentPage === 0 || isGenerating}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-lg font-medium text-sm transition-colors ${
                 currentPage === 0 
                   ? 'opacity-0 cursor-default' 
                   : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -83,15 +85,14 @@ const Content = () => {
               {t.common.prev}
             </button>
             <div className="hidden sm:block">
-               <h1 className="text-sm font-bold text-gray-700">AGS for DGIST</h1>
-               <p className="text-[10px] text-gray-400">by H.J.</p>
+               <h1 className="text-xs font-bold text-gray-700">AGS for DGIST</h1>
             </div>
           </div>
 
           <button 
             onClick={handleNext} 
             disabled={currentPage === totalPages || isGenerating}
-            className={`px-6 py-2 rounded-lg font-medium transition-colors text-white ${
+            className={`px-5 py-1.5 rounded-lg font-medium text-sm transition-colors text-white ${
               isGenerating
                 ? 'bg-blue-400 cursor-wait'
                 : 'bg-blue-600 hover:bg-blue-700'

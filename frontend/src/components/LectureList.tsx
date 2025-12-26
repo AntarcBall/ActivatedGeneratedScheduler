@@ -109,66 +109,65 @@ export const LectureList = () => {
     }, [allLectures, selectedLectureIds]);
 
     return (
-        <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto h-[calc(100vh-250px)]">
-            {/* Sidebar Controls */}
-            <div className="w-full lg:w-80 flex flex-col gap-6 overflow-y-auto pr-2 custom-scrollbar">
-                {/* Stats Card */}
-                <div className="bg-gray-900 rounded-3xl p-6 text-white shadow-xl shadow-gray-200">
-                    <div className="flex items-center justify-between mb-4">
-                        <span className="text-xs font-black text-gray-400 uppercase tracking-widest">{t.selectedCount}</span>
-                        <div className="bg-blue-600 px-3 py-1 rounded-full text-xs font-black italic">BETA</div>
+        <div className="flex flex-col lg:flex-row gap-4 w-full h-full min-h-0">
+            {/* Sidebar Controls - Compressed */}
+            <div className="w-full lg:w-[25%] flex flex-col gap-3 overflow-y-auto pr-1 custom-scrollbar">
+                {/* Stats Card - Highly Compressed */}
+                <div className="bg-gray-900 rounded-2xl p-4 text-white shadow-lg flex-shrink-0">
+                    <div className="flex items-center justify-between mb-2">
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{t.selectedCount}</span>
                     </div>
-                    <div className="flex items-end gap-2 mb-6">
-                        <span className="text-5xl font-black">{stats.count}</span>
-                        <span className="text-gray-400 font-bold mb-1.5">Sections</span>
+                    <div className="flex items-baseline gap-2 mb-3">
+                        <span className="text-3xl font-black">{stats.count}</span>
+                        <span className="text-xs text-gray-400 font-bold">Sections</span>
                     </div>
-                    <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                        <span className="text-xs font-bold text-gray-400">{t.totalCredits}</span>
-                        <span className="text-xl font-black text-blue-400">{stats.credits.toFixed(1)}</span>
+                    <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                        <span className="text-[10px] font-bold text-gray-400">{t.totalCredits}</span>
+                        <span className="text-lg font-black text-blue-400">{stats.credits.toFixed(1)}</span>
                     </div>
                 </div>
 
-                {/* Search Toggle */}
-                <div className="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm">
+                {/* Search Toggle - Compressed */}
+                <div className="bg-white rounded-xl border border-gray-100 p-2 shadow-sm flex-shrink-0">
                     <button 
                         onClick={() => setIsSearchEnabled(!isSearchEnabled)}
-                        className={`w-full flex items-center justify-between p-2 rounded-xl transition-all ${isSearchEnabled ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}`}
+                        className={`w-full flex items-center justify-between p-1.5 rounded-lg transition-all ${isSearchEnabled ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}`}
                     >
-                        <div className="flex items-center gap-3">
-                            <Search className="w-5 h-5" />
-                            <span className="font-bold">{t.showSearch}</span>
+                        <div className="flex items-center gap-2">
+                            <Search className="w-4 h-4" />
+                            <span className="font-bold text-sm">{t.showSearch}</span>
                         </div>
-                        <Check className={`w-4 h-4 transition-opacity ${isSearchEnabled ? 'opacity-100' : 'opacity-0'}`} />
+                        <Check className={`w-3 h-3 transition-opacity ${isSearchEnabled ? 'opacity-100' : 'opacity-0'}`} />
                     </button>
                     {isSearchEnabled && (
-                        <div className="mt-4 animate-in slide-in-from-top-2 duration-300">
+                        <div className="mt-2 animate-in slide-in-from-top-1 duration-200">
                             <input
                                 type="text"
                                 placeholder={t.searchPlaceholder}
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 transition-all"
+                                className="w-full bg-gray-50 border-none rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-blue-500 transition-all"
                             />
                         </div>
                     )}
                 </div>
 
-                {/* Filter Toggle */}
-                <div className="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm flex-1">
+                {/* Filter Toggle - Compressed */}
+                <div className="bg-white rounded-xl border border-gray-100 p-2 shadow-sm flex-1 min-h-0 flex flex-col">
                     <button 
                         onClick={() => setIsFilterEnabled(!isFilterEnabled)}
-                        className={`w-full flex items-center justify-between p-2 rounded-xl transition-all ${isFilterEnabled ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}`}
+                        className={`w-full flex items-center justify-between p-1.5 rounded-lg transition-all flex-shrink-0 ${isFilterEnabled ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}`}
                     >
-                        <div className="flex items-center gap-3">
-                            <Filter className="w-5 h-5" />
-                            <span className="font-bold">{t.showMatches}</span>
+                        <div className="flex items-center gap-2">
+                            <Filter className="w-4 h-4" />
+                            <span className="font-bold text-sm">{t.showMatches}</span>
                         </div>
-                        <Check className={`w-4 h-4 transition-opacity ${isFilterEnabled ? 'opacity-100' : 'opacity-0'}`} />
+                        <Check className={`w-3 h-3 transition-opacity ${isFilterEnabled ? 'opacity-100' : 'opacity-0'}`} />
                     </button>
 
                     {isFilterEnabled && (
-                        <div className="mt-6 space-y-6 animate-in slide-in-from-top-2 duration-300">
-                            <div className="space-y-2">
+                        <div className="mt-3 space-y-4 overflow-y-auto pr-1 custom-scrollbar animate-in slide-in-from-top-1 duration-200">
+                            <div className="grid grid-cols-1 gap-1">
                                 {[
                                     { id: 'basicMandatory', label: t.basicMandatory },
                                     { id: 'math', label: t.math },
@@ -182,9 +181,9 @@ export const LectureList = () => {
                                     <button
                                         key={filter.id}
                                         onClick={() => handleFilterChange(filter.id)}
-                                        className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                                        className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                                             activeFilter === filter.id 
-                                                ? 'bg-blue-600 text-white shadow-lg shadow-blue-100' 
+                                                ? 'bg-blue-600 text-white shadow-md' 
                                                 : 'text-gray-500 hover:bg-gray-50'
                                         }`}
                                     >
@@ -193,16 +192,16 @@ export const LectureList = () => {
                                 ))}
                             </div>
 
-                            <div className="pt-6 border-t border-gray-50">
-                                <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest block mb-4">
+                            <div className="pt-3 border-t border-gray-100">
+                                <span className="text-[9px] font-black text-gray-300 uppercase tracking-widest block mb-2">
                                     {t.majorTracks}
                                 </span>
-                                <div className="space-y-1">
+                                <div className="grid grid-cols-1 gap-1">
                                     {uniqueMajors.map(major => (
                                         <button
                                             key={major}
                                             onClick={() => handleFilterChange(major)}
-                                            className={`w-full text-left px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                                            className={`w-full text-left px-3 py-1.5 rounded-lg text-[10px] font-bold transition-all ${
                                                 activeFilter === major 
                                                     ? 'bg-gray-900 text-white' 
                                                     : 'text-gray-400 hover:bg-gray-50'
@@ -217,71 +216,71 @@ export const LectureList = () => {
                     )}
                 </div>
 
-                {/* Help Button */}
+                {/* Help Button - Compressed */}
                 <button 
                     onClick={() => setShowHelp(true)}
-                    className="flex items-center justify-center gap-2 p-4 bg-blue-50 text-blue-600 rounded-2xl font-bold hover:bg-blue-100 transition-colors"
+                    className="flex items-center justify-center gap-2 p-2.5 bg-blue-50 text-blue-600 rounded-xl font-bold text-sm hover:bg-blue-100 transition-colors flex-shrink-0"
                 >
-                    <HelpCircle className="w-5 h-5" />
+                    <HelpCircle className="w-4 h-4" />
                     {t.guideTitle}
                 </button>
             </div>
 
-            {/* Lecture List Main */}
-            <div className="flex-1 bg-white rounded-3xl border border-gray-100 shadow-xl overflow-hidden flex flex-col">
-                <div className="flex-1 overflow-y-auto custom-scrollbar p-2">
+            {/* Lecture List Main - Longer and Dominant */}
+            <div className="flex-1 lg:w-[75%] bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden flex flex-col min-h-0">
+                <div className="flex-1 overflow-y-auto custom-scrollbar p-1">
                     {groupedLectures.map((group) => {
                         const isExpanded = expandedGroups.has(group.name);
                         const selectedInGroup = group.lectures.filter(l => selectedLectureIds.includes(l.id));
                         
                         return (
-                            <div key={group.name} className="mb-2 group/item">
+                            <div key={group.name} className="mb-1 group/item">
                                 <button 
                                     onClick={(e) => toggleGroup(group.name, e)}
-                                    className={`w-full flex items-center justify-between p-4 rounded-2xl transition-all ${
+                                    className={`w-full flex items-center justify-between p-3 rounded-xl transition-all ${
                                         isExpanded ? 'bg-gray-50' : 'hover:bg-gray-50'
                                     }`}
                                 >
-                                    <div className="flex items-center gap-4">
-                                        <div className={`p-2 rounded-xl transition-colors ${selectedInGroup.length > 0 ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-400'}`}>
-                                            {isExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+                                    <div className="flex items-center gap-3">
+                                        <div className={`p-1.5 rounded-lg transition-colors ${selectedInGroup.length > 0 ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-400'}`}>
+                                            {isExpanded ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />}
                                         </div>
                                         <div className="text-left">
-                                            <h4 className="font-bold text-gray-900">{group.name}</h4>
-                                            <p className="text-xs text-gray-400 font-medium">{group.lectures.length} Sections available</p>
+                                            <h4 className="font-bold text-gray-900 text-sm">{group.name}</h4>
+                                            <p className="text-[10px] text-gray-400 font-medium">{group.lectures.length} Sections</p>
                                         </div>
                                     </div>
                                     {selectedInGroup.length > 0 && (
-                                        <span className="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-black rounded-full">
+                                        <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-[9px] font-black rounded-full">
                                             {selectedInGroup.length} Selected
                                         </span>
                                     )}
                                 </button>
 
                                 {isExpanded && (
-                                    <div className="px-4 pb-4 pt-2 grid grid-cols-1 md:grid-cols-2 gap-3 animate-in slide-in-from-top-2 duration-200">
+                                    <div className="px-3 pb-3 pt-1 grid grid-cols-1 md:grid-cols-2 gap-2 animate-in slide-in-from-top-1 duration-200">
                                         {group.lectures.map(lec => {
                                             const isSelected = selectedLectureIds.includes(lec.id);
                                             return (
                                                 <div 
                                                     key={lec.id}
                                                     onClick={() => toggleLectureSelection(lec.id)}
-                                                    className={`p-4 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
+                                                    className={`p-3 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                                                         isSelected 
                                                             ? 'border-blue-600 bg-blue-50/50' 
                                                             : 'border-gray-100 hover:border-blue-200 bg-white'
                                                     }`}
                                                 >
-                                                    <div className="flex justify-between items-start mb-3">
-                                                        <span className={`px-2 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
+                                                    <div className="flex justify-between items-start mb-2">
+                                                        <span className={`px-1.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider ${
                                                             isSelected ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-400'
                                                         }`}>
-                                                            Section {lec.section}
+                                                            S{lec.section}
                                                         </span>
-                                                        <span className="text-[10px] font-bold text-gray-300">{lec.credit} Credits</span>
+                                                        <span className="text-[9px] font-bold text-gray-300">{lec.credit}C</span>
                                                     </div>
-                                                    <p className="font-bold text-gray-800 mb-1">{lec.prof}</p>
-                                                    <div className="text-[10px] font-bold text-gray-400 space-y-0.5">
+                                                    <p className="font-bold text-gray-800 text-xs mb-0.5">{lec.prof}</p>
+                                                    <div className="text-[9px] font-bold text-gray-400 space-y-0.5">
                                                         {lec.time_slots.map((s, i) => (
                                                             <div key={i}>{s.day} {formatTimeString([s]).split(' ')[1]}</div>
                                                         ))}
@@ -297,7 +296,7 @@ export const LectureList = () => {
                 </div>
             </div>
 
-            {/* Help Modal */}
+            {/* Help Modal (Remains readable size) */}
             {showHelp && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/20 backdrop-blur-sm animate-in fade-in duration-300">
                     <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg p-8 relative animate-in zoom-in-95 duration-300 max-h-[90vh] overflow-y-auto">
