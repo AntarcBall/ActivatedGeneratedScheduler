@@ -4,6 +4,7 @@ import { PreferenceList } from './components/PreferenceList';
 import { TimeSelector } from './components/TimeSelector';
 import { WeightSettings } from './components/WeightSettings';
 import { ResultsView } from './components/ResultsView';
+import { LandingPage } from './components/LandingPage';
 
 const Content = () => {
   const { currentPage, totalPages, nextPage, prevPage, generateTimetables, isGenerating } = useApp();
@@ -18,6 +19,7 @@ const Content = () => {
 
   const renderStep = () => {
     switch(currentPage) {
+      case 0: return <LandingPage />;
       case 1: return <LectureList />;
       case 2: return <PreferenceList />;
       case 3: return <TimeSelector type="good" />;
@@ -45,7 +47,9 @@ const Content = () => {
 
         {/* Content Area */}
         <div className="flex-1 p-6 overflow-y-auto">
-          <h2 className="text-xl font-bold mb-4">Step {currentPage}: {getPageTitle(currentPage)}</h2>
+          <h2 className="text-xl font-bold mb-4">
+              {currentPage === 0 ? "Welcome" : `Step ${currentPage}: ${getPageTitle(currentPage)}`}
+          </h2>
           {renderStep()}
         </div>
 
@@ -54,10 +58,10 @@ const Content = () => {
           <div className="flex items-center space-x-4">
             <button 
               onClick={prevPage} 
-              disabled={currentPage === 1 || isGenerating}
+              disabled={currentPage === 0 || isGenerating}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                currentPage === 1 
-                  ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
+                currentPage === 0 
+                  ? 'opacity-0 cursor-default' 
                   : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
               }`}
             >
@@ -78,7 +82,7 @@ const Content = () => {
                 : 'bg-blue-600 hover:bg-blue-700'
             }`}
           >
-            {isGenerating ? 'Generating...' : currentPage === 5 ? 'Generate Timetable' : currentPage === 6 ? 'Finished' : 'Next'}
+            {isGenerating ? 'Generating...' : currentPage === 0 ? 'Start' : currentPage === 5 ? 'Generate Timetable' : currentPage === 6 ? 'Finished' : 'Next'}
           </button>
         </div>
       </div>
@@ -88,6 +92,7 @@ const Content = () => {
 
 const getPageTitle = (page: number) => {
   switch(page) {
+    case 0: return "Welcome";
     case 1: return "Select Lectures";
     case 2: return "Set Preferences";
     case 3: return "Select Preferred Times";

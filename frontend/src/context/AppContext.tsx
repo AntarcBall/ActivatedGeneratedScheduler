@@ -16,6 +16,7 @@ interface AppState {
     totalPages: number;
     generatedTimetables: Timetable[];
     isGenerating: boolean;
+    language: 'ko' | 'en';
     
     // Actions
     toggleLectureSelection: (id: number) => void;
@@ -27,6 +28,7 @@ interface AppState {
     nextPage: () => void;
     prevPage: () => void;
     generateTimetables: () => void;
+    setLanguage: (lang: 'ko' | 'en') => void;
 }
 
 const AppContext = createContext<AppState | undefined>(undefined);
@@ -51,11 +53,12 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         { weight: 5, rss: false },
     ]);
 
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(0); // Start at Landing Page (0)
     const totalPages = 6;
     
     const [generatedTimetables, setGeneratedTimetables] = useState<Timetable[]>([]);
     const [isGenerating, setIsGenerating] = useState(false);
+    const [language, setLanguage] = useState<'ko' | 'en'>('ko');
 
     // Load Data
     useEffect(() => {
@@ -109,7 +112,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     };
 
     const setPage = (page: number) => {
-        if (page >= 1 && page <= totalPages) setCurrentPage(page);
+        if (page >= 0 && page <= totalPages) setCurrentPage(page);
     };
 
     const nextPage = () => {
@@ -117,7 +120,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     };
 
     const prevPage = () => {
-        if (currentPage > 1) setCurrentPage(p => p - 1);
+        if (currentPage > 0) setCurrentPage(p => p - 1);
     };
 
     const generateTimetables = () => {
@@ -164,6 +167,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         totalPages,
         generatedTimetables,
         isGenerating,
+        language,
         toggleLectureSelection,
         setLecturePreference,
         toggleSlot,
@@ -172,7 +176,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         setPage,
         nextPage,
         prevPage,
-        generateTimetables
+        generateTimetables,
+        setLanguage
     };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
