@@ -5,7 +5,7 @@ export const translations = {
             subtitle: "동아리 DGROID에 가입해서 더 좋은 소프트웨어를 개발해주세요.",
             start: "시작하기",
             helpTitle: "도움이 필요하신가요?",
-            helpDesc: "각 페이지 우측 상단의 ? 버튼을 누르면 자세한 사용 가이드를 확인할 수 있습니다."
+            helpDesc: "? 버튼을 누르면 자세한 사용 가이드를 확인할 수 있습니다."
         },
         steps: {
             step1: "강의 선택",

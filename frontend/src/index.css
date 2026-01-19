@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./assets/fonts/NanumSquareR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'NanumSquare', system-ui, sans-serif;
+  }
+}
