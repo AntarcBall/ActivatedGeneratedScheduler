@@ -2,7 +2,7 @@ export const translations = {
     ko: {
         landing: {
             title: "DGIST 자동 시간표 생성기",
-            subtitle: "당신의 완벽한 학기를 위한 스마트한 선택",
+            subtitle: "동아리 DGROID에 가입해서 더 좋은 소프트웨어를 개발해주세요.",
             start: "시작하기",
             helpTitle: "도움이 필요하신가요?",
             helpDesc: "각 페이지 우측 상단의 ? 버튼을 누르면 자세한 사용 가이드를 확인할 수 있습니다."
