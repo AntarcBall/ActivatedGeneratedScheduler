@@ -2,6 +2,8 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 import { Lecture, Timetable, WeightConfig, DayOfWeek } from '../types';
 import { parseLecture } from '../utils/lectureUtils';
 
+const LOCALSTORAGE_KEY = 'ags_selected_lectures';
+
 interface AppState {
     // Data
     allLectures: Lecture[];
@@ -20,6 +22,7 @@ interface AppState {
     
     // Actions
     toggleLectureSelection: (id: number) => void;
+    resetSelectedLectures: () => void;
     setLecturePreference: (id: number, pref: number) => void;
     toggleSlot: (type: 'good' | 'bad', day: DayOfWeek, slotIndex: number) => void;
     setWeight: (index: number, weight: number) => void;
@@ -35,7 +38,14 @@ const AppContext = createContext<AppState | undefined>(undefined);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
     const [allLectures, setAllLectures] = useState<Lecture[]>([]);
-    const [selectedLectureIds, setSelectedLectureIds] = useState<number[]>([]);
+    const [selectedLectureIds, setSelectedLectureIds] = useState<number[]>(() => {
+        try {
+            const saved = localStorage.getItem(LOCALSTORAGE_KEY);
+            return saved ? JSON.parse(saved) : [];
+        } catch {
+            return [];
+        }
+    });
     const [preferences, setPreferences] = useState<Record<number, number>>({});
     
     const [goodSlots, setGoodSlots] = useState<Record<DayOfWeek, number[]>>({
@@ -75,9 +85,15 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     const toggleLectureSelection = (id: number) => {
         setSelectedLectureIds(prev => {
-            if (prev.includes(id)) return prev.filter(x => x !== id);
-            return [...prev, id];
+            const newIds = prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id];
+            localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(newIds));
+            return newIds;
         });
+    };
+
+    const resetSelectedLectures = () => {
+        setSelectedLectureIds([]);
+        localStorage.removeItem(LOCALSTORAGE_KEY);
     };
 
     const setLecturePreference = (id: number, pref: number) => {
@@ -170,6 +186,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         isGenerating,
         language,
         toggleLectureSelection,
+        resetSelectedLectures,
         setLecturePreference,
         toggleSlot,
         setWeight,

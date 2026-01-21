@@ -8,7 +8,7 @@ import LandingPage from './components/LandingPage';
 import { translations } from './translations';
 
 const Content = () => {
-  const { currentPage, totalPages, nextPage, prevPage, generateTimetables, isGenerating, language } = useApp();
+  const { currentPage, totalPages, nextPage, prevPage, generateTimetables, isGenerating, language, resetSelectedLectures } = useApp();
   const t = translations[language];
 
   const handleNext = () => {
@@ -73,12 +73,12 @@ const Content = () => {
         {/* Footer / Navigation */}
         <div className="p-2 md:p-3 border-t bg-gray-50 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <button 
-              onClick={prevPage} 
+            <button
+              onClick={prevPage}
               disabled={currentPage === 0 || isGenerating}
               className={`px-3 py-1.5 rounded-lg font-medium text-sm transition-colors ${
-                currentPage === 0 
-                  ? 'opacity-0 cursor-default' 
+                currentPage === 0
+                  ? 'opacity-0 cursor-default'
                   : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
               }`}
             >
@@ -89,7 +89,16 @@ const Content = () => {
             </div>
           </div>
 
-          <button 
+          {currentPage === 1 && (
+            <button
+              onClick={resetSelectedLectures}
+              className="px-3 py-1.5 rounded-lg font-medium text-sm transition-colors bg-red-50 border border-red-200 text-red-600 hover:bg-red-100"
+            >
+              {t.common.reset || 'Reset'}
+            </button>
+          )}
+
+          <button
             onClick={handleNext} 
             disabled={currentPage === totalPages || isGenerating}
             className={`px-5 py-1.5 rounded-lg font-medium text-sm transition-colors text-white ${
