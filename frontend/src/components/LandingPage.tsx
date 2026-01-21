@@ -23,10 +23,6 @@ export default function LandingPage() {
                 </button>
             </div>
 
-            <div className="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center mb-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-                <span className="text-white text-5xl font-black italic">D</span>
-            </div>
-
             <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">
                 {t.title}
             </h1>
@@ -44,8 +40,8 @@ export default function LandingPage() {
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </button>
 
-            <div className="mt-20 pt-10 border-t border-gray-100 w-full max-w-md">
-                <p className="text-sm text-gray-400 font-medium mb-4 uppercase tracking-widest">{t.helpTitle}</p>
+            <div className="pt-10 border-t border-gray-100 w-full max-w-md">
+                <p className="text-sm text-gray-400 font-medium uppercase tracking-widest">{t.helpTitle}</p>
                 <div className="bg-blue-50 rounded-2xl p-6 text-blue-800 text-sm leading-relaxed flex flex-col items-center gap-3">
                     <span>{t.helpDesc}</span>
                     <a
