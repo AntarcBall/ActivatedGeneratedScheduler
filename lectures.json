@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "course_number": "BE101a",
         "section": 1,
         "name": "프로그래밍",
         "prof": "목지수",
@@ -23,6 +24,7 @@
     },
     {
         "id": 2,
+        "course_number": "BE202",
         "section": 1,
         "name": "데이터사이언스기초",
         "prof": "장준기",
@@ -45,6 +47,7 @@
     },
     {
         "id": 3,
+        "course_number": "BE202",
         "section": 2,
         "name": "데이터사이언스기초",
         "prof": "길현재",
@@ -67,6 +70,7 @@
     },
     {
         "id": 4,
+        "course_number": "BE203",
         "section": 1,
         "name": "창의기계설계",
         "prof": "박준혁",
@@ -84,6 +88,7 @@
     },
     {
         "id": 5,
+        "course_number": "BE203",
         "section": 2,
         "name": "창의기계설계",
         "prof": "송석호",
@@ -101,6 +106,7 @@
     },
     {
         "id": 6,
+        "course_number": "BE205",
         "section": 1,
         "name": "회로이론과 계측법(이론)",
         "prof": "이정협",
@@ -118,6 +124,7 @@
     },
     {
         "id": 7,
+        "course_number": "BE205",
         "section": 2,
         "name": "회로이론과 계측법(이론)",
         "prof": "송민영",
@@ -135,6 +142,7 @@
     },
     {
         "id": 8,
+        "course_number": "BR301",
         "section": 1,
         "name": "뇌과학실험Ⅰ(이)",
         "prof": "조용철, 김규형, 오용석",
@@ -154,6 +162,7 @@
     },
     {
         "id": 9,
+        "course_number": "BR403",
         "section": 1,
         "name": "신경재생 및 퇴행(이)",
         "prof": "조용철",
@@ -178,6 +187,7 @@
     },
     {
         "id": 10,
+        "course_number": "BR404",
         "section": 1,
         "name": "학습과 기억(이)",
         "prof": "박포정",
@@ -202,6 +212,7 @@
     },
     {
         "id": 11,
+        "course_number": "BS102a",
         "section": 1,
         "name": "공학수학Ⅰ",
         "prof": "안흥주",
@@ -224,6 +235,7 @@
     },
     {
         "id": 12,
+        "course_number": "BS102a",
         "section": 2,
         "name": "공학수학Ⅰ",
         "prof": "Hudson Thomas Bryan",
@@ -246,6 +258,7 @@
     },
     {
         "id": 13,
+        "course_number": "BS102a",
         "section": 3,
         "name": "공학수학Ⅰ",
         "prof": "Carlos Scarinci",
@@ -268,6 +281,7 @@
     },
     {
         "id": 14,
+        "course_number": "BS102a",
         "section": 4,
         "name": "공학수학Ⅰ",
         "prof": "Carlos Scarinci",
@@ -290,6 +304,7 @@
     },
     {
         "id": 15,
+        "course_number": "BS102a",
         "section": 5,
         "name": "공학수학Ⅰ",
         "prof": "미배정",
@@ -312,6 +327,7 @@
     },
     {
         "id": 16,
+        "course_number": "BS103a",
         "section": 1,
         "name": "일반물리Ⅰ",
         "prof": "DEVECIOGLU DENIZ OLGU",
@@ -334,6 +350,7 @@
     },
     {
         "id": 17,
+        "course_number": "BS103a",
         "section": 2,
         "name": "일반물리Ⅰ",
         "prof": "DEVECIOGLU DENIZ OLGU",
@@ -356,6 +373,7 @@
     },
     {
         "id": 18,
+        "course_number": "BS103a",
         "section": 3,
         "name": "일반물리Ⅰ",
         "prof": "DEVECIOGLU DENIZ OLGU",
@@ -378,6 +396,7 @@
     },
     {
         "id": 19,
+        "course_number": "BS104a",
         "section": 1,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
@@ -395,6 +414,7 @@
     },
     {
         "id": 20,
+        "course_number": "BS104a",
         "section": 2,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
@@ -412,6 +432,7 @@
     },
     {
         "id": 21,
+        "course_number": "BS104a",
         "section": 3,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
@@ -429,6 +450,7 @@
     },
     {
         "id": 22,
+        "course_number": "BS104a",
         "section": 4,
         "name": "일반물리실험Ⅰ",
         "prof": "김동렬",
@@ -446,6 +468,7 @@
     },
     {
         "id": 23,
+        "course_number": "BS104a",
         "section": 5,
         "name": "일반물리실험Ⅰ",
         "prof": "박기성",
@@ -463,6 +486,7 @@
     },
     {
         "id": 24,
+        "course_number": "BS113",
         "section": 1,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
@@ -480,6 +504,7 @@
     },
     {
         "id": 25,
+        "course_number": "BS113",
         "section": 2,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
@@ -497,6 +522,7 @@
     },
     {
         "id": 26,
+        "course_number": "BS113",
         "section": 3,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
@@ -514,6 +540,7 @@
     },
     {
         "id": 27,
+        "course_number": "BS113",
         "section": 4,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
@@ -531,6 +558,7 @@
     },
     {
         "id": 28,
+        "course_number": "BS113",
         "section": 5,
         "name": "일반화학실험Ⅰ",
         "prof": "민은선",
@@ -548,6 +576,7 @@
     },
     {
         "id": 29,
+        "course_number": "BS114",
         "section": 1,
         "name": "생명과학개론",
         "prof": "이석규",
@@ -570,6 +599,7 @@
     },
     {
         "id": 30,
+        "course_number": "BS114",
         "section": 2,
         "name": "생명과학개론",
         "prof": "이효상",
@@ -592,6 +622,7 @@
     },
     {
         "id": 31,
+        "course_number": "BS115",
         "section": 1,
         "name": "일반생물학 실험",
         "prof": "김유리",
@@ -609,6 +640,7 @@
     },
     {
         "id": 32,
+        "course_number": "BS115",
         "section": 2,
         "name": "일반생물학 실험",
         "prof": "조정아",
@@ -626,6 +658,7 @@
     },
     {
         "id": 33,
+        "course_number": "BS115",
         "section": 3,
         "name": "일반생물학 실험",
         "prof": "조정아",
@@ -643,6 +676,7 @@
     },
     {
         "id": 34,
+        "course_number": "BS115",
         "section": 4,
         "name": "일반생물학 실험",
         "prof": "조정아",
@@ -660,6 +694,7 @@
     },
     {
         "id": 35,
+        "course_number": "BS115",
         "section": 5,
         "name": "일반생물학 실험",
         "prof": "조정아",
@@ -677,6 +712,7 @@
     },
     {
         "id": 36,
+        "course_number": "BS115",
         "section": 6,
         "name": "일반생물학 실험",
         "prof": "조정아",
@@ -694,6 +730,7 @@
     },
     {
         "id": 37,
+        "course_number": "BS115",
         "section": 7,
         "name": "일반생물학 실험",
         "prof": "조정아",
@@ -711,6 +748,7 @@
     },
     {
         "id": 38,
+        "course_number": "BS116",
         "section": 1,
         "name": "일반생물학Ⅰ",
         "prof": "정찬, 곽준명, 김민식",
@@ -733,6 +771,7 @@
     },
     {
         "id": 39,
+        "course_number": "BS118",
         "section": 1,
         "name": "일반화학Ⅰ",
         "prof": "인수일",
@@ -750,6 +789,7 @@
     },
     {
         "id": 40,
+        "course_number": "BS118",
         "section": 2,
         "name": "일반화학Ⅰ",
         "prof": "상가라쥬샨무감",
@@ -772,6 +812,7 @@
     },
     {
         "id": 41,
+        "course_number": "BS118",
         "section": 3,
         "name": "일반화학Ⅰ",
         "prof": "미배정",
@@ -794,6 +835,7 @@
     },
     {
         "id": 42,
+        "course_number": "BS202",
         "section": 1,
         "name": "확률과 통계 및 실습",
         "prof": "김주한",
@@ -816,6 +858,7 @@
     },
     {
         "id": 43,
+        "course_number": "BS202",
         "section": 2,
         "name": "확률과 통계 및 실습",
         "prof": "김주한",
@@ -838,6 +881,7 @@
     },
     {
         "id": 44,
+        "course_number": "BS203",
         "section": 1,
         "name": "선형대수학",
         "prof": "한강진",
@@ -860,6 +904,7 @@
     },
     {
         "id": 45,
+        "course_number": "BS203",
         "section": 2,
         "name": "선형대수학",
         "prof": "한강진",
@@ -882,6 +927,7 @@
     },
     {
         "id": 46,
+        "course_number": "BS203",
         "section": 3,
         "name": "선형대수학",
         "prof": "이두석",
@@ -904,6 +950,7 @@
     },
     {
         "id": 47,
+        "course_number": "BS203",
         "section": 4,
         "name": "선형대수학",
         "prof": "미배정",
@@ -926,6 +973,7 @@
     },
     {
         "id": 48,
+        "course_number": "CE303",
         "section": 1,
         "name": "화학공학열역학(공)",
         "prof": "고서진",
@@ -950,6 +998,7 @@
     },
     {
         "id": 49,
+        "course_number": "CE401",
         "section": 1,
         "name": "고분자개론(이,공)",
         "prof": "호동해",
@@ -975,6 +1024,7 @@
     },
     {
         "id": 50,
+        "course_number": "CE402",
         "section": 1,
         "name": "화학 제품 및 공정 설계(공)",
         "prof": "김찬연",
@@ -999,6 +1049,7 @@
     },
     {
         "id": 51,
+        "course_number": "CHEM201",
         "section": 1,
         "name": "분석화학(이,공)",
         "prof": "이호춘",
@@ -1025,6 +1076,7 @@
     },
     {
         "id": 52,
+        "course_number": "CHEM205",
         "section": 1,
         "name": "유기화학Ⅰ(이,공)",
         "prof": "정병혁",
@@ -1051,6 +1103,7 @@
     },
     {
         "id": 53,
+        "course_number": "CHEM206",
         "section": 1,
         "name": "일반화학실험Ⅱ(이)",
         "prof": "이윤구",
@@ -1070,6 +1123,7 @@
     },
     {
         "id": 54,
+        "course_number": "CHEM301",
         "section": 1,
         "name": "심화화학실험Ⅰ(이)",
         "prof": "홍선기, 인수일",
@@ -1089,6 +1143,7 @@
     },
     {
         "id": 55,
+        "course_number": "CHEM305",
         "section": 1,
         "name": "무기화학Ⅱ(이,공)",
         "prof": "김성균",
@@ -1114,6 +1169,7 @@
     },
     {
         "id": 56,
+        "course_number": "CHEM306",
         "section": 1,
         "name": "물리화학Ⅱ(이,공)",
         "prof": "성주영",
@@ -1139,6 +1195,7 @@
     },
     {
         "id": 57,
+        "course_number": "CHEM404",
         "section": 1,
         "name": "계산화학(이)",
         "prof": "장윤희",
@@ -1163,6 +1220,7 @@
     },
     {
         "id": 58,
+        "course_number": "CR501",
         "section": 1,
         "name": "한국어 Ⅰ",
         "prof": "장근영",
@@ -1185,6 +1243,7 @@
     },
     {
         "id": 59,
+        "course_number": "CR502",
         "section": 1,
         "name": "한국어 Ⅱ",
         "prof": "정효정",
@@ -1207,6 +1266,7 @@
     },
     {
         "id": 60,
+        "course_number": "CSE203",
         "section": 1,
         "name": "자료구조(이,공)",
         "prof": "김선준",
@@ -1232,6 +1292,7 @@
     },
     {
         "id": 61,
+        "course_number": "CSE302",
         "section": 1,
         "name": "기계학습개론(이,공)",
         "prof": "박상현",
@@ -1256,6 +1317,7 @@
     },
     {
         "id": 62,
+        "course_number": "CSE305",
         "section": 1,
         "name": "컴퓨터구조(공)",
         "prof": "미배정",
@@ -1281,6 +1343,7 @@
     },
     {
         "id": 63,
+        "course_number": "CSE306",
         "section": 1,
         "name": "시스템 프로그래밍(공)",
         "prof": "이용우",
@@ -1305,6 +1368,7 @@
     },
     {
         "id": 64,
+        "course_number": "CSE307",
         "section": 1,
         "name": "프로그래밍 언어(이,공)",
         "prof": "전민석",
@@ -1329,6 +1393,7 @@
     },
     {
         "id": 65,
+        "course_number": "CSE402",
         "section": 1,
         "name": "강화학습(이,공)",
         "prof": "이두석",
@@ -1354,6 +1419,7 @@
     },
     {
         "id": 66,
+        "course_number": "CSE404",
         "section": 1,
         "name": "컴퓨터 비전 개론(공)",
         "prof": "임성훈",
@@ -1378,6 +1444,7 @@
     },
     {
         "id": 67,
+        "course_number": "CSE405",
         "section": 1,
         "name": "컴퓨터보안개론(공)",
         "prof": "최원석",
@@ -1402,6 +1469,7 @@
     },
     {
         "id": 68,
+        "course_number": "EE301",
         "section": 1,
         "name": "신호 및 시스템(공)",
         "prof": "최재호",
@@ -1426,6 +1494,7 @@
     },
     {
         "id": 69,
+        "course_number": "EE303",
         "section": 1,
         "name": "전자회로 이론(공)",
         "prof": "윤종혁",
@@ -1450,6 +1519,7 @@
     },
     {
         "id": 70,
+        "course_number": "EE304",
         "section": 1,
         "name": "반도체물성 개론(공)",
         "prof": "이상훈",
@@ -1476,6 +1546,7 @@
     },
     {
         "id": 71,
+        "course_number": "EE401",
         "section": 1,
         "name": "디지털 신호처리(공)",
         "prof": "황재윤",
@@ -1501,6 +1572,7 @@
     },
     {
         "id": 72,
+        "course_number": "EE403",
         "section": 1,
         "name": "디지털통신(공)",
         "prof": "서대원",
@@ -1525,6 +1597,7 @@
     },
     {
         "id": 73,
+        "course_number": "EE404",
         "section": 1,
         "name": "반도체공정개론(공)",
         "prof": "권혁준",
@@ -1549,6 +1622,7 @@
     },
     {
         "id": 74,
+        "course_number": "EE406",
         "section": 1,
         "name": "지능형제어시스템(공)",
         "prof": "김경대, 이성민",
@@ -1573,6 +1647,7 @@
     },
     {
         "id": 75,
+        "course_number": "EE407",
         "section": 1,
         "name": "디지털집적회로설계(공)",
         "prof": "김가인",
@@ -1597,6 +1672,7 @@
     },
     {
         "id": 76,
+        "course_number": "ENT301",
         "section": 1,
         "name": "기업가 정신과 사회적 책임",
         "prof": "미배정",
@@ -1619,6 +1695,7 @@
     },
     {
         "id": 77,
+        "course_number": "ENT306",
         "section": 1,
         "name": "회계학 원론",
         "prof": "조성표",
@@ -1636,6 +1713,7 @@
     },
     {
         "id": 78,
+        "course_number": "GC101",
         "section": 1,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1653,6 +1731,7 @@
     },
     {
         "id": 79,
+        "course_number": "GC101",
         "section": 2,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1670,6 +1749,7 @@
     },
     {
         "id": 80,
+        "course_number": "GC101",
         "section": 3,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1687,6 +1767,7 @@
     },
     {
         "id": 81,
+        "course_number": "GC101",
         "section": 4,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1704,6 +1785,7 @@
     },
     {
         "id": 82,
+        "course_number": "GC101",
         "section": 5,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1721,6 +1803,7 @@
     },
     {
         "id": 83,
+        "course_number": "GC101",
         "section": 6,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1738,6 +1821,7 @@
     },
     {
         "id": 84,
+        "course_number": "GC101",
         "section": 7,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1755,6 +1839,7 @@
     },
     {
         "id": 85,
+        "course_number": "GC101",
         "section": 8,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1772,6 +1857,7 @@
     },
     {
         "id": 86,
+        "course_number": "GC101",
         "section": 9,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
@@ -1789,6 +1875,7 @@
     },
     {
         "id": 87,
+        "course_number": "GC101",
         "section": 10,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
@@ -1806,6 +1893,7 @@
     },
     {
         "id": 88,
+        "course_number": "GC101",
         "section": 11,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
@@ -1823,6 +1911,7 @@
     },
     {
         "id": 89,
+        "course_number": "GC101",
         "section": 12,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Andrew John Miller",
@@ -1840,6 +1929,7 @@
     },
     {
         "id": 90,
+        "course_number": "GC101",
         "section": 13,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Andrew John Miller",
@@ -1857,6 +1947,7 @@
     },
     {
         "id": 91,
+        "course_number": "GC101",
         "section": 14,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "이정아",
@@ -1874,6 +1965,7 @@
     },
     {
         "id": 92,
+        "course_number": "HSS101",
         "section": 1,
         "name": "경제학 입문 - 영어강좌",
         "prof": "김선구",
@@ -1891,6 +1983,7 @@
     },
     {
         "id": 93,
+        "course_number": "HSS102",
         "section": 1,
         "name": "과학기술과 현대사회",
         "prof": "장하원",
@@ -1908,6 +2001,7 @@
     },
     {
         "id": 94,
+        "course_number": "HSS103",
         "section": 1,
         "name": "법과 사회",
         "prof": "김현희",
@@ -1925,6 +2019,7 @@
     },
     {
         "id": 95,
+        "course_number": "HSS104a",
         "section": 1,
         "name": "소설의 이해",
         "prof": "배하은",
@@ -1947,6 +2042,7 @@
     },
     {
         "id": 96,
+        "course_number": "HSS106",
         "section": 1,
         "name": "비교정치학",
         "prof": "윤지성",
@@ -1969,6 +2065,7 @@
     },
     {
         "id": 97,
+        "course_number": "HSS107",
         "section": 1,
         "name": "언어학입문",
         "prof": "이정아",
@@ -1986,6 +2083,7 @@
     },
     {
         "id": 98,
+        "course_number": "HSS108",
         "section": 1,
         "name": "비교역사학",
         "prof": "문준영",
@@ -2003,6 +2101,7 @@
     },
     {
         "id": 99,
+        "course_number": "HSS109a",
         "section": 1,
         "name": "학술 글쓰기",
         "prof": "배하은",
@@ -2025,6 +2124,7 @@
     },
     {
         "id": 100,
+        "course_number": "HSS109a",
         "section": 2,
         "name": "학술 글쓰기",
         "prof": "임희현",
@@ -2042,6 +2142,7 @@
     },
     {
         "id": 101,
+        "course_number": "HSS109a",
         "section": 3,
         "name": "학술 글쓰기",
         "prof": "임희현",
@@ -2059,6 +2160,7 @@
     },
     {
         "id": 102,
+        "course_number": "HSS109a",
         "section": 4,
         "name": "학술 글쓰기",
         "prof": "전계성",
@@ -2076,6 +2178,7 @@
     },
     {
         "id": 103,
+        "course_number": "HSS109a",
         "section": 5,
         "name": "학술 글쓰기",
         "prof": "전계성",
@@ -2093,6 +2196,7 @@
     },
     {
         "id": 104,
+        "course_number": "HSS112",
         "section": 1,
         "name": "사회학의 이해",
         "prof": "최태섭",
@@ -2110,6 +2214,7 @@
     },
     {
         "id": 105,
+        "course_number": "HSS114",
         "section": 1,
         "name": "지리학 입문",
         "prof": "숀센",
@@ -2127,6 +2232,7 @@
     },
     {
         "id": 106,
+        "course_number": "HSS115",
         "section": 1,
         "name": "심리학으로의 여행",
         "prof": "곽금주",
@@ -2144,6 +2250,7 @@
     },
     {
         "id": 107,
+        "course_number": "HSS116",
         "section": 1,
         "name": "인류학의 이해",
         "prof": "이정덕",
@@ -2161,6 +2268,7 @@
     },
     {
         "id": 108,
+        "course_number": "HSS117",
         "section": 1,
         "name": "인간과 종교",
         "prof": "박범석",
@@ -2178,6 +2286,7 @@
     },
     {
         "id": 109,
+        "course_number": "HSS118",
         "section": 1,
         "name": "미래소양강좌",
         "prof": "최한경",
@@ -2195,6 +2304,7 @@
     },
     {
         "id": 110,
+        "course_number": "HSS119",
         "section": 1,
         "name": "진로탐색 및 전공설계Ⅰ",
         "prof": "최한경",
@@ -2212,6 +2322,7 @@
     },
     {
         "id": 111,
+        "course_number": "HSS121",
         "section": 1,
         "name": "Introduction to Traditional Korean Culture - 영어강좌",
         "prof": "배하은",
@@ -2229,6 +2340,7 @@
     },
     {
         "id": 112,
+        "course_number": "HSS122",
         "section": 1,
         "name": "Introduction to Philosophy - 영어강좌",
         "prof": "김병재",
@@ -2246,6 +2358,7 @@
     },
     {
         "id": 113,
+        "course_number": "HSS201",
         "section": 1,
         "name": "과학기술사의 주요 장면",
         "prof": "장하원",
@@ -2263,6 +2376,7 @@
     },
     {
         "id": 114,
+        "course_number": "HSS202",
         "section": 1,
         "name": "과학철학의 쟁점",
         "prof": "강유진",
@@ -2280,6 +2394,7 @@
     },
     {
         "id": 115,
+        "course_number": "HSS203",
         "section": 1,
         "name": "근대 사회와 사상",
         "prof": "문준영",
@@ -2297,6 +2412,7 @@
     },
     {
         "id": 116,
+        "course_number": "HSS204",
         "section": 1,
         "name": "글로벌 정치경제 - 영어 강좌",
         "prof": "윤지성",
@@ -2319,6 +2435,7 @@
     },
     {
         "id": 117,
+        "course_number": "HSS207a",
         "section": 1,
         "name": "커뮤니케이션 특강 - 영어 강좌",
         "prof": "조성겸",
@@ -2336,6 +2453,7 @@
     },
     {
         "id": 118,
+        "course_number": "HSS208a",
         "section": 1,
         "name": "철학 고전의 이해",
         "prof": "김병재",
@@ -2358,6 +2476,7 @@
     },
     {
         "id": 119,
+        "course_number": "HSS212",
         "section": 1,
         "name": "권리변동의 일반",
         "prof": "함상범",
@@ -2375,6 +2494,7 @@
     },
     {
         "id": 120,
+        "course_number": "HSS215",
         "section": 1,
         "name": "도시지리학",
         "prof": "숀센",
@@ -2397,6 +2517,7 @@
     },
     {
         "id": 121,
+        "course_number": "HSS218",
         "section": 1,
         "name": "세계종교입문",
         "prof": "박범석",
@@ -2414,6 +2535,7 @@
     },
     {
         "id": 122,
+        "course_number": "HSS221",
         "section": 1,
         "name": "사회과학 특강Ⅰ",
         "prof": "곽금주",
@@ -2431,6 +2553,7 @@
     },
     {
         "id": 123,
+        "course_number": "HSS222",
         "section": 1,
         "name": "사회과학 특강Ⅱ - 인류 진화와 문화",
         "prof": "이정덕",
@@ -2448,6 +2571,7 @@
     },
     {
         "id": 124,
+        "course_number": "HSS222",
         "section": 2,
         "name": "사회과학 특강Ⅱ - 문화와 사회",
         "prof": "최태섭",
@@ -2465,6 +2589,7 @@
     },
     {
         "id": 125,
+        "course_number": "HSS223",
         "section": 1,
         "name": "심리철학 - 영어 강좌",
         "prof": "김병재",
@@ -2487,6 +2612,7 @@
     },
     {
         "id": 126,
+        "course_number": "HSS301a",
         "section": 1,
         "name": "Scientific Writing",
         "prof": "이정아",
@@ -2509,6 +2635,7 @@
     },
     {
         "id": 127,
+        "course_number": "HSS301a",
         "section": 2,
         "name": "Scientific Writing",
         "prof": "Mark Silverlock",
@@ -2531,6 +2658,7 @@
     },
     {
         "id": 128,
+        "course_number": "INT201",
         "section": 1,
         "name": "국내 인턴십Ⅰ",
         "prof": "김소희",
@@ -2548,6 +2676,7 @@
     },
     {
         "id": 129,
+        "course_number": "INT202",
         "section": 1,
         "name": "국내 인턴십Ⅱ",
         "prof": "김소희",
@@ -2565,6 +2694,7 @@
     },
     {
         "id": 130,
+        "course_number": "INT203",
         "section": 1,
         "name": "국내 인턴십Ⅲ",
         "prof": "김소희",
@@ -2582,6 +2712,7 @@
     },
     {
         "id": 131,
+        "course_number": "INT204",
         "section": 1,
         "name": "국내 인턴십Ⅳ",
         "prof": "김소희",
@@ -2599,6 +2730,7 @@
     },
     {
         "id": 132,
+        "course_number": "INT211",
         "section": 1,
         "name": "해외 인턴십Ⅴ",
         "prof": "김회준",
@@ -2616,6 +2748,7 @@
     },
     {
         "id": 133,
+        "course_number": "INT212",
         "section": 1,
         "name": "해외 인턴십Ⅵ",
         "prof": "김회준",
@@ -2633,6 +2766,7 @@
     },
     {
         "id": 134,
+        "course_number": "INT213",
         "section": 1,
         "name": "해외 인턴십Ⅶ",
         "prof": "김회준",
@@ -2650,6 +2784,7 @@
     },
     {
         "id": 135,
+        "course_number": "INT214",
         "section": 1,
         "name": "해외 인턴십Ⅷ",
         "prof": "김회준",
@@ -2667,6 +2802,7 @@
     },
     {
         "id": 136,
+        "course_number": "INT401",
         "section": 1,
         "name": "국내 인턴십 Ⅴ",
         "prof": "김소희",
@@ -2684,6 +2820,7 @@
     },
     {
         "id": 137,
+        "course_number": "INT402",
         "section": 1,
         "name": "국내 인턴십 Ⅵ",
         "prof": "김소희",
@@ -2701,6 +2838,7 @@
     },
     {
         "id": 138,
+        "course_number": "LS203",
         "section": 1,
         "name": "세포생물학 실험(이)",
         "prof": "이창훈, 정찬, 조정아",
@@ -2726,6 +2864,7 @@
     },
     {
         "id": 139,
+        "course_number": "LS203",
         "section": 2,
         "name": "세포생물학 실험(이)",
         "prof": "정찬, 이창훈, 조정아",
@@ -2751,6 +2890,7 @@
     },
     {
         "id": 140,
+        "course_number": "LS203",
         "section": 3,
         "name": "세포생물학 실험(이)",
         "prof": "조정아, 정찬, 이창훈",
@@ -2776,6 +2916,7 @@
     },
     {
         "id": 141,
+        "course_number": "LS204",
         "section": 1,
         "name": "세포생물학(이)",
         "prof": "백명인, 정영태",
@@ -2801,6 +2942,7 @@
     },
     {
         "id": 142,
+        "course_number": "LS204",
         "section": 2,
         "name": "세포생물학(이)",
         "prof": "백명인, 정영태",
@@ -2826,6 +2968,7 @@
     },
     {
         "id": 143,
+        "course_number": "LS304",
         "section": 1,
         "name": "생명체의 다양성과 유기적 관계(이)",
         "prof": "이상임",
@@ -2850,6 +2993,7 @@
     },
     {
         "id": 144,
+        "course_number": "LS305",
         "section": 1,
         "name": "신경과학Ⅰ(이)",
         "prof": "서병창, 엄지원",
@@ -2875,6 +3019,7 @@
     },
     {
         "id": 145,
+        "course_number": "LS306",
         "section": 1,
         "name": "신경과학Ⅱ(이)",
         "prof": "현정호, 이효상, 최한경",
@@ -2900,6 +3045,7 @@
     },
     {
         "id": 146,
+        "course_number": "LS308",
         "section": 1,
         "name": "생화학Ⅰ(이)",
         "prof": "김진해, 김유리, 이종찬, 이재민",
@@ -2925,6 +3071,7 @@
     },
     {
         "id": 147,
+        "course_number": "LS312",
         "section": 1,
         "name": "의약품공학(이)",
         "prof": "예경무, 이병훈",
@@ -2944,6 +3091,7 @@
     },
     {
         "id": 148,
+        "course_number": "LS314",
         "section": 1,
         "name": "생명과학 노벨상 수상의  위대한 발견(이)",
         "prof": "이병훈, 이송이",
@@ -2968,6 +3116,7 @@
     },
     {
         "id": 149,
+        "course_number": "LS403",
         "section": 1,
         "name": "발생 및 발달생물학(이)",
         "prof": "백명인, 유성운, 곽준명",
@@ -2993,6 +3142,7 @@
     },
     {
         "id": 150,
+        "course_number": "LS406",
         "section": 1,
         "name": "의생명공학(이,공)",
         "prof": "이광",
@@ -3012,6 +3162,7 @@
     },
     {
         "id": 151,
+        "course_number": "LS407a",
         "section": 1,
         "name": "인체생리학(이)",
         "prof": "이재민, 김은경",
@@ -3036,6 +3187,7 @@
     },
     {
         "id": 152,
+        "course_number": "LS410",
         "section": 1,
         "name": "현대 미생물학(이)",
         "prof": "김유리, 정찬",
@@ -3060,6 +3212,7 @@
     },
     {
         "id": 153,
+        "course_number": "LS411",
         "section": 1,
         "name": "계산뇌과학입문(이)",
         "prof": "유우경, 김민환",
@@ -3085,6 +3238,7 @@
     },
     {
         "id": 154,
+        "course_number": "LS412",
         "section": 1,
         "name": "뇌질환(이)",
         "prof": "이성배",
@@ -3110,6 +3264,7 @@
     },
     {
         "id": 155,
+        "course_number": "MECH201",
         "section": 1,
         "name": "고체역학(공)",
         "prof": "장경인",
@@ -3134,6 +3289,7 @@
     },
     {
         "id": 156,
+        "course_number": "MECH301",
         "section": 1,
         "name": "인간과 공학(공)",
         "prof": "김회준, 이성민, 박준혁, 남강현, 정소현, 김기섭",
@@ -3153,6 +3309,7 @@
     },
     {
         "id": 157,
+        "course_number": "MECH306",
         "section": 1,
         "name": "진동공학(공)",
         "prof": "임용섭",
@@ -3177,6 +3334,7 @@
     },
     {
         "id": 158,
+        "course_number": "MECH309",
         "section": 1,
         "name": "자동제어시스템(공)",
         "prof": "박석호",
@@ -3202,6 +3360,7 @@
     },
     {
         "id": 159,
+        "course_number": "MECH311",
         "section": 1,
         "name": "유체역학(공)",
         "prof": "정소현",
@@ -3222,6 +3381,7 @@
     },
     {
         "id": 160,
+        "course_number": "MECH313",
         "section": 1,
         "name": "로봇전자공학(공)",
         "prof": "박경서",
@@ -3246,6 +3406,7 @@
     },
     {
         "id": 161,
+        "course_number": "MECH401",
         "section": 1,
         "name": "로봇동역학 및 제어(공)",
         "prof": "황민호",
@@ -3270,6 +3431,7 @@
     },
     {
         "id": 162,
+        "course_number": "MECH402",
         "section": 1,
         "name": "마이크로/나노공학(공)",
         "prof": "이재홍",
@@ -3294,6 +3456,7 @@
     },
     {
         "id": 163,
+        "course_number": "MECH405",
         "section": 1,
         "name": "열전달(공)",
         "prof": "최경호",
@@ -3318,6 +3481,7 @@
     },
     {
         "id": 164,
+        "course_number": "MECH407",
         "section": 1,
         "name": "모빌리티공학개론(공)",
         "prof": "이성민",
@@ -3342,6 +3506,7 @@
     },
     {
         "id": 165,
+        "course_number": "MSE305a",
         "section": 1,
         "name": "재료공학개론Ⅰ(이,공)",
         "prof": "이주혁",
@@ -3367,6 +3532,7 @@
     },
     {
         "id": 166,
+        "course_number": "MSE307",
         "section": 1,
         "name": "재료공학실험(공)",
         "prof": "김진수, 이성원, 이주혁, 이종수, 이신범",
@@ -3391,6 +3557,7 @@
     },
     {
         "id": 167,
+        "course_number": "MSE402",
         "section": 1,
         "name": "재료상변태(공)",
         "prof": "김진수",
@@ -3416,6 +3583,7 @@
     },
     {
         "id": 168,
+        "course_number": "MSE407",
         "section": 1,
         "name": "재료의 기계적 거동(공)",
         "prof": "김영규",
@@ -3440,6 +3608,7 @@
     },
     {
         "id": 169,
+        "course_number": "PHY202a",
         "section": 1,
         "name": "해석역학Ⅰ(이,공)",
         "prof": "이재동",
@@ -3464,6 +3633,7 @@
     },
     {
         "id": 170,
+        "course_number": "PHY205a",
         "section": 1,
         "name": "현대물리(이)",
         "prof": "김소연",
@@ -3488,6 +3658,7 @@
     },
     {
         "id": 171,
+        "course_number": "PHY302a",
         "section": 1,
         "name": "고급물리 실험(이)",
         "prof": "미배정",
@@ -3512,6 +3683,7 @@
     },
     {
         "id": 172,
+        "course_number": "PHY304",
         "section": 1,
         "name": "양자역학Ⅰ(이,공)",
         "prof": "박기성",
@@ -3536,6 +3708,7 @@
     },
     {
         "id": 173,
+        "course_number": "PHY306",
         "section": 1,
         "name": "수리물리(이)",
         "prof": "최승호",
@@ -3560,6 +3733,7 @@
     },
     {
         "id": 174,
+        "course_number": "PHY308",
         "section": 1,
         "name": "전기역학Ⅱ(이)",
         "prof": "조창희",
@@ -3584,6 +3758,7 @@
     },
     {
         "id": 175,
+        "course_number": "PHY401",
         "section": 1,
         "name": "현대광학(이,공)",
         "prof": "이기준",
@@ -3608,6 +3783,7 @@
     },
     {
         "id": 176,
+        "course_number": "PHY403",
         "section": 1,
         "name": "고체물리Ⅱ(이,공)",
         "prof": "홍정일",
@@ -3632,6 +3808,7 @@
     },
     {
         "id": 177,
+        "course_number": "PHY405",
         "section": 1,
         "name": "생물물리학(이,공)",
         "prof": "이종찬",
@@ -3651,6 +3828,7 @@
     },
     {
         "id": 178,
+        "course_number": "PHY406",
         "section": 1,
         "name": "전산물리(이)",
         "prof": "강준구",
@@ -3675,6 +3853,7 @@
     },
     {
         "id": 179,
+        "course_number": "PHY408",
         "section": 1,
         "name": "원자분자물리학(이,공)",
         "prof": "미배정",
@@ -3699,6 +3878,7 @@
     },
     {
         "id": 180,
+        "course_number": "RP401",
         "section": 1,
         "name": "Thesis",
         "prof": "문제일",
@@ -3716,6 +3896,7 @@
     },
     {
         "id": 181,
+        "course_number": "RP401",
         "section": 2,
         "name": "Thesis",
         "prof": "유성운",
@@ -3733,6 +3914,7 @@
     },
     {
         "id": 182,
+        "course_number": "RP401",
         "section": 3,
         "name": "Thesis",
         "prof": "김은경",
@@ -3750,6 +3932,7 @@
     },
     {
         "id": 183,
+        "course_number": "RP401",
         "section": 4,
         "name": "Thesis",
         "prof": "서병창",
@@ -3767,6 +3950,7 @@
     },
     {
         "id": 184,
+        "course_number": "RP401",
         "section": 5,
         "name": "Thesis",
         "prof": "김규형",
@@ -3784,6 +3968,7 @@
     },
     {
         "id": 185,
+        "course_number": "RP401",
         "section": 6,
         "name": "Thesis",
         "prof": "이석규",
@@ -3801,6 +3986,7 @@
     },
     {
         "id": 186,
+        "course_number": "RP401",
         "section": 7,
         "name": "Thesis",
         "prof": "이성배",
@@ -3818,6 +4004,7 @@
     },
     {
         "id": 187,
+        "course_number": "RP401",
         "section": 8,
         "name": "Thesis",
         "prof": "오용석",
@@ -3835,6 +4022,7 @@
     },
     {
         "id": 188,
+        "course_number": "RP401",
         "section": 9,
         "name": "Thesis",
         "prof": "이효상",
@@ -3852,6 +4040,7 @@
     },
     {
         "id": 189,
+        "course_number": "RP401",
         "section": 10,
         "name": "Thesis",
         "prof": "최한경",
@@ -3869,6 +4058,7 @@
     },
     {
         "id": 190,
+        "course_number": "RP401",
         "section": 11,
         "name": "Thesis",
         "prof": "유우경",
@@ -3886,6 +4076,7 @@
     },
     {
         "id": 191,
+        "course_number": "RP401",
         "section": 12,
         "name": "Thesis",
         "prof": "고재원",
@@ -3903,6 +4094,7 @@
     },
     {
         "id": 192,
+        "course_number": "RP401",
         "section": 13,
         "name": "Thesis",
         "prof": "엄지원",
@@ -3920,6 +4112,7 @@
     },
     {
         "id": 193,
+        "course_number": "RP401",
         "section": 14,
         "name": "Thesis",
         "prof": "백명인",
@@ -3937,6 +4130,7 @@
     },
     {
         "id": 194,
+        "course_number": "RP401",
         "section": 15,
         "name": "Thesis",
         "prof": "이광",
@@ -3954,6 +4148,7 @@
     },
     {
         "id": 195,
+        "course_number": "RP401",
         "section": 16,
         "name": "Thesis",
         "prof": "현정호",
@@ -3971,6 +4166,7 @@
     },
     {
         "id": 196,
+        "course_number": "RP401",
         "section": 17,
         "name": "Thesis",
         "prof": "조용철",
@@ -3988,6 +4184,7 @@
     },
     {
         "id": 197,
+        "course_number": "RP401",
         "section": 18,
         "name": "Thesis",
         "prof": "김민환",
@@ -4005,6 +4202,7 @@
     },
     {
         "id": 198,
+        "course_number": "RP401",
         "section": 19,
         "name": "Thesis",
         "prof": "박포정",
@@ -4022,6 +4220,7 @@
     },
     {
         "id": 199,
+        "course_number": "RP402",
         "section": 1,
         "name": "Thesis",
         "prof": "구재형",
@@ -4039,6 +4238,7 @@
     },
     {
         "id": 200,
+        "course_number": "RP402",
         "section": 2,
         "name": "Thesis",
         "prof": "이창훈",
@@ -4056,6 +4256,7 @@
     },
     {
         "id": 201,
+        "course_number": "RP402",
         "section": 3,
         "name": "Thesis",
         "prof": "남창훈",
@@ -4073,6 +4274,7 @@
     },
     {
         "id": 202,
+        "course_number": "RP402",
         "section": 4,
         "name": "Thesis",
         "prof": "우혜련",
@@ -4090,6 +4292,7 @@
     },
     {
         "id": 203,
+        "course_number": "RP402",
         "section": 5,
         "name": "Thesis",
         "prof": "곽준명",
@@ -4107,6 +4310,7 @@
     },
     {
         "id": 204,
+        "course_number": "RP402",
         "section": 6,
         "name": "Thesis",
         "prof": "이영삼",
@@ -4124,6 +4328,7 @@
     },
     {
         "id": 205,
+        "course_number": "RP402",
         "section": 7,
         "name": "Thesis",
         "prof": "이상임",
@@ -4141,6 +4346,7 @@
     },
     {
         "id": 206,
+        "course_number": "RP402",
         "section": 8,
         "name": "Thesis",
         "prof": "이병훈",
@@ -4158,6 +4364,7 @@
     },
     {
         "id": 207,
+        "course_number": "RP402",
         "section": 9,
         "name": "Thesis",
         "prof": "김민석",
@@ -4175,6 +4382,7 @@
     },
     {
         "id": 208,
+        "course_number": "RP402",
         "section": 10,
         "name": "Thesis",
         "prof": "이재민",
@@ -4192,6 +4400,7 @@
     },
     {
         "id": 209,
+        "course_number": "RP402",
         "section": 11,
         "name": "Thesis",
         "prof": "예경무",
@@ -4209,6 +4418,7 @@
     },
     {
         "id": 210,
+        "course_number": "RP402",
         "section": 12,
         "name": "Thesis",
         "prof": "김진해",
@@ -4226,6 +4436,7 @@
     },
     {
         "id": 211,
+        "course_number": "RP402",
         "section": 13,
         "name": "Thesis",
         "prof": "이종찬",
@@ -4243,6 +4454,7 @@
     },
     {
         "id": 212,
+        "course_number": "RP402",
         "section": 14,
         "name": "Thesis",
         "prof": "정영태",
@@ -4260,6 +4472,7 @@
     },
     {
         "id": 213,
+        "course_number": "RP402",
         "section": 15,
         "name": "Thesis",
         "prof": "김민식",
@@ -4277,6 +4490,7 @@
     },
     {
         "id": 214,
+        "course_number": "RP402",
         "section": 16,
         "name": "Thesis",
         "prof": "기영훈",
@@ -4294,6 +4508,7 @@
     },
     {
         "id": 215,
+        "course_number": "RP402",
         "section": 17,
         "name": "Thesis",
         "prof": "김유리",
@@ -4311,6 +4526,7 @@
     },
     {
         "id": 216,
+        "course_number": "RP402",
         "section": 18,
         "name": "Thesis",
         "prof": "정찬",
@@ -4328,6 +4544,7 @@
     },
     {
         "id": 217,
+        "course_number": "RP402",
         "section": 19,
         "name": "Thesis",
         "prof": "최일규",
@@ -4345,6 +4562,7 @@
     },
     {
         "id": 218,
+        "course_number": "RP402",
         "section": 20,
         "name": "Thesis",
         "prof": "김태완",
@@ -4362,6 +4580,7 @@
     },
     {
         "id": 219,
+        "course_number": "RP402",
         "section": 21,
         "name": "Thesis",
         "prof": "이송이",
@@ -4379,6 +4598,7 @@
     },
     {
         "id": 220,
+        "course_number": "RP402",
         "section": 22,
         "name": "Thesis",
         "prof": "Felix Jonas",
@@ -4396,6 +4616,7 @@
     },
     {
         "id": 221,
+        "course_number": "RP403",
         "section": 1,
         "name": "Thesis",
         "prof": "오세훈",
@@ -4413,6 +4634,7 @@
     },
     {
         "id": 222,
+        "course_number": "RP403",
         "section": 2,
         "name": "Thesis",
         "prof": "김기섭",
@@ -4430,6 +4652,7 @@
     },
     {
         "id": 223,
+        "course_number": "RP403",
         "section": 3,
         "name": "Thesis",
         "prof": "김동욱",
@@ -4447,6 +4670,7 @@
     },
     {
         "id": 224,
+        "course_number": "RP403",
         "section": 4,
         "name": "Thesis",
         "prof": "김봉훈",
@@ -4464,6 +4688,7 @@
     },
     {
         "id": 225,
+        "course_number": "RP403",
         "section": 5,
         "name": "Thesis",
         "prof": "김소희",
@@ -4481,6 +4706,7 @@
     },
     {
         "id": 226,
+        "course_number": "RP403",
         "section": 6,
         "name": "Thesis",
         "prof": "김회준",
@@ -4498,6 +4724,7 @@
     },
     {
         "id": 227,
+        "course_number": "RP403",
         "section": 7,
         "name": "Thesis",
         "prof": "남강현",
@@ -4515,6 +4742,7 @@
     },
     {
         "id": 228,
+        "course_number": "RP403",
         "section": 8,
         "name": "Thesis",
         "prof": "문인규",
@@ -4532,6 +4760,7 @@
     },
     {
         "id": 229,
+        "course_number": "RP403",
         "section": 9,
         "name": "Thesis",
         "prof": "박경서",
@@ -4549,6 +4778,7 @@
     },
     {
         "id": 230,
+        "course_number": "RP403",
         "section": 10,
         "name": "Thesis",
         "prof": "박상현",
@@ -4566,6 +4796,7 @@
     },
     {
         "id": 231,
+        "course_number": "RP403",
         "section": 11,
         "name": "Thesis",
         "prof": "박석호",
@@ -4583,6 +4814,7 @@
     },
     {
         "id": 232,
+        "course_number": "RP403",
         "section": 12,
         "name": "Thesis",
         "prof": "박준혁",
@@ -4600,6 +4832,7 @@
     },
     {
         "id": 233,
+        "course_number": "RP403",
         "section": 13,
         "name": "Thesis",
         "prof": "송석호",
@@ -4617,6 +4850,7 @@
     },
     {
         "id": 234,
+        "course_number": "RP403",
         "section": 14,
         "name": "Thesis",
         "prof": "송철",
@@ -4634,6 +4868,7 @@
     },
     {
         "id": 235,
+        "course_number": "RP403",
         "section": 15,
         "name": "Thesis",
         "prof": "유재석",
@@ -4651,6 +4886,7 @@
     },
     {
         "id": 236,
+        "course_number": "RP403",
         "section": 16,
         "name": "Thesis",
         "prof": "윤동원",
@@ -4668,6 +4904,7 @@
     },
     {
         "id": 237,
+        "course_number": "RP403",
         "section": 17,
         "name": "Thesis",
         "prof": "이상훈",
@@ -4685,6 +4922,7 @@
     },
     {
         "id": 238,
+        "course_number": "RP403",
         "section": 18,
         "name": "Thesis",
         "prof": "이성민",
@@ -4702,6 +4940,7 @@
     },
     {
         "id": 239,
+        "course_number": "RP403",
         "section": 19,
         "name": "Thesis",
         "prof": "이아형",
@@ -4719,6 +4958,7 @@
     },
     {
         "id": 240,
+        "course_number": "RP403",
         "section": 20,
         "name": "Thesis",
         "prof": "이옥균",
@@ -4736,6 +4976,7 @@
     },
     {
         "id": 241,
+        "course_number": "RP403",
         "section": 21,
         "name": "Thesis",
         "prof": "이재홍",
@@ -4753,6 +4994,7 @@
     },
     {
         "id": 242,
+        "course_number": "RP403",
         "section": 22,
         "name": "Thesis",
         "prof": "임용섭",
@@ -4770,6 +5012,7 @@
     },
     {
         "id": 243,
+        "course_number": "RP403",
         "section": 23,
         "name": "Thesis",
         "prof": "장경인",
@@ -4787,6 +5030,7 @@
     },
     {
         "id": 244,
+        "course_number": "RP403",
         "section": 24,
         "name": "Thesis",
         "prof": "정소현",
@@ -4804,6 +5048,7 @@
     },
     {
         "id": 245,
+        "course_number": "RP403",
         "section": 25,
         "name": "Thesis",
         "prof": "한상윤",
@@ -4821,6 +5066,7 @@
     },
     {
         "id": 246,
+        "course_number": "RP403",
         "section": 26,
         "name": "Thesis",
         "prof": "황민호",
@@ -4838,6 +5084,7 @@
     },
     {
         "id": 247,
+        "course_number": "RP404",
         "section": 1,
         "name": "Thesis",
         "prof": "홍정일",
@@ -4855,6 +5102,7 @@
     },
     {
         "id": 248,
+        "course_number": "RP404",
         "section": 2,
         "name": "Thesis",
         "prof": "박기성",
@@ -4872,6 +5120,7 @@
     },
     {
         "id": 249,
+        "course_number": "RP404",
         "section": 3,
         "name": "Thesis",
         "prof": "김성균",
@@ -4889,6 +5138,7 @@
     },
     {
         "id": 250,
+        "course_number": "RP404",
         "section": 4,
         "name": "Thesis",
         "prof": "정낙천",
@@ -4906,6 +5156,7 @@
     },
     {
         "id": 251,
+        "course_number": "RP404",
         "section": 5,
         "name": "Thesis",
         "prof": "조창희",
@@ -4923,6 +5174,7 @@
     },
     {
         "id": 252,
+        "course_number": "RP404",
         "section": 6,
         "name": "Thesis",
         "prof": "서정필",
@@ -4940,6 +5192,7 @@
     },
     {
         "id": 253,
+        "course_number": "RP404",
         "section": 7,
         "name": "Thesis",
         "prof": "김철기",
@@ -4957,6 +5210,7 @@
     },
     {
         "id": 254,
+        "course_number": "RP404",
         "section": 8,
         "name": "Thesis",
         "prof": "정병혁",
@@ -4974,6 +5228,7 @@
     },
     {
         "id": 255,
+        "course_number": "RP404",
         "section": 9,
         "name": "Thesis",
         "prof": "강준구",
@@ -4991,6 +5246,7 @@
     },
     {
         "id": 256,
+        "course_number": "RP404",
         "section": 10,
         "name": "Thesis",
         "prof": "박진희",
@@ -5008,6 +5264,7 @@
     },
     {
         "id": 257,
+        "course_number": "RP404",
         "section": 11,
         "name": "Thesis",
         "prof": "이성원",
@@ -5025,6 +5282,7 @@
     },
     {
         "id": 258,
+        "course_number": "RP404",
         "section": 12,
         "name": "Thesis",
         "prof": "이신범",
@@ -5042,6 +5300,7 @@
     },
     {
         "id": 259,
+        "course_number": "RP404",
         "section": 13,
         "name": "Thesis",
         "prof": "홍선기",
@@ -5059,6 +5318,7 @@
     },
     {
         "id": 260,
+        "course_number": "RP404",
         "section": 14,
         "name": "Thesis",
         "prof": "이성기",
@@ -5076,6 +5336,7 @@
     },
     {
         "id": 261,
+        "course_number": "RP404",
         "section": 15,
         "name": "Thesis",
         "prof": "성주영",
@@ -5093,6 +5354,7 @@
     },
     {
         "id": 262,
+        "course_number": "RP404",
         "section": 16,
         "name": "Thesis",
         "prof": "김아람",
@@ -5110,6 +5372,7 @@
     },
     {
         "id": 263,
+        "course_number": "RP404",
         "section": 17,
         "name": "Thesis",
         "prof": "서상원",
@@ -5127,6 +5390,7 @@
     },
     {
         "id": 264,
+        "course_number": "RP404",
         "section": 18,
         "name": "Thesis",
         "prof": "김종구",
@@ -5144,6 +5408,7 @@
     },
     {
         "id": 265,
+        "course_number": "RP404",
         "section": 19,
         "name": "Thesis",
         "prof": "김소연",
@@ -5161,6 +5426,7 @@
     },
     {
         "id": 266,
+        "course_number": "RP404",
         "section": 20,
         "name": "Thesis",
         "prof": "문혜원",
@@ -5178,6 +5444,7 @@
     },
     {
         "id": 267,
+        "course_number": "RP405",
         "section": 1,
         "name": "Thesis",
         "prof": "이호춘",
@@ -5195,6 +5462,7 @@
     },
     {
         "id": 268,
+        "course_number": "RP405",
         "section": 2,
         "name": "Thesis",
         "prof": "이윤구",
@@ -5212,6 +5480,7 @@
     },
     {
         "id": 269,
+        "course_number": "RP405",
         "section": 3,
         "name": "Thesis",
         "prof": "상가라쥬샨무감",
@@ -5229,6 +5498,7 @@
     },
     {
         "id": 270,
+        "course_number": "RP405",
         "section": 4,
         "name": "Thesis",
         "prof": "이종수",
@@ -5246,6 +5516,7 @@
     },
     {
         "id": 271,
+        "course_number": "RP405",
         "section": 5,
         "name": "Thesis",
         "prof": "인수일",
@@ -5263,6 +5534,7 @@
     },
     {
         "id": 272,
+        "course_number": "RP405",
         "section": 6,
         "name": "Thesis",
         "prof": "최승호",
@@ -5280,6 +5552,7 @@
     },
     {
         "id": 273,
+        "course_number": "RP405",
         "section": 7,
         "name": "Thesis",
         "prof": "장윤희",
@@ -5297,6 +5570,7 @@
     },
     {
         "id": 274,
+        "course_number": "RP405",
         "section": 8,
         "name": "Thesis",
         "prof": "이주혁",
@@ -5314,6 +5588,7 @@
     },
     {
         "id": 275,
+        "course_number": "RP405",
         "section": 9,
         "name": "Thesis",
         "prof": "양지웅",
@@ -5331,6 +5606,7 @@
     },
     {
         "id": 276,
+        "course_number": "RP405",
         "section": 10,
         "name": "Thesis",
         "prof": "김찬연",
@@ -5348,6 +5624,7 @@
     },
     {
         "id": 277,
+        "course_number": "RP405",
         "section": 11,
         "name": "Thesis",
         "prof": "호동해",
@@ -5365,6 +5642,7 @@
     },
     {
         "id": 278,
+        "course_number": "RP405",
         "section": 12,
         "name": "Thesis",
         "prof": "김운혁",
@@ -5382,6 +5660,7 @@
     },
     {
         "id": 279,
+        "course_number": "RP405",
         "section": 13,
         "name": "Thesis",
         "prof": "김진수",
@@ -5399,6 +5678,7 @@
     },
     {
         "id": 280,
+        "course_number": "RP405",
         "section": 14,
         "name": "Thesis",
         "prof": "이종민",
@@ -5416,6 +5696,7 @@
     },
     {
         "id": 281,
+        "course_number": "RP405",
         "section": 15,
         "name": "Thesis",
         "prof": "고서진",
@@ -5433,6 +5714,7 @@
     },
     {
         "id": 282,
+        "course_number": "RP405",
         "section": 16,
         "name": "Thesis",
         "prof": "김승현",
@@ -5450,6 +5732,7 @@
     },
     {
         "id": 283,
+        "course_number": "RP406",
         "section": 1,
         "name": "Thesis",
         "prof": "장재은",
@@ -5467,6 +5750,7 @@
     },
     {
         "id": 284,
+        "course_number": "RP406",
         "section": 2,
         "name": "Thesis",
         "prof": "박경준",
@@ -5484,6 +5768,7 @@
     },
     {
         "id": 285,
+        "course_number": "RP406",
         "section": 3,
         "name": "Thesis",
         "prof": "은용순",
@@ -5501,6 +5786,7 @@
     },
     {
         "id": 286,
+        "course_number": "RP406",
         "section": 4,
         "name": "Thesis",
         "prof": "이기준",
@@ -5518,6 +5804,7 @@
     },
     {
         "id": 287,
+        "course_number": "RP406",
         "section": 5,
         "name": "Thesis",
         "prof": "황재윤",
@@ -5535,6 +5822,7 @@
     },
     {
         "id": 288,
+        "course_number": "RP406",
         "section": 6,
         "name": "Thesis",
         "prof": "이정협",
@@ -5552,6 +5840,7 @@
     },
     {
         "id": 289,
+        "course_number": "RP406",
         "section": 7,
         "name": "Thesis",
         "prof": "권혁준",
@@ -5569,6 +5858,7 @@
     },
     {
         "id": 290,
+        "course_number": "RP406",
         "section": 8,
         "name": "Thesis",
         "prof": "김경대",
@@ -5586,6 +5876,7 @@
     },
     {
         "id": 291,
+        "course_number": "RP406",
         "section": 9,
         "name": "Thesis",
         "prof": "신동훈",
@@ -5603,6 +5894,7 @@
     },
     {
         "id": 292,
+        "course_number": "RP406",
         "section": 10,
         "name": "Thesis",
         "prof": "임성훈",
@@ -5620,6 +5912,7 @@
     },
     {
         "id": 293,
+        "course_number": "RP406",
         "section": 11,
         "name": "Thesis",
         "prof": "김선준",
@@ -5637,6 +5930,7 @@
     },
     {
         "id": 294,
+        "course_number": "RP406",
         "section": 12,
         "name": "Thesis",
         "prof": "장진호",
@@ -5654,6 +5948,7 @@
     },
     {
         "id": 295,
+        "course_number": "RP406",
         "section": 13,
         "name": "Thesis",
         "prof": "김예성",
@@ -5671,6 +5966,7 @@
     },
     {
         "id": 296,
+        "course_number": "RP406",
         "section": 14,
         "name": "Thesis",
         "prof": "윤종혁",
@@ -5688,6 +5984,7 @@
     },
     {
         "id": 297,
+        "course_number": "RP406",
         "section": 15,
         "name": "Thesis",
         "prof": "김백규",
@@ -5705,6 +6002,7 @@
     },
     {
         "id": 298,
+        "course_number": "RP406",
         "section": 16,
         "name": "Thesis",
         "prof": "서대원",
@@ -5722,6 +6020,7 @@
     },
     {
         "id": 299,
+        "course_number": "RP406",
         "section": 17,
         "name": "Thesis",
         "prof": "김가인",
@@ -5739,6 +6038,7 @@
     },
     {
         "id": 300,
+        "course_number": "RP406",
         "section": 18,
         "name": "Thesis",
         "prof": "송민영",
@@ -5756,6 +6056,7 @@
     },
     {
         "id": 301,
+        "course_number": "RP406",
         "section": 19,
         "name": "Thesis",
         "prof": "김영식",
@@ -5773,6 +6074,7 @@
     },
     {
         "id": 302,
+        "course_number": "RP406",
         "section": 20,
         "name": "Thesis",
         "prof": "이경태",
@@ -5790,6 +6092,7 @@
     },
     {
         "id": 303,
+        "course_number": "RP406",
         "section": 21,
         "name": "Thesis",
         "prof": "소진현",
@@ -5807,6 +6110,7 @@
     },
     {
         "id": 304,
+        "course_number": "RP406",
         "section": 22,
         "name": "Thesis",
         "prof": "이병권",
@@ -5824,6 +6128,7 @@
     },
     {
         "id": 305,
+        "course_number": "RP406",
         "section": 23,
         "name": "Thesis",
         "prof": "이병문",
@@ -5841,6 +6146,7 @@
     },
     {
         "id": 306,
+        "course_number": "RP406",
         "section": 24,
         "name": "Thesis",
         "prof": "최재호",
@@ -5858,6 +6164,7 @@
     },
     {
         "id": 307,
+        "course_number": "RP406",
         "section": 25,
         "name": "Thesis",
         "prof": "박대희",
@@ -5875,6 +6182,7 @@
     },
     {
         "id": 308,
+        "course_number": "RP406",
         "section": 26,
         "name": "Thesis",
         "prof": "최원석",
@@ -5892,6 +6200,7 @@
     },
     {
         "id": 309,
+        "course_number": "RP406",
         "section": 27,
         "name": "Thesis",
         "prof": "이용우",
@@ -5909,6 +6218,7 @@
     },
     {
         "id": 310,
+        "course_number": "RP406",
         "section": 28,
         "name": "Thesis",
         "prof": "김기섭",
@@ -5926,6 +6236,7 @@
     },
     {
         "id": 311,
+        "course_number": "RP406",
         "section": 29,
         "name": "Thesis",
         "prof": "최상현",
@@ -5943,6 +6254,7 @@
     },
     {
         "id": 312,
+        "course_number": "RP406",
         "section": 30,
         "name": "Thesis",
         "prof": "전민석",
@@ -5960,6 +6272,7 @@
     },
     {
         "id": 313,
+        "course_number": "RP406",
         "section": 31,
         "name": "Thesis",
         "prof": "길현재",
@@ -5977,6 +6290,7 @@
     },
     {
         "id": 314,
+        "course_number": "RP406",
         "section": 32,
         "name": "Thesis",
         "prof": "장준기",
@@ -5994,6 +6308,7 @@
     },
     {
         "id": 315,
+        "course_number": "RP406",
         "section": 33,
         "name": "Thesis",
         "prof": "목지수",
@@ -6011,6 +6326,7 @@
     },
     {
         "id": 316,
+        "course_number": "RP406",
         "section": 34,
         "name": "Thesis",
         "prof": "이민선",
@@ -6028,6 +6344,7 @@
     },
     {
         "id": 317,
+        "course_number": "RP408",
         "section": 1,
         "name": "URP",
         "prof": "문제일",
@@ -6045,6 +6362,7 @@
     },
     {
         "id": 318,
+        "course_number": "RP408",
         "section": 2,
         "name": "URP",
         "prof": "유성운",
@@ -6062,6 +6380,7 @@
     },
     {
         "id": 319,
+        "course_number": "RP408",
         "section": 3,
         "name": "URP",
         "prof": "김은경",
@@ -6079,6 +6398,7 @@
     },
     {
         "id": 320,
+        "course_number": "RP408",
         "section": 4,
         "name": "URP",
         "prof": "서병창",
@@ -6096,6 +6416,7 @@
     },
     {
         "id": 321,
+        "course_number": "RP408",
         "section": 5,
         "name": "URP",
         "prof": "김규형",
@@ -6113,6 +6434,7 @@
     },
     {
         "id": 322,
+        "course_number": "RP408",
         "section": 6,
         "name": "URP",
         "prof": "이석규",
@@ -6130,6 +6452,7 @@
     },
     {
         "id": 323,
+        "course_number": "RP408",
         "section": 7,
         "name": "URP",
         "prof": "이성배",
@@ -6147,6 +6470,7 @@
     },
     {
         "id": 324,
+        "course_number": "RP408",
         "section": 8,
         "name": "URP",
         "prof": "오용석",
@@ -6164,6 +6488,7 @@
     },
     {
         "id": 325,
+        "course_number": "RP408",
         "section": 9,
         "name": "URP",
         "prof": "이효상",
@@ -6181,6 +6506,7 @@
     },
     {
         "id": 326,
+        "course_number": "RP408",
         "section": 10,
         "name": "URP",
         "prof": "최한경",
@@ -6198,6 +6524,7 @@
     },
     {
         "id": 327,
+        "course_number": "RP408",
         "section": 100,
         "name": "URP",
         "prof": "김운혁",
@@ -6215,6 +6542,7 @@
     },
     {
         "id": 328,
+        "course_number": "RP408",
         "section": 101,
         "name": "URP",
         "prof": "김진수",
@@ -6232,6 +6560,7 @@
     },
     {
         "id": 329,
+        "course_number": "RP408",
         "section": 102,
         "name": "URP",
         "prof": "이종민",
@@ -6249,6 +6578,7 @@
     },
     {
         "id": 330,
+        "course_number": "RP408",
         "section": 103,
         "name": "URP",
         "prof": "고서진",
@@ -6266,6 +6596,7 @@
     },
     {
         "id": 331,
+        "course_number": "RP408",
         "section": 104,
         "name": "URP",
         "prof": "김승현",
@@ -6283,6 +6614,7 @@
     },
     {
         "id": 332,
+        "course_number": "RP408",
         "section": 105,
         "name": "URP",
         "prof": "장재은",
@@ -6300,6 +6632,7 @@
     },
     {
         "id": 333,
+        "course_number": "RP408",
         "section": 106,
         "name": "URP",
         "prof": "박경준",
@@ -6317,6 +6650,7 @@
     },
     {
         "id": 334,
+        "course_number": "RP408",
         "section": 107,
         "name": "URP",
         "prof": "은용순",
@@ -6334,6 +6668,7 @@
     },
     {
         "id": 335,
+        "course_number": "RP408",
         "section": 108,
         "name": "URP",
         "prof": "이기준",
@@ -6351,6 +6686,7 @@
     },
     {
         "id": 336,
+        "course_number": "RP408",
         "section": 109,
         "name": "URP",
         "prof": "황재윤",
@@ -6368,6 +6704,7 @@
     },
     {
         "id": 337,
+        "course_number": "RP408",
         "section": 11,
         "name": "URP",
         "prof": "유우경",
@@ -6385,6 +6722,7 @@
     },
     {
         "id": 338,
+        "course_number": "RP408",
         "section": 110,
         "name": "URP",
         "prof": "이정협",
@@ -6402,6 +6740,7 @@
     },
     {
         "id": 339,
+        "course_number": "RP408",
         "section": 111,
         "name": "URP",
         "prof": "권혁준",
@@ -6419,6 +6758,7 @@
     },
     {
         "id": 340,
+        "course_number": "RP408",
         "section": 112,
         "name": "URP",
         "prof": "김경대",
@@ -6436,6 +6776,7 @@
     },
     {
         "id": 341,
+        "course_number": "RP408",
         "section": 113,
         "name": "URP",
         "prof": "신동훈",
@@ -6453,6 +6794,7 @@
     },
     {
         "id": 342,
+        "course_number": "RP408",
         "section": 114,
         "name": "URP",
         "prof": "임성훈",
@@ -6470,6 +6812,7 @@
     },
     {
         "id": 343,
+        "course_number": "RP408",
         "section": 115,
         "name": "URP",
         "prof": "김선준",
@@ -6487,6 +6830,7 @@
     },
     {
         "id": 344,
+        "course_number": "RP408",
         "section": 116,
         "name": "URP",
         "prof": "장진호",
@@ -6504,6 +6848,7 @@
     },
     {
         "id": 345,
+        "course_number": "RP408",
         "section": 117,
         "name": "URP",
         "prof": "김예성",
@@ -6521,6 +6866,7 @@
     },
     {
         "id": 346,
+        "course_number": "RP408",
         "section": 118,
         "name": "URP",
         "prof": "윤종혁",
@@ -6538,6 +6884,7 @@
     },
     {
         "id": 347,
+        "course_number": "RP408",
         "section": 119,
         "name": "URP",
         "prof": "김백규",
@@ -6555,6 +6902,7 @@
     },
     {
         "id": 348,
+        "course_number": "RP408",
         "section": 12,
         "name": "URP",
         "prof": "고재원",
@@ -6572,6 +6920,7 @@
     },
     {
         "id": 349,
+        "course_number": "RP408",
         "section": 120,
         "name": "URP",
         "prof": "서대원",
@@ -6589,6 +6938,7 @@
     },
     {
         "id": 350,
+        "course_number": "RP408",
         "section": 121,
         "name": "URP",
         "prof": "김가인",
@@ -6606,6 +6956,7 @@
     },
     {
         "id": 351,
+        "course_number": "RP408",
         "section": 122,
         "name": "URP",
         "prof": "송민영",
@@ -6623,6 +6974,7 @@
     },
     {
         "id": 352,
+        "course_number": "RP408",
         "section": 123,
         "name": "URP",
         "prof": "김영식",
@@ -6640,6 +6992,7 @@
     },
     {
         "id": 353,
+        "course_number": "RP408",
         "section": 124,
         "name": "URP",
         "prof": "이경태",
@@ -6657,6 +7010,7 @@
     },
     {
         "id": 354,
+        "course_number": "RP408",
         "section": 125,
         "name": "URP",
         "prof": "소진현",
@@ -6674,6 +7028,7 @@
     },
     {
         "id": 355,
+        "course_number": "RP408",
         "section": 126,
         "name": "URP",
         "prof": "이병권",
@@ -6691,6 +7046,7 @@
     },
     {
         "id": 356,
+        "course_number": "RP408",
         "section": 127,
         "name": "URP",
         "prof": "이병문",
@@ -6708,6 +7064,7 @@
     },
     {
         "id": 357,
+        "course_number": "RP408",
         "section": 128,
         "name": "URP",
         "prof": "최재호",
@@ -6725,6 +7082,7 @@
     },
     {
         "id": 358,
+        "course_number": "RP408",
         "section": 129,
         "name": "URP",
         "prof": "박대희",
@@ -6742,6 +7100,7 @@
     },
     {
         "id": 359,
+        "course_number": "RP408",
         "section": 13,
         "name": "URP",
         "prof": "엄지원",
@@ -6759,6 +7118,7 @@
     },
     {
         "id": 360,
+        "course_number": "RP408",
         "section": 130,
         "name": "URP",
         "prof": "최일규",
@@ -6776,6 +7136,7 @@
     },
     {
         "id": 361,
+        "course_number": "RP408",
         "section": 131,
         "name": "URP",
         "prof": "이용우",
@@ -6793,6 +7154,7 @@
     },
     {
         "id": 362,
+        "course_number": "RP408",
         "section": 132,
         "name": "URP",
         "prof": "김기섭",
@@ -6810,6 +7172,7 @@
     },
     {
         "id": 363,
+        "course_number": "RP408",
         "section": 133,
         "name": "URP",
         "prof": "최상현",
@@ -6827,6 +7190,7 @@
     },
     {
         "id": 364,
+        "course_number": "RP408",
         "section": 134,
         "name": "URP",
         "prof": "전민석",
@@ -6844,6 +7208,7 @@
     },
     {
         "id": 365,
+        "course_number": "RP408",
         "section": 135,
         "name": "URP",
         "prof": "길현재",
@@ -6861,6 +7226,7 @@
     },
     {
         "id": 366,
+        "course_number": "RP408",
         "section": 136,
         "name": "URP",
         "prof": "장준기",
@@ -6878,6 +7244,7 @@
     },
     {
         "id": 367,
+        "course_number": "RP408",
         "section": 137,
         "name": "URP",
         "prof": "목지수",
@@ -6895,6 +7262,7 @@
     },
     {
         "id": 368,
+        "course_number": "RP408",
         "section": 138,
         "name": "URP",
         "prof": "이민선",
@@ -6912,6 +7280,7 @@
     },
     {
         "id": 369,
+        "course_number": "RP408",
         "section": 14,
         "name": "URP",
         "prof": "백명인",
@@ -6929,6 +7298,7 @@
     },
     {
         "id": 370,
+        "course_number": "RP408",
         "section": 15,
         "name": "URP",
         "prof": "이광",
@@ -6946,6 +7316,7 @@
     },
     {
         "id": 371,
+        "course_number": "RP408",
         "section": 16,
         "name": "URP",
         "prof": "현정호",
@@ -6963,6 +7334,7 @@
     },
     {
         "id": 372,
+        "course_number": "RP408",
         "section": 17,
         "name": "URP",
         "prof": "조용철",
@@ -6980,6 +7352,7 @@
     },
     {
         "id": 373,
+        "course_number": "RP408",
         "section": 18,
         "name": "URP",
         "prof": "김민환",
@@ -6997,6 +7370,7 @@
     },
     {
         "id": 374,
+        "course_number": "RP408",
         "section": 19,
         "name": "URP",
         "prof": "박포정",
@@ -7014,6 +7388,7 @@
     },
     {
         "id": 375,
+        "course_number": "RP408",
         "section": 20,
         "name": "URP",
         "prof": "구재형",
@@ -7031,6 +7406,7 @@
     },
     {
         "id": 376,
+        "course_number": "RP408",
         "section": 21,
         "name": "URP",
         "prof": "이창훈",
@@ -7048,6 +7424,7 @@
     },
     {
         "id": 377,
+        "course_number": "RP408",
         "section": 22,
         "name": "URP",
         "prof": "남창훈",
@@ -7065,6 +7442,7 @@
     },
     {
         "id": 378,
+        "course_number": "RP408",
         "section": 23,
         "name": "URP",
         "prof": "우혜련",
@@ -7082,6 +7460,7 @@
     },
     {
         "id": 379,
+        "course_number": "RP408",
         "section": 24,
         "name": "URP",
         "prof": "곽준명",
@@ -7099,6 +7478,7 @@
     },
     {
         "id": 380,
+        "course_number": "RP408",
         "section": 25,
         "name": "URP",
         "prof": "이영삼",
@@ -7116,6 +7496,7 @@
     },
     {
         "id": 381,
+        "course_number": "RP408",
         "section": 26,
         "name": "URP",
         "prof": "이상임",
@@ -7133,6 +7514,7 @@
     },
     {
         "id": 382,
+        "course_number": "RP408",
         "section": 27,
         "name": "URP",
         "prof": "이병훈",
@@ -7150,6 +7532,7 @@
     },
     {
         "id": 383,
+        "course_number": "RP408",
         "section": 28,
         "name": "URP",
         "prof": "김민석",
@@ -7167,6 +7550,7 @@
     },
     {
         "id": 384,
+        "course_number": "RP408",
         "section": 29,
         "name": "URP",
         "prof": "이재민",
@@ -7184,6 +7568,7 @@
     },
     {
         "id": 385,
+        "course_number": "RP408",
         "section": 30,
         "name": "URP",
         "prof": "예경무",
@@ -7201,6 +7586,7 @@
     },
     {
         "id": 386,
+        "course_number": "RP408",
         "section": 31,
         "name": "URP",
         "prof": "김진해",
@@ -7218,6 +7604,7 @@
     },
     {
         "id": 387,
+        "course_number": "RP408",
         "section": 32,
         "name": "URP",
         "prof": "이종찬",
@@ -7235,6 +7622,7 @@
     },
     {
         "id": 388,
+        "course_number": "RP408",
         "section": 33,
         "name": "URP",
         "prof": "정영태",
@@ -7252,6 +7640,7 @@
     },
     {
         "id": 389,
+        "course_number": "RP408",
         "section": 34,
         "name": "URP",
         "prof": "김민식",
@@ -7269,6 +7658,7 @@
     },
     {
         "id": 390,
+        "course_number": "RP408",
         "section": 35,
         "name": "URP",
         "prof": "기영훈",
@@ -7286,6 +7676,7 @@
     },
     {
         "id": 391,
+        "course_number": "RP408",
         "section": 36,
         "name": "URP",
         "prof": "김유리",
@@ -7303,6 +7694,7 @@
     },
     {
         "id": 392,
+        "course_number": "RP408",
         "section": 37,
         "name": "URP",
         "prof": "정찬",
@@ -7320,6 +7712,7 @@
     },
     {
         "id": 393,
+        "course_number": "RP408",
         "section": 38,
         "name": "URP",
         "prof": "최일규",
@@ -7337,6 +7730,7 @@
     },
     {
         "id": 394,
+        "course_number": "RP408",
         "section": 39,
         "name": "URP",
         "prof": "김태완",
@@ -7354,6 +7748,7 @@
     },
     {
         "id": 395,
+        "course_number": "RP408",
         "section": 40,
         "name": "URP",
         "prof": "이송이",
@@ -7371,6 +7766,7 @@
     },
     {
         "id": 396,
+        "course_number": "RP408",
         "section": 41,
         "name": "URP",
         "prof": "Felix Jonas",
@@ -7388,6 +7784,7 @@
     },
     {
         "id": 397,
+        "course_number": "RP408",
         "section": 42,
         "name": "URP",
         "prof": "오세훈",
@@ -7405,6 +7802,7 @@
     },
     {
         "id": 398,
+        "course_number": "RP408",
         "section": 43,
         "name": "URP",
         "prof": "김기섭",
@@ -7422,6 +7820,7 @@
     },
     {
         "id": 399,
+        "course_number": "RP408",
         "section": 44,
         "name": "URP",
         "prof": "김동욱",
@@ -7439,6 +7838,7 @@
     },
     {
         "id": 400,
+        "course_number": "RP408",
         "section": 45,
         "name": "URP",
         "prof": "김봉훈",
@@ -7456,6 +7856,7 @@
     },
     {
         "id": 401,
+        "course_number": "RP408",
         "section": 46,
         "name": "URP",
         "prof": "김소희",
@@ -7473,6 +7874,7 @@
     },
     {
         "id": 402,
+        "course_number": "RP408",
         "section": 47,
         "name": "URP",
         "prof": "김회준",
@@ -7490,6 +7892,7 @@
     },
     {
         "id": 403,
+        "course_number": "RP408",
         "section": 48,
         "name": "URP",
         "prof": "남강현",
@@ -7507,6 +7910,7 @@
     },
     {
         "id": 404,
+        "course_number": "RP408",
         "section": 49,
         "name": "URP",
         "prof": "문인규",
@@ -7524,6 +7928,7 @@
     },
     {
         "id": 405,
+        "course_number": "RP408",
         "section": 50,
         "name": "URP",
         "prof": "박경서",
@@ -7541,6 +7946,7 @@
     },
     {
         "id": 406,
+        "course_number": "RP408",
         "section": 51,
         "name": "URP",
         "prof": "박상현",
@@ -7558,6 +7964,7 @@
     },
     {
         "id": 407,
+        "course_number": "RP408",
         "section": 52,
         "name": "URP",
         "prof": "박석호",
@@ -7575,6 +7982,7 @@
     },
     {
         "id": 408,
+        "course_number": "RP408",
         "section": 53,
         "name": "URP",
         "prof": "박준혁",
@@ -7592,6 +8000,7 @@
     },
     {
         "id": 409,
+        "course_number": "RP408",
         "section": 54,
         "name": "URP",
         "prof": "송석호",
@@ -7609,6 +8018,7 @@
     },
     {
         "id": 410,
+        "course_number": "RP408",
         "section": 55,
         "name": "URP",
         "prof": "송철",
@@ -7626,6 +8036,7 @@
     },
     {
         "id": 411,
+        "course_number": "RP408",
         "section": 56,
         "name": "URP",
         "prof": "유재석",
@@ -7643,6 +8054,7 @@
     },
     {
         "id": 412,
+        "course_number": "RP408",
         "section": 57,
         "name": "URP",
         "prof": "윤동원",
@@ -7660,6 +8072,7 @@
     },
     {
         "id": 413,
+        "course_number": "RP408",
         "section": 58,
         "name": "URP",
         "prof": "이상훈",
@@ -7677,6 +8090,7 @@
     },
     {
         "id": 414,
+        "course_number": "RP408",
         "section": 59,
         "name": "URP",
         "prof": "이성민",
@@ -7694,6 +8108,7 @@
     },
     {
         "id": 415,
+        "course_number": "RP408",
         "section": 60,
         "name": "URP",
         "prof": "이아형",
@@ -7711,6 +8126,7 @@
     },
     {
         "id": 416,
+        "course_number": "RP408",
         "section": 61,
         "name": "URP",
         "prof": "이옥균",
@@ -7728,6 +8144,7 @@
     },
     {
         "id": 417,
+        "course_number": "RP408",
         "section": 62,
         "name": "URP",
         "prof": "이재홍",
@@ -7745,6 +8162,7 @@
     },
     {
         "id": 418,
+        "course_number": "RP408",
         "section": 63,
         "name": "URP",
         "prof": "임용섭",
@@ -7762,6 +8180,7 @@
     },
     {
         "id": 419,
+        "course_number": "RP408",
         "section": 64,
         "name": "URP",
         "prof": "장경인",
@@ -7779,6 +8198,7 @@
     },
     {
         "id": 420,
+        "course_number": "RP408",
         "section": 65,
         "name": "URP",
         "prof": "정소현",
@@ -7796,6 +8216,7 @@
     },
     {
         "id": 421,
+        "course_number": "RP408",
         "section": 66,
         "name": "URP",
         "prof": "한상윤",
@@ -7813,6 +8234,7 @@
     },
     {
         "id": 422,
+        "course_number": "RP408",
         "section": 67,
         "name": "URP",
         "prof": "황민호",
@@ -7830,6 +8252,7 @@
     },
     {
         "id": 423,
+        "course_number": "RP408",
         "section": 69,
         "name": "URP",
         "prof": "홍정일",
@@ -7847,6 +8270,7 @@
     },
     {
         "id": 424,
+        "course_number": "RP408",
         "section": 70,
         "name": "URP",
         "prof": "박기성",
@@ -7864,6 +8288,7 @@
     },
     {
         "id": 425,
+        "course_number": "RP408",
         "section": 71,
         "name": "URP",
         "prof": "김성균",
@@ -7881,6 +8306,7 @@
     },
     {
         "id": 426,
+        "course_number": "RP408",
         "section": 72,
         "name": "URP",
         "prof": "정낙천",
@@ -7898,6 +8324,7 @@
     },
     {
         "id": 427,
+        "course_number": "RP408",
         "section": 73,
         "name": "URP",
         "prof": "조창희",
@@ -7915,6 +8342,7 @@
     },
     {
         "id": 428,
+        "course_number": "RP408",
         "section": 74,
         "name": "URP",
         "prof": "서정필",
@@ -7932,6 +8360,7 @@
     },
     {
         "id": 429,
+        "course_number": "RP408",
         "section": 75,
         "name": "URP",
         "prof": "김철기",
@@ -7949,6 +8378,7 @@
     },
     {
         "id": 430,
+        "course_number": "RP408",
         "section": 76,
         "name": "URP",
         "prof": "정병혁",
@@ -7966,6 +8396,7 @@
     },
     {
         "id": 431,
+        "course_number": "RP408",
         "section": 77,
         "name": "URP",
         "prof": "강준구",
@@ -7983,6 +8414,7 @@
     },
     {
         "id": 432,
+        "course_number": "RP408",
         "section": 78,
         "name": "URP",
         "prof": "박진희",
@@ -8000,6 +8432,7 @@
     },
     {
         "id": 433,
+        "course_number": "RP408",
         "section": 79,
         "name": "URP",
         "prof": "이성원",
@@ -8017,6 +8450,7 @@
     },
     {
         "id": 434,
+        "course_number": "RP408",
         "section": 80,
         "name": "URP",
         "prof": "이신범",
@@ -8034,6 +8468,7 @@
     },
     {
         "id": 435,
+        "course_number": "RP408",
         "section": 81,
         "name": "URP",
         "prof": "홍선기",
@@ -8051,6 +8486,7 @@
     },
     {
         "id": 436,
+        "course_number": "RP408",
         "section": 82,
         "name": "URP",
         "prof": "이성기",
@@ -8068,6 +8504,7 @@
     },
     {
         "id": 437,
+        "course_number": "RP408",
         "section": 83,
         "name": "URP",
         "prof": "성주영",
@@ -8085,6 +8522,7 @@
     },
     {
         "id": 438,
+        "course_number": "RP408",
         "section": 84,
         "name": "URP",
         "prof": "김아람",
@@ -8102,6 +8540,7 @@
     },
     {
         "id": 439,
+        "course_number": "RP408",
         "section": 85,
         "name": "URP",
         "prof": "서상원",
@@ -8119,6 +8558,7 @@
     },
     {
         "id": 440,
+        "course_number": "RP408",
         "section": 86,
         "name": "URP",
         "prof": "김종구",
@@ -8136,6 +8576,7 @@
     },
     {
         "id": 441,
+        "course_number": "RP408",
         "section": 87,
         "name": "URP",
         "prof": "김소연",
@@ -8153,6 +8594,7 @@
     },
     {
         "id": 442,
+        "course_number": "RP408",
         "section": 88,
         "name": "URP",
         "prof": "문혜원",
@@ -8170,6 +8612,7 @@
     },
     {
         "id": 443,
+        "course_number": "RP408",
         "section": 89,
         "name": "URP",
         "prof": "이호춘",
@@ -8187,6 +8630,7 @@
     },
     {
         "id": 444,
+        "course_number": "RP408",
         "section": 90,
         "name": "URP",
         "prof": "이윤구",
@@ -8204,6 +8648,7 @@
     },
     {
         "id": 445,
+        "course_number": "RP408",
         "section": 91,
         "name": "URP",
         "prof": "상가라쥬샨무감",
@@ -8221,6 +8666,7 @@
     },
     {
         "id": 446,
+        "course_number": "RP408",
         "section": 92,
         "name": "URP",
         "prof": "이종수",
@@ -8238,6 +8684,7 @@
     },
     {
         "id": 447,
+        "course_number": "RP408",
         "section": 93,
         "name": "URP",
         "prof": "인수일",
@@ -8255,6 +8702,7 @@
     },
     {
         "id": 448,
+        "course_number": "RP408",
         "section": 94,
         "name": "URP",
         "prof": "최승호",
@@ -8272,6 +8720,7 @@
     },
     {
         "id": 449,
+        "course_number": "RP408",
         "section": 95,
         "name": "URP",
         "prof": "장윤희",
@@ -8289,6 +8738,7 @@
     },
     {
         "id": 450,
+        "course_number": "RP408",
         "section": 96,
         "name": "URP",
         "prof": "이주혁",
@@ -8306,6 +8756,7 @@
     },
     {
         "id": 451,
+        "course_number": "RP408",
         "section": 97,
         "name": "URP",
         "prof": "양지웅",
@@ -8323,6 +8774,7 @@
     },
     {
         "id": 452,
+        "course_number": "RP408",
         "section": 98,
         "name": "URP",
         "prof": "김찬연",
@@ -8340,6 +8792,7 @@
     },
     {
         "id": 453,
+        "course_number": "RP408",
         "section": 99,
         "name": "URP",
         "prof": "호동해",
@@ -8357,6 +8810,7 @@
     },
     {
         "id": 454,
+        "course_number": "TP101",
         "section": 1,
         "name": "디자인 사고",
         "prof": "박종래",
@@ -8374,6 +8828,7 @@
     },
     {
         "id": 455,
+        "course_number": "TP202",
         "section": 1,
         "name": "도심항공교통개론(이,공)",
         "prof": "인수일",
@@ -8391,6 +8846,7 @@
     },
     {
         "id": 456,
+        "course_number": "TP301",
         "section": 1,
         "name": "커뮤니케이션과 현대사회",
         "prof": "조성겸",
@@ -8408,6 +8864,7 @@
     },
     {
         "id": 457,
+        "course_number": "TP305",
         "section": 1,
         "name": "게임이론",
         "prof": "김선구",
@@ -8425,6 +8882,7 @@
     },
     {
         "id": 458,
+        "course_number": "TP307a",
         "section": 1,
         "name": "UX디자인",
         "prof": "박종래",
@@ -8442,6 +8900,7 @@
     },
     {
         "id": 459,
+        "course_number": "TP308",
         "section": 1,
         "name": "생명에 대한 융합적 이해",
         "prof": "남창훈",
@@ -8459,6 +8918,7 @@
     },
     {
         "id": 460,
+        "course_number": "TP309",
         "section": 1,
         "name": "학부생을 위한 해석학 개론",
         "prof": "안흥주",
@@ -8481,6 +8941,7 @@
     },
     {
         "id": 461,
+        "course_number": "TP310",
         "section": 1,
         "name": "현대대수학 개론",
         "prof": "Hudson Thomas Bryan",
@@ -8503,6 +8964,7 @@
     },
     {
         "id": 462,
+        "course_number": "TP406",
         "section": 1,
         "name": "텐서들의 기하학과 그 응용(이,공)",
         "prof": "한강진",
