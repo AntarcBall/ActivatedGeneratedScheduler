@@ -6,7 +6,13 @@ import { HelpCircle, X, Search, Filter, ChevronDown, ChevronRight, Check } from 
 import { translations } from '../translations';
 
 export const LectureList = () => {
-    const { allLectures, selectedLectureKeys, toggleLectureSelection, language } = useApp();
+    const {
+        allLectures,
+        selectedLectureKeys,
+        toggleLectureSelection,
+        language,
+        isPreferenceListAlphabetical,
+    } = useApp();
     const t = translations[language].lectureList;
 
     const [searchTerm, setSearchTerm] = useState('');
@@ -97,8 +103,12 @@ export const LectureList = () => {
             }
         });
 
+        if (isPreferenceListAlphabetical) {
+            orderedGroups.sort((a, b) => a.name.localeCompare(b.name));
+        }
+
         return orderedGroups;
-    }, [filteredLectures]);
+    }, [filteredLectures, isPreferenceListAlphabetical]);
 
     const stats = useMemo(() => {
         let credits = 0;
@@ -116,7 +126,7 @@ export const LectureList = () => {
         return { count: selected.length, credits };
     }, [allLectures, selectedLectureKeys]);
 
-    const selectedLectures = useMemo(() => {
+    const selectedLectureGroups = useMemo(() => {
         const selected = allLectures
             .filter(l => selectedLectureKeys.includes(getLectureKey(l)))
             .sort((a, b) => {
@@ -124,7 +134,16 @@ export const LectureList = () => {
                 if (nameCompare !== 0) return nameCompare;
                 return a.section - b.section;
             });
-        return selected;
+        const groups: { name: string; lectures: Lecture[] }[] = [];
+        selected.forEach(lec => {
+            const last = groups[groups.length - 1];
+            if (!last || last.name !== lec.name) {
+                groups.push({ name: lec.name, lectures: [lec] });
+            } else {
+                last.lectures.push(lec);
+            }
+        });
+        return groups;
     }, [allLectures, selectedLectureKeys]);
 
     return (
@@ -220,29 +239,34 @@ export const LectureList = () => {
                                 {t.selectedTitle}
                             </span>
                             <span className="text-[9px] font-bold text-gray-400">
-                                {selectedLectures.length}
+                                {selectedLectureGroups.reduce((sum, group) => sum + group.lectures.length, 0)}
                             </span>
                         </div>
                         <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-1 space-y-1">
-                            {selectedLectures.length === 0 ? (
+                            {selectedLectureGroups.length === 0 ? (
                                 <p className="text-[10px] text-gray-400">{t.selectedEmpty}</p>
                             ) : (
-                                selectedLectures.map(lec => (
+                                selectedLectureGroups.map(group => (
                                     <div
-                                        key={getLectureKey(lec)}
-                                        className="flex items-center justify-between px-2 py-1 rounded-lg bg-gray-50 border border-gray-100"
+                                        key={group.name}
+                                        className="px-2 py-1 rounded-lg bg-gray-50 border border-gray-100"
                                     >
-                                        <div className="min-w-0">
-                                            <p className="text-[10px] font-bold text-gray-700 truncate">
-                                                {lec.name}
-                                            </p>
-                                            <p className="text-[9px] text-gray-400 truncate">
-                                                {lec.prof}
-                                            </p>
+                                        <p className="text-[10px] font-bold text-gray-700 truncate">
+                                            {group.name}
+                                        </p>
+                                        <p className="text-[9px] text-gray-400 truncate">
+                                            {group.lectures.map(lec => lec.prof).filter((prof, idx, arr) => arr.indexOf(prof) === idx).join(', ')}
+                                        </p>
+                                        <div className="flex flex-wrap gap-1 mt-1">
+                                            {group.lectures.map(lec => (
+                                                <span
+                                                    key={getLectureKey(lec)}
+                                                    className="text-[9px] font-black text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-md"
+                                                >
+                                                    S{lec.section}
+                                                </span>
+                                            ))}
                                         </div>
-                                        <span className="ml-2 text-[9px] font-black text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-md">
-                                            S{lec.section}
-                                        </span>
                                     </div>
                                 ))
                             )}

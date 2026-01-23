@@ -5,22 +5,37 @@ import { translations } from '../translations';
 import { Minus, Plus } from 'lucide-react';
 
 export const PreferenceList = () => {
-    const { allLectures, selectedLectureKeys, preferences, setLecturePreference, language } = useApp();
+    const {
+        allLectures,
+        selectedLectureKeys,
+        preferences,
+        setLecturePreference,
+        language,
+        isPreferenceListAlphabetical,
+    } = useApp();
     const t = translations[language].preference;
 
     const groupedLectures = useMemo(() => {
-        const selected = allLectures.filter(lec => selectedLectureKeys.includes(getLectureKey(lec)));
-        const groups: Record<string, typeof selected> = {};
-        
+        const lectureByKey = new Map<string, typeof allLectures[number]>();
+        allLectures.forEach(lec => lectureByKey.set(getLectureKey(lec), lec));
+
+        const selected = selectedLectureKeys
+            .map(key => lectureByKey.get(key))
+            .filter((lec): lec is typeof allLectures[number] => Boolean(lec));
+
+        const groups = new Map<string, typeof selected>();
         selected.forEach(lec => {
-            if (!groups[lec.name]) groups[lec.name] = [];
-            groups[lec.name].push(lec);
+            if (!groups.has(lec.name)) groups.set(lec.name, []);
+            groups.get(lec.name)?.push(lec);
         });
 
-        return Object.entries(groups)
-            .sort(([nameA], [nameB]) => nameA.localeCompare(nameB))
-            .map(([name, lecs]) => [name, lecs.sort((a, b) => a.section - b.section)] as const);
-    }, [allLectures, selectedLectureKeys]);
+        const entries = Array.from(groups.entries());
+        if (isPreferenceListAlphabetical) {
+            entries.sort(([nameA], [nameB]) => nameA.localeCompare(nameB));
+        }
+
+        return entries.map(([name, lecs]) => [name, lecs.sort((a, b) => a.section - b.section)] as const);
+    }, [allLectures, selectedLectureKeys, isPreferenceListAlphabetical]);
 
     return (
         <div className="flex flex-col h-full space-y-4 min-h-0">

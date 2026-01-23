@@ -8,7 +8,18 @@ import LandingPage from './components/LandingPage';
 import { translations } from './translations';
 
 const Content = () => {
-  const { currentPage, totalPages, nextPage, prevPage, generateTimetables, isGenerating, language, resetSelectedLectures } = useApp();
+  const {
+    currentPage,
+    totalPages,
+    nextPage,
+    prevPage,
+    generateTimetables,
+    isGenerating,
+    language,
+    resetSelectedLectures,
+    isPreferenceListAlphabetical,
+    setPreferenceListAlphabetical
+  } = useApp();
   const t = translations[language];
 
   const handleNext = () => {
@@ -96,6 +107,18 @@ const Content = () => {
             >
               {t.common.reset || 'Reset'}
             </button>
+          )}
+
+          {currentPage === 1 && (
+            <label className="flex items-center gap-2 text-xs font-bold text-gray-600">
+              <input
+                type="checkbox"
+                checked={isPreferenceListAlphabetical}
+                onChange={(e) => setPreferenceListAlphabetical(e.target.checked)}
+                className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              />
+              {t.preference.sortAlphaLabel}
+            </label>
           )}
 
           <button

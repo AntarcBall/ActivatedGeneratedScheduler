@@ -9,6 +9,7 @@ const LOCALSTORAGE_GOOD_SLOTS_KEY = 'ags_good_slots';
 const LOCALSTORAGE_BAD_SLOTS_KEY = 'ags_bad_slots';
 const LOCALSTORAGE_WEIGHTS_KEY = 'ags_weights';
 const LOCALSTORAGE_CURRENT_PAGE_KEY = 'ags_current_page';
+const LOCALSTORAGE_PREFERENCE_SORT_KEY = 'ags_preference_sort_alpha';
 const TOTAL_PAGES = 6;
 const DEFAULT_WEIGHTS: WeightConfig[] = [
     { weight: 5, rss: false },
@@ -99,6 +100,16 @@ const readCurrentPageFromStorage = () => {
     }
 };
 
+const readPreferenceSortFromStorage = () => {
+    try {
+        const saved = localStorage.getItem(LOCALSTORAGE_PREFERENCE_SORT_KEY);
+        if (saved === null) return true;
+        return saved === 'true';
+    } catch {
+        return true;
+    }
+};
+
 interface AppState {
     // Data
     allLectures: Lecture[];
@@ -114,6 +125,7 @@ interface AppState {
     generatedTimetables: Timetable[];
     isGenerating: boolean;
     language: 'ko' | 'en';
+    isPreferenceListAlphabetical: boolean;
     
     // Actions
     toggleLectureSelection: (lecture: Lecture) => void;
@@ -127,6 +139,7 @@ interface AppState {
     prevPage: () => void;
     generateTimetables: () => void;
     setLanguage: (lang: 'ko' | 'en') => void;
+    setPreferenceListAlphabetical: (value: boolean) => void;
 }
 
 const AppContext = createContext<AppState | undefined>(undefined);
@@ -175,6 +188,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     const [generatedTimetables, setGeneratedTimetables] = useState<Timetable[]>([]);
     const [isGenerating, setIsGenerating] = useState(false);
     const [language, setLanguage] = useState<'ko' | 'en'>('ko');
+    const [isPreferenceListAlphabetical, setPreferenceListAlphabetical] = useState(
+        () => readPreferenceSortFromStorage()
+    );
 
     // Load Data
     useEffect(() => {
@@ -196,6 +212,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         localStorage.setItem(LOCALSTORAGE_CURRENT_PAGE_KEY, String(currentPage));
     }, [currentPage]);
+
+    useEffect(() => {
+        localStorage.setItem(LOCALSTORAGE_PREFERENCE_SORT_KEY, String(isPreferenceListAlphabetical));
+    }, [isPreferenceListAlphabetical]);
 
     useEffect(() => {
         if (!allLectures.length || !legacySelectedIds.length) return;
@@ -331,6 +351,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         generatedTimetables,
         isGenerating,
         language,
+        isPreferenceListAlphabetical,
         toggleLectureSelection,
         resetSelectedLectures,
         setLecturePreference,
@@ -341,7 +362,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         nextPage,
         prevPage,
         generateTimetables,
-        setLanguage
+        setLanguage,
+        setPreferenceListAlphabetical
     };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

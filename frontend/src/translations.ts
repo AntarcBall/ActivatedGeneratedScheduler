@@ -43,7 +43,8 @@ export const translations = {
         },
         preference: {
             title: "강의 선호도 설정",
-            desc: "선택한 강의들 중 특별히 선호하거나 피하고 싶은 분반의 점수를 조절하세요. (기본값: 0)"
+            desc: "선택한 강의들 중 특별히 선호하거나 피하고 싶은 분반의 점수를 조절하세요. (기본값: 0)",
+            sortAlphaLabel: "가나다순 정렬"
         },
         timeSelector: {
             goodTitle: "희망 시간대 설정 (Good Slots)",
@@ -126,7 +127,8 @@ export const translations = {
         },
         preference: {
             title: "Lecture Preferences",
-            desc: "Adjust scores for specific sections you prefer or want to avoid. (Default: 0)"
+            desc: "Adjust scores for specific sections you prefer or want to avoid. (Default: 0)",
+            sortAlphaLabel: "Order alphabetically"
         },
         timeSelector: {
             goodTitle: "Set Good Slots",
