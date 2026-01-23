@@ -1,15 +1,15 @@
 import { useApp } from '../context/AppContext';
-import { formatSingleSlotTime } from '../utils/lectureUtils';
+import { formatSingleSlotTime, getLectureKey } from '../utils/lectureUtils';
 import { useMemo } from 'react';
 import { translations } from '../translations';
 import { Minus, Plus } from 'lucide-react';
 
 export const PreferenceList = () => {
-    const { allLectures, selectedLectureIds, preferences, setLecturePreference, language } = useApp();
+    const { allLectures, selectedLectureKeys, preferences, setLecturePreference, language } = useApp();
     const t = translations[language].preference;
 
     const groupedLectures = useMemo(() => {
-        const selected = allLectures.filter(lec => selectedLectureIds.includes(lec.id));
+        const selected = allLectures.filter(lec => selectedLectureKeys.includes(getLectureKey(lec)));
         const groups: Record<string, typeof selected> = {};
         
         selected.forEach(lec => {
@@ -20,7 +20,7 @@ export const PreferenceList = () => {
         return Object.entries(groups)
             .sort(([nameA], [nameB]) => nameA.localeCompare(nameB))
             .map(([name, lecs]) => [name, lecs.sort((a, b) => a.section - b.section)] as const);
-    }, [allLectures, selectedLectureIds]);
+    }, [allLectures, selectedLectureKeys]);
 
     return (
         <div className="flex flex-col h-full space-y-4 min-h-0">

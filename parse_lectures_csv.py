@@ -44,6 +44,7 @@ def parse_csv_to_json(csv_path, json_path):
 
             try:
                 l_id = int(row[0])
+                course_number = row[3].strip()
                 section_str = row[4]
                 section = int(section_str) if section_str.isdigit() else 0
                 name = row[5]
@@ -94,6 +95,7 @@ def parse_csv_to_json(csv_path, json_path):
                 
                 lectures.append({
                     "id": l_id,
+                    "course_number": course_number,
                     "section": section,
                     "name": name,
                     "prof": prof,

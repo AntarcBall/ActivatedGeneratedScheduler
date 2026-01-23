@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
-import { formatTimeString } from '../utils/lectureUtils';
+import { formatTimeString, getLectureKey } from '../utils/lectureUtils';
 import { Lecture } from '../types';
 import { HelpCircle, X, Search, Filter, ChevronDown, ChevronRight, Check } from 'lucide-react';
 import { translations } from '../translations';
 
 export const LectureList = () => {
-    const { allLectures, selectedLectureIds, toggleLectureSelection, language } = useApp();
+    const { allLectures, selectedLectureKeys, toggleLectureSelection, language } = useApp();
     const t = translations[language].lectureList;
 
     const [searchTerm, setSearchTerm] = useState('');
@@ -102,7 +102,7 @@ export const LectureList = () => {
 
     const stats = useMemo(() => {
         let credits = 0;
-        const selected = allLectures.filter(l => selectedLectureIds.includes(l.id));
+        const selected = allLectures.filter(l => selectedLectureKeys.includes(getLectureKey(l)));
         
         // Group by name to sum credits only once per course
         const uniqueCourses = new Set<string>();
@@ -114,7 +114,7 @@ export const LectureList = () => {
         });
         
         return { count: selected.length, credits };
-    }, [allLectures, selectedLectureIds]);
+    }, [allLectures, selectedLectureKeys]);
 
     return (
         <div className="flex flex-col lg:flex-row gap-3 w-full h-full min-h-0">
@@ -219,7 +219,7 @@ export const LectureList = () => {
                 <div className="flex-1 overflow-y-auto custom-scrollbar p-1">
                     {groupedLectures.map((group) => {
                         const isExpanded = expandedGroups.has(group.name);
-                        const selectedInGroup = group.lectures.filter(l => selectedLectureIds.includes(l.id));
+                        const selectedInGroup = group.lectures.filter(l => selectedLectureKeys.includes(getLectureKey(l)));
                         
                         return (
                             <div key={group.name} className="mb-1 group/item">
@@ -248,11 +248,11 @@ export const LectureList = () => {
                                 {isExpanded && (
                                     <div className="px-3 pb-3 pt-1 grid grid-cols-1 md:grid-cols-2 gap-2 animate-in slide-in-from-top-1 duration-200">
                                         {group.lectures.map(lec => {
-                                            const isSelected = selectedLectureIds.includes(lec.id);
+                                            const isSelected = selectedLectureKeys.includes(getLectureKey(lec));
                                             return (
                                                 <div 
                                                     key={lec.id}
-                                                    onClick={() => toggleLectureSelection(lec.id)}
+                                                    onClick={() => toggleLectureSelection(lec)}
                                                     className={`p-3 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                                                         isSelected 
                                                             ? 'border-blue-600 bg-blue-50/50' 

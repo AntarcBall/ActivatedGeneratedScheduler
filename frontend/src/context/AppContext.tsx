@@ -1,13 +1,14 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Lecture, Timetable, WeightConfig, DayOfWeek } from '../types';
-import { parseLecture } from '../utils/lectureUtils';
+import { parseLecture, getLectureKey } from '../utils/lectureUtils';
 
-const LOCALSTORAGE_KEY = 'ags_selected_lectures';
+const LOCALSTORAGE_KEY = 'ags_selected_lecture_keys';
+const LEGACY_LOCALSTORAGE_KEY = 'ags_selected_lectures';
 
 interface AppState {
     // Data
     allLectures: Lecture[];
-    selectedLectureIds: number[];
+    selectedLectureKeys: string[];
     preferences: Record<number, number>; // id -> preference
     goodSlots: Record<DayOfWeek, number[]>;
     badSlots: Record<DayOfWeek, number[]>;
@@ -21,7 +22,7 @@ interface AppState {
     language: 'ko' | 'en';
     
     // Actions
-    toggleLectureSelection: (id: number) => void;
+    toggleLectureSelection: (lecture: Lecture) => void;
     resetSelectedLectures: () => void;
     setLecturePreference: (id: number, pref: number) => void;
     toggleSlot: (type: 'good' | 'bad', day: DayOfWeek, slotIndex: number) => void;
@@ -38,10 +39,24 @@ const AppContext = createContext<AppState | undefined>(undefined);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
     const [allLectures, setAllLectures] = useState<Lecture[]>([]);
-    const [selectedLectureIds, setSelectedLectureIds] = useState<number[]>(() => {
+    const [selectedLectureKeys, setSelectedLectureKeys] = useState<string[]>(() => {
         try {
             const saved = localStorage.getItem(LOCALSTORAGE_KEY);
-            return saved ? JSON.parse(saved) : [];
+            if (!saved) return [];
+            const parsed = JSON.parse(saved);
+            if (!Array.isArray(parsed) || !parsed.every(item => typeof item === 'string')) return [];
+            return parsed;
+        } catch {
+            return [];
+        }
+    });
+    const [legacySelectedIds, setLegacySelectedIds] = useState<number[]>(() => {
+        try {
+            const saved = localStorage.getItem(LEGACY_LOCALSTORAGE_KEY);
+            if (!saved) return [];
+            const parsed = JSON.parse(saved);
+            if (!Array.isArray(parsed) || !parsed.every(item => typeof item === 'number')) return [];
+            return parsed;
         } catch {
             return [];
         }
@@ -83,16 +98,34 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
             .catch(err => console.error(`Failed to load lectures (${language}):`, err));
     }, [language]);
 
-    const toggleLectureSelection = (id: number) => {
-        setSelectedLectureIds(prev => {
-            const newIds = prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id];
-            localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(newIds));
-            return newIds;
+    useEffect(() => {
+        if (!allLectures.length || !legacySelectedIds.length) return;
+        if (selectedLectureKeys.length > 0) return;
+        const mappedKeys = allLectures
+            .filter(l => legacySelectedIds.includes(l.id))
+            .map(l => getLectureKey(l));
+        if (!mappedKeys.length) {
+            setLegacySelectedIds([]);
+            localStorage.removeItem(LEGACY_LOCALSTORAGE_KEY);
+            return;
+        }
+        setSelectedLectureKeys(mappedKeys);
+        localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(mappedKeys));
+        localStorage.removeItem(LEGACY_LOCALSTORAGE_KEY);
+        setLegacySelectedIds([]);
+    }, [allLectures, legacySelectedIds, selectedLectureKeys.length]);
+
+    const toggleLectureSelection = (lecture: Lecture) => {
+        const key = getLectureKey(lecture);
+        setSelectedLectureKeys(prev => {
+            const newKeys = prev.includes(key) ? prev.filter(x => x !== key) : [...prev, key];
+            localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(newKeys));
+            return newKeys;
         });
     };
 
     const resetSelectedLectures = () => {
-        setSelectedLectureIds([]);
+        setSelectedLectureKeys([]);
         localStorage.removeItem(LOCALSTORAGE_KEY);
     };
 
@@ -144,7 +177,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         setIsGenerating(true);
         // Prepare data for worker
         const selectedLectures = allLectures
-            .filter(l => selectedLectureIds.includes(l.id))
+            .filter(l => selectedLectureKeys.includes(getLectureKey(l)))
             .map(l => ({
                 ...l,
                 preference: preferences[l.id] || 0
@@ -175,7 +208,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     const value: AppState = {
         allLectures,
-        selectedLectureIds,
+        selectedLectureKeys,
         preferences,
         goodSlots,
         badSlots,

@@ -16,6 +16,7 @@ export interface RawTimeSlot {
 
 export interface RawLecture {
     id: number;
+    course_number?: string;
     section: number;
     name: string;
     prof: string;
@@ -28,6 +29,7 @@ export interface RawLecture {
 
 export interface Lecture {
     id: number;
+    course_number?: string;
     section: number;
     name: string;
     prof: string;

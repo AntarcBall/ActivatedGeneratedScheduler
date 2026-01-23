@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "course_number": "BE101a",
         "section": 1,
         "name": "Introduction to Programming",
         "prof": "Jisoo Mok",
@@ -23,6 +24,7 @@
     },
     {
         "id": 2,
+        "course_number": "BE202",
         "section": 1,
         "name": "Introduction to Data Science",
         "prof": "Jun-Gi Jang",
@@ -45,6 +47,7 @@
     },
     {
         "id": 3,
+        "course_number": "BE202",
         "section": 2,
         "name": "Introduction to Data Science",
         "prof": "Hyunjae Gil",
@@ -67,6 +70,7 @@
     },
     {
         "id": 4,
+        "course_number": "BE203",
         "section": 1,
         "name": "Creative mechanical design",
         "prof": "Joon-Hyuk Park",
@@ -84,6 +88,7 @@
     },
     {
         "id": 5,
+        "course_number": "BE203",
         "section": 2,
         "name": "Creative mechanical design",
         "prof": "Sukho Song",
@@ -101,6 +106,7 @@
     },
     {
         "id": 6,
+        "course_number": "BE205",
         "section": 1,
         "name": "Circuit Theory and Measurement (Lecture)",
         "prof": "Lee, Jung Hyup",
@@ -118,6 +124,7 @@
     },
     {
         "id": 7,
+        "course_number": "BE205",
         "section": 2,
         "name": "Circuit Theory and Measurement (Lecture)",
         "prof": "Song, Minyoung",
@@ -135,6 +142,7 @@
     },
     {
         "id": 8,
+        "course_number": "BR301",
         "section": 1,
         "name": "Brain Science LabⅠ",
         "prof": "Cho, Yongcheol, Kim, Kyu Hyung , Oh, Yong Seok",
@@ -154,6 +162,7 @@
     },
     {
         "id": 9,
+        "course_number": "BR403",
         "section": 1,
         "name": "Neuroregeneration and Degeneration",
         "prof": "Cho, Yongcheol",
@@ -178,6 +187,7 @@
     },
     {
         "id": 10,
+        "course_number": "BR404",
         "section": 1,
         "name": "Learning and Memory",
         "prof": "Pojeong Park",
@@ -202,6 +212,7 @@
     },
     {
         "id": 11,
+        "course_number": "BS102a",
         "section": 1,
         "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Ahn, Heung Ju",
@@ -224,6 +235,7 @@
     },
     {
         "id": 12,
+        "course_number": "BS102a",
         "section": 2,
         "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Hudson Thomas Bryan",
@@ -246,6 +258,7 @@
     },
     {
         "id": 13,
+        "course_number": "BS102a",
         "section": 3,
         "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Carlos Scarinci",
@@ -268,6 +281,7 @@
     },
     {
         "id": 14,
+        "course_number": "BS102a",
         "section": 4,
         "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Carlos Scarinci",
@@ -290,6 +304,7 @@
     },
     {
         "id": 15,
+        "course_number": "BS102a",
         "section": 5,
         "name": "Engineering MathematicsⅠ - Engineering Mathematics I",
         "prof": "Unassigned",
@@ -312,6 +327,7 @@
     },
     {
         "id": 16,
+        "course_number": "BS103a",
         "section": 1,
         "name": "General PhysicsⅠ",
         "prof": "DEVECIOGLU DENIZ OLGU",
@@ -334,6 +350,7 @@
     },
     {
         "id": 17,
+        "course_number": "BS103a",
         "section": 2,
         "name": "General PhysicsⅠ",
         "prof": "DEVECIOGLU DENIZ OLGU",
@@ -356,6 +373,7 @@
     },
     {
         "id": 18,
+        "course_number": "BS103a",
         "section": 3,
         "name": "General PhysicsⅠ",
         "prof": "DEVECIOGLU DENIZ OLGU",
@@ -378,6 +396,7 @@
     },
     {
         "id": 19,
+        "course_number": "BS104a",
         "section": 1,
         "name": "General Physics LabⅠ",
         "prof": "Kim, Dong Lyeul",
@@ -395,6 +414,7 @@
     },
     {
         "id": 20,
+        "course_number": "BS104a",
         "section": 2,
         "name": "General Physics LabⅠ",
         "prof": "Kim, Dong Lyeul",
@@ -412,6 +432,7 @@
     },
     {
         "id": 21,
+        "course_number": "BS104a",
         "section": 3,
         "name": "General Physics LabⅠ",
         "prof": "Kim, Dong Lyeul",
@@ -429,6 +450,7 @@
     },
     {
         "id": 22,
+        "course_number": "BS104a",
         "section": 4,
         "name": "General Physics LabⅠ",
         "prof": "Kim, Dong Lyeul",
@@ -446,6 +468,7 @@
     },
     {
         "id": 23,
+        "course_number": "BS104a",
         "section": 5,
         "name": "General Physics LabⅠ",
         "prof": "Park, Keeseong",
@@ -463,6 +486,7 @@
     },
     {
         "id": 24,
+        "course_number": "BS113",
         "section": 1,
         "name": "General Chemistry Lab Ⅰ",
         "prof": "Min, Eun Seon",
@@ -480,6 +504,7 @@
     },
     {
         "id": 25,
+        "course_number": "BS113",
         "section": 2,
         "name": "General Chemistry Lab Ⅰ",
         "prof": "Min, Eun Seon",
@@ -497,6 +522,7 @@
     },
     {
         "id": 26,
+        "course_number": "BS113",
         "section": 3,
         "name": "General Chemistry Lab Ⅰ",
         "prof": "Min, Eun Seon",
@@ -514,6 +540,7 @@
     },
     {
         "id": 27,
+        "course_number": "BS113",
         "section": 4,
         "name": "General Chemistry Lab Ⅰ",
         "prof": "Min, Eun Seon",
@@ -531,6 +558,7 @@
     },
     {
         "id": 28,
+        "course_number": "BS113",
         "section": 5,
         "name": "General Chemistry Lab Ⅰ",
         "prof": "Min, Eun Seon",
@@ -548,6 +576,7 @@
     },
     {
         "id": 29,
+        "course_number": "BS114",
         "section": 1,
         "name": "Introduction to Biology",
         "prof": "Sukkyoo Lee",
@@ -570,6 +599,7 @@
     },
     {
         "id": 30,
+        "course_number": "BS114",
         "section": 2,
         "name": "Introduction to Biology",
         "prof": "Lee, Hyo Sang",
@@ -592,6 +622,7 @@
     },
     {
         "id": 31,
+        "course_number": "BS115",
         "section": 1,
         "name": "General Biology Lab",
         "prof": "Kim, Yoo Ri",
@@ -609,6 +640,7 @@
     },
     {
         "id": 32,
+        "course_number": "BS115",
         "section": 2,
         "name": "General Biology Lab",
         "prof": "Cho, Jeong A",
@@ -626,6 +658,7 @@
     },
     {
         "id": 33,
+        "course_number": "BS115",
         "section": 3,
         "name": "General Biology Lab",
         "prof": "Cho, Jeong A",
@@ -643,6 +676,7 @@
     },
     {
         "id": 34,
+        "course_number": "BS115",
         "section": 4,
         "name": "General Biology Lab",
         "prof": "Cho, Jeong A",
@@ -660,6 +694,7 @@
     },
     {
         "id": 35,
+        "course_number": "BS115",
         "section": 5,
         "name": "General Biology Lab",
         "prof": "Cho, Jeong A",
@@ -677,6 +712,7 @@
     },
     {
         "id": 36,
+        "course_number": "BS115",
         "section": 6,
         "name": "General Biology Lab",
         "prof": "Cho, Jeong A",
@@ -694,6 +730,7 @@
     },
     {
         "id": 37,
+        "course_number": "BS115",
         "section": 7,
         "name": "General Biology Lab",
         "prof": "Cho, Jeong A",
@@ -711,6 +748,7 @@
     },
     {
         "id": 38,
+        "course_number": "BS116",
         "section": 1,
         "name": "General Biology I",
         "prof": "Chan Chung, Kwak, June Myoung, Kim, Min Sik",
@@ -733,6 +771,7 @@
     },
     {
         "id": 39,
+        "course_number": "BS118",
         "section": 1,
         "name": "General chemistryⅠ",
         "prof": "In, Su Il",
@@ -750,6 +789,7 @@
     },
     {
         "id": 40,
+        "course_number": "BS118",
         "section": 2,
         "name": "General chemistryⅠ",
         "prof": "SANGARAJU SHANMUGAM",
@@ -772,6 +812,7 @@
     },
     {
         "id": 41,
+        "course_number": "BS118",
         "section": 3,
         "name": "General chemistryⅠ",
         "prof": "Unassigned",
@@ -794,6 +835,7 @@
     },
     {
         "id": 42,
+        "course_number": "BS202",
         "section": 1,
         "name": "Introduction to Probability and Mathematical Statistics with R",
         "prof": "Kim, Ju Han",
@@ -816,6 +858,7 @@
     },
     {
         "id": 43,
+        "course_number": "BS202",
         "section": 2,
         "name": "Introduction to Probability and Mathematical Statistics with R",
         "prof": "Kim, Ju Han",
@@ -838,6 +881,7 @@
     },
     {
         "id": 44,
+        "course_number": "BS203",
         "section": 1,
         "name": "Linear Algebra",
         "prof": "Han, Kang Jin",
@@ -860,6 +904,7 @@
     },
     {
         "id": 45,
+        "course_number": "BS203",
         "section": 2,
         "name": "Linear Algebra",
         "prof": "Han, Kang Jin",
@@ -882,6 +927,7 @@
     },
     {
         "id": 46,
+        "course_number": "BS203",
         "section": 3,
         "name": "Linear Algebra",
         "prof": "Lee, Doo Seok",
@@ -904,6 +950,7 @@
     },
     {
         "id": 47,
+        "course_number": "BS203",
         "section": 4,
         "name": "Linear Algebra",
         "prof": "Unassigned",
@@ -926,6 +973,7 @@
     },
     {
         "id": 48,
+        "course_number": "CE303",
         "section": 1,
         "name": "Chemical engineering thermodynamics",
         "prof": "Seo-Jin Ko",
@@ -950,6 +998,7 @@
     },
     {
         "id": 49,
+        "course_number": "CE401",
         "section": 1,
         "name": "Introduction to Polymer Science and Engineering",
         "prof": "Dong Hae Ho",
@@ -975,6 +1024,7 @@
     },
     {
         "id": 50,
+        "course_number": "CE402",
         "section": 1,
         "name": "Chemical Product and Process Design",
         "prof": "Kim, Chan Yeon",
@@ -999,6 +1049,7 @@
     },
     {
         "id": 51,
+        "course_number": "CHEM201",
         "section": 1,
         "name": "Analytical Chemistry",
         "prof": "Lee, Hochun",
@@ -1025,6 +1076,7 @@
     },
     {
         "id": 52,
+        "course_number": "CHEM205",
         "section": 1,
         "name": "Organic Chemistry I",
         "prof": "Jung, Byung Hyuck",
@@ -1051,6 +1103,7 @@
     },
     {
         "id": 53,
+        "course_number": "CHEM206",
         "section": 1,
         "name": "General chemistry laboratoryⅡ",
         "prof": "Lee, Youn Gu",
@@ -1070,6 +1123,7 @@
     },
     {
         "id": 54,
+        "course_number": "CHEM301",
         "section": 1,
         "name": "Advanced Chemistry Lab I (Analytical and Organic Chemistry)",
         "prof": "Seonki Hong, In, Su Il",
@@ -1089,6 +1143,7 @@
     },
     {
         "id": 55,
+        "course_number": "CHEM305",
         "section": 1,
         "name": "Inorganic Chemistry II",
         "prof": "SEONG KYUN KIM",
@@ -1114,6 +1169,7 @@
     },
     {
         "id": 56,
+        "course_number": "CHEM306",
         "section": 1,
         "name": "Physical Chemistry II",
         "prof": "Sung Jooyoung",
@@ -1139,6 +1195,7 @@
     },
     {
         "id": 57,
+        "course_number": "CHEM404",
         "section": 1,
         "name": "Computational Chemistry",
         "prof": "Jang, Yun Hee ",
@@ -1163,6 +1220,7 @@
     },
     {
         "id": 58,
+        "course_number": "CSE203",
         "section": 1,
         "name": "Data Structure",
         "prof": "Kim, Sunjun",
@@ -1185,6 +1243,7 @@
     },
     {
         "id": 59,
+        "course_number": "CSE302",
         "section": 1,
         "name": "Introduction to Machine Learning",
         "prof": "Sang Hyun, Park",
@@ -1207,6 +1266,7 @@
     },
     {
         "id": 60,
+        "course_number": "CSE305",
         "section": 1,
         "name": "Computer Architecture",
         "prof": "Unassigned",
@@ -1232,6 +1292,7 @@
     },
     {
         "id": 61,
+        "course_number": "CSE306",
         "section": 1,
         "name": "System Programming",
         "prof": "Yongwoo Lee",
@@ -1256,6 +1317,7 @@
     },
     {
         "id": 62,
+        "course_number": "CSE307",
         "section": 1,
         "name": "Programming Languages",
         "prof": "Minseok Jeon",
@@ -1281,6 +1343,7 @@
     },
     {
         "id": 63,
+        "course_number": "CSE404",
         "section": 1,
         "name": "Introduction to Computer Vision",
         "prof": "Im, Sung Hoon",
@@ -1305,6 +1368,7 @@
     },
     {
         "id": 64,
+        "course_number": "CSE405",
         "section": 1,
         "name": "Introduction to Computer Security",
         "prof": "Wonseok Choi",
@@ -1329,6 +1393,7 @@
     },
     {
         "id": 65,
+        "course_number": "EE301",
         "section": 1,
         "name": "Signals and Systems",
         "prof": "Jae-Ho Choi",
@@ -1354,6 +1419,7 @@
     },
     {
         "id": 66,
+        "course_number": "EE401",
         "section": 1,
         "name": "Digital Signal Processing",
         "prof": "Hwang, Jae Youn",
@@ -1378,6 +1444,7 @@
     },
     {
         "id": 67,
+        "course_number": "EE403",
         "section": 1,
         "name": "Digital Communications",
         "prof": "Seo, Dae Won",
@@ -1402,6 +1469,7 @@
     },
     {
         "id": 68,
+        "course_number": "EE406",
         "section": 1,
         "name": "Intelligent Control Systems",
         "prof": "Kim Kyoung Dae, Seongmin Lee",
@@ -1426,6 +1494,7 @@
     },
     {
         "id": 69,
+        "course_number": "EE407",
         "section": 1,
         "name": "Digital Integrated Circuit Design",
         "prof": "KIM, GAIN",
@@ -1450,6 +1519,7 @@
     },
     {
         "id": 70,
+        "course_number": "GC101",
         "section": 1,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1471,6 +1541,7 @@
     },
     {
         "id": 71,
+        "course_number": "GC101",
         "section": 2,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1491,6 +1562,7 @@
     },
     {
         "id": 72,
+        "course_number": "GC101",
         "section": 3,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1510,6 +1582,7 @@
     },
     {
         "id": 73,
+        "course_number": "GC101",
         "section": 4,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Aaron Cumberledge",
@@ -1529,6 +1602,7 @@
     },
     {
         "id": 74,
+        "course_number": "GC101",
         "section": 5,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1548,6 +1622,7 @@
     },
     {
         "id": 75,
+        "course_number": "GC101",
         "section": 6,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1567,6 +1642,7 @@
     },
     {
         "id": 76,
+        "course_number": "GC101",
         "section": 7,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1584,6 +1660,7 @@
     },
     {
         "id": 77,
+        "course_number": "GC101",
         "section": 8,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Benjamin Wilson Riley",
@@ -1601,6 +1678,7 @@
     },
     {
         "id": 78,
+        "course_number": "GC101",
         "section": 9,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
@@ -1618,6 +1696,7 @@
     },
     {
         "id": 79,
+        "course_number": "GC101",
         "section": 10,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
@@ -1635,6 +1714,7 @@
     },
     {
         "id": 80,
+        "course_number": "GC101",
         "section": 11,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Mark Silverlock",
@@ -1652,6 +1732,7 @@
     },
     {
         "id": 81,
+        "course_number": "GC101",
         "section": 12,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Andrew John Miller",
@@ -1669,6 +1750,7 @@
     },
     {
         "id": 82,
+        "course_number": "GC101",
         "section": 13,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Andrew John Miller",
@@ -1686,6 +1768,7 @@
     },
     {
         "id": 83,
+        "course_number": "GC101",
         "section": 14,
         "name": "Academic English: Speaking and Correspondence",
         "prof": "Lee, Jeong Ah",
@@ -1703,6 +1786,7 @@
     },
     {
         "id": 84,
+        "course_number": "HSS101",
         "section": 1,
         "name": "Introduction to Economics",
         "prof": "Kim, Son-ku",
@@ -1720,6 +1804,7 @@
     },
     {
         "id": 85,
+        "course_number": "HSS102",
         "section": 1,
         "name": "Science and Technology in Modern Society",
         "prof": " Chang, Ha Won",
@@ -1737,6 +1822,7 @@
     },
     {
         "id": 86,
+        "course_number": "HSS103",
         "section": 1,
         "name": "Law and Society",
         "prof": "Kim, Hyun hee",
@@ -1754,6 +1840,7 @@
     },
     {
         "id": 87,
+        "course_number": "HSS104a",
         "section": 1,
         "name": "Introduction to Fiction",
         "prof": "Bae, Haeun",
@@ -1776,6 +1863,7 @@
     },
     {
         "id": 88,
+        "course_number": "HSS106",
         "section": 1,
         "name": "Comparative Politics",
         "prof": "Yoon, Ji Sung",
@@ -1798,6 +1886,7 @@
     },
     {
         "id": 89,
+        "course_number": "HSS107",
         "section": 1,
         "name": "Introduction to Linguistics",
         "prof": "Lee, Jeong Ah",
@@ -1815,6 +1904,7 @@
     },
     {
         "id": 90,
+        "course_number": "HSS108",
         "section": 1,
         "name": "Comparative History",
         "prof": "Moon, Jun Young",
@@ -1832,6 +1922,7 @@
     },
     {
         "id": 91,
+        "course_number": "HSS109a",
         "section": 1,
         "name": "Academic Writing",
         "prof": "Bae, Haeun",
@@ -1854,6 +1945,7 @@
     },
     {
         "id": 92,
+        "course_number": "HSS109a",
         "section": 2,
         "name": "Academic Writing",
         "prof": "Lim, Hee hyun",
@@ -1871,6 +1963,7 @@
     },
     {
         "id": 93,
+        "course_number": "HSS109a",
         "section": 3,
         "name": "Academic Writing",
         "prof": "Lim, Hee hyun",
@@ -1888,6 +1981,7 @@
     },
     {
         "id": 94,
+        "course_number": "HSS109a",
         "section": 4,
         "name": "Academic Writing",
         "prof": "Jeon, Gye Seong",
@@ -1905,6 +1999,7 @@
     },
     {
         "id": 95,
+        "course_number": "HSS109a",
         "section": 5,
         "name": "Academic Writing",
         "prof": "Jeon, Gye Seong",
@@ -1922,6 +2017,7 @@
     },
     {
         "id": 96,
+        "course_number": "HSS112",
         "section": 1,
         "name": "Introduction to Sociology",
         "prof": "Choi, Tae Seob",
@@ -1939,6 +2035,7 @@
     },
     {
         "id": 97,
+        "course_number": "HSS114",
         "section": 1,
         "name": "Introduction to Geography",
         "prof": "Shen Shawn",
@@ -1956,6 +2053,7 @@
     },
     {
         "id": 98,
+        "course_number": "HSS115",
         "section": 1,
         "name": "Journey to Psychology",
         "prof": "Kwak, Keum-joo",
@@ -1973,6 +2071,7 @@
     },
     {
         "id": 99,
+        "course_number": "HSS116",
         "section": 1,
         "name": "Understanding Anthropology",
         "prof": "Yi, Jeong-duk",
@@ -1990,6 +2089,7 @@
     },
     {
         "id": 100,
+        "course_number": "HSS117",
         "section": 1,
         "name": "Humans and Religions",
         "prof": "Park, Beom Seok",
@@ -2007,6 +2107,7 @@
     },
     {
         "id": 101,
+        "course_number": "HSS118",
         "section": 1,
         "name": "Seminar for Comprehensive Competency Cultivation",
         "prof": "HAN KYOUNG CHOE",
@@ -2024,6 +2125,7 @@
     },
     {
         "id": 102,
+        "course_number": "HSS119",
         "section": 1,
         "name": "Career Exploration and Major Design I",
         "prof": "HAN KYOUNG CHOE",
@@ -2041,6 +2143,7 @@
     },
     {
         "id": 103,
+        "course_number": "HSS121",
         "section": 1,
         "name": "Introduction to Traditional Korean Culture",
         "prof": "Bae, Haeun",
@@ -2058,6 +2161,7 @@
     },
     {
         "id": 104,
+        "course_number": "HSS122",
         "section": 1,
         "name": "Introduction to Philosophy",
         "prof": "Kim, Byoungjae",
@@ -2075,6 +2179,7 @@
     },
     {
         "id": 105,
+        "course_number": "HSS201",
         "section": 1,
         "name": "Basic Issues in History of Science and Technology",
         "prof": " Chang, Ha Won",
@@ -2092,6 +2197,7 @@
     },
     {
         "id": 106,
+        "course_number": "HSS202",
         "section": 1,
         "name": "Issues in Philosophy of Science",
         "prof": "Kang, Eugene ",
@@ -2109,6 +2215,7 @@
     },
     {
         "id": 107,
+        "course_number": "HSS203",
         "section": 1,
         "name": "Social and Political Thoughts in Modern Society",
         "prof": "Moon, Jun Young",
@@ -2126,6 +2233,7 @@
     },
     {
         "id": 108,
+        "course_number": "HSS204",
         "section": 1,
         "name": "Global Political Economy",
         "prof": "Yoon, Ji Sung",
@@ -2148,6 +2256,7 @@
     },
     {
         "id": 109,
+        "course_number": "HSS207a",
         "section": 1,
         "name": "Introduction to Communication Studies",
         "prof": "Cho, Sung-kyum ",
@@ -2165,6 +2274,7 @@
     },
     {
         "id": 110,
+        "course_number": "HSS208a",
         "section": 1,
         "name": "Classics in Philosophy",
         "prof": "Kim, Byoungjae",
@@ -2187,6 +2297,7 @@
     },
     {
         "id": 111,
+        "course_number": "HSS212",
         "section": 1,
         "name": "General Theory of Rights change - General Theory of Rights Change",
         "prof": "Ham, Sang beom",
@@ -2204,6 +2315,7 @@
     },
     {
         "id": 112,
+        "course_number": "HSS215",
         "section": 1,
         "name": "Urban Geography",
         "prof": "Shen Shawn",
@@ -2226,6 +2338,7 @@
     },
     {
         "id": 113,
+        "course_number": "HSS218",
         "section": 1,
         "name": "Introduction to the Religions in the World",
         "prof": "Park, Beom Seok",
@@ -2243,6 +2356,7 @@
     },
     {
         "id": 114,
+        "course_number": "HSS221",
         "section": 1,
         "name": "Special Topics in Social Sciences Ⅰ - Special Topics in Social Sciences Ⅰ: Mapping your life across 20s",
         "prof": "Kwak, Keum-joo",
@@ -2260,6 +2374,7 @@
     },
     {
         "id": 115,
+        "course_number": "HSS222",
         "section": 1,
         "name": "Special Topics in Social Sciences Ⅱ - Human Evolution and Culture",
         "prof": "Yi, Jeong-duk",
@@ -2277,6 +2392,7 @@
     },
     {
         "id": 116,
+        "course_number": "HSS222",
         "section": 2,
         "name": "Special Topics in Social Sciences Ⅱ - Culture and Society",
         "prof": "Choi, Tae Seob",
@@ -2294,6 +2410,7 @@
     },
     {
         "id": 117,
+        "course_number": "HSS223",
         "section": 1,
         "name": "Philosophy of Mind",
         "prof": "Kim, Byoungjae",
@@ -2316,6 +2433,7 @@
     },
     {
         "id": 118,
+        "course_number": "HSS301a",
         "section": 1,
         "name": "Scientific Writing",
         "prof": "Lee, Jeong Ah",
@@ -2338,6 +2456,7 @@
     },
     {
         "id": 119,
+        "course_number": "HSS301a",
         "section": 2,
         "name": "Scientific Writing",
         "prof": "Mark Silverlock",
@@ -2360,6 +2479,7 @@
     },
     {
         "id": 120,
+        "course_number": "INT201",
         "section": 1,
         "name": "internshipⅠ",
         "prof": "Kim, Sohee",
@@ -2377,6 +2497,7 @@
     },
     {
         "id": 121,
+        "course_number": "INT202",
         "section": 1,
         "name": "internshipⅡ",
         "prof": "Kim, Sohee",
@@ -2394,6 +2515,7 @@
     },
     {
         "id": 122,
+        "course_number": "INT203",
         "section": 1,
         "name": "internshipⅢ",
         "prof": "Kim, Sohee",
@@ -2411,6 +2533,7 @@
     },
     {
         "id": 123,
+        "course_number": "INT204",
         "section": 1,
         "name": "internshipⅣ",
         "prof": "Kim, Sohee",
@@ -2428,6 +2551,7 @@
     },
     {
         "id": 124,
+        "course_number": "INT211",
         "section": 1,
         "name": "Global InternshipⅤ",
         "prof": "Kim, Hoe Joon",
@@ -2445,6 +2569,7 @@
     },
     {
         "id": 125,
+        "course_number": "INT212",
         "section": 1,
         "name": "Global InternshipⅥ",
         "prof": "Kim, Hoe Joon",
@@ -2462,6 +2587,7 @@
     },
     {
         "id": 126,
+        "course_number": "INT213",
         "section": 1,
         "name": "Global InternshipⅦ",
         "prof": "Kim, Hoe Joon",
@@ -2479,6 +2605,7 @@
     },
     {
         "id": 127,
+        "course_number": "INT214",
         "section": 1,
         "name": "Global InternshipⅧ",
         "prof": "Kim, Hoe Joon",
@@ -2496,6 +2623,7 @@
     },
     {
         "id": 128,
+        "course_number": "INT401",
         "section": 1,
         "name": "internshipⅤ",
         "prof": "Kim, Sohee",
@@ -2513,6 +2641,7 @@
     },
     {
         "id": 129,
+        "course_number": "INT402",
         "section": 1,
         "name": "internshipⅥ",
         "prof": "Kim, Sohee",
@@ -2530,6 +2659,7 @@
     },
     {
         "id": 130,
+        "course_number": "LS203",
         "section": 1,
         "name": "Cell Biology Lab",
         "prof": "Lee, Chang-Hun, Chan Chung, Cho, Jeong A",
@@ -2552,6 +2682,7 @@
     },
     {
         "id": 131,
+        "course_number": "LS203",
         "section": 2,
         "name": "Cell Biology Lab",
         "prof": "Chan Chung, Lee, Chang-Hun, Cho, Jeong A",
@@ -2574,6 +2705,7 @@
     },
     {
         "id": 132,
+        "course_number": "LS203",
         "section": 3,
         "name": "Cell Biology Lab",
         "prof": "Cho, Jeong A, Chan Chung, Lee, Chang-Hun",
@@ -2596,6 +2728,7 @@
     },
     {
         "id": 133,
+        "course_number": "LS204",
         "section": 1,
         "name": "Cell Biology",
         "prof": "Baek, Myung In, Jeong, Young Tae",
@@ -2618,6 +2751,7 @@
     },
     {
         "id": 134,
+        "course_number": "LS204",
         "section": 2,
         "name": "Cell Biology",
         "prof": "Baek, Myung In, Jeong, Young Tae",
@@ -2640,6 +2774,7 @@
     },
     {
         "id": 135,
+        "course_number": "LS304",
         "section": 1,
         "name": "Ecology and Evolution",
         "prof": "LEE, SANGIM",
@@ -2662,6 +2797,7 @@
     },
     {
         "id": 136,
+        "course_number": "LS305",
         "section": 1,
         "name": "Neuroscience Ⅰ",
         "prof": "Suh, Byung Chang, Um, JI Won",
@@ -2684,6 +2820,7 @@
     },
     {
         "id": 137,
+        "course_number": "LS306",
         "section": 1,
         "name": "Neuroscience Ⅱ",
         "prof": "Hyun, Jung Ho, Lee, Hyo Sang, HAN KYOUNG CHOE",
@@ -2706,6 +2843,7 @@
     },
     {
         "id": 138,
+        "course_number": "LS308",
         "section": 1,
         "name": "Biochemistry I",
         "prof": "Kim, Jin Hae, Kim, Yoo Ri, Lee, Jong Chan, Lee, Jae Min",
@@ -2731,6 +2869,7 @@
     },
     {
         "id": 139,
+        "course_number": "LS312",
         "section": 1,
         "name": "Technology for drug development",
         "prof": "Yea, Kyung Moo, Lee, Byung Hoon",
@@ -2751,6 +2890,7 @@
     },
     {
         "id": 140,
+        "course_number": "LS314",
         "section": 1,
         "name": "Nobel Prize Winning Discoveries in Life Sciences",
         "prof": "Lee, Byung Hoon, Song-Yi Lee",
@@ -2776,6 +2916,7 @@
     },
     {
         "id": 141,
+        "course_number": "LS403",
         "section": 1,
         "name": "Principles of Development",
         "prof": "Baek, Myung In, Yu, Seong-Woon, Kwak, June Myoung",
@@ -2801,6 +2942,7 @@
     },
     {
         "id": 142,
+        "course_number": "LS406",
         "section": 1,
         "name": "Biomedical Engineering",
         "prof": "Lee Kwang",
@@ -2821,6 +2963,7 @@
     },
     {
         "id": 143,
+        "course_number": "LS407a",
         "section": 1,
         "name": "Human Physiology",
         "prof": "Lee, Jae Min, KIM, EUN-KYOUNG",
@@ -2845,6 +2988,7 @@
     },
     {
         "id": 144,
+        "course_number": "LS410",
         "section": 1,
         "name": "Microbiology",
         "prof": "Kim, Yoo Ri, Chan Chung",
@@ -2870,6 +3014,7 @@
     },
     {
         "id": 145,
+        "course_number": "LS411",
         "section": 1,
         "name": "Introduction to Computational Brain Science",
         "prof": "Yu, Woo Kyung, Mean-Hwan Kim",
@@ -2895,6 +3040,7 @@
     },
     {
         "id": 146,
+        "course_number": "LS412",
         "section": 1,
         "name": "Neurobiology of Disease",
         "prof": "Lee, Sung Bae",
@@ -2920,6 +3066,7 @@
     },
     {
         "id": 147,
+        "course_number": "MECH201",
         "section": 1,
         "name": "Solid Mechanics",
         "prof": "Kyung In, Jang",
@@ -2944,6 +3091,7 @@
     },
     {
         "id": 148,
+        "course_number": "MECH301",
         "section": 1,
         "name": "Robots for Human",
         "prof": "Kim, Hoe Joon, Seongmin Lee, Joon-Hyuk Park, Nam, Kanghyun, Sohyun Jung, Giseop Kim",
@@ -2963,6 +3111,7 @@
     },
     {
         "id": 149,
+        "course_number": "MECH306",
         "section": 1,
         "name": "Engineering Vibration",
         "prof": "Lim, Yong Seob",
@@ -2988,6 +3137,7 @@
     },
     {
         "id": 150,
+        "course_number": "MECH309",
         "section": 1,
         "name": "Introduction to Control Engineering (Lecture)",
         "prof": "Park, Suk Ho",
@@ -3012,6 +3162,7 @@
     },
     {
         "id": 151,
+        "course_number": "MECH311",
         "section": 1,
         "name": "Fluid dynamics",
         "prof": "Sohyun Jung",
@@ -3031,6 +3182,7 @@
     },
     {
         "id": 152,
+        "course_number": "MECH313",
         "section": 1,
         "name": "Electronics for Robotics",
         "prof": "Park, Kyungseo",
@@ -3055,6 +3207,7 @@
     },
     {
         "id": 153,
+        "course_number": "MECH401",
         "section": 1,
         "name": "Robot Dynamics and Control",
         "prof": "Hwang, Min Ho",
@@ -3080,6 +3233,7 @@
     },
     {
         "id": 154,
+        "course_number": "MECH402",
         "section": 1,
         "name": "Micro/Nano Engineering",
         "prof": "Lee, Jae Hong",
@@ -3105,6 +3259,7 @@
     },
     {
         "id": 155,
+        "course_number": "MECH405",
         "section": 1,
         "name": "Fundamental of Heat Transfer",
         "prof": "Choi, Gyeung Ho",
@@ -3129,6 +3284,7 @@
     },
     {
         "id": 156,
+        "course_number": "MECH407",
         "section": 1,
         "name": "Introduction to  Mobile System",
         "prof": "Seongmin Lee",
@@ -3153,6 +3309,7 @@
     },
     {
         "id": 157,
+        "course_number": "MSE305a",
         "section": 1,
         "name": "Introduction to materials science & engineeringⅠ",
         "prof": "Lee, Ju Hyuck",
@@ -3177,6 +3334,7 @@
     },
     {
         "id": 158,
+        "course_number": "MSE307",
         "section": 1,
         "name": "Experiment in Materials Science & Engineering",
         "prof": "Jinsoo Kim, Sungwon Lee, Lee, Ju Hyuck, Lee, Jong-Soo, LEE, SHINBUHM",
@@ -3202,6 +3360,7 @@
     },
     {
         "id": 159,
+        "course_number": "MSE402",
         "section": 1,
         "name": "Phase Transformations",
         "prof": "Jinsoo Kim",
@@ -3227,6 +3386,7 @@
     },
     {
         "id": 160,
+        "course_number": "MSE407",
         "section": 1,
         "name": "Mechanical Behavior  of Materials",
         "prof": "Younggyu Kim",
@@ -3251,6 +3411,7 @@
     },
     {
         "id": 161,
+        "course_number": "PHY202a",
         "section": 1,
         "name": "Analytical MechanicsⅠ",
         "prof": "Lee, Jae Dong",
@@ -3275,6 +3436,7 @@
     },
     {
         "id": 162,
+        "course_number": "PHY205a",
         "section": 1,
         "name": "Modern Physics",
         "prof": "Kim, Soyeun",
@@ -3299,6 +3461,7 @@
     },
     {
         "id": 163,
+        "course_number": "PHY302a",
         "section": 1,
         "name": "Advanced Physics Lab",
         "prof": "Unassigned",
@@ -3323,6 +3486,7 @@
     },
     {
         "id": 164,
+        "course_number": "PHY304",
         "section": 1,
         "name": "Quantum MechanicsⅠ - Quantum Mechanics I",
         "prof": "Park, Keeseong",
@@ -3347,6 +3511,7 @@
     },
     {
         "id": 165,
+        "course_number": "PHY306",
         "section": 1,
         "name": "Mathematical Physics",
         "prof": "Choe, Seung Ho",
@@ -3372,6 +3537,7 @@
     },
     {
         "id": 166,
+        "course_number": "PHY308",
         "section": 1,
         "name": "ElectrodynamicsⅡ - Electrodynamics II",
         "prof": "Chang-Hee Cho",
@@ -3396,6 +3562,7 @@
     },
     {
         "id": 167,
+        "course_number": "PHY401",
         "section": 1,
         "name": "Modern Optics",
         "prof": "Lee, Ki Joon",
@@ -3421,6 +3588,7 @@
     },
     {
         "id": 168,
+        "course_number": "PHY403",
         "section": 1,
         "name": "Solid State Physics Ⅱ",
         "prof": "Hong, Jung Il ",
@@ -3445,6 +3613,7 @@
     },
     {
         "id": 169,
+        "course_number": "PHY405",
         "section": 1,
         "name": "Biophysics",
         "prof": "Lee, Jong Chan",
@@ -3464,6 +3633,7 @@
     },
     {
         "id": 170,
+        "course_number": "PHY406",
         "section": 1,
         "name": "Computational Physics",
         "prof": "Kang, Joongoo",
@@ -3488,6 +3658,7 @@
     },
     {
         "id": 171,
+        "course_number": "PHY408",
         "section": 1,
         "name": "Atomic & Molecular Physics",
         "prof": "Unassigned",
@@ -3512,6 +3683,7 @@
     },
     {
         "id": 172,
+        "course_number": "TP101",
         "section": 1,
         "name": "Design Thinking",
         "prof": "Park, Jong Rae",
@@ -3531,6 +3703,7 @@
     },
     {
         "id": 173,
+        "course_number": "TP202",
         "section": 1,
         "name": "Introduction to Urban Air Mobility",
         "prof": "In, Su Il",
@@ -3550,6 +3723,7 @@
     },
     {
         "id": 174,
+        "course_number": "TP301",
         "section": 1,
         "name": "Communication and Modern Society",
         "prof": "Cho, Sung-kyum ",
@@ -3569,6 +3743,7 @@
     },
     {
         "id": 175,
+        "course_number": "TP305",
         "section": 1,
         "name": "Game Theory",
         "prof": "Kim, Son-ku",
@@ -3588,6 +3763,7 @@
     },
     {
         "id": 176,
+        "course_number": "TP307a",
         "section": 1,
         "name": "User experience design",
         "prof": "Park, Jong Rae",
@@ -3607,6 +3783,7 @@
     },
     {
         "id": 177,
+        "course_number": "TP308",
         "section": 1,
         "name": "Integrative understanding of life",
         "prof": "Nam, Chang Hoon",
@@ -3626,6 +3803,7 @@
     },
     {
         "id": 178,
+        "course_number": "TP309",
         "section": 1,
         "name": "Introduction to Mathematical Analysis for the Undergraduate",
         "prof": "Ahn, Heung Ju",
@@ -3650,6 +3828,7 @@
     },
     {
         "id": 179,
+        "course_number": "TP310",
         "section": 1,
         "name": "Modern Algebra",
         "prof": "Hudson Thomas Bryan",
@@ -3674,6 +3853,7 @@
     },
     {
         "id": 180,
+        "course_number": "TP406",
         "section": 1,
         "name": "Geometry of Tensors and Applications",
         "prof": "Han, Kang Jin",
@@ -3696,6 +3876,7 @@
     },
     {
         "id": 181,
+        "course_number": "SM204",
         "section": 1,
         "name": "Introduction to Semiconductor Fabrication - Device Fabrication Process for Nanotechnology",
         "prof": "Kwon, Hyuk Jun",
@@ -3718,6 +3899,7 @@
     },
     {
         "id": 182,
+        "course_number": "SM303",
         "section": 1,
         "name": "Fundamentals of Electronic Devices",
         "prof": "Byeongmoon Lee",
@@ -3740,6 +3922,7 @@
     },
     {
         "id": 183,
+        "course_number": "SM304",
         "section": 1,
         "name": "Introduction to Electronic Circuits",
         "prof": "Lee, Jung Hyup",
@@ -3762,6 +3945,7 @@
     },
     {
         "id": 184,
+        "course_number": "SM305",
         "section": 1,
         "name": "Semiconductor  Fabrication Lab - Semiconductor Fabrication Lab",
         "prof": "Jang, Jae Eun, Sanghyeon Choi",

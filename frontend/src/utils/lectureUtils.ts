@@ -25,6 +25,7 @@ export const parseLecture = (raw: RawLecture): Lecture => {
 
     return {
         id: raw.id,
+        course_number: raw.course_number,
         section: raw.section,
         name: raw.name,
         prof: raw.prof,
@@ -36,6 +37,11 @@ export const parseLecture = (raw: RawLecture): Lecture => {
         selected: false,
         preference: 0
     };
+};
+
+export const getLectureKey = (lec: Pick<Lecture, 'course_number' | 'section' | 'id'>): string => {
+    if (lec.course_number) return `${lec.course_number}#${lec.section}`;
+    return `id:${lec.id}`;
 };
 
 export const formatTimeString = (slots: TimeSlot[]): string => {
