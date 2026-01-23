@@ -18,6 +18,8 @@ export const translations = {
         lectureList: {
             searchPlaceholder: "강의명, 교수명, 또는 전공 검색...",
             selectedCount: "개 선택됨",
+            selectedTitle: "선택한 강의",
+            selectedEmpty: "아직 선택된 강의가 없습니다.",
             totalCredits: "총 학점",
             showSearch: "검색창 보기",
             showMatches: "다음 중 하나라도 해당하는 것들만 보기",
@@ -99,6 +101,8 @@ export const translations = {
         lectureList: {
             searchPlaceholder: "Search by name, professor, or major...",
             selectedCount: "selected",
+            selectedTitle: "Selected Lectures",
+            selectedEmpty: "No lectures selected yet.",
             totalCredits: "Total Credits",
             showSearch: "Show Search",
             showMatches: "Show matches only",

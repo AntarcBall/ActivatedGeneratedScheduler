@@ -116,6 +116,17 @@ export const LectureList = () => {
         return { count: selected.length, credits };
     }, [allLectures, selectedLectureKeys]);
 
+    const selectedLectures = useMemo(() => {
+        const selected = allLectures
+            .filter(l => selectedLectureKeys.includes(getLectureKey(l)))
+            .sort((a, b) => {
+                const nameCompare = a.name.localeCompare(b.name);
+                if (nameCompare !== 0) return nameCompare;
+                return a.section - b.section;
+            });
+        return selected;
+    }, [allLectures, selectedLectureKeys]);
+
     return (
         <div className="flex flex-col lg:flex-row gap-3 w-full h-full min-h-0">
             {/* Sidebar Controls - Compressed */}
@@ -202,6 +213,41 @@ export const LectureList = () => {
                             </div>
                         </div>
                     )}
+
+                    <div className="mt-2 pt-2 border-t border-gray-100 flex-1 min-h-0 flex flex-col">
+                        <div className="flex items-center justify-between mb-1">
+                            <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest">
+                                {t.selectedTitle}
+                            </span>
+                            <span className="text-[9px] font-bold text-gray-400">
+                                {selectedLectures.length}
+                            </span>
+                        </div>
+                        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-1 space-y-1">
+                            {selectedLectures.length === 0 ? (
+                                <p className="text-[10px] text-gray-400">{t.selectedEmpty}</p>
+                            ) : (
+                                selectedLectures.map(lec => (
+                                    <div
+                                        key={getLectureKey(lec)}
+                                        className="flex items-center justify-between px-2 py-1 rounded-lg bg-gray-50 border border-gray-100"
+                                    >
+                                        <div className="min-w-0">
+                                            <p className="text-[10px] font-bold text-gray-700 truncate">
+                                                {lec.name}
+                                            </p>
+                                            <p className="text-[9px] text-gray-400 truncate">
+                                                {lec.prof}
+                                            </p>
+                                        </div>
+                                        <span className="ml-2 text-[9px] font-black text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-md">
+                                            S{lec.section}
+                                        </span>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </div>
                 </div>
 
                 {/* Help Button - Compressed */}

@@ -4,6 +4,100 @@ import { parseLecture, getLectureKey } from '../utils/lectureUtils';
 
 const LOCALSTORAGE_KEY = 'ags_selected_lecture_keys';
 const LEGACY_LOCALSTORAGE_KEY = 'ags_selected_lectures';
+const LOCALSTORAGE_PREFERENCES_KEY = 'ags_preferences';
+const LOCALSTORAGE_GOOD_SLOTS_KEY = 'ags_good_slots';
+const LOCALSTORAGE_BAD_SLOTS_KEY = 'ags_bad_slots';
+const LOCALSTORAGE_WEIGHTS_KEY = 'ags_weights';
+const LOCALSTORAGE_CURRENT_PAGE_KEY = 'ags_current_page';
+const TOTAL_PAGES = 6;
+const DEFAULT_WEIGHTS: WeightConfig[] = [
+    { weight: 5, rss: false },
+    { weight: 5, rss: false },
+    { weight: 5, rss: false },
+    { weight: 5, rss: false },
+];
+const DAYS: DayOfWeek[] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+
+const readPreferencesFromStorage = () => {
+    try {
+        const saved = localStorage.getItem(LOCALSTORAGE_PREFERENCES_KEY);
+        if (!saved) return {};
+        const parsed = JSON.parse(saved);
+        if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+        const result: Record<number, number> = {};
+        Object.entries(parsed).forEach(([key, value]) => {
+            const id = Number(key);
+            if (!Number.isFinite(id)) return;
+            if (typeof value !== 'number' || !Number.isFinite(value)) return;
+            if (value !== 0) result[id] = value;
+        });
+        return result;
+    } catch {
+        return {};
+    }
+};
+
+const readSlotsFromStorage = (storageKey: string) => {
+    const base: Record<DayOfWeek, number[]> = {
+        Mon: [],
+        Tue: [],
+        Wed: [],
+        Thu: [],
+        Fri: [],
+    };
+    try {
+        const saved = localStorage.getItem(storageKey);
+        if (!saved) return base;
+        const parsed = JSON.parse(saved);
+        if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return base;
+        const result: Record<DayOfWeek, number[]> = { ...base };
+        DAYS.forEach(day => {
+            const daySlots = (parsed as Record<string, unknown>)[day];
+            if (!Array.isArray(daySlots)) return;
+            const filtered = daySlots
+                .filter(slot => Number.isInteger(slot) && slot >= 0 && slot <= 23) as number[];
+            result[day] = Array.from(new Set(filtered)).sort((a, b) => a - b);
+        });
+        return result;
+    } catch {
+        return base;
+    }
+};
+
+const readWeightsFromStorage = () => {
+    try {
+        const saved = localStorage.getItem(LOCALSTORAGE_WEIGHTS_KEY);
+        if (!saved) return DEFAULT_WEIGHTS;
+        const parsed = JSON.parse(saved);
+        if (!Array.isArray(parsed)) return DEFAULT_WEIGHTS;
+        return DEFAULT_WEIGHTS.map((base, index) => {
+            const item = parsed[index];
+            if (!item || typeof item !== 'object' || Array.isArray(item)) return base;
+            const weightValue = (item as { weight?: unknown }).weight;
+            const rssValue = (item as { rss?: unknown }).rss;
+            const weight = typeof weightValue === 'number' && Number.isFinite(weightValue)
+                ? Math.min(10, Math.max(0, Math.round(weightValue)))
+                : base.weight;
+            const rss = typeof rssValue === 'boolean' ? rssValue : base.rss;
+            return { weight, rss };
+        });
+    } catch {
+        return DEFAULT_WEIGHTS;
+    }
+};
+
+const readCurrentPageFromStorage = () => {
+    try {
+        const saved = localStorage.getItem(LOCALSTORAGE_CURRENT_PAGE_KEY);
+        if (!saved) return 0;
+        const parsed = Number(saved);
+        if (!Number.isInteger(parsed)) return 0;
+        if (parsed < 0 || parsed > TOTAL_PAGES) return 0;
+        return parsed;
+    } catch {
+        return 0;
+    }
+};
 
 interface AppState {
     // Data
@@ -61,25 +155,22 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
             return [];
         }
     });
-    const [preferences, setPreferences] = useState<Record<number, number>>({});
+    const [preferences, setPreferences] = useState<Record<number, number>>(
+        () => readPreferencesFromStorage()
+    );
     
-    const [goodSlots, setGoodSlots] = useState<Record<DayOfWeek, number[]>>({
-        Mon: [], Tue: [], Wed: [], Thu: [], Fri: []
-    });
-    const [badSlots, setBadSlots] = useState<Record<DayOfWeek, number[]>>({
-        Mon: [], Tue: [], Wed: [], Thu: [], Fri: []
-    });
+    const [goodSlots, setGoodSlots] = useState<Record<DayOfWeek, number[]>>(
+        () => readSlotsFromStorage(LOCALSTORAGE_GOOD_SLOTS_KEY)
+    );
+    const [badSlots, setBadSlots] = useState<Record<DayOfWeek, number[]>>(
+        () => readSlotsFromStorage(LOCALSTORAGE_BAD_SLOTS_KEY)
+    );
     
     // Weights: [FitGood, FitBad, BreakTime, Prefer]
-    const [weights, setWeights] = useState<WeightConfig[]>([
-        { weight: 5, rss: false },
-        { weight: 5, rss: false },
-        { weight: 5, rss: false },
-        { weight: 5, rss: false },
-    ]);
+    const [weights, setWeights] = useState<WeightConfig[]>(() => readWeightsFromStorage());
 
-    const [currentPage, setCurrentPage] = useState(0); // Start at Landing Page (0)
-    const totalPages = 6;
+    const [currentPage, setCurrentPage] = useState(() => readCurrentPageFromStorage());
+    const totalPages = TOTAL_PAGES;
     
     const [generatedTimetables, setGeneratedTimetables] = useState<Timetable[]>([]);
     const [isGenerating, setIsGenerating] = useState(false);
@@ -97,6 +188,14 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
             })
             .catch(err => console.error(`Failed to load lectures (${language}):`, err));
     }, [language]);
+
+    useEffect(() => {
+        localStorage.setItem(LOCALSTORAGE_WEIGHTS_KEY, JSON.stringify(weights));
+    }, [weights]);
+
+    useEffect(() => {
+        localStorage.setItem(LOCALSTORAGE_CURRENT_PAGE_KEY, String(currentPage));
+    }, [currentPage]);
 
     useEffect(() => {
         if (!allLectures.length || !legacySelectedIds.length) return;
@@ -130,7 +229,16 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     };
 
     const setLecturePreference = (id: number, pref: number) => {
-        setPreferences(prev => ({ ...prev, [id]: pref }));
+        setPreferences(prev => {
+            const next = { ...prev };
+            if (pref === 0) {
+                delete next[id];
+            } else {
+                next[id] = pref;
+            }
+            localStorage.setItem(LOCALSTORAGE_PREFERENCES_KEY, JSON.stringify(next));
+            return next;
+        });
     };
 
     const toggleSlot = (type: 'good' | 'bad', day: DayOfWeek, slotIndex: number) => {
@@ -141,7 +249,12 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
             const newSlots = exists 
                 ? currentSlots.filter(s => s !== slotIndex)
                 : [...currentSlots, slotIndex];
-            return { ...prev, [day]: newSlots };
+            const next = { ...prev, [day]: newSlots };
+            localStorage.setItem(
+                type === 'good' ? LOCALSTORAGE_GOOD_SLOTS_KEY : LOCALSTORAGE_BAD_SLOTS_KEY,
+                JSON.stringify(next)
+            );
+            return next;
         });
     };
 
