@@ -34,7 +34,9 @@ export const PreferenceList = () => {
             entries.sort(([nameA], [nameB]) => nameA.localeCompare(nameB));
         }
 
-        return entries.map(([name, lecs]) => [name, lecs.sort((a, b) => a.section - b.section)] as const);
+        return entries
+            .filter(([_, lecs]) => lecs.length > 1)
+            .map(([name, lecs]) => [name, lecs.sort((a, b) => a.section - b.section)] as const);
     }, [allLectures, selectedLectureKeys, isPreferenceListAlphabetical]);
 
     return (
@@ -73,18 +75,17 @@ export const PreferenceList = () => {
                                         </div>
 
                                         <div className="flex items-center gap-4 bg-gray-100 p-1 rounded-xl">
-                                            <button 
+                                            <button
                                                 onClick={() => setLecturePreference(lec.id, pref - 1)}
                                                 className="w-7 h-7 flex items-center justify-center bg-white rounded-lg shadow-sm text-red-500 hover:bg-red-50 transition-colors"
                                             >
                                                 <Minus className="w-3.5 h-3.5" />
                                             </button>
-                                            <span className={`w-8 text-center font-bold text-base ${
-                                                pref > 0 ? 'text-green-600' : pref < 0 ? 'text-red-600' : 'text-gray-400'
-                                            }`}>
+                                            <span className={`w-8 text-center font-bold text-base ${pref > 0 ? 'text-green-600' : pref < 0 ? 'text-red-600' : 'text-gray-400'
+                                                }`}>
                                                 {pref > 0 ? `+${pref}` : pref}
                                             </span>
-                                            <button 
+                                            <button
                                                 onClick={() => setLecturePreference(lec.id, pref + 1)}
                                                 className="w-7 h-7 flex items-center justify-center bg-white rounded-lg shadow-sm text-green-500 hover:bg-green-50 transition-colors"
                                             >
