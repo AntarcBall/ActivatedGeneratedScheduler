@@ -129,14 +129,14 @@ export const ResultsView = () => {
                                         let borderStyle = '';
                                         if (pref > 0) {
                                             // Good preference: Bold Green
-                                            borderStyle = 'border-green-500 border-l-2 border-r-2';
-                                            if (isStart) borderStyle += ' border-t-2';
-                                            if (isEnd) borderStyle += ' border-b-2';
+                                            borderStyle = 'border-green-500 border-l-4 border-r-4';
+                                            if (isStart) borderStyle += ' border-t-4';
+                                            if (isEnd) borderStyle += ' border-b-4';
                                         } else if (pref < 0) {
                                             // Bad preference: Bold Red
-                                            borderStyle = 'border-red-500 border-l-2 border-r-2';
-                                            if (isStart) borderStyle += ' border-t-2';
-                                            if (isEnd) borderStyle += ' border-b-2';
+                                            borderStyle = 'border-red-500 border-l-4 border-r-4';
+                                            if (isStart) borderStyle += ' border-t-4';
+                                            if (isEnd) borderStyle += ' border-b-4';
                                         } else {
                                             // Normal: Standard colored borders
                                             const borderPart = colorClass.split(' ').pop() || '';
