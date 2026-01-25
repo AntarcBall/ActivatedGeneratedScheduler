@@ -24,10 +24,10 @@ export default function LandingPage() {
                 </button>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-black text-yellow-200 mb-6 tracking-tight">
                 {t.title}
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-xl text-yellow-200 mb-8 max-w-2xl leading-relaxed">
                 {t.subtitle}
             </p>
 
