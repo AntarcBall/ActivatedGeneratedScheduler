@@ -31,7 +31,7 @@ export default function LandingPage() {
                 {t.subtitle}
             </p>
 
-            <img src="logo.png" alt="Logo" className="w-48 h-auto mb-12 rounded-xl" />
+            <img src="logo1.png" alt="Logo" className="w-48 h-auto mb-12 rounded-xl" />
 
             <button
                 onClick={nextPage}

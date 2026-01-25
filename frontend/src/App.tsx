@@ -1,6 +1,6 @@
 import { AppProvider, useApp } from './context/AppContext';
 import { LectureList } from './components/LectureList';
-import { MeshGradient } from '@paper-design/shaders-react';
+import { Heatmap } from '@paper-design/shaders-react';
 import { PreferenceList } from './components/PreferenceList';
 import { TimeSelector } from './components/TimeSelector';
 import { WeightSettings } from './components/WeightSettings';
@@ -75,12 +75,20 @@ const Content = () => {
         {/* Content Area */}
         <div className="relative flex-1 p-3 md:p-4 overflow-hidden flex flex-col">
           {currentPage === 0 && (
-            <MeshGradient
-              colors={['#5100ff', '#00ff80', '#ffcc00', '#ea00ff']}
-              distortion={1}
-              swirl={0.8}
-              speed={0.2}
-              className="absolute inset-0 h-full w-full opacity-50 pointer-events-none"
+            <Heatmap
+              className="absolute inset-0 h-full w-full opacity-80 pointer-events-none"
+              width={1280}
+              height={720}
+              image="https://shaders.paper.design/images/logos/diamond.svg"
+              colors={["#112069", "#1f3ca3", "#3265e7", "#6bd8ff", "#ffe77a", "#ff9a1f", "#ff4d00"]}
+              colorBack="#000000"
+              contour={0.57}
+              angle={0}
+              noise={0}
+              innerGlow={0.5}
+              outerGlow={0.5}
+              speed={1}
+              scale={0.75}
             />
           )}
           <h2 className="text-lg font-bold mb-2 flex-shrink-0 z-10">
