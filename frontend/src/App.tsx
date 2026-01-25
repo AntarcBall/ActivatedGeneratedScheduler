@@ -1,5 +1,6 @@
 import { AppProvider, useApp } from './context/AppContext';
 import { LectureList } from './components/LectureList';
+import { MeshGradient } from '@paper-design/shaders-react';
 import { PreferenceList } from './components/PreferenceList';
 import { TimeSelector } from './components/TimeSelector';
 import { WeightSettings } from './components/WeightSettings';
@@ -31,7 +32,7 @@ const Content = () => {
   };
 
   const getPageTitle = (page: number) => {
-    switch(page) {
+    switch (page) {
       case 0: return t.landing.title;
       case 1: return t.steps.step1;
       case 2: return t.steps.step2;
@@ -44,7 +45,7 @@ const Content = () => {
   };
 
   const renderStep = () => {
-    switch(currentPage) {
+    switch (currentPage) {
       case 0: return <LandingPage />;
       case 1: return <LectureList />;
       case 2: return <PreferenceList />;
@@ -54,7 +55,7 @@ const Content = () => {
       case 6: return <ResultsView />;
       default: return (
         <div className="border border-dashed border-gray-300 rounded-lg h-64 flex items-center justify-center text-gray-500">
-           Component for Page {currentPage} goes here.
+          Component for Page {currentPage} goes here.
         </div>
       );
     }
@@ -65,18 +66,27 @@ const Content = () => {
       <div className="w-full max-w-7xl bg-white shadow-lg rounded-xl overflow-hidden flex flex-col h-full">
         {/* Progress Bar */}
         <div className="w-full bg-gray-200 h-1.5 flex-shrink-0">
-          <div 
+          <div
             className="bg-blue-500 h-1.5 transition-all duration-300"
             style={{ width: `${(currentPage / totalPages) * 100}%` }}
           />
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 p-3 md:p-4 overflow-hidden flex flex-col">
-          <h2 className="text-lg font-bold mb-2 flex-shrink-0">
-              {currentPage === 0 ? t.landing.title : `Step ${currentPage}: ${getPageTitle(currentPage)}`}
+        <div className="relative flex-1 p-3 md:p-4 overflow-hidden flex flex-col">
+          {currentPage === 0 && (
+            <MeshGradient
+              colors={['#5100ff', '#00ff80', '#ffcc00', '#ea00ff']}
+              distortion={1}
+              swirl={0.8}
+              speed={0.2}
+              className="absolute inset-0 h-full w-full opacity-50 pointer-events-none"
+            />
+          )}
+          <h2 className="text-lg font-bold mb-2 flex-shrink-0 z-10">
+            {currentPage === 0 ? t.landing.title : `Step ${currentPage}: ${getPageTitle(currentPage)}`}
           </h2>
-          <div className="flex-1 min-h-0">
+          <div className="flex-1 min-h-0 z-10">
             {renderStep()}
           </div>
         </div>
@@ -87,16 +97,15 @@ const Content = () => {
             <button
               onClick={prevPage}
               disabled={currentPage === 0 || isGenerating}
-              className={`px-3 py-1.5 rounded-lg font-medium text-sm transition-colors ${
-                currentPage === 0
-                  ? 'opacity-0 cursor-default'
-                  : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
-              }`}
+              className={`px-3 py-1.5 rounded-lg font-medium text-sm transition-colors ${currentPage === 0
+                ? 'opacity-0 cursor-default'
+                : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                }`}
             >
               {t.common.prev}
             </button>
             <div className="hidden sm:block">
-               <h1 className="text-xs font-bold text-gray-700">AGS for DGIST by H. Jeong</h1>
+              <h1 className="text-xs font-bold text-gray-700">AGS for DGIST by H. Jeong</h1>
             </div>
           </div>
 
@@ -122,13 +131,12 @@ const Content = () => {
           )}
 
           <button
-            onClick={handleNext} 
+            onClick={handleNext}
             disabled={currentPage === totalPages || isGenerating}
-            className={`px-5 py-1.5 rounded-lg font-medium text-sm transition-colors text-white ${
-              isGenerating
-                ? 'bg-blue-400 cursor-wait'
-                : 'bg-blue-600 hover:bg-blue-700'
-            }`}
+            className={`px-5 py-1.5 rounded-lg font-medium text-sm transition-colors text-white ${isGenerating
+              ? 'bg-blue-400 cursor-wait'
+              : 'bg-blue-600 hover:bg-blue-700'
+              }`}
           >
             {isGenerating ? t.common.generating : currentPage === 0 ? t.landing.start : currentPage === 5 ? t.common.generate : currentPage === 6 ? t.common.finished : t.common.next}
           </button>

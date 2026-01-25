@@ -3,3 +3,4 @@ selected_lectures_cache.json
 __pycache__/
 \node_modules
 frontend/dist
+skill.md

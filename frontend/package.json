@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@paper-design/shaders-react": "^0.0.71",
     "lucide-react": "^0.344.0",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",

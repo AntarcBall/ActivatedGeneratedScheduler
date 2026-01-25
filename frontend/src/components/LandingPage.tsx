@@ -1,6 +1,7 @@
 import { useApp } from '../context/AppContext';
 import { translations } from '../translations';
 
+
 export default function LandingPage() {
     const { language, setLanguage, nextPage } = useApp();
     const t = translations[language].landing;
