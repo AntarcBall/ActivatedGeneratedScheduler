@@ -23,7 +23,7 @@ const COLORS = [
 ];
 
 export const ResultsView = () => {
-    const { generatedTimetables, language } = useApp();
+    const { generatedTimetables, language, preferences } = useApp();
     const t = translations[language].results;
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +34,7 @@ export const ResultsView = () => {
 
     if (generatedTimetables.length === 0) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[400px] text-center p-12 bg-white rounded-3xl border-2 border-dashed border-gray-100">
+            <div className="flex flex-col items-center justify-center min-h-[400px] text-center p-12 bg-white rounded-3xl border-8 border-dashed border-gray-100">
                 <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
                     <BookOpen className="w-10 h-10 text-gray-300" />
                 </div>
@@ -79,8 +79,8 @@ export const ResultsView = () => {
                     <div className="px-6 py-2 text-center min-w-[100px]">
                         <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Score</div>
                         <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
-                            <div 
-                                className="bg-blue-600 h-full transition-all duration-1000" 
+                            <div
+                                className="bg-blue-600 h-full transition-all duration-1000"
                                 style={{ width: `${100 - ((current.totalLoss - minScore) / (maxScore - minScore || 1) * 100)}%` }}
                             />
                         </div>
@@ -101,34 +101,55 @@ export const ResultsView = () => {
                                 {day}
                             </div>
                         ))}
-                        
+
                         {Array.from({ length: 24 }).map((_, slotIdx) => (
                             <React.Fragment key={slotIdx}>
                                 <div key={`t-${slotIdx}`} className="h-[22px] flex items-center justify-end pr-2 text-[8px] font-bold text-gray-300 bg-gray-50/30 border-r border-b border-gray-100">
                                     {formatSingleSlotTime(slotIdx)}
                                 </div>
                                 {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map(day => {
-                                    const lecture = current.lectures.find(l => 
+                                    const lecture = current.lectures.find(l =>
                                         l.time_slots.some(s => s.day === day && slotIdx >= s.start_index && slotIdx <= s.end_index)
                                     );
-                                    
+
                                     const slot = lecture?.time_slots.find(s => s.day === day && slotIdx >= s.start_index && slotIdx <= s.end_index);
                                     const isStart = slot && slot.start_index === slotIdx;
                                     const isSecond = slot && slot.start_index + 1 === slotIdx;
                                     const isEnd = slot && slot.end_index === slotIdx;
-                                    
-                                    const colorClass = lecture 
-                                        ? COLORS[current.lectures.indexOf(lecture) % COLORS.length] 
+
+                                    const colorClass = lecture
+                                        ? COLORS[current.lectures.indexOf(lecture) % COLORS.length]
                                         : 'bg-white';
 
-                                    const borderPart = colorClass.split(' ').pop() || '';
-                                    const borderClass = lecture
-                                        ? `border-l border-r ${isStart ? 'border-t' : 'border-t-0'} ${isEnd ? 'border-b' : 'border-b-0'} ${borderPart.replace('border-', 'border-opacity-50 border-')}`
-                                        : 'border-r border-b border-gray-50';
+                                    const pref = lecture ? (preferences[lecture.id] || 0) : 0;
+
+                                    let borderClass = '';
+                                    if (lecture) {
+                                        // Base borders
+                                        let borderStyle = '';
+                                        if (pref > 0) {
+                                            // Good preference: Bold Green
+                                            borderStyle = 'border-green-500 border-l-2 border-r-2';
+                                            if (isStart) borderStyle += ' border-t-2';
+                                            if (isEnd) borderStyle += ' border-b-2';
+                                        } else if (pref < 0) {
+                                            // Bad preference: Bold Red
+                                            borderStyle = 'border-red-500 border-l-2 border-r-2';
+                                            if (isStart) borderStyle += ' border-t-2';
+                                            if (isEnd) borderStyle += ' border-b-2';
+                                        } else {
+                                            // Normal: Standard colored borders
+                                            const borderPart = colorClass.split(' ').pop() || '';
+                                            borderStyle = `border-l border-r ${isStart ? 'border-t' : 'border-t-0'} ${isEnd ? 'border-b' : 'border-b-0'} ${borderPart.replace('border-', 'border-opacity-50 border-')}`;
+                                        }
+                                        borderClass = borderStyle;
+                                    } else {
+                                        borderClass = 'border-r border-b border-gray-50';
+                                    }
 
                                     return (
-                                        <div 
-                                            key={`${day}-${slotIdx}`} 
+                                        <div
+                                            key={`${day}-${slotIdx}`}
                                             className={`h-[22px] transition-all overflow-hidden ${colorClass} ${borderClass} ${lecture ? 'z-10' : ''}`}
                                         >
                                             {lecture && (isStart || isSecond) && (
@@ -166,28 +187,37 @@ export const ResultsView = () => {
                     </div>
 
                     <div className="space-y-4 max-h-[600px] overflow-y-auto custom-scrollbar pr-2">
-                        {current.lectures.map((lec, idx) => (
-                            <div key={lec.id} className={`group bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden`}>
-                                <div className={`absolute top-0 left-0 w-1.5 h-full ${COLORS[idx % COLORS.length].split(' ')[0]}`} />
-                                <div className="flex items-start justify-between mb-3 pl-3">
-                                    <span className="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-black rounded-lg uppercase tracking-wider">
-                                        Section {lec.section}
-                                    </span>
-                                    <span className="text-[10px] font-bold text-gray-300">{lec.credit} Credits</span>
-                                </div>
-                                <div className="pl-3">
-                                    <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{lec.name}</h4>
-                                    <p className="text-sm text-gray-500 font-medium">{lec.prof}</p>
-                                    <div className="mt-4 pt-4 border-t border-gray-50 flex flex-wrap gap-2">
-                                        {lec.time_slots.map((s, i) => (
-                                            <span key={i} className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">
-                                                {s.day} {formatSingleSlotTime(s.start_index)}
-                                            </span>
-                                        ))}
+                        {current.lectures.map((lec, idx) => {
+                            const pref = preferences[lec.id] || 0;
+                            const cardBorderClass = pref > 0
+                                ? 'ring-2 ring-green-500 border-transparent'
+                                : pref < 0
+                                    ? 'ring-2 ring-red-500 border-transparent'
+                                    : 'border-gray-100';
+
+                            return (
+                                <div key={lec.id} className={`group bg-white p-5 rounded-2xl border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden ${cardBorderClass}`}>
+                                    <div className={`absolute top-0 left-0 w-1.5 h-full ${COLORS[idx % COLORS.length].split(' ')[0]}`} />
+                                    <div className="flex items-start justify-between mb-3 pl-3">
+                                        <span className="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-black rounded-lg uppercase tracking-wider">
+                                            Section {lec.section}
+                                        </span>
+                                        <span className="text-[10px] font-bold text-gray-300">{lec.credit} Credits</span>
+                                    </div>
+                                    <div className="pl-3">
+                                        <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{lec.name}</h4>
+                                        <p className="text-sm text-gray-500 font-medium">{lec.prof}</p>
+                                        <div className="mt-4 pt-4 border-t border-gray-50 flex flex-wrap gap-2">
+                                            {lec.time_slots.map((s, i) => (
+                                                <span key={i} className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">
+                                                    {s.day} {formatSingleSlotTime(s.start_index)}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>

@@ -17,11 +17,11 @@ export const LectureList = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [showHelp, setShowHelp] = useState(false);
-    
+
     // UI Visibility States
     const [isSearchEnabled, setIsSearchEnabled] = useState(false);
     const [isFilterEnabled, setIsFilterEnabled] = useState(false);
-    
+
     // Filter State (Single selection for Radio behavior)
     const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
@@ -54,10 +54,10 @@ export const LectureList = () => {
 
     const filteredLectures = useMemo(() => {
         return allLectures.filter(lec => {
-            const matchesSearch = 
+            const matchesSearch =
                 lec.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 lec.prof.toLowerCase().includes(searchTerm.toLowerCase());
-            
+
             if (!matchesSearch) return false;
 
             if (isFilterEnabled) {
@@ -74,7 +74,7 @@ export const LectureList = () => {
                 if (activeFilter === 'track') return category === (language === 'ko' ? '트랙' : 'Track');
                 if (activeFilter === 'writingReading') return category === (language === 'ko' ? '쓰기·읽기 중점' : 'Writing·Reading');
                 if (activeFilter === 'nonTrackConvergence') return category === (language === 'ko' ? '비트랙/융합' : 'Non-Track/Convergence');
-                
+
                 if (lec.major_tracks && lec.major_tracks.includes(activeFilter)) {
                     return true;
                 }
@@ -92,7 +92,7 @@ export const LectureList = () => {
             if (!groups[lec.name]) groups[lec.name] = [];
             groups[lec.name].push(lec);
         });
-        
+
         const orderedGroups: { name: string, lectures: Lecture[] }[] = [];
         const seenNames = new Set<string>();
 
@@ -113,7 +113,7 @@ export const LectureList = () => {
     const stats = useMemo(() => {
         let credits = 0;
         const selected = allLectures.filter(l => selectedLectureKeys.includes(getLectureKey(l)));
-        
+
         // Group by name to sum credits only once per course
         const uniqueCourses = new Set<string>();
         selected.forEach(l => {
@@ -122,7 +122,7 @@ export const LectureList = () => {
                 credits += (l.credit || 0);
             }
         });
-        
+
         return { count: selected.length, credits };
     }, [allLectures, selectedLectureKeys]);
 
@@ -167,7 +167,7 @@ export const LectureList = () => {
 
                 {/* Search Toggle - Compressed */}
                 <div className="bg-white rounded-xl border border-gray-100 p-2 shadow-sm flex-shrink-0">
-                    <button 
+                    <button
                         onClick={() => setIsSearchEnabled(!isSearchEnabled)}
                         className={`w-full flex items-center justify-between p-1.5 rounded-lg transition-all ${isSearchEnabled ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}`}
                     >
@@ -192,7 +192,7 @@ export const LectureList = () => {
 
                 {/* Filter Toggle - Compressed */}
                 <div className="bg-white rounded-xl border border-gray-100 p-2 shadow-sm flex-1 min-h-0 flex flex-col">
-                    <button 
+                    <button
                         onClick={() => setIsFilterEnabled(!isFilterEnabled)}
                         className={`w-full flex items-center justify-between p-1.5 rounded-lg transition-all flex-shrink-0 ${isFilterEnabled ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}`}
                     >
@@ -220,11 +220,10 @@ export const LectureList = () => {
                                     <button
                                         key={filter.id}
                                         onClick={() => handleFilterChange(filter.id)}
-                                        className={`px-2 py-1 rounded-md text-[9px] font-bold transition-all whitespace-nowrap border ${
-                                            activeFilter === filter.id 
+                                        className={`px-2 py-1 rounded-md text-[9px] font-bold transition-all whitespace-nowrap border ${activeFilter === filter.id
                                                 ? filter.style === 'blue' ? 'bg-blue-600 text-white border-blue-600 shadow-sm' : 'bg-gray-900 text-white border-gray-900 shadow-sm'
                                                 : 'text-gray-500 bg-gray-50 border-gray-100 hover:bg-gray-100'
-                                        }`}
+                                            }`}
                                     >
                                         {filter.label}
                                     </button>
@@ -275,7 +274,7 @@ export const LectureList = () => {
                 </div>
 
                 {/* Help Button - Compressed */}
-                <button 
+                <button
                     onClick={() => setShowHelp(true)}
                     className="flex items-center justify-center gap-2 p-2 bg-blue-50 text-blue-600 rounded-xl font-bold text-xs hover:bg-blue-100 transition-colors flex-shrink-0"
                 >
@@ -290,14 +289,13 @@ export const LectureList = () => {
                     {groupedLectures.map((group) => {
                         const isExpanded = expandedGroups.has(group.name);
                         const selectedInGroup = group.lectures.filter(l => selectedLectureKeys.includes(getLectureKey(l)));
-                        
+
                         return (
                             <div key={group.name} className="mb-1 group/item">
-                                <button 
+                                <button
                                     onClick={(e) => toggleGroup(group.name, e)}
-                                    className={`w-full flex items-center justify-between p-3 rounded-xl transition-all ${
-                                        isExpanded ? 'bg-gray-50' : 'hover:bg-gray-50'
-                                    }`}
+                                    className={`w-full flex items-center justify-between p-3 rounded-xl transition-all ${isExpanded ? 'bg-gray-50' : 'hover:bg-gray-50'
+                                        }`}
                                 >
                                     <div className="flex items-center gap-3">
                                         <div className={`p-1.5 rounded-lg transition-colors ${selectedInGroup.length > 0 ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-400'}`}>
@@ -320,19 +318,17 @@ export const LectureList = () => {
                                         {group.lectures.map(lec => {
                                             const isSelected = selectedLectureKeys.includes(getLectureKey(lec));
                                             return (
-                                                <div 
+                                                <div
                                                     key={lec.id}
                                                     onClick={() => toggleLectureSelection(lec)}
-                                                    className={`p-3 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
-                                                        isSelected 
-                                                            ? 'border-blue-600 bg-blue-50/50' 
+                                                    className={`p-3 rounded-xl border-8 cursor-pointer transition-all duration-300 ${isSelected
+                                                            ? 'border-blue-600 bg-blue-50/50'
                                                             : 'border-gray-100 hover:border-blue-200 bg-white'
-                                                    }`}
+                                                        }`}
                                                 >
                                                     <div className="flex justify-between items-start mb-2">
-                                                        <span className={`px-1.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider ${
-                                                            isSelected ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-400'
-                                                        }`}>
+                                                        <span className={`px-1.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider ${isSelected ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-400'
+                                                            }`}>
                                                             S{lec.section}
                                                         </span>
                                                         <span className="text-[9px] font-bold text-gray-300">{lec.credit}C</span>
@@ -358,7 +354,7 @@ export const LectureList = () => {
             {showHelp && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/20 backdrop-blur-sm animate-in fade-in duration-300">
                     <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg p-8 relative animate-in zoom-in-95 duration-300 max-h-[90vh] overflow-y-auto">
-                        <button 
+                        <button
                             onClick={() => setShowHelp(false)}
                             className="absolute top-6 right-6 p-2 hover:bg-gray-100 rounded-full transition-colors"
                         >
@@ -366,7 +362,7 @@ export const LectureList = () => {
                         </button>
 
                         <h3 className="text-2xl font-black text-gray-900 mb-8">{t.guideTitle}</h3>
-                        
+
                         <div className="space-y-8">
                             <div className="p-6 bg-blue-50 rounded-2xl border border-blue-100">
                                 <h4 className="font-bold text-blue-700 mb-2 flex items-center gap-2">
