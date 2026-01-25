@@ -52,7 +52,10 @@ export const ResultsView = () => {
     return (
         <div className="space-y-8 animate-in fade-in zoom-in-95 duration-500">
             {/* Header / Stats */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
+            <div
+                className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
+                style={{ height: '83.81818200000001px', paddingTop: 0, paddingBottom: 0 }}
+            >
                 <div className="flex items-center gap-6">
                     <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-100 rotate-3">
                         <Trophy className="w-8 h-8 text-white" />
