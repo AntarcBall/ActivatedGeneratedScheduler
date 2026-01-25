@@ -111,6 +111,7 @@ export const ResultsView = () => {
                                     
                                     const slot = lecture?.time_slots.find(s => s.day === day && slotIdx >= s.start_index && slotIdx <= s.end_index);
                                     const isStart = slot && slot.start_index === slotIdx;
+                                    const isSecond = slot && slot.start_index + 1 === slotIdx;
                                     const isEnd = slot && slot.end_index === slotIdx;
                                     
                                     const colorClass = lecture 
@@ -127,14 +128,18 @@ export const ResultsView = () => {
                                             key={`${day}-${slotIdx}`} 
                                             className={`h-[22px] transition-all overflow-hidden ${colorClass} ${borderClass} ${lecture ? 'z-10' : ''}`}
                                         >
-                                            {isStart && lecture && (
+                                            {lecture && (isStart || isSecond) && (
                                                 <div className="px-1 py-0.5 h-full flex flex-col justify-center leading-[1.1]">
-                                                    <div className="font-bold text-[8px] truncate text-gray-900">
-                                                        {lecture.name}
-                                                    </div>
-                                                    <div className="text-[7px] opacity-90 truncate font-medium">
-                                                        S{lecture.section} · {lecture.prof}
-                                                    </div>
+                                                    {isStart && (
+                                                        <div className="font-bold text-[13px] truncate text-gray-900">
+                                                            {lecture.name}
+                                                        </div>
+                                                    )}
+                                                    {isSecond && (
+                                                        <div className="text-[12px] opacity-90 truncate font-medium">
+                                                            Section {lecture.section} {lecture.prof}
+                                                        </div>
+                                                    )}
                                                 </div>
                                             )}
                                         </div>
