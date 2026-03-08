@@ -1,4 +1,5 @@
 import coursesCsv from "../Courses_eng.csv?raw";
+import latestCsv from "../latest.csv?raw";
 
 export type DayKey = "Mon" | "Tue" | "Wed" | "Thu" | "Fri";
 
@@ -52,6 +53,14 @@ export type RoomData = {
   topSlackSections: RoomInsight[];
 };
 
+type DemandRow = {
+  courseCode: string;
+  section: string;
+  titleKo: string;
+  enrolled: number;
+  adminCapacity: number;
+};
+
 type SectionAccumulator = {
   courseCode: string;
   section: string;
@@ -69,6 +78,11 @@ const DAYS: DayKey[] = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 const TOTAL_WEEK_HOURS = 60;
 const SCHEDULE_PATTERN =
   /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(\d{2}:\d{2})-(\d{2}:\d{2})\((.+)\)$/;
+const LATEST_COURSE_CODE = "\uACFC\uBAA9\uCF54\uB4DC";
+const LATEST_SECTION = "\uBD84\uBC18";
+const LATEST_TITLE = "\uACFC\uBAA9\uBA85";
+const LATEST_ENROLLED = "\uD604\uC7AC\uC218\uAC15\uC2E0\uCCAD\uC778\uC6D0";
+const LATEST_CAPACITY = "\uC804\uCCB4\uC815\uC6D0";
 
 function splitCsvLine(line: string) {
   const fields: string[] = [];
@@ -138,8 +152,24 @@ function createDayHours() {
   } satisfies Record<DayKey, number>;
 }
 
-function buildRooms(courseRaw: string): RoomData[] {
+function buildDemandMap(raw: string) {
+  const latestRows = parseCsv(raw);
+  const demandRows = latestRows.map((row) => ({
+    courseCode: row[LATEST_COURSE_CODE].trim(),
+    section: row[LATEST_SECTION].trim(),
+    titleKo: row[LATEST_TITLE].trim(),
+    enrolled: Number(row[LATEST_ENROLLED]),
+    adminCapacity: Number(row[LATEST_CAPACITY]),
+  }));
+
+  return new Map<string, DemandRow>(
+    demandRows.map((row) => [`${row.courseCode}-${row.section}`, row]),
+  );
+}
+
+function buildRooms(courseRaw: string, latestRaw: string): RoomData[] {
   const courseRows = parseCsv(courseRaw);
+  const demandBySection = buildDemandMap(latestRaw);
   const roomMap = new Map<
     string,
     {
@@ -160,8 +190,9 @@ function buildRooms(courseRaw: string): RoomData[] {
     const courseCode = row["Course Number"].trim();
     const section = row["Section"].trim();
     const key = `${courseCode}-${section}`;
+    const demand = demandBySection.get(key);
     const title = normalizeTitle(row["Course Title"].trim());
-    const titleKo = null;
+    const titleKo = demand?.titleKo ?? null;
     const professor = row["Instructor"].trim();
     const professorKo = null;
 
@@ -178,6 +209,8 @@ function buildRooms(courseRaw: string): RoomData[] {
 
       const room = match[4].trim();
       const duration = (toMinutes(match[3]) - toMinutes(match[2])) / 60;
+      const fillRate =
+        demand && demand.adminCapacity > 0 ? demand.enrolled / demand.adminCapacity : null;
 
       const session: Session = {
         room,
@@ -190,9 +223,9 @@ function buildRooms(courseRaw: string): RoomData[] {
         day: day as DayKey,
         start: match[2],
         end: match[3],
-        enrolled: null,
-        adminCapacity: null,
-        fillRate: null,
+        enrolled: demand?.enrolled ?? null,
+        adminCapacity: demand?.adminCapacity ?? null,
+        fillRate,
       };
 
       const roomEntry = roomMap.get(room) ?? {
@@ -215,9 +248,9 @@ function buildRooms(courseRaw: string): RoomData[] {
         professorKo,
         title,
         titleKo,
-        enrolled: null,
-        adminCapacity: null,
-        fillRate: null,
+        enrolled: demand?.enrolled ?? null,
+        adminCapacity: demand?.adminCapacity ?? null,
+        fillRate,
         meetingHours: 0,
       };
 
@@ -329,4 +362,4 @@ function buildRooms(courseRaw: string): RoomData[] {
     });
 }
 
-export const rooms = buildRooms(coursesCsv);
+export const rooms = buildRooms(coursesCsv, latestCsv);
