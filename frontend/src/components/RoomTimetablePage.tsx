@@ -31,7 +31,7 @@ const normalizeRoomName = (value: string) => value.trim().replace(/\s+/g, ' ');
 const buildRoomUrl = (name: string) => {
     const base = import.meta.env.BASE_URL || '/';
     const prefix = base.endsWith('/') ? base : `${base}/`;
-    return `${window.location.origin}${prefix}room/${encodeURIComponent(name)}`;
+    return `${window.location.origin}${prefix}#/room/${encodeURIComponent(name)}`;
 };
 
 const timeToMinutes = (value: string) => {

@@ -33,7 +33,7 @@ const normalizeProfessorName = (name: string) => name.trim().replace(/\s+/g, ' '
 const buildProfessorUrl = (name: string) => {
     const base = import.meta.env.BASE_URL || '/';
     const prefix = base.endsWith('/') ? base : `${base}/`;
-    return `${window.location.origin}${prefix}professor/${encodeURIComponent(name)}`;
+    return `${window.location.origin}${prefix}#/professor/${encodeURIComponent(name)}`;
 };
 
 type ProfessorRank = { name: string; sections: number };

@@ -6,8 +6,9 @@ import { translations } from '../translations';
 export default function LandingPage() {
     const { language, setLanguage, nextPage } = useApp();
     const t = translations[language].landing;
-    const professorDirectoryUrl = `${import.meta.env.BASE_URL}professor/kim-sohee`;
-    const roomDirectoryUrl = `${import.meta.env.BASE_URL}room/${encodeURIComponent('E7 - 233')}`;
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const professorDirectoryUrl = `${baseUrl}#/professor/kim-sohee`;
+    const roomDirectoryUrl = `${baseUrl}#/room/${encodeURIComponent('E7 - 233')}`;
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
