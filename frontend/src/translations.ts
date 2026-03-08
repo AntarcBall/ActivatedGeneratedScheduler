@@ -4,6 +4,10 @@ export const translations = {
             title: "DGIST 자동 시간표 생성기",
             subtitle: "동아리 DGROID에 가입해서 더 좋은 소프트웨어를 개발해주세요.",
             start: "시작하기",
+            professorButton: "교수 시간표 보기",
+            professorButtonHint: "교수별 강의 시간표와 섹션을 확인합니다.",
+            roomButton: "강의실별 보기",
+            roomButtonHint: "강의실 사용 시간표와 활용도를 확인합니다.",
             helpTitle: "도움이 필요하신가요?",
             helpDesc: "? 버튼을 누르면 자세한 사용 가이드를 확인할 수 있습니다."
         },
@@ -88,6 +92,10 @@ export const translations = {
             title: "DGIST Auto Timetable Generator",
             subtitle: "Smart Choice for Your Perfect Semester",
             start: "Get Started",
+            professorButton: "Browse Professors",
+            professorButtonHint: "Open the professor timetable view and search by course.",
+            roomButton: "Browse Rooms",
+            roomButtonHint: "Open room schedules and capacity usage by classroom.",
             helpTitle: "Need Help?",
             helpDesc: "Click the ? button at the top right of each page for a detailed guide."
         },

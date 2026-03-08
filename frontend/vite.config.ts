@@ -6,6 +6,11 @@ import path from 'path'
 export default defineConfig({
   base: '/ActivatedGeneratedScheduler/',
   plugins: [react()],
+  server: {
+    fs: {
+      allow: [path.resolve(__dirname, '..')],
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

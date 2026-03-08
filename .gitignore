@@ -4,3 +4,7 @@ __pycache__/
 \node_modules
 frontend/dist
 skill.md
+latest.csv
+lectures_professor_lecture_rank.csv
+lectures_eng_professor_lecture_rank.csv
+tmp_err.txt
