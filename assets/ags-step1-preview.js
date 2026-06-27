@@ -110,6 +110,23 @@ const storedSelectionKeys = () => {
   return Array.from(new Set(keys));
 };
 
+const writeSelectionKeys = (keys) => {
+  const uniqueKeys = Array.from(new Set(keys));
+  for (const storage of [window.localStorage, window.sessionStorage]) {
+    try {
+      if (uniqueKeys.length) storage.setItem("ags_selected_lecture_keys", JSON.stringify(uniqueKeys));
+      else storage.removeItem("ags_selected_lecture_keys");
+    } catch {
+      // Ignore malformed or inaccessible storage.
+    }
+  }
+  return uniqueKeys;
+};
+
+const removeStoredSelectionKey = (key) => {
+  return writeSelectionKeys(storedSelectionKeys().filter((item) => item !== key));
+};
+
 const lecturesFromSelectionKeys = (keys) => {
   const keySet = new Set(keys);
   return lectures.filter((lecture) => keySet.has(selectionKey(lecture)));
@@ -194,6 +211,32 @@ const lectureFromGroup = (group) => {
 };
 
 const targetCard = (eventTarget) => eventTarget.closest?.(".ags-lecture-main .cursor-pointer");
+
+const targetSelectedBadge = (eventTarget) => {
+  const badge = eventTarget.closest?.(".ags-lecture-sidebar span");
+  if (!badge || !/^S\d+/i.test(normalize(badge.textContent))) return null;
+  const badgeList = badge.parentElement;
+  const row = badgeList?.parentElement;
+  if (!badgeList?.classList?.contains("flex-wrap") || !row?.closest?.(".ags-lecture-sidebar")) return null;
+  return badge;
+};
+
+const lectureFromSelectedBadge = (badge) => {
+  const row = badge?.parentElement?.parentElement;
+  const name = normalize(row?.querySelector("p")?.textContent);
+  const section = normalize(badge?.textContent).replace(/^S/i, "");
+  return lectures.find((lecture) => normalize(lecture.name) === name && String(lecture.section) === section) || null;
+};
+
+const visibleSelectedCardForLecture = (lecture) => {
+  const main = currentMain();
+  if (!main || !lecture) return null;
+  const key = selectionKey(lecture);
+  return Array.from(main.querySelectorAll(".cursor-pointer")).find((card) => {
+    const cardLecture = lectureFromCard(card);
+    return cardLecture && selectionKey(cardLecture) === key && isSelected(card);
+  }) || null;
+};
 
 const targetGroupButton = (eventTarget) => {
   const button = eventTarget.closest?.(".ags-lecture-main button");
@@ -325,6 +368,32 @@ document.addEventListener("click", (event) => {
     update();
   });
 });
+
+document.addEventListener("click", (event) => {
+  const badge = targetSelectedBadge(event.target);
+  if (!badge) return;
+  const lecture = lectureFromSelectedBadge(badge);
+  if (!lecture) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+
+  const key = selectionKey(lecture);
+  removeStoredSelectionKey(key);
+
+  const card = visibleSelectedCardForLecture(lecture);
+  if (card) {
+    card.click();
+    return;
+  }
+
+  selectedLectures = selectedLectures.filter((item) => selectionKey(item) !== key);
+  pinnedLectures = pinnedLectures.filter((item) => selectionKey(item) !== key);
+  if (activeLecture && selectionKey(activeLecture) === key) activeLecture = null;
+  update();
+  window.location.reload();
+}, true);
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest?.("button");
