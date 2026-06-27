@@ -198,6 +198,31 @@ const setPinnedLecture = (lecture, selected) => {
     : pinnedLectures.filter((item) => lectureKey(item) !== key);
 };
 
+const sameLectureSet = (left, right) => {
+  const leftKeys = left.map(lectureKey).sort().join("|");
+  const rightKeys = right.map(lectureKey).sort().join("|");
+  return leftKeys === rightKeys;
+};
+
+const syncSelectionsFromDom = () => {
+  const main = currentMain();
+  if (!main) return false;
+  const selectedCards = Array.from(main.querySelectorAll(".cursor-pointer")).filter(isSelected);
+  if (selectedCards.length === 0) return false;
+  const nextSelected = uniqueLectures(selectedCards.map(lectureFromCard));
+  const nextPinned = uniqueLectures(
+    selectedCards
+      .filter((card) => groupSectionCount(card) === 1)
+      .map(lectureFromCard)
+  );
+  const changed = !sameLectureSet(selectedLectures, nextSelected) || !sameLectureSet(pinnedLectures, nextPinned);
+  if (changed) {
+    selectedLectures = nextSelected;
+    pinnedLectures = nextPinned;
+  }
+  return changed;
+};
+
 const selectedLectureConflicts = () => conflictSlots(uniqueLectures([...pinnedLectures, ...selectedLectures]).map((lecture) => ({ lecture, kind: "selected" })));
 
 const ensureWarning = () => {
@@ -232,6 +257,12 @@ const isStepOneResetButton = (button) => {
   return text === "초기화" || text === "Reset";
 };
 
+const afterReactSelectionUpdate = (callback) => {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(callback);
+  });
+};
+
 const update = () => renderPreview();
 
 document.addEventListener("mouseover", (event) => {
@@ -252,13 +283,14 @@ document.addEventListener("click", (event) => {
   const card = event.target.closest?.(".ags-lecture-main .cursor-pointer");
   if (!card) return;
   const lecture = lectureFromCard(card);
-  const nextSelected = !isSelected(card);
   const singleSection = groupSectionCount(card) === 1;
-  setTimeout(() => {
-    setSelectedLecture(lecture, nextSelected);
-    if (singleSection) setPinnedLecture(lecture, nextSelected);
+  afterReactSelectionUpdate(() => {
+    const selected = isSelected(card);
+    setSelectedLecture(lecture, selected);
+    if (singleSection) setPinnedLecture(lecture, selected);
+    syncSelectionsFromDom();
     update();
-  }, 0);
+  });
 });
 
 document.addEventListener("click", (event) => {
@@ -292,8 +324,9 @@ new MutationObserver((mutations) => {
     renderedLectureKey = "";
     return;
   }
-  if (!main.querySelector(".ags-lecture-preview")) update();
-}).observe(document.body, { childList: true, subtree: true });
+  const changed = syncSelectionsFromDom();
+  if (!main.querySelector(".ags-lecture-preview") || changed) update();
+}).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
 
 loadLectures()
   .then(update)
