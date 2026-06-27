@@ -79,7 +79,11 @@ const conflictSlots = (items) => {
       }
     }
   }
-  return new Set(Array.from(slots).filter(([, slotItems]) => slotItems.length > 1).map(([key]) => key));
+  return new Set(
+    Array.from(slots)
+      .filter(([, slotItems]) => new Set(slotItems.map((item) => item.lecture.name)).size > 1)
+      .map(([key]) => key)
+  );
 };
 
 const displayLectures = () => {
