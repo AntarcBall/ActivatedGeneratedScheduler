@@ -53,6 +53,7 @@ const ensurePreview = () => {
 };
 
 const lectureKey = (lecture) => `${lecture.id}:${lecture.course_number}:${lecture.section}`;
+const selectionKey = (lecture) => lecture.course_number ? `${lecture.course_number}#${lecture.section}` : `id:${lecture.id}`;
 
 const uniqueLectures = (items) => {
   const seen = new Set();
@@ -88,6 +89,30 @@ const displayLectures = () => {
     selected.push({ lecture: activeLecture, kind: "active" });
   }
   return selected;
+};
+
+const storedSelectionKeys = () => {
+  const keys = [];
+  for (const storage of [window.localStorage, window.sessionStorage]) {
+    try {
+      const raw = storage.getItem("ags_selected_lecture_keys");
+      if (!raw) continue;
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) keys.push(...parsed.filter((item) => typeof item === "string"));
+    } catch {
+      // Ignore malformed or inaccessible storage.
+    }
+  }
+  return Array.from(new Set(keys));
+};
+
+const lecturesFromSelectionKeys = (keys) => {
+  const keySet = new Set(keys);
+  return lectures.filter((lecture) => keySet.has(selectionKey(lecture)));
+};
+
+const singleSectionLectures = (items) => {
+  return items.filter((lecture) => lectures.filter((candidate) => candidate.name === lecture.name).length === 1);
 };
 
 const renderPreview = () => {
@@ -208,13 +233,15 @@ const syncSelectionsFromDom = () => {
   const main = currentMain();
   if (!main) return false;
   const selectedCards = Array.from(main.querySelectorAll(".cursor-pointer")).filter(isSelected);
-  if (selectedCards.length === 0) return false;
-  const nextSelected = uniqueLectures(selectedCards.map(lectureFromCard));
-  const nextPinned = uniqueLectures(
-    selectedCards
+  const storedSelected = lecturesFromSelectionKeys(storedSelectionKeys());
+  const domSelected = selectedCards.map(lectureFromCard);
+  const nextSelected = uniqueLectures([...storedSelected, ...domSelected]);
+  const nextPinned = uniqueLectures([
+    ...singleSectionLectures(storedSelected),
+    ...selectedCards
       .filter((card) => groupSectionCount(card) === 1)
       .map(lectureFromCard)
-  );
+  ]);
   const changed = !sameLectureSet(selectedLectures, nextSelected) || !sameLectureSet(pinnedLectures, nextPinned);
   if (changed) {
     selectedLectures = nextSelected;
@@ -224,6 +251,8 @@ const syncSelectionsFromDom = () => {
 };
 
 const selectedLectureConflicts = () => conflictSlots(uniqueLectures([...pinnedLectures, ...selectedLectures]).map((lecture) => ({ lecture, kind: "selected" })));
+
+const blockingLectureConflicts = () => conflictSlots(pinnedLectures.map((lecture) => ({ lecture, kind: "pinned" })));
 
 const ensureWarning = () => {
   let warning = document.querySelector(".ags-conflict-warning");
@@ -296,7 +325,7 @@ document.addEventListener("click", (event) => {
 document.addEventListener("click", (event) => {
   const button = event.target.closest?.("button");
   if (!isStepOneNextButton(button)) return;
-  if (selectedLectureConflicts().size === 0) return;
+  if (blockingLectureConflicts().size === 0) return;
   event.preventDefault();
   event.stopPropagation();
   event.stopImmediatePropagation();
@@ -329,5 +358,8 @@ new MutationObserver((mutations) => {
 }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
 
 loadLectures()
-  .then(update)
+  .then(() => {
+    syncSelectionsFromDom();
+    update();
+  })
   .catch((error) => console.error("Failed to load AGS preview data:", error));
