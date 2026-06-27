@@ -1,0 +1,300 @@
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+const DAY_LABELS = { "월": "Mon", "화": "Tue", "수": "Wed", "목": "Thu", "금": "Fri" };
+const EXCLUDED = /URGP|UGRP|URP|인턴|Internship/i;
+
+let lectures = [];
+let activeLecture = null;
+let selectedLectures = [];
+let pinnedLectures = [];
+let renderedLectureKey = "";
+let warningTimer = null;
+
+const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const GROUP_SELECTOR = '[class~="group/item"]';
+
+const slotLabel = (index) => {
+  const hour = 9 + Math.floor(index / 2);
+  return `${hour}:${index % 2 === 0 ? "00" : "30"}`;
+};
+
+const normalizeLecture = (lecture) => ({
+  id: lecture.id,
+  course_number: lecture.course_number,
+  section: String(lecture.section),
+  name: lecture.name,
+  prof: lecture.prof,
+  credit: lecture.credit || 0,
+  time_slots: (lecture.time_slots || []).map((slot) => ({
+    day: DAY_LABELS[String(slot.day || "").trim()] || slot.day,
+    start_index: slot.start_index - 1,
+    end_index: slot.end_index - 1,
+  })),
+});
+
+const loadLectures = async () => {
+  const ko = await fetch("/ActivatedGeneratedScheduler/lectures.json").then((res) => res.json());
+  lectures = ko
+    .filter((lecture) => !EXCLUDED.test([lecture.course_number, lecture.name, lecture.category].filter(Boolean).join(" ")))
+    .map(normalizeLecture);
+};
+
+const currentMain = () => document.querySelector(".ags-lecture-main");
+
+const ensurePreview = () => {
+  const main = currentMain();
+  if (!main) return null;
+  let preview = main.querySelector(".ags-lecture-preview");
+  if (!preview) {
+    preview = document.createElement("aside");
+    preview.className = "ags-lecture-preview";
+    main.appendChild(preview);
+  }
+  return preview;
+};
+
+const lectureKey = (lecture) => `${lecture.id}:${lecture.course_number}:${lecture.section}`;
+
+const uniqueLectures = (items) => {
+  const seen = new Set();
+  const result = [];
+  for (const lecture of items) {
+    if (!lecture) continue;
+    const key = lectureKey(lecture);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(lecture);
+  }
+  return result;
+};
+
+const conflictSlots = (items) => {
+  const slots = new Map();
+  for (const item of items) {
+    for (const slot of item.lecture.time_slots) {
+      for (let i = slot.start_index; i <= slot.end_index; i += 1) {
+        const key = `${slot.day}-${i}`;
+        if (!slots.has(key)) slots.set(key, []);
+        slots.get(key).push(item);
+      }
+    }
+  }
+  return new Set(Array.from(slots).filter(([, slotItems]) => slotItems.length > 1).map(([key]) => key));
+};
+
+const displayLectures = () => {
+  const selected = [];
+  for (const lecture of pinnedLectures) selected.push({ lecture, kind: "pinned" });
+  if (activeLecture && !pinnedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
+    selected.push({ lecture: activeLecture, kind: "active" });
+  }
+  return selected;
+};
+
+const renderPreview = () => {
+  const preview = ensurePreview();
+  if (!preview) return;
+  const selected = displayLectures();
+  const selectedForConflicts = uniqueLectures([...pinnedLectures, ...selectedLectures]);
+  const conflicts = conflictSlots(selectedForConflicts.map((lecture) => ({ lecture, kind: "selected" })));
+  const nextKey = selected.map(({ lecture, kind }) => `${kind}:${lectureKey(lecture)}`).join("|") || "empty";
+  const conflictKey = [
+    Array.from(conflicts).sort().join(","),
+    selectedForConflicts.map(lectureKey).sort().join("|"),
+  ].join(":");
+  if (!preview.hidden && renderedLectureKey === `${nextKey}:${conflictKey}`) return;
+  renderedLectureKey = `${nextKey}:${conflictKey}`;
+  preview.hidden = false;
+
+  const occupied = new Map();
+  const starts = new Map();
+  for (const item of selected) {
+    const { lecture } = item;
+    for (const slot of lecture.time_slots) {
+      const startKey = `${slot.day}-${slot.start_index}`;
+      if (!starts.has(startKey)) starts.set(startKey, []);
+      starts.get(startKey).push(item);
+      for (let i = slot.start_index; i <= slot.end_index; i += 1) {
+        const key = `${slot.day}-${i}`;
+        if (!occupied.has(key)) occupied.set(key, []);
+        occupied.get(key).push(item);
+      }
+    }
+  }
+
+  preview.innerHTML = `
+    <div class="ags-preview-grid">
+      <div class="ags-preview-cell ags-preview-header"></div>
+      ${DAYS.map((day) => `<div class="ags-preview-cell ags-preview-header">${day}</div>`).join("")}
+      ${Array.from({ length: 24 }).map((_, index) => `
+        <div class="ags-preview-cell ags-preview-time">${slotLabel(index)}</div>
+        ${DAYS.map((day) => {
+          const key = `${day}-${index}`;
+          const cellItems = occupied.get(key) || [];
+          const startItems = starts.get(key) || [];
+          const classes = [
+            "ags-preview-cell",
+            cellItems.length ? "ags-preview-busy" : "",
+            cellItems.some((item) => item.kind === "pinned") ? "ags-preview-pinned" : "",
+            cellItems.some((item) => item.kind === "active") ? "ags-preview-active" : "",
+            cellItems.length > 1 ? "ags-preview-overlap" : "",
+            conflicts.has(key) ? "ags-preview-conflict" : "",
+          ].filter(Boolean).join(" ");
+          return `<div class="${classes}">${startItems.map(({ lecture, kind }) => `<span class="ags-preview-label-${kind}">${lecture.name}</span>`).join("")}</div>`;
+        }).join("")}
+      `).join("")}
+    </div>
+  `;
+};
+
+const lectureFromCard = (card) => {
+  const group = card.closest(GROUP_SELECTOR);
+  const name = normalize(group?.querySelector("h4")?.textContent);
+  const section = normalize(card.querySelector("span")?.textContent).replace(/^S/i, "");
+  const prof = normalize(card.querySelector("p")?.textContent);
+  return lectures.find((lecture) =>
+    normalize(lecture.name) === name &&
+    String(lecture.section) === section &&
+    normalize(lecture.prof) === prof
+  ) || null;
+};
+
+const lectureFromGroup = (group) => {
+  const name = normalize(group?.querySelector("h4")?.textContent);
+  const matches = lectures.filter((lecture) => normalize(lecture.name) === name);
+  return matches.length === 1 ? matches[0] : null;
+};
+
+const targetCard = (eventTarget) => eventTarget.closest?.(".ags-lecture-main .cursor-pointer");
+
+const targetGroupButton = (eventTarget) => {
+  const button = eventTarget.closest?.(".ags-lecture-main button");
+  return button?.closest(GROUP_SELECTOR) ? button : null;
+};
+
+const lectureFromTarget = (eventTarget) => {
+  const card = targetCard(eventTarget);
+  if (card) return lectureFromCard(card);
+  const button = targetGroupButton(eventTarget);
+  return button ? lectureFromGroup(button.closest(GROUP_SELECTOR)) : null;
+};
+
+const groupSectionCount = (card) => card.closest(GROUP_SELECTOR)?.querySelectorAll(".cursor-pointer").length || 0;
+
+const isSelected = (card) => card.className.includes("border-blue-600");
+
+const setSelectedLecture = (lecture, selected) => {
+  if (!lecture) return;
+  const key = lectureKey(lecture);
+  selectedLectures = selected
+    ? uniqueLectures([...selectedLectures, lecture])
+    : selectedLectures.filter((item) => lectureKey(item) !== key);
+};
+
+const setPinnedLecture = (lecture, selected) => {
+  if (!lecture) return;
+  const key = lectureKey(lecture);
+  pinnedLectures = selected
+    ? [...pinnedLectures.filter((item) => lectureKey(item) !== key), lecture]
+    : pinnedLectures.filter((item) => lectureKey(item) !== key);
+};
+
+const selectedLectureConflicts = () => conflictSlots(uniqueLectures([...pinnedLectures, ...selectedLectures]).map((lecture) => ({ lecture, kind: "selected" })));
+
+const ensureWarning = () => {
+  let warning = document.querySelector(".ags-conflict-warning");
+  if (!warning) {
+    warning = document.createElement("div");
+    warning.className = "ags-conflict-warning";
+    document.body.appendChild(warning);
+  }
+  return warning;
+};
+
+const showConflictWarning = () => {
+  const warning = ensureWarning();
+  warning.textContent = "시간이 겹치는 분반이 선택되어 있습니다. 빨간 칸을 확인한 뒤 충돌을 해제하세요.";
+  warning.classList.add("ags-conflict-warning-visible");
+  clearTimeout(warningTimer);
+  warningTimer = setTimeout(() => {
+    warning.classList.remove("ags-conflict-warning-visible");
+  }, 3600);
+};
+
+const isStepOneNextButton = (button) => {
+  if (!button || !currentMain()) return false;
+  const text = normalize(button.textContent);
+  return text === "다음" || text === "Next";
+};
+
+const isStepOneResetButton = (button) => {
+  if (!button || !currentMain()) return false;
+  const text = normalize(button.textContent);
+  return text === "초기화" || text === "Reset";
+};
+
+const update = () => renderPreview();
+
+document.addEventListener("mouseover", (event) => {
+  const lecture = lectureFromTarget(event.target);
+  if (!lecture) return;
+  activeLecture = lecture;
+  update();
+});
+
+document.addEventListener("mouseout", (event) => {
+  const target = targetCard(event.target) || targetGroupButton(event.target);
+  if (!target || target.contains(event.relatedTarget)) return;
+  activeLecture = null;
+  update();
+});
+
+document.addEventListener("click", (event) => {
+  const card = event.target.closest?.(".ags-lecture-main .cursor-pointer");
+  if (!card) return;
+  const lecture = lectureFromCard(card);
+  const nextSelected = !isSelected(card);
+  const singleSection = groupSectionCount(card) === 1;
+  setTimeout(() => {
+    setSelectedLecture(lecture, nextSelected);
+    if (singleSection) setPinnedLecture(lecture, nextSelected);
+    update();
+  }, 0);
+});
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest?.("button");
+  if (!isStepOneNextButton(button)) return;
+  if (selectedLectureConflicts().size === 0) return;
+  event.preventDefault();
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+  activeLecture = null;
+  update();
+  showConflictWarning();
+}, true);
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest?.("button");
+  if (!isStepOneResetButton(button)) return;
+  setTimeout(() => {
+    activeLecture = null;
+    selectedLectures = [];
+    pinnedLectures = [];
+    update();
+  }, 0);
+});
+
+new MutationObserver((mutations) => {
+  if (mutations.every((mutation) => mutation.target.closest?.(".ags-lecture-preview"))) return;
+  const main = currentMain();
+  if (!main) {
+    activeLecture = null;
+    renderedLectureKey = "";
+    return;
+  }
+  if (!main.querySelector(".ags-lecture-preview")) update();
+}).observe(document.body, { childList: true, subtree: true });
+
+loadLectures()
+  .then(update)
+  .catch((error) => console.error("Failed to load AGS preview data:", error));
