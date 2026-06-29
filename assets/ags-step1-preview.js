@@ -88,8 +88,9 @@ const conflictSlots = (items) => {
 
 const displayLectures = () => {
   const selected = [];
-  for (const lecture of pinnedLectures) selected.push({ lecture, kind: "pinned" });
-  if (activeLecture && !pinnedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
+  const fixedLectures = uniqueLectures([...selectedLectures, ...pinnedLectures]);
+  for (const lecture of fixedLectures) selected.push({ lecture, kind: "pinned" });
+  if (activeLecture && !fixedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
     selected.push({ lecture: activeLecture, kind: "active" });
   }
   return selected;
