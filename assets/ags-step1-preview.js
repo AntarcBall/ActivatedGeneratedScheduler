@@ -86,11 +86,15 @@ const conflictSlots = (items) => {
   );
 };
 
+const isSingleSectionLecture = (lecture) => {
+  return !!lecture && lectures.filter((candidate) => candidate.name === lecture.name).length === 1;
+};
+
 const displayLectures = () => {
   const selected = [];
-  const fixedLectures = uniqueLectures([...selectedLectures, ...pinnedLectures]);
+  const fixedLectures = uniqueLectures(pinnedLectures);
   for (const lecture of fixedLectures) selected.push({ lecture, kind: "pinned" });
-  if (activeLecture && !fixedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
+  if (isSingleSectionLecture(activeLecture) && !fixedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
     selected.push({ lecture: activeLecture, kind: "active" });
   }
   return selected;
@@ -134,14 +138,14 @@ const lecturesFromSelectionKeys = (keys) => {
 };
 
 const singleSectionLectures = (items) => {
-  return items.filter((lecture) => lectures.filter((candidate) => candidate.name === lecture.name).length === 1);
+  return items.filter(isSingleSectionLecture);
 };
 
 const renderPreview = () => {
   const preview = ensurePreview();
   if (!preview) return;
   const selected = displayLectures();
-  const selectedForConflicts = uniqueLectures([...pinnedLectures, ...selectedLectures]);
+  const selectedForConflicts = uniqueLectures(selected.map(({ lecture }) => lecture));
   const conflicts = conflictSlots(selectedForConflicts.map((lecture) => ({ lecture, kind: "selected" })));
   const nextKey = selected.map(({ lecture, kind }) => `${kind}:${lectureKey(lecture)}`).join("|") || "empty";
   const conflictKey = [
