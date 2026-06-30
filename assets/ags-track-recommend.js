@@ -51,11 +51,32 @@ const matchedTracksForCourse = (courseName, profile) => {
     .some((course) => normalizeCourseName(course) === key));
 };
 
+const requirementEntriesForCourse = (courseName, profile) => {
+  if (!requirements || !profile) return [];
+  const key = normalizeCourseName(courseName);
+  const entries = [];
+  for (const track of profile.tracks) {
+    for (const year of requirements.years || []) {
+      if (requirementsFor(track, year).some((course) => normalizeCourseName(course) === key)) {
+        entries.push({ track, year });
+      }
+    }
+  }
+  return entries;
+};
+
+const unique = (items) => Array.from(new Set(items));
+
+const yearLabelFor = (entries) => {
+  const years = unique(entries.map((entry) => entry.year)).sort((left, right) => Number(left) - Number(right));
+  return years.map((year) => `${year}학년`).join(", ");
+};
+
 const stepOneMain = () => document.querySelector(".ags-lecture-main");
 
 const clearRecommendations = () => {
-  document.querySelectorAll(".ags-track-recommended, .ags-track-recommended-strong").forEach((group) => {
-    group.classList.remove("ags-track-recommended", "ags-track-recommended-strong");
+  document.querySelectorAll(".ags-track-year-known, .ags-track-recommended, .ags-track-recommended-strong").forEach((group) => {
+    group.classList.remove("ags-track-year-known", "ags-track-recommended", "ags-track-recommended-strong");
     group.removeAttribute("data-ags-track-label");
   });
   document.querySelectorAll(".ags-track-card-recommended, .ags-track-card-recommended-strong").forEach((card) => {
@@ -73,13 +94,17 @@ const syncRecommendations = () => {
 
   for (const group of main.querySelectorAll('[class~="group/item"]')) {
     const name = normalizeText(group.querySelector("h4")?.textContent);
+    const entries = requirementEntriesForCourse(name, profile);
     const matches = matchedTracksForCourse(name, profile);
     const strong = matches.length > 1;
+    const yearLabel = yearLabelFor(entries);
 
+    group.classList.toggle("ags-track-year-known", entries.length > 0);
     group.classList.toggle("ags-track-recommended", matches.length > 0);
     group.classList.toggle("ags-track-recommended-strong", strong);
-    if (matches.length) {
-      const label = strong ? `공통 필수: ${matches.join(", ")}` : `필수: ${matches[0]}`;
+    if (entries.length) {
+      const requirementLabel = matches.length ? (strong ? `공통 필수: ${matches.join(", ")}` : `필수: ${matches[0]}`) : "";
+      const label = [yearLabel, requirementLabel].filter(Boolean).join(" · ");
       if (group.getAttribute("data-ags-track-label") !== label) group.setAttribute("data-ags-track-label", label);
     } else {
       group.removeAttribute("data-ags-track-label");

@@ -7,7 +7,9 @@ let activeLecture = null;
 let selectedLectures = [];
 let pinnedLectures = [];
 let renderedLectureKey = "";
+let renderedAvailabilityKey = "";
 let warningTimer = null;
+let mutationSyncScheduled = false;
 
 const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const GROUP_SELECTOR = '[class~="group/item"]';
@@ -54,6 +56,7 @@ const ensurePreview = () => {
 
 const lectureKey = (lecture) => `${lecture.id}:${lecture.course_number}:${lecture.section}`;
 const selectionKey = (lecture) => lecture.course_number ? `${lecture.course_number}#${lecture.section}` : `id:${lecture.id}`;
+const courseKey = (lecture) => lecture.course_number || normalize(lecture.name);
 
 const uniqueLectures = (items) => {
   const seen = new Set();
@@ -84,6 +87,39 @@ const conflictSlots = (items) => {
       .filter(([, slotItems]) => new Set(slotItems.map((item) => item.lecture.name)).size > 1)
       .map(([key]) => key)
   );
+};
+
+const lecturesOverlap = (left, right) => {
+  if (!left || !right) return false;
+  for (const leftSlot of left.time_slots) {
+    for (const rightSlot of right.time_slots) {
+      if (leftSlot.day !== rightSlot.day) continue;
+      if (leftSlot.start_index <= rightSlot.end_index && rightSlot.start_index <= leftSlot.end_index) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+const selectedLecturesByCourse = () => {
+  const selectedByCourse = new Map();
+  for (const lecture of uniqueLectures(selectedLectures)) {
+    const key = courseKey(lecture);
+    if (!selectedByCourse.has(key)) selectedByCourse.set(key, []);
+    selectedByCourse.get(key).push(lecture);
+  }
+  return selectedByCourse;
+};
+
+const isBlockedBySelectedCourse = (candidate, selectedByCourse) => {
+  if (!candidate || !candidate.time_slots.length) return false;
+  const candidateCourse = courseKey(candidate);
+  for (const [selectedCourse, selectedOptions] of selectedByCourse) {
+    if (selectedCourse === candidateCourse || selectedOptions.length === 0) continue;
+    if (selectedOptions.every((selected) => lecturesOverlap(candidate, selected))) return true;
+  }
+  return false;
 };
 
 const isSingleSectionLecture = (lecture) => {
@@ -281,6 +317,44 @@ const sameLectureSet = (left, right) => {
   return leftKeys === rightKeys;
 };
 
+const syncConflictAvailability = () => {
+  const main = currentMain();
+  if (!main) {
+    renderedAvailabilityKey = "";
+    return;
+  }
+
+  const cards = Array.from(main.querySelectorAll(".cursor-pointer"));
+  const cardEntries = cards.map((card) => ({ card, lecture: lectureFromCard(card) })).filter((entry) => entry.lecture);
+  const selectionSignature = uniqueLectures(selectedLectures).map(selectionKey).sort().join("|");
+  const cardSignature = cardEntries.map(({ lecture }) => selectionKey(lecture)).join("|");
+  const nextKey = `${selectionSignature}::${cardSignature}`;
+
+  const alreadySynced = renderedAvailabilityKey === nextKey &&
+    cardEntries.every(({ card }) =>
+      card.dataset.agsConflictKey === nextKey &&
+      card.classList.contains("ags-step1-conflict-option") === (card.dataset.agsConflictBlocked === "1")
+    );
+  if (alreadySynced) return;
+  renderedAvailabilityKey = nextKey;
+
+  const selectedByCourse = selectedLecturesByCourse();
+  const blockedCards = new Set();
+  for (const { card, lecture } of cardEntries) {
+    const blocked = isBlockedBySelectedCourse(lecture, selectedByCourse);
+    card.classList.toggle("ags-step1-conflict-option", blocked);
+    card.dataset.agsConflictKey = nextKey;
+    card.dataset.agsConflictBlocked = blocked ? "1" : "0";
+    if (blocked) blockedCards.add(card);
+  }
+
+  for (const group of main.querySelectorAll(GROUP_SELECTOR)) {
+    const groupCards = Array.from(group.querySelectorAll(".cursor-pointer"));
+    const blocked = groupCards.length > 0 && groupCards.every((card) => blockedCards.has(card));
+    group.classList.toggle("ags-step1-conflict-group", blocked);
+  }
+};
+
 const syncSelectionsFromDom = () => {
   const main = currentMain();
   if (!main) return false;
@@ -344,7 +418,10 @@ const afterReactSelectionUpdate = (callback) => {
   });
 };
 
-const update = () => renderPreview();
+const update = () => {
+  renderPreview();
+  syncConflictAvailability();
+};
 
 document.addEventListener("mouseover", (event) => {
   const lecture = lectureFromTarget(event.target);
@@ -423,16 +500,25 @@ document.addEventListener("click", (event) => {
   }, 0);
 });
 
-new MutationObserver((mutations) => {
-  if (mutations.every((mutation) => mutation.target.closest?.(".ags-lecture-preview"))) return;
+const syncFromMutation = () => {
+  mutationSyncScheduled = false;
   const main = currentMain();
   if (!main) {
     activeLecture = null;
     renderedLectureKey = "";
+    renderedAvailabilityKey = "";
     return;
   }
   const changed = syncSelectionsFromDom();
   if (!main.querySelector(".ags-lecture-preview") || changed) update();
+  else syncConflictAvailability();
+};
+
+new MutationObserver((mutations) => {
+  if (mutations.every((mutation) => mutation.target.closest?.(".ags-lecture-preview"))) return;
+  if (mutationSyncScheduled) return;
+  mutationSyncScheduled = true;
+  requestAnimationFrame(syncFromMutation);
 }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
 
 loadLectures()
