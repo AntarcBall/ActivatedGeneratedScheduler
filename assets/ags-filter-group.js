@@ -4,10 +4,13 @@ const BASIC_FILTER_LABELS = new Set([
   "수학",
   "물리",
   "화학",
+  "생명과학",
   "Basic Mandatory",
   "Math",
   "Physics",
   "Chemistry",
+  "Biology",
+  "Life Sciences",
 ]);
 const TRACK_ALL_LABELS = new Set(["트랙", "트랙 전체", "Track", "All Tracks"]);
 
@@ -59,7 +62,7 @@ const relabelTrackAll = (button) => {
 
 const classifyButton = (button, index) => {
   const label = normalizeLabel(button.textContent);
-  if (index < 4 && BASIC_FILTER_LABELS.has(label)) return "basic";
+  if (index < 5 && BASIC_FILTER_LABELS.has(label)) return "basic";
   if (index === 5 && trackLabelSet().has(label)) return "track";
   if (index >= 8 && trackLabels.has(label)) return "track";
   return "other";
