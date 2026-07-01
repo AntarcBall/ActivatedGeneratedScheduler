@@ -216,7 +216,9 @@ const showProfilePage = () => {
 };
 
 const syncProfileTrigger = () => {
-  if (isSpecialRoute()) {
+  if (isSpecialRoute() || !stepOneMain()) {
+    profilePage?.remove();
+    profilePage = null;
     profileTrigger?.remove();
     profileTrigger = null;
     return;
