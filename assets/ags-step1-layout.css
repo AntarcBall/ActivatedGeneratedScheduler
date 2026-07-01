@@ -1,0 +1,33 @@
+@media (min-width: 1024px) {
+  .ags-lecture-main {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .ags-lecture-main > div:first-child {
+    min-width: 0;
+    min-height: 0;
+    padding: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .ags-lecture-preview {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    min-width: 0;
+    min-height: 0;
+    box-shadow: none !important;
+  }
+
+  .ags-lecture-preview[hidden] {
+    display: none !important;
+  }
+}
