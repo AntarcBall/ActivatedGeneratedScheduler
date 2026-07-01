@@ -81,6 +81,11 @@
   padding-right: 3.25rem !important;
 }
 
+.ags-lecture-main [class~="group/item"].ags-course-has-select-all.ags-track-year-known::after {
+  right: 3rem;
+  max-width: calc(48% - 2.75rem);
+}
+
 .ags-section-select-all {
   position: absolute;
   top: 0.55rem;

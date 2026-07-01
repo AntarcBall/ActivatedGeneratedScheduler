@@ -44,18 +44,25 @@ const requirementsFor = (track, year) => {
   return requirements?.requirements?.[track]?.[year] || [];
 };
 
-const matchedTracksForCourse = (courseName, profile) => {
-  if (!requirements || !profile) return [];
+const requirementTracks = () => requirements?.tracks || [];
+
+const currentYearTracksForCourse = (courseName, year, tracks) => {
+  if (!requirements || !year || !tracks?.length) return [];
   const key = normalizeCourseName(courseName);
-  return profile.tracks.filter((track) => requirementsFor(track, profile.year)
+  return tracks.filter((track) => requirementsFor(track, year)
     .some((course) => normalizeCourseName(course) === key));
 };
 
-const requirementEntriesForCourse = (courseName, profile) => {
+const matchedTracksForCourse = (courseName, profile) => {
   if (!requirements || !profile) return [];
+  return currentYearTracksForCourse(courseName, profile.year, profile.tracks);
+};
+
+const requirementEntriesForTracks = (courseName, tracks) => {
+  if (!requirements || !tracks?.length) return [];
   const key = normalizeCourseName(courseName);
   const entries = [];
-  for (const track of profile.tracks) {
+  for (const track of tracks) {
     for (const year of requirements.years || []) {
       if (requirementsFor(track, year).some((course) => normalizeCourseName(course) === key)) {
         entries.push({ track, year });
@@ -65,11 +72,40 @@ const requirementEntriesForCourse = (courseName, profile) => {
   return entries;
 };
 
+const requirementEntriesForCourse = (courseName) => requirementEntriesForTracks(courseName, requirementTracks());
+
 const unique = (items) => Array.from(new Set(items));
 
-const yearLabelFor = (entries) => {
-  const years = unique(entries.map((entry) => entry.year)).sort((left, right) => Number(left) - Number(right));
-  return years.map((year) => `${year}학년`).join(", ");
+const requirementLabelForTracks = (tracks) => {
+  if (tracks.length > 1) return `공통 필수: ${tracks.join(", ")}`;
+  if (tracks.length === 1) return `필수: ${tracks[0]}`;
+  return "";
+};
+
+const requirementYearGroups = (entries) => {
+  const years = requirements?.years || unique(entries.map((entry) => entry.year));
+  return years.map((year) => ({
+    year,
+    tracks: unique(entries.filter((entry) => entry.year === year).map((entry) => entry.track)),
+  })).filter((group) => group.tracks.length > 0);
+};
+
+const displayRequirementEntries = (entries, preferredYear) => {
+  const currentYearEntries = entries.filter((entry) => entry.year === preferredYear);
+  return currentYearEntries.length ? currentYearEntries : entries;
+};
+
+const requirementLabelForEntries = (entries) => {
+  const groups = requirementYearGroups(entries);
+  if (groups.length === 0) return "";
+  if (groups.length === 1) {
+    const [group] = groups;
+    return [`${group.year}학년`, requirementLabelForTracks(group.tracks)].filter(Boolean).join(" · ");
+  }
+  return groups.map((group) => {
+    const trackLabel = group.tracks.length > 1 ? `공통: ${group.tracks.join(", ")}` : group.tracks[0];
+    return `${group.year}학년 ${trackLabel}`;
+  }).join(" · ");
 };
 
 const stepOneMain = () => document.querySelector(".ags-lecture-main");
@@ -94,17 +130,16 @@ const syncRecommendations = () => {
 
   for (const group of main.querySelectorAll('[class~="group/item"]')) {
     const name = normalizeText(group.querySelector("h4")?.textContent);
-    const entries = requirementEntriesForCourse(name, profile);
     const matches = matchedTracksForCourse(name, profile);
+    const visibleEntries = requirementEntriesForCourse(name);
     const strong = matches.length > 1;
-    const yearLabel = yearLabelFor(entries);
+    const visibleLabel = requirementLabelForEntries(displayRequirementEntries(visibleEntries, profile.year));
 
-    group.classList.toggle("ags-track-year-known", entries.length > 0);
+    group.classList.toggle("ags-track-year-known", visibleEntries.length > 0);
     group.classList.toggle("ags-track-recommended", matches.length > 0);
     group.classList.toggle("ags-track-recommended-strong", strong);
-    if (entries.length) {
-      const requirementLabel = matches.length ? (strong ? `공통 필수: ${matches.join(", ")}` : `필수: ${matches[0]}`) : "";
-      const label = [yearLabel, requirementLabel].filter(Boolean).join(" · ");
+    if (visibleEntries.length) {
+      const label = visibleLabel;
       if (group.getAttribute("data-ags-track-label") !== label) group.setAttribute("data-ags-track-label", label);
     } else {
       group.removeAttribute("data-ags-track-label");
