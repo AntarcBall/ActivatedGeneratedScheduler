@@ -102,9 +102,9 @@ const lecturesOverlap = (left, right) => {
   return false;
 };
 
-const selectedLecturesByCourse = () => {
+const selectedLecturesByCourse = (items = selectedLectures) => {
   const selectedByCourse = new Map();
-  for (const lecture of uniqueLectures(selectedLectures)) {
+  for (const lecture of uniqueLectures(items)) {
     const key = courseKey(lecture);
     if (!selectedByCourse.has(key)) selectedByCourse.set(key, []);
     selectedByCourse.get(key).push(lecture);
@@ -326,19 +326,29 @@ const syncConflictAvailability = () => {
 
   const cards = Array.from(main.querySelectorAll(".cursor-pointer"));
   const cardEntries = cards.map((card) => ({ card, lecture: lectureFromCard(card) })).filter((entry) => entry.lecture);
+  const groupEntries = Array.from(main.querySelectorAll(GROUP_SELECTOR)).map((group) => ({
+    group,
+    lecture: lectureFromGroup(group),
+  }));
   const selectionSignature = uniqueLectures(selectedLectures).map(selectionKey).sort().join("|");
   const cardSignature = cardEntries.map(({ lecture }) => selectionKey(lecture)).join("|");
-  const nextKey = `${selectionSignature}::${cardSignature}`;
+  const groupSignature = groupEntries.map(({ group }) => normalize(group.querySelector("h4")?.textContent)).join("|");
+  const nextKey = `${selectionSignature}::${cardSignature}::${groupSignature}`;
 
   const alreadySynced = renderedAvailabilityKey === nextKey &&
     cardEntries.every(({ card }) =>
       card.dataset.agsConflictKey === nextKey &&
       card.classList.contains("ags-step1-conflict-option") === (card.dataset.agsConflictBlocked === "1")
+    ) &&
+    groupEntries.every(({ group }) =>
+      group.dataset.agsConflictKey === nextKey &&
+      group.classList.contains("ags-step1-conflict-group") === (group.dataset.agsConflictBlocked === "1")
     );
   if (alreadySynced) return;
   renderedAvailabilityKey = nextKey;
 
   const selectedByCourse = selectedLecturesByCourse();
+  const pinnedByCourse = selectedLecturesByCourse(pinnedLectures);
   const blockedCards = new Set();
   for (const { card, lecture } of cardEntries) {
     const blocked = isBlockedBySelectedCourse(lecture, selectedByCourse);
@@ -348,10 +358,14 @@ const syncConflictAvailability = () => {
     if (blocked) blockedCards.add(card);
   }
 
-  for (const group of main.querySelectorAll(GROUP_SELECTOR)) {
+  for (const { group, lecture } of groupEntries) {
     const groupCards = Array.from(group.querySelectorAll(".cursor-pointer"));
-    const blocked = groupCards.length > 0 && groupCards.every((card) => blockedCards.has(card));
+    const cardBlocked = groupCards.length > 0 && groupCards.every((card) => blockedCards.has(card));
+    const foldedSingleBlocked = groupCards.length === 0 && isBlockedBySelectedCourse(lecture, pinnedByCourse);
+    const blocked = cardBlocked || foldedSingleBlocked;
     group.classList.toggle("ags-step1-conflict-group", blocked);
+    group.dataset.agsConflictKey = nextKey;
+    group.dataset.agsConflictBlocked = blocked ? "1" : "0";
   }
 };
 
