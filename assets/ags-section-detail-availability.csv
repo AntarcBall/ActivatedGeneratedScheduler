@@ -1,0 +1,179 @@
+course_number,section,name,professor,status,available,reason,response_bytes
+BE101a,01,프로그래밍,김기섭,available,Y,,2970
+BE204,01,화학공학개론,김운혁,available,Y,,2129
+BE206,01,회로이론과 계측법(실습),송민영,available,Y,,2572
+BE206,02,회로이론과 계측법(실습),이정협,available,Y,,4412
+BE206,03,회로이론과 계측법(실습),윤종혁,available,Y,,1709
+BE206,04,회로이론과 계측법(실습),김가인,available,Y,,2320
+BE206,05,회로이론과 계측법(실습),유재석,empty,N,empty_response,0
+BE206,06,회로이론과 계측법(실습),이경태,empty,N,empty_response,0
+BR201,01,신경과학Ⅰ(이),"서병창, 정한빈, 엄지원",available,Y,,3060
+BR202,01,신경과학Ⅱ(이),"현정호, 이효상, 최한경",available,Y,,3291
+BR302,01,"뇌공학개론(이,공)","이광, 조용철",available,Y,,1726
+BR303,01,뇌과학실험Ⅱ(이),"유우경, 이광, 최한경",available,Y,,2008
+BR306,01,인지뇌과학개론(이),"현정호, 최한경",available,Y,,15787
+BR307,01,뇌과학 특강(이),최한경,available,Y,,1873
+BR402,01,신경생리학(이),박포정,available,Y,,2102
+BR406,01,시스템 뇌과학(이),"이효상, 오용석",available,Y,,2301
+BR407,01,인공지능과 뇌과학(이),김민환,available,Y,,3987
+BS101,01,다변수 미적분학,이두석,available,Y,,3124
+BS101,02,다변수 미적분학,안흥주,available,Y,,4810
+BS101,03,다변수 미적분학,한강진,available,Y,,2173
+BS101,04,다변수 미적분학,Carlos Scarinci,available,Y,,3228
+BS101,05,다변수 미적분학,Carlos Scarinci,available,Y,,3232
+BS102a,01,공학수학Ⅰ,Hudson Thomas Bryan,available,Y,,3458
+BS105a,01,일반물리Ⅱ,DEVECIOGLU DENIZ OLGU,available,Y,,4854
+BS105a,02,일반물리Ⅱ,DEVECIOGLU DENIZ OLGU,available,Y,,4854
+BS105a,03,일반물리Ⅱ,DEVECIOGLU DENIZ OLGU,available,Y,,4854
+BS105a,04,일반물리Ⅱ,유천열,available,Y,,3224
+BS106a,01,일반물리실험Ⅱ,김동렬,available,Y,,2760
+BS106a,02,일반물리실험Ⅱ,김동렬,available,Y,,2760
+BS106a,03,일반물리실험Ⅱ,김동렬,available,Y,,2760
+BS106a,04,일반물리실험Ⅱ,김동렬,available,Y,,2760
+BS106a,05,일반물리실험Ⅱ,김동렬,available,Y,,2760
+BS106a,06,일반물리실험Ⅱ,박기성,available,Y,,3053
+BS113,01,일반화학실험Ⅰ,민은선,available,Y,,3829
+BS113,02,일반화학실험Ⅰ,민은선,available,Y,,3829
+BS113,03,일반화학실험Ⅰ,민은선,available,Y,,3829
+BS113,04,일반화학실험Ⅰ,민은선,available,Y,,3829
+BS113,05,일반화학실험Ⅰ,민은선,available,Y,,3829
+BS113,06,일반화학실험Ⅰ,Desta Kebede Taye,available,Y,,2489
+BS113,07,일반화학실험Ⅰ,Desta Kebede Taye,available,Y,,2489
+BS113,08,일반화학실험Ⅰ,Desta Kebede Taye,available,Y,,2489
+BS114,01,생명과학개론,예경무,available,Y,,1685
+BS114,02,생명과학개론,Felix Jonas,available,Y,,1687
+BS115,01,일반생물학 실험,이석규,available,Y,,1457
+BS115,02,일반생물학 실험,박포정,available,Y,,2500
+BS115,03,일반생물학 실험,조정아,available,Y,,2863
+BS115,04,일반생물학 실험,조정아,available,Y,,2863
+BS115,05,일반생물학 실험,조정아,available,Y,,2863
+BS115,06,일반생물학 실험,조정아,available,Y,,2863
+BS116,01,일반생물학Ⅰ,"이석규, 유성운",available,Y,,2982
+BS117,01,일반생물학Ⅱ,"서병창, 이상임",available,Y,,2762
+BS117,02,일반생물학Ⅱ,"엄지원, 최일규",available,Y,,1986
+BS118,01,일반화학Ⅰ,Desta Kebede Taye,available,Y,,2482
+BS119,01,일반화학Ⅱ,Desta Kebede Taye,available,Y,,2584
+BS119,02,일반화학Ⅱ,Desta Kebede Taye,available,Y,,2584
+BS119,03,일반화학Ⅱ,문혜원,available,Y,,1352
+BS120a,01,일변수 미적분학,안흥주,available,Y,,5808
+BS201b,01,공학수학Ⅱ,이두석,available,Y,,3002
+BS202a,01,확률과 통계 및 실습,Carlos Scarinci,available,Y,,2077
+BS203a,01,선형대수학,한강진,available,Y,,4048
+CE201a,01,화학공학기초실험(공),"김찬연, 김승현, 김운혁, 최종민, 호동해",available,Y,,1729
+CE301,01,반응공학(공),양지웅,empty,N,empty_response,0
+CE302,01,이동현상개론(공),이종민,available,Y,,1045
+CHEM202,01,"무기화학Ⅰ(이,공)",박진희,available,Y,,1904
+CHEM203,01,"물리화학Ⅰ(이,공)",장윤희,available,Y,,1594
+CHEM204,01,"유기화학Ⅱ(이,공)",서상원,available,Y,,1929
+CHEM302,01,심화화학실험Ⅱ(이),"김성균, 장윤희",available,Y,,2816
+CHEM303,01,"유기화학Ⅲ(이,공)",이성기,available,Y,,1701
+CHEM304,01,"물리화학Ⅲ(이,공)",김종구,available,Y,,2542
+CHEM403,01,광물리화학 개론(이),성주영,available,Y,,1522
+CHEM406,01,"고분자화학(이,공)",홍선기,available,Y,,2641
+CSE201,01,"객체지향 프로그래밍(이,공)",김백규,available,Y,,2206
+CSE202,01,"이산수학(이,공)",신동훈,available,Y,,2557
+CSE204,01,인공지능기초(공),배인환,empty,N,empty_response,0
+CSE205,01,"계산이론(이,공)",전민석,available,Y,,3391
+CSE301,01,"컴퓨터 알고리즘(이,공)",좌훈승,available,Y,,2014
+CSE303,01,딥러닝개론(공),박대희,empty,N,empty_response,0
+CSE304,01,운영체제(공),이용우,available,Y,,1985
+CSE401,01,데이터베이스개론(공),장준기,available,Y,,2706
+CSE403,01,"컴퓨터 네트워크(이,공)",미배정,empty,N,empty_response,0
+EE201,01,디지털 논리회로(공),유재석,available,Y,,1905
+EE302,01,전자소자개론(공),한상윤,available,Y,,2218
+EE305,01,통신의 기초(공),최지웅,available,Y,,1468
+EE306,01,아날로그 전자회로(공),이경태,empty,N,empty_response,0
+EE402,01,"디지털 영상처리(이,공)",이병권,available,Y,,2875
+EE405,01,반도체공정실습(공),최상현,empty,N,empty_response,0
+ENT301,01,기업가 정신과 사회적 책임,권업,available,Y,,3569
+GC102,01,Academic English: Research and Writing,Aaron Cumberledge,available,Y,,6312
+GC102,02,Academic English: Research and Writing,Aaron Cumberledge,available,Y,,6312
+GC102,03,Academic English: Research and Writing,Aaron Cumberledge,available,Y,,6312
+GC102,04,Academic English: Research and Writing,Aaron Cumberledge,available,Y,,6312
+GC102,05,Academic English: Research and Writing,Benjamin Wilson Riley,available,Y,,5295
+GC102,06,Academic English: Research and Writing,Benjamin Wilson Riley,available,Y,,5293
+GC102,07,Academic English: Research and Writing,Benjamin Wilson Riley,available,Y,,5293
+GC102,08,Academic English: Research and Writing,Mark Silverlock,available,Y,,6603
+GC102,09,Academic English: Research and Writing,Mark Silverlock,available,Y,,6603
+GC102,10,Academic English: Research and Writing,Mark Silverlock,available,Y,,6560
+GC102,11,Academic English: Research and Writing,Mark Silverlock,available,Y,,6606
+GC102,12,Academic English: Research and Writing,미배정,available,Y,,6254
+GC102,13,Academic English: Research and Writing,미배정,available,Y,,6254
+GC102,14,Academic English: Research and Writing,미배정,available,Y,,6254
+GC102,15,Academic English: Research and Writing,미배정,available,Y,,6254
+GC102,16,Academic English: Research and Writing,미배정,available,Y,,6254
+HSS101,01,경제학 입문,김선구,available,Y,,2758
+HSS102,01,과학기술과 현대사회,장하원,available,Y,,3224
+HSS103,01,법과 사회,김현희,available,Y,,2244
+HSS108,01,비교역사학,이원근,available,Y,,2363
+HSS109a,01,학술 글쓰기,배하은,available,Y,,3610
+HSS109a,02,학술 글쓰기,임희현,available,Y,,2267
+HSS109a,03,학술 글쓰기,임희현,available,Y,,2434
+HSS109a,04,학술 글쓰기,전계성,available,Y,,2454
+HSS109a,05,학술 글쓰기,전계성,available,Y,,2454
+HSS112,01,사회학의 이해,최태섭,available,Y,,2427
+HSS113,01,글로벌 문화와 의사소통,이정아,available,Y,,6715
+HSS115,01,심리학으로의 여행,미배정,empty,N,empty_response,0
+HSS116,01,인류학의 이해,미배정,empty,N,empty_response,0
+HSS117,01,인간과 종교,박범석,empty,N,empty_response,0
+HSS118,01,미래소양강좌,서대원,available,Y,,689
+HSS120,01,진로탐색 및 전공설계 II,서대원,available,Y,,2814
+HSS123,01,Korea and International Relations,윤지성,available,Y,,2213
+HSS201,01,과학기술사의 주요 장면,장하원,available,Y,,4989
+HSS202,01,과학철학의 쟁점,강유진,available,Y,,2688
+HSS203,01,근대 사회와 사상,이원근,available,Y,,2127
+HSS207a,01,커뮤니케이션 특강,미배정,empty,N,empty_response,0
+HSS210,01,고전의 산책,"이정아, 배하은, 윤지성",available,Y,,5522
+HSS211,01,젠더와 사회,최태섭,available,Y,,2348
+HSS212,01,권리변동의 일반,함상범,available,Y,,1928
+HSS213,01,영어 문학 텍스트 : 주제적 접근 읽기,이정아,available,Y,,7366
+HSS218,01,세계종교입문,박범석,empty,N,empty_response,0
+HSS219,01,인문학 특강Ⅰ - 한국문학과 한국사회,배하은,available,Y,,2697
+HSS221,01,사회과학 특강Ⅰ - 한국 민주주의와 정당정치,윤지성,available,Y,,3504
+HSS221,02,사회과학 특강Ⅰ - 인지심리학,미배정,empty,N,empty_response,0
+HSS222,01,사회과학 특강Ⅱ - World Geography,미배정,available,Y,,3584
+HSS222,02,사회과학 특강Ⅱ - Cultural Geography,미배정,available,Y,,3698
+HSS222,03,사회과학 특강Ⅱ - 북한사회와 문화,미배정,empty,N,empty_response,0
+HSS224,01,시 읽기의 즐거움,배하은,available,Y,,3003
+HSS301a,01,Scientific Writing,이정아,available,Y,,6303
+HSS301a,02,Scientific Writing,Benjamin Wilson Riley,available,Y,,6825
+LS202,01,유전학(이),"우혜련, 이송이, 김규형, 이성배",available,Y,,1588
+LS202,02,유전학(이),"우혜련, 이송이, 김규형, 이성배",available,Y,,1588
+LS205,01,유전학 실험(이),"이송이, 조정아",available,Y,,2588
+LS206,01,"생명분석화학(이,공)","김민식, 김유리, 김민석",available,Y,,2121
+LS303b,01,정량 생명과학(이),"이창훈, 유우경",available,Y,,1349
+LS307,01,분자생물학(이),"엄지원, 김진해, 이영삼",available,Y,,1334
+LS309,01,생화학Ⅱ(이),정한빈,available,Y,,2767
+LS311,01,생명과학과 사회(이),남창훈,available,Y,,3822
+LS313a,01,분자생물학 실험(이),"이영삼, 이창훈",available,Y,,3693
+LS401a,01,면역학(이),"남창훈, 최일규",available,Y,,2608
+MECH203,01,동역학(공),박석호,available,Y,,1805
+MECH204,01,기계열역학(공),김민수,available,Y,,2589
+MECH205,01,의공학개론(공),"송석호, 노어진, 김민수, 이아형",available,Y,,2609
+MECH303,01,기구학(공),윤동원,empty,N,empty_response,0
+MECH307,01,"인공지능개론(이,공)",문인규,available,Y,,2013
+MECH312,01,메카트로닉스(공),송철,available,Y,,3107
+MECH404a,01,창의공학설계(공),"이성민, 김동욱",available,Y,,4958
+MECH406,01,"기계재료학(이,공)",김봉훈,empty,N,empty_response,0
+MSE302,01,"재료열역학 개론(이,공)",인수일,available,Y,,2342
+MSE306a,01,"재료공학개론Ⅱ(이,공)",이신범,available,Y,,1706
+MSE308,01,데이터 기반 신소재 공학(공),박인철,available,Y,,9927
+MSE309,01,세라믹개론(공),이태훈,available,Y,,4412
+MSE403,01,전자재료학(공),이성원,available,Y,,913
+MSE404a,01,"결정학 및 회절(이,공)",김진수,empty,N,empty_response,0
+PHY201a,01,"열 및 통계 물리(이,공)",박기성,available,Y,,1814
+PHY203a,01,전기역학Ⅰ(이),홍정일,available,Y,,1272
+PHY204,01,"해석역학Ⅱ(이,공)",서정필,available,Y,,2101
+PHY301,01,응용물리 실험(이.공),"박기성, 유천열, 김영욱, 조창희",available,Y,,1591
+PHY303,01,"고체물리Ⅰ(이,공)",김소연,available,Y,,1828
+PHY305,01,"양자역학Ⅱ(이,공)",김아람,available,Y,,1666
+PHY309,01,미분기하학과 일반상대론(이),Carlos Scarinci,available,Y,,2388
+PHY407,01,"양자 컴퓨팅 개론(이,공)",권상일,available,Y,,5015
+PHY409,01,입자물리개론(이),DEVECIOGLU DENIZ OLGU,available,Y,,3436
+TP101,01,디자인 사고,박종래,available,Y,,3179
+TP201,01,디자인 기획과 전략,박종래,available,Y,,4339
+TP203,01,"소리와 음악(이,공)",이기준,available,Y,,2858
+TP301,01,커뮤니케이션과 현대사회,미배정,empty,N,empty_response,0
+TP305,01,게임이론,김선구,available,Y,,1198
+TP313,01,위상수학개론,Hudson Thomas Bryan,available,Y,,3470
+TP314,01,"생체분자역학개론(이,공)","김유리, 정소현",available,Y,,2485
