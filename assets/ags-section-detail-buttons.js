@@ -34,8 +34,11 @@ const rebuildLectureMap = () => {
 const detailKey = (lecture) => `${lecture.course_number}#${sectionText(lecture.section)}`;
 
 const courseNameFromGroup = (group) => {
-  const title = normalizeText(group?.querySelector(":scope > button")?.textContent);
-  return title.replace(/\s*\d+\s+Sections?\s*$/i, "").trim();
+  const header = group?.querySelector(":scope > button");
+  const heading = normalizeText(header?.querySelector("h4")?.textContent);
+  if (heading) return heading;
+  const title = normalizeText(header?.textContent);
+  return title.replace(/\s*(?:\(\d+\)|\d+\s+Sections?)\s*$/i, "").trim();
 };
 
 const lectureFromCard = (card) => {
