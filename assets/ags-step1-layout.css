@@ -86,6 +86,52 @@
   max-width: calc(48% - 2.75rem);
 }
 
+.ags-lecture-main [class~="group/item"].ags-track-year-known.ags-course-row-has-label::after,
+.ags-lecture-main [class~="group/item"].ags-track-recommended.ags-course-row-has-label::after,
+.ags-lecture-main [class~="group/item"].ags-track-recommended-strong.ags-course-row-has-label::after {
+  display: none !important;
+  content: none !important;
+}
+
+.ags-course-row-meta {
+  display: flex !important;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  max-width: min(34rem, calc(100vw - 10rem));
+  margin-top: 0.15rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ags-course-row-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #fbbf24;
+  border-radius: 999px;
+  background: #fffbeb;
+  color: #92400e;
+  padding: 0.12rem 0.42rem;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.ags-track-recommended-strong .ags-course-row-label {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.ags-course-row-count {
+  flex: 0 0 auto;
+  color: #9ca3af;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
 .ags-section-select-all {
   position: absolute;
   top: 0.55rem;

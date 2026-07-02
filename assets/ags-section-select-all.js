@@ -12,7 +12,9 @@ const waitForFrame = () => new Promise((resolve) => requestAnimationFrame(() => 
 const sectionCards = (group) => Array.from(group.querySelectorAll(SECTION_CARD_SELECTOR));
 
 const sectionCount = (group) => {
-  const text = normalizeText(group.querySelector("p")?.textContent);
+  const meta = group.querySelector("p");
+  if (meta?.dataset?.agsSectionCount) return Number(meta.dataset.agsSectionCount);
+  const text = normalizeText(meta?.textContent);
   const match = text.match(/(\d+)/);
   return match ? Number(match[1]) : sectionCards(group).length;
 };
