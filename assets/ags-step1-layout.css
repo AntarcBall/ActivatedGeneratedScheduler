@@ -173,6 +173,36 @@
   line-height: 1;
 }
 
+.ags-friday-course-label {
+  position: absolute;
+  top: 0.73rem;
+  right: 3.05rem;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 1.55rem;
+  border: 1px solid #fecaca;
+  border-radius: 999px;
+  background: #fff1f2;
+  color: #be123c;
+  padding: 0 0.38rem;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.ags-friday-course.ags-course-has-select-all > button:first-of-type {
+  padding-right: 5.6rem !important;
+}
+
+.ags-lecture-main [class~="group/item"].ags-friday-course.ags-course-has-select-all.ags-track-year-known::after {
+  right: 5.4rem;
+  max-width: calc(48% - 5rem);
+}
+
 .ags-section-detail-card {
   position: relative;
 }
