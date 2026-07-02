@@ -59,6 +59,19 @@ const paragraph = (label, value) => {
   `;
 };
 
+const weeklyPlanText = (value) => {
+  const text = normalizeText(value);
+  if (!text) return "";
+  const insertBreak = (match, prefix, offset) => {
+    if (offset === 0) return "";
+    return /\s/.test(prefix) ? "\n" : `${prefix}\n`;
+  };
+  return text
+    .replace(/(^|[^\d])(?=\d+\s*주차\s*:)/g, insertBreak)
+    .replace(/(^|[^A-Za-z])(?=Weeks?\s*\d+(?:\s*[–-]\s*\d+)?\s*:)/gi, insertBreak)
+    .trim();
+};
+
 const openDetailModal = (lecture, record) => {
   const previous = document.querySelector(".ags-detail-modal-backdrop");
   previous?.remove();
@@ -89,7 +102,7 @@ const openDetailModal = (lecture, record) => {
         ${paragraph("평가/운영", detail.LT_POLY)}
         ${paragraph("수강 대상 및 유의사항", detail.LRN_ITGT)}
         ${paragraph("비고", detail.ETC)}
-        ${paragraph("주차별 계획", detail.SCHETCHUL || detail.ALL_CNTN)}
+        ${paragraph("주차별 계획", weeklyPlanText(detail.SCHETCHUL || detail.ALL_CNTN))}
       </div>
     </div>
   `;
