@@ -32,6 +32,108 @@
   }
 }
 
+body.ags-home-clean #root > div {
+  padding: 0 !important;
+  background: #f8fafc !important;
+}
+
+body.ags-home-clean #root > div > div {
+  width: 100% !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.ags-home-clean #root > div > div > div:first-child {
+  display: none !important;
+}
+
+.ags-home-hidden {
+  display: none !important;
+}
+
+.ags-home-shell {
+  isolation: isolate;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.74), rgb(248 250 252 / 0.52)),
+    #f8fafc !important;
+}
+
+.ags-home-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("/ActivatedGeneratedScheduler/assets/ags-generator-background.svg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.ags-home-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.8), rgb(255 255 255 / 0.24) 44%, rgb(255 255 255 / 0.78)),
+    linear-gradient(180deg, rgb(255 255 255 / 0.16), rgb(255 255 255 / 0.78));
+  pointer-events: none;
+}
+
+.ags-home-shell > .absolute.inset-0 {
+  display: none !important;
+}
+
+.ags-home-hero {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  justify-content: center !important;
+  gap: 1.1rem !important;
+  padding: 4rem 1.25rem !important;
+}
+
+.ags-home-main-title {
+  margin: 0 !important;
+  color: #0f172a !important;
+  font-size: 5.5rem !important;
+  font-weight: 950 !important;
+  line-height: 1.04 !important;
+  letter-spacing: 0 !important;
+  text-shadow: 0 16px 36px rgb(15 23 42 / 0.16);
+}
+
+.ags-home-start {
+  border-radius: 999px !important;
+  background: #111827 !important;
+  color: #fff !important;
+  padding: 0.95rem 1.5rem !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  box-shadow: 0 18px 38px -24px rgb(15 23 42 / 0.72) !important;
+}
+
+.ags-home-start:hover {
+  background: #2563eb !important;
+}
+
+@media (max-width: 768px) {
+  .ags-home-main-title {
+    font-size: 3.2rem !important;
+  }
+
+  .ags-home-hero {
+    padding: 3rem 1rem !important;
+  }
+}
+
 .ags-filter-grid-grouped {
   position: relative;
   isolation: isolate;
