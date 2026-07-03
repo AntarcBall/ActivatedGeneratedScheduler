@@ -3943,13 +3943,8 @@
       "반도체공학"
     ],
     "credit": 4,
-    "time_slots": [
-      {
-        "day": "토",
-        "start_index": 19,
-        "end_index": 26
-      }
-    ]
+    "time_slots": [],
+    "schedule_note": "토18:00-22:00(E7 - 236)"
   },
   {
     "id": 180,
