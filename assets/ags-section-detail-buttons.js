@@ -13,6 +13,7 @@ const escapeHtml = (value) => String(value ?? "")
 
 let lectures = [];
 let detailMap = new Map();
+let openCourseMeta = new Map();
 let lectureMap = new Map();
 let detailSyncScheduled = false;
 let detailDataReady = false;
@@ -32,6 +33,39 @@ const rebuildLectureMap = () => {
 };
 
 const detailKey = (lecture) => `${lecture.course_number}#${sectionText(lecture.section)}`;
+
+const fallbackDetailRecord = (lecture) => {
+  const meta = openCourseMeta.get(detailKey(lecture));
+  if (!meta) return null;
+  return {
+    key: detailKey(lecture),
+    detail: {
+      SBJT_NO: meta.course_number,
+      CLSS_NO: meta.section,
+      SBJT_NM: meta.name,
+      CPTN_DCD: meta.classification,
+      TMCNT: String(meta.credit || ""),
+      PROF_NM: meta.professor,
+      DEPT_NM: meta.department,
+      EMAIL: "",
+      LT_SUMA: [
+        meta.field ? `교과분야: ${meta.field}` : "",
+        meta.area ? `교과영역: ${meta.area}` : "",
+        meta.lecture_type ? `강의/실습: ${meta.lecture_type}` : "",
+        meta.english ? "영어강의" : "",
+      ].filter(Boolean).join("\n"),
+      LT_PURO: "",
+      ETC: meta.notes,
+      LABRM_NM: "",
+      INFO: meta.schedule_text,
+      LRN_ITGT: meta.prerequisites ? `선수과목: ${meta.prerequisites}` : "",
+      LT_POLY: "",
+      LSN_MTHD: "",
+      SCHETCHUL: "",
+      ALL_CNTN: "",
+    },
+  };
+};
 
 const courseNameFromGroup = (group) => {
   const header = group?.querySelector(":scope > button");
@@ -123,7 +157,7 @@ const ensureButton = (card) => {
   if (card.querySelector(":scope > .ags-section-detail-button")) return;
 
   const lecture = lectureFromCard(card);
-  const record = lecture ? detailMap.get(detailKey(lecture)) : null;
+  const record = lecture ? detailMap.get(detailKey(lecture)) || fallbackDetailRecord(lecture) : null;
   const available = Boolean(record);
 
   card.classList.add("ags-section-detail-card");
@@ -160,13 +194,15 @@ const scheduleDetailSync = () => {
 
 const init = async () => {
   try {
-    const [lectureData, detailData] = await Promise.all([
+    const [lectureData, detailData, metadata] = await Promise.all([
       loadJson("lectures.json"),
       loadJson("assets/ags-section-details.json"),
+      loadJson("assets/ags-open-course-metadata.json"),
     ]);
     lectures = lectureData;
     rebuildLectureMap();
     detailMap = new Map((detailData.records || []).map((record) => [record.key, record]));
+    openCourseMeta = new Map((metadata.courses || []).map((course) => [`${course.course_number}#${sectionText(course.section)}`, course]));
     detailDataReady = true;
     scheduleDetailSync();
   } catch (error) {

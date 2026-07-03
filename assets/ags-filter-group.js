@@ -58,12 +58,14 @@ const relabelTrackAll = (button) => {
   const label = normalizeLabel(button.textContent);
   if (label === "트랙") button.textContent = "트랙 전체";
   if (label === "Track") button.textContent = "All Tracks";
+  if (label === "반도체공학") button.textContent = "반도체";
 };
 
 const classifyButton = (button, index) => {
   const label = normalizeLabel(button.textContent);
   if (index < 5 && BASIC_FILTER_LABELS.has(label)) return "basic";
   if (index === 5 && trackLabelSet().has(label)) return "track";
+  if (label === "반도체" && trackLabels.has("반도체공학")) return "track";
   if (index >= 8 && trackLabels.has(label)) return "track";
   return "other";
 };

@@ -203,6 +203,68 @@
   max-width: calc(48% - 5rem);
 }
 
+.ags-open-course-labels {
+  position: absolute;
+  top: 0.73rem;
+  right: 5.45rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  max-width: min(24rem, 42%);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ags-open-course-chip {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.18rem 0.38rem;
+  font-size: 0.65rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ags-open-course-chip-semiconductor {
+  border: 1px solid #99f6e4;
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.ags-open-course-chip-prereq {
+  border: 1px solid #fde68a;
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.ags-open-course-chip-credit {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.ags-semiconductor-course.ags-course-has-select-all > button:first-of-type {
+  padding-right: 12rem !important;
+}
+
+.ags-hidden-selection-summary-card {
+  display: none !important;
+}
+
+.ags-bottom-selection-summary {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  color: #111827;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
 .ags-section-detail-card {
   position: relative;
 }

@@ -1877,7 +1877,8 @@
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
-      "전자공학"
+      "전자공학",
+      "반도체공학"
     ],
     "credit": 3,
     "time_slots": [
@@ -1927,7 +1928,8 @@
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
-      "전자공학"
+      "전자공학",
+      "반도체공학"
     ],
     "credit": 3,
     "time_slots": [
@@ -1978,7 +1980,8 @@
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
-      "전자공학"
+      "전자공학",
+      "반도체공학"
     ],
     "credit": 3,
     "time_slots": [
@@ -3518,7 +3521,8 @@
     "category": "트랙",
     "major_tracks": [
       "재료공학",
-      "화학공학"
+      "화학공학",
+      "반도체공학"
     ],
     "credit": 3,
     "time_slots": [
@@ -3924,6 +3928,151 @@
         "day": "수",
         "start_index": 4,
         "end_index": 6
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "course_number": "RP303",
+    "section": 1,
+    "name": "반도체 연구실무 기초(공)",
+    "prof": "권혁준",
+    "classification": "심화선택",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ],
+    "credit": 4,
+    "time_slots": [
+      {
+        "day": "토",
+        "start_index": 19,
+        "end_index": 26
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "course_number": "SM202",
+    "section": 1,
+    "name": "반도체 재료공학 개론(공)(반)",
+    "prof": "조창희",
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "목",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "course_number": "SM203a",
+    "section": 1,
+    "name": "반도체물성 개론(공)(반)",
+    "prof": "이상훈",
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 5,
+        "end_index": 7
+      },
+      {
+        "day": "목",
+        "start_index": 5,
+        "end_index": 7
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "course_number": "SM306",
+    "section": 1,
+    "name": "반도체공정응용(공)(반)",
+    "prof": "권혁준",
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "day": "수",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "course_number": "SM307",
+    "section": 1,
+    "name": "디지털 전자회로(공)(반)",
+    "prof": "김가인",
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 12,
+        "end_index": 14
+      },
+      {
+        "day": "수",
+        "start_index": 12,
+        "end_index": 14
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "course_number": "SM308",
+    "section": 1,
+    "name": "아날로그 전자회로(공)(반)",
+    "prof": "송민영",
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 16,
+        "end_index": 18
+      },
+      {
+        "day": "목",
+        "start_index": 16,
+        "end_index": 18
       }
     ]
   }
