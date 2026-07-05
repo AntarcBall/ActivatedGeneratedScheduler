@@ -56,6 +56,14 @@ const showGuide = (button) => {
         </div>
         <button type="button" class="ags-step1-guide-close" aria-label="닫기">×</button>
       </div>
+      <div class="ags-step1-guide-update">
+        <p class="ags-step1-guide-update-kicker">업데이트 사항</p>
+        <h4>수강 사이트 재조회 결과, 일부 강의 시간이 바뀌었습니다.</h4>
+        <ul>
+          <li><strong>디지털 논리회로(공)</strong> 월/수 16:30-18:00 → 월/수 13:00-14:30</li>
+          <li><strong>디지털 영상처리(이,공)</strong> 화/목 13:00-14:30 → 화/목 10:30-12:00</li>
+        </ul>
+      </div>
       <div class="ags-step1-guide-image-wrap">
         <img src="${GUIDE_IMAGE_URL}" alt="Step 1 강의 선택 화면 안내" class="ags-step1-guide-image">
       </div>
