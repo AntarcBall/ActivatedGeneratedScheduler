@@ -1,0 +1,68 @@
+@media (max-width: 640px) {
+  .ags-app-footer {
+    min-height: 3.65rem !important;
+    height: 3.65rem !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    padding: 0.35rem 0.5rem calc(0.35rem + env(safe-area-inset-bottom)) !important;
+    overflow: visible !important;
+  }
+
+  .ags-app-footer > div:first-child {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .ags-app-footer > div:first-child button {
+    height: 2.5rem !important;
+    padding: 0 0.65rem !important;
+    white-space: nowrap !important;
+  }
+
+  .ags-app-footer > div:first-child button:disabled {
+    display: none !important;
+  }
+
+  .ags-app-footer > button,
+  .ags-app-footer .ags-result-skip-button {
+    height: 2.5rem !important;
+    min-width: 3.2rem !important;
+    padding: 0 0.72rem !important;
+    white-space: nowrap !important;
+    border-radius: 0.75rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1 !important;
+  }
+
+  .ags-app-footer > button[class*="text-red"],
+  .ags-app-footer label {
+    display: none !important;
+  }
+
+  .ags-bottom-selection-summary {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    padding: 0 0.15rem !important;
+    text-align: left !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .ags-result-skip-button {
+    right: 4.55rem !important;
+    bottom: calc(0.58rem + env(safe-area-inset-bottom)) !important;
+    z-index: 10000 !important;
+    box-shadow: 0 10px 20px -16px rgb(30 64 175 / 0.7) !important;
+  }
+
+  .ags-track-profile-trigger {
+    left: auto !important;
+    right: 0.75rem !important;
+    top: 0.78rem !important;
+    bottom: auto !important;
+    max-width: 7.8rem !important;
+    padding: 0.3rem 0.52rem !important;
+    font-size: 0.66rem !important;
+    box-shadow: 0 10px 20px -18px rgb(15 23 42 / 0.8) !important;
+  }
+}

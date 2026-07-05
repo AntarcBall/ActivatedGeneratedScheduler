@@ -42,6 +42,13 @@ const waitForPageChange = async (fromPage, timeout = 1600) => {
   return false;
 };
 
+const isCompactMobile = () => window.matchMedia?.("(max-width: 640px)")?.matches;
+
+const labelForMode = (mode) => {
+  if (isCompactMobile()) return mode === "forward" ? "결과" : "선택";
+  return mode === "forward" ? "결과 바로보기" : "강의 선택으로";
+};
+
 const jumpToResults = async () => {
   if (skipBusy) return;
   skipBusy = true;
@@ -91,7 +98,7 @@ const makeButton = (mode) => {
   const button = document.createElement("button");
   button.type = "button";
   button.className = `ags-result-skip-button ags-result-skip-button-${mode}`;
-  button.textContent = mode === "forward" ? "결과 바로보기" : "강의 선택으로";
+  button.textContent = labelForMode(mode);
   button.addEventListener("click", () => {
     window.setTimeout(() => {
       if (mode === "forward") void jumpToResults();
@@ -119,6 +126,7 @@ const syncSkipButtons = () => {
   }
 
   if (existing && existing.classList.contains(`ags-result-skip-button-${mode}`)) {
+    existing.textContent = labelForMode(mode);
     existing.disabled = skipBusy;
     return;
   }

@@ -114,6 +114,7 @@ const syncBottomSummary = () => {
 
   const bar = footer();
   if (!bar || !document.querySelector(".ags-lecture-main")) return;
+  bar.classList.add("ags-app-footer");
   let summary = bar.querySelector(":scope > .ags-bottom-selection-summary");
   if (!summary) {
     summary = document.createElement("div");
