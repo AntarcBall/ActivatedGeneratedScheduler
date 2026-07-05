@@ -1858,13 +1858,13 @@
     "time_slots": [
       {
         "day": "월",
-        "start_index": 16,
-        "end_index": 18
+        "start_index": 9,
+        "end_index": 11
       },
       {
         "day": "수",
-        "start_index": 16,
-        "end_index": 18
+        "start_index": 9,
+        "end_index": 11
       }
     ]
   },
@@ -1961,13 +1961,13 @@
     "time_slots": [
       {
         "day": "화",
-        "start_index": 9,
-        "end_index": 11
+        "start_index": 4,
+        "end_index": 6
       },
       {
         "day": "목",
-        "start_index": 9,
-        "end_index": 11
+        "start_index": 4,
+        "end_index": 6
       }
     ]
   },
