@@ -4070,5 +4070,95 @@
         "end_index": 18
       }
     ]
+  },
+  {
+    "id": 185,
+    "course_number": "BE201",
+    "section": 1,
+    "name": "인공지능기초",
+    "prof": "배인환",
+    "classification": "기초필수",
+    "category": "컴퓨터공학",
+    "major_tracks": [],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 5,
+        "end_index": 7
+      },
+      {
+        "day": "수",
+        "start_index": 5,
+        "end_index": 7
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "course_number": "MECH304",
+    "section": 1,
+    "name": "시스템의 통합적 모델링(공)",
+    "prof": "박준혁",
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학",
+      "전자공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "금",
+        "start_index": 1,
+        "end_index": 6
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "course_number": "MSE303",
+    "section": 1,
+    "name": "나노재료학(공)",
+    "prof": "이종수",
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학",
+      "화학공학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 15,
+        "end_index": 17
+      },
+      {
+        "day": "목",
+        "start_index": 15,
+        "end_index": 17
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "course_number": "PHY307",
+    "section": 1,
+    "name": "응용물리특론(이,공)",
+    "prof": "허승정",
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ],
+    "credit": 3,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 12,
+        "end_index": 14
+      }
+    ]
   }
 ]

@@ -1,5 +1,6 @@
 course_number,section,name,professor,status,available,reason,response_bytes
 BE101a,01,프로그래밍,김기섭,available,Y,,2970
+BE201,01,인공지능기초,배인환,empty,N,empty_response,0
 BE204,01,화학공학개론,김운혁,available,Y,,2129
 BE206,01,회로이론과 계측법(실습),송민영,available,Y,,2572
 BE206,02,회로이론과 계측법(실습),이정협,available,Y,,4412
@@ -137,6 +138,16 @@ HSS222,03,사회과학 특강Ⅱ - 북한사회와 문화,미배정,empty,N,empt
 HSS224,01,시 읽기의 즐거움,배하은,available,Y,,3003
 HSS301a,01,Scientific Writing,이정아,available,Y,,6303
 HSS301a,02,Scientific Writing,Benjamin Wilson Riley,available,Y,,6825
+INT201,01,국내 인턴십Ⅰ,조용철,empty,N,empty_response,0
+INT202,01,국내 인턴십Ⅱ,조용철,empty,N,empty_response,0
+INT203,01,국내 인턴십Ⅲ,조용철,empty,N,empty_response,0
+INT204,01,국내 인턴십Ⅳ,조용철,empty,N,empty_response,0
+INT211,01,해외 인턴십Ⅴ,김회준,empty,N,empty_response,0
+INT212,01,해외 인턴십Ⅵ,김회준,empty,N,empty_response,0
+INT213,01,해외 인턴십Ⅶ,김회준,empty,N,empty_response,0
+INT214,01,해외 인턴십Ⅷ,김회준,empty,N,empty_response,0
+INT401,01,국내 인턴십 Ⅴ,조용철,empty,N,empty_response,0
+INT402,01,국내 인턴십 Ⅵ,조용철,empty,N,empty_response,0
 LS202,01,유전학(이),"우혜련, 이송이, 김규형, 이성배",available,Y,,1588
 LS202,02,유전학(이),"우혜련, 이송이, 김규형, 이성배",available,Y,,1588
 LS205,01,유전학 실험(이),"이송이, 조정아",available,Y,,2588
@@ -150,12 +161,14 @@ LS401a,01,면역학(이),"남창훈, 최일규",available,Y,,2608
 MECH203,01,동역학(공),박석호,available,Y,,1805
 MECH204,01,기계열역학(공),김민수,available,Y,,2589
 MECH205,01,의공학개론(공),"송석호, 노어진, 김민수, 이아형",available,Y,,2609
-MECH303,01,기구학(공),윤동원,empty,N,empty_response,0
+MECH303,01,기구학(공),윤동원,available,Y,,2049
+MECH304,01,시스템의 통합적 모델링(공),박준혁,available,Y,,13241
 MECH307,01,"인공지능개론(이,공)",문인규,available,Y,,2013
 MECH312,01,메카트로닉스(공),송철,available,Y,,3107
 MECH404a,01,창의공학설계(공),"이성민, 김동욱",available,Y,,4958
 MECH406,01,"기계재료학(이,공)",김봉훈,empty,N,empty_response,0
 MSE302,01,"재료열역학 개론(이,공)",인수일,available,Y,,2342
+MSE303,01,나노재료학(공),이종수,available,Y,,2315
 MSE306a,01,"재료공학개론Ⅱ(이,공)",이신범,available,Y,,1706
 MSE308,01,데이터 기반 신소재 공학(공),박인철,available,Y,,9927
 MSE309,01,세라믹개론(공),이태훈,available,Y,,4412
@@ -167,9 +180,16 @@ PHY204,01,"해석역학Ⅱ(이,공)",서정필,available,Y,,2101
 PHY301,01,응용물리 실험(이.공),"박기성, 유천열, 김영욱, 조창희",available,Y,,1591
 PHY303,01,"고체물리Ⅰ(이,공)",김소연,available,Y,,1828
 PHY305,01,"양자역학Ⅱ(이,공)",김아람,available,Y,,1666
+PHY307,01,"응용물리특론(이,공)",허승정,available,Y,,2155
 PHY309,01,미분기하학과 일반상대론(이),Carlos Scarinci,available,Y,,2388
 PHY407,01,"양자 컴퓨팅 개론(이,공)",권상일,available,Y,,5015
 PHY409,01,입자물리개론(이),DEVECIOGLU DENIZ OLGU,available,Y,,3436
+RP303,01,반도체 연구실무 기초(공),권혁준,available,Y,,1019
+SM202,01,반도체 재료공학 개론(공)(반),조창희,empty,N,empty_response,0
+SM203a,01,반도체물성 개론(공)(반),이상훈,available,Y,,1721
+SM306,01,반도체공정응용(공)(반),권혁준,available,Y,,2779
+SM307,01,디지털 전자회로(공)(반),김가인,available,Y,,1987
+SM308,01,아날로그 전자회로(공)(반),송민영,available,Y,,1726
 TP101,01,디자인 사고,박종래,available,Y,,3179
 TP201,01,디자인 기획과 전략,박종래,available,Y,,4339
 TP203,01,"소리와 음악(이,공)",이기준,available,Y,,2858
