@@ -121,7 +121,8 @@ const syncBottomSummary = () => {
     summary.className = "ags-bottom-selection-summary";
     bar.insertBefore(summary, bar.children[Math.min(1, bar.children.length)] || null);
   }
-  summary.textContent = summaryText();
+  const nextSummary = summaryText();
+  if (summary.textContent !== nextSummary) summary.textContent = nextSummary;
 };
 
 const relabelSemiconductorFilter = () => {

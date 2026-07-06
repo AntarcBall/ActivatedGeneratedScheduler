@@ -64,7 +64,7 @@ const cleanHome = () => {
   shell.classList.add("ags-home-shell");
   hero.classList.add("ags-home-hero");
   title.classList.add("ags-home-main-title");
-  title.textContent = HOME_TITLE;
+  if (title.textContent !== HOME_TITLE) title.textContent = HOME_TITLE;
   startButton.classList.add("ags-home-start");
 
   const smallTitle = shell.querySelector(":scope > h2");

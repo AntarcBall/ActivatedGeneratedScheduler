@@ -126,7 +126,8 @@ const syncSkipButtons = () => {
   }
 
   if (existing && existing.classList.contains(`ags-result-skip-button-${mode}`)) {
-    existing.textContent = labelForMode(mode);
+    const nextLabel = labelForMode(mode);
+    if (existing.textContent !== nextLabel) existing.textContent = nextLabel;
     existing.disabled = skipBusy;
     return;
   }

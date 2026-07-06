@@ -164,9 +164,10 @@ const updateLink = (link, kind, item) => {
   if (!hint) return;
   const isKorean = /[가-힣]/.test(document.body.innerText.slice(0, 200));
   const countLabel = isKorean ? `${item.courseCount}과목 · ${item.sessionCount}회` : `${item.courseCount} courses · ${item.sessionCount} sessions`;
-  hint.textContent = kind === "professor"
+  const nextText = kind === "professor"
     ? `${item.name} · ${countLabel}`
     : `${item.name} · ${countLabel}`;
+  if (hint.textContent !== nextText) hint.textContent = nextText;
 };
 
 const syncRouteLinks = async () => {
