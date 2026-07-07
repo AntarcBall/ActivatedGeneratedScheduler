@@ -1,20 +1,32 @@
 const LECTURES_URL = "/ActivatedGeneratedScheduler/lectures.json";
+const REQUIREMENTS_URL = "/ActivatedGeneratedScheduler/assets/ags-track-requirements.json";
 const SORT_ORDER_KEY = "ags_sort_priority_order";
-const PROFILE_KEY = "ags_track_profile";
 const COURSE_GROUP_SELECTOR = ".ags-lecture-main [class~='group/item']";
-const DEFAULT_ORDER = ["recommended", "korean", "fridayOff"];
+const DEFAULT_ORDER = ["year", "korean", "fridayOff"];
 
 const CRITERIA = {
-  recommended: { label: "학년추천", shortLabel: "추천" },
+  year: { label: "학년순", shortLabel: "학년" },
   korean: { label: "한글순", shortLabel: "한글" },
   fridayOff: { label: "금공강", shortLabel: "금공강" },
 };
 
 let lecturesByName = new Map();
+let requiredYearByCourse = new Map();
 let syncScheduled = false;
 let dragKey = null;
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+
+const normalizeCourseName = (value) => normalizeText(value)
+  .replace(/\s*-\s*영어강의\s*$/i, "")
+  .replace(/Ⅰ/g, "1")
+  .replace(/Ⅱ/g, "2")
+  .replace(/Ⅲ/g, "3")
+  .replace(/Ⅳ/g, "4")
+  .replace(/[()\[\]{}.,·:;*＊\s-]/g, "")
+  .replace(/이공/g, "")
+  .replace(/공이/g, "")
+  .toLowerCase();
 
 const readJsonStorage = (storage, key) => {
   try {
@@ -37,7 +49,9 @@ const writeStorage = (key, value) => {
 
 const cleanOrder = (value) => {
   const items = Array.isArray(value) ? value : [];
-  const order = items.filter((item) => Object.hasOwn(CRITERIA, item));
+  const order = items
+    .map((item) => item === "recommended" ? "year" : item)
+    .filter((item) => Object.hasOwn(CRITERIA, item));
   for (const key of DEFAULT_ORDER) {
     if (!order.includes(key)) order.push(key);
   }
@@ -52,14 +66,6 @@ const saveSortOrder = (order) => {
   writeStorage(SORT_ORDER_KEY, cleanOrder(order));
 };
 
-const readProfile = () => {
-  const parsed = readJsonStorage(window.sessionStorage, PROFILE_KEY) || readJsonStorage(window.localStorage, PROFILE_KEY);
-  if (!parsed || typeof parsed !== "object") return null;
-  const year = ["1", "2", "3", "4"].includes(String(parsed.year)) ? String(parsed.year) : "";
-  const tracks = Array.isArray(parsed.tracks) ? parsed.tracks.map(normalizeText).filter(Boolean) : [];
-  return year && tracks.length ? { year, tracks } : null;
-};
-
 const courseNameFromGroup = (group) => normalizeText(group.querySelector(":scope > button h4")?.textContent);
 
 const hasFridayFreeOption = (name) => {
@@ -68,16 +74,35 @@ const hasFridayFreeOption = (name) => {
   return lectures.some((lecture) => !(lecture.time_slots || []).some((slot) => slot.day === "금" || slot.day === "Fri"));
 };
 
-const recommendationScore = (group) => {
-  if (group.classList.contains("ags-track-recommended-strong")) return 3;
-  if (group.classList.contains("ags-track-recommended")) return 2;
-  if (group.classList.contains("ags-track-year-known")) return 1;
-  return 0;
+const requiredYear = (name) => requiredYearByCourse.get(normalizeCourseName(name)) || Number.POSITIVE_INFINITY;
+
+const buildRequiredYearMap = (requirements) => {
+  const next = new Map();
+  const tracks = Array.isArray(requirements?.tracks) ? requirements.tracks : [];
+  const byTrack = requirements?.requirements && typeof requirements.requirements === "object" ? requirements.requirements : {};
+
+  for (const track of tracks) {
+    const yearGroups = byTrack[track] && typeof byTrack[track] === "object" ? byTrack[track] : {};
+    for (const [year, courses] of Object.entries(yearGroups)) {
+      const numericYear = Number(year);
+      if (!Number.isFinite(numericYear)) continue;
+      for (const course of Array.isArray(courses) ? courses : []) {
+        const key = normalizeCourseName(course);
+        if (!key) continue;
+        next.set(key, Math.min(next.get(key) || Number.POSITIVE_INFINITY, numericYear));
+      }
+    }
+  }
+
+  return next;
 };
 
 const criterionCompare = (left, right, key) => {
-  if (key === "recommended") {
-    return recommendationScore(right.group) - recommendationScore(left.group);
+  if (key === "year") {
+    const leftYear = requiredYear(left.name);
+    const rightYear = requiredYear(right.name);
+    if (leftYear === rightYear) return 0;
+    return leftYear - rightYear;
   }
 
   if (key === "korean") {
@@ -231,12 +256,14 @@ new MutationObserver(scheduleSortSync).observe(document.body, {
 window.addEventListener("load", scheduleSortSync);
 window.addEventListener("resize", scheduleSortSync);
 window.addEventListener("storage", (event) => {
-  if (event.key === SORT_ORDER_KEY || event.key === PROFILE_KEY) scheduleSortSync();
+  if (event.key === SORT_ORDER_KEY) scheduleSortSync();
 });
 
-fetch(LECTURES_URL)
-  .then((response) => response.json())
-  .then((lectures) => {
+Promise.all([
+  fetch(LECTURES_URL).then((response) => response.json()),
+  fetch(REQUIREMENTS_URL).then((response) => response.json()),
+])
+  .then(([lectures, requirements]) => {
     const byName = new Map();
     for (const lecture of lectures) {
       const name = normalizeText(lecture.name);
@@ -245,11 +272,13 @@ fetch(LECTURES_URL)
       byName.get(name).push(lecture);
     }
     lecturesByName = byName;
+    requiredYearByCourse = buildRequiredYearMap(requirements);
   })
   .catch(() => {
     lecturesByName = new Map();
+    requiredYearByCourse = new Map();
   })
   .finally(() => {
-    if (!readProfile()) saveSortOrder(readSortOrder());
+    saveSortOrder(readSortOrder());
     scheduleSortSync();
   });
