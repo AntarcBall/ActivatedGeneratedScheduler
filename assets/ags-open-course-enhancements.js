@@ -15,6 +15,7 @@ let enhancementSyncScheduled = false;
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const normalizeSection = (value) => String(value || "").replace(/^S/i, "").padStart(2, "0");
 const lectureSelectionKey = (lecture) => `${lecture.course_number}#${lecture.section}`;
+const lectureCourseKey = (lecture) => lecture.course_number || normalizeText(lecture.name);
 
 const courseNameFromRow = (row) => normalizeText(row?.querySelector(":scope > button h4")?.textContent);
 
@@ -90,8 +91,17 @@ const selectedLectures = () => {
 const summaryText = () => {
   const items = selectedLectures();
   const sectionCount = items.length;
-  const courseCount = new Set(items.map((lecture) => lecture.name)).size;
-  const credits = items.reduce((sum, lecture) => sum + (Number(lecture.credit) || 0), 0);
+  const countedCourses = new Set();
+  let credits = 0;
+
+  for (const lecture of items) {
+    const key = lectureCourseKey(lecture);
+    if (countedCourses.has(key)) continue;
+    countedCourses.add(key);
+    credits += Number(lecture.credit) || 0;
+  }
+
+  const courseCount = countedCourses.size;
   return `선택 ${courseCount}과목 · ${sectionCount}분반 · ${credits.toFixed(1)}학점`;
 };
 

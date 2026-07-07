@@ -199,6 +199,88 @@ body.ags-home-clean #root > div > div > div:first-child {
   padding: 0.35rem !important;
 }
 
+.ags-sort-priority-list {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.ags-sort-priority-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.ags-sort-label {
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.ags-sort-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.ags-sort-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22rem;
+  min-height: 1.75rem;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid #dbeafe;
+  border-radius: 0.5rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  cursor: grab;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.ags-sort-chip:active {
+  cursor: grabbing;
+}
+
+.ags-sort-chip-dragging {
+  opacity: 0.55;
+}
+
+.ags-sort-rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.62rem;
+}
+
+.ags-sort-hidden-old-control {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .ags-sort-priority-control {
+    order: 8;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ags-sort-chip {
+    padding-inline: 0.38rem;
+  }
+}
+
 .ags-filter-group-frame {
   position: absolute;
   left: var(--ags-filter-frame-x);
