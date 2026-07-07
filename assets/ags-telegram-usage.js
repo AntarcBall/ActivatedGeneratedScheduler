@@ -8,6 +8,7 @@ const CATEGORY_SENT_SIGNATURE_KEY = "ags_category_button_last_sent_signature";
 const TRACK_PROFILE_KEY = "ags_track_profile";
 const CATEGORY_HEADER_LABEL = "카테고리";
 const MAX_LABEL_LENGTH = 80;
+const RESULT_SEND_CHECK_MS = 1200;
 
 const cleanText = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
@@ -133,6 +134,8 @@ const categoryCountsSignature = (counts) => {
   return JSON.stringify(entries);
 };
 
+const hasCategoryCounts = () => categoryCountsSignature(readCategoryCounts()) !== "[]";
+
 const messageFromCounts = (counts) => {
   const profile = readProfile();
   const entries = Object.entries(counts)
@@ -152,48 +155,75 @@ const messageFromCounts = (counts) => {
   ].join("\n");
 };
 
-const postTelegram = (text) => {
+let sendInFlight = false;
+
+const postTelegram = async (text) => {
   const body = new URLSearchParams({
     chat_id: TELEGRAM_CHAT_ID,
     text,
     disable_web_page_preview: "true",
   });
 
-  if (navigator.sendBeacon?.(TELEGRAM_SEND_URL, body)) return;
-
-  fetch(TELEGRAM_SEND_URL, {
+  const response = await fetch(TELEGRAM_SEND_URL, {
     method: "POST",
-    mode: "no-cors",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
     body,
     keepalive: true,
-  }).catch(() => {});
+  });
+  const result = await response.json().catch(() => null);
+  return response.ok && result?.ok === true;
 };
 
-const maybeSendOnResults = () => {
-  if (currentStep() !== 6) return;
+const maybeSendOnResults = async () => {
+  if (sendInFlight || currentStep() !== 6) return;
 
   const counts = readCategoryCounts();
   const signature = categoryCountsSignature(counts);
   if (signature === "[]" || signature === readSessionItem(CATEGORY_SENT_SIGNATURE_KEY)) return;
 
-  postTelegram(messageFromCounts(counts));
-  writeSessionItem(CATEGORY_SENT_SIGNATURE_KEY, signature);
+  sendInFlight = true;
+  try {
+    if (await postTelegram(messageFromCounts(counts))) {
+      writeSessionItem(CATEGORY_SENT_SIGNATURE_KEY, signature);
+    }
+  } finally {
+    sendInFlight = false;
+  }
+};
+
+const scheduleResultChecks = () => {
+  window.setTimeout(() => void maybeSendOnResults(), 250);
+  window.setTimeout(() => void maybeSendOnResults(), 900);
+  window.setTimeout(() => void maybeSendOnResults(), 1800);
+  window.setTimeout(() => void maybeSendOnResults(), 3200);
 };
 
 document.addEventListener("click", (event) => {
   const button = isCategoryButton(event.target);
-  if (button) recordCategoryClick(button);
+  if (button) {
+    recordCategoryClick(button);
+    return;
+  }
+
+  if (hasCategoryCounts() && event.target.closest?.("button")) {
+    scheduleResultChecks();
+  }
 }, { capture: true });
 
 new MutationObserver(() => {
   syncCategoryHeaderLabel();
-  maybeSendOnResults();
+  void maybeSendOnResults();
 }).observe(document.body, {
   childList: true,
   subtree: true,
+  characterData: true,
 });
 
 window.addEventListener("load", () => {
   syncCategoryHeaderLabel();
-  window.setTimeout(maybeSendOnResults, 400);
+  window.setTimeout(() => void maybeSendOnResults(), 400);
 });
+
+window.setInterval(() => {
+  void maybeSendOnResults();
+}, RESULT_SEND_CHECK_MS);
