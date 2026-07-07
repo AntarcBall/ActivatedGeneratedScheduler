@@ -4,7 +4,8 @@ const TELEGRAM_SEND_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sen
 
 const SESSION_ID_KEY = "ags_usage_session_id";
 const CATEGORY_COUNTS_KEY = "ags_category_button_click_counts";
-const CATEGORY_SENT_SIGNATURE_KEY = "ags_category_button_last_sent_signature";
+const CATEGORY_SENT_SIGNATURE_KEY = "ags_category_button_last_confirmed_signature_v2";
+const CATEGORY_QUEUED_SIGNATURE_KEY = "ags_category_button_last_queued_signature_v2";
 const RESULT_SKIP_USED_KEY = "ags_result_skip_used";
 const TRACK_PROFILE_KEY = "ags_track_profile";
 const CATEGORY_HEADER_LABEL = "카테고리";
@@ -137,6 +138,15 @@ const categoryCountsSignature = (counts) => {
 
 const hasCategoryCounts = () => categoryCountsSignature(readCategoryCounts()) !== "[]";
 
+const telegramGetUrl = (text) => {
+  const params = new URLSearchParams({
+    chat_id: TELEGRAM_CHAT_ID,
+    text,
+    disable_web_page_preview: "true",
+  });
+  return `${TELEGRAM_SEND_URL}?${params.toString()}`;
+};
+
 const messageFromCounts = (counts) => {
   const profile = readProfile();
   const entries = Object.entries(counts)
@@ -166,14 +176,30 @@ const postTelegram = async (text) => {
     disable_web_page_preview: "true",
   });
 
-  const response = await fetch(TELEGRAM_SEND_URL, {
-    method: "POST",
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-    body,
-    keepalive: true,
+  try {
+    const response = await fetch(TELEGRAM_SEND_URL, {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body,
+      keepalive: true,
+    });
+    const result = await response.json().catch(() => null);
+    if (response.ok && result?.ok === true) return "confirmed";
+  } catch {
+    // Browser extensions or privacy settings can block direct API fetches.
+  }
+
+  const beaconBody = new Blob([body.toString()], { type: "application/x-www-form-urlencoded;charset=UTF-8" });
+  if (navigator.sendBeacon?.(TELEGRAM_SEND_URL, beaconBody)) return "queued";
+
+  return new Promise((resolve) => {
+    const image = new Image();
+    const done = () => resolve("queued");
+    image.onload = done;
+    image.onerror = done;
+    image.src = telegramGetUrl(text);
+    window.setTimeout(done, 1800);
   });
-  const result = await response.json().catch(() => null);
-  return response.ok && result?.ok === true;
 };
 
 const maybeSendOnResults = async () => {
@@ -181,12 +207,19 @@ const maybeSendOnResults = async () => {
 
   const counts = readCategoryCounts();
   const signature = categoryCountsSignature(counts);
-  if (signature === "[]" || signature === readSessionItem(CATEGORY_SENT_SIGNATURE_KEY)) return;
+  if (
+    signature === "[]" ||
+    signature === readSessionItem(CATEGORY_SENT_SIGNATURE_KEY) ||
+    signature === readSessionItem(CATEGORY_QUEUED_SIGNATURE_KEY)
+  ) return;
 
   sendInFlight = true;
   try {
-    if (await postTelegram(messageFromCounts(counts))) {
+    const result = await postTelegram(messageFromCounts(counts));
+    if (result === "confirmed") {
       writeSessionItem(CATEGORY_SENT_SIGNATURE_KEY, signature);
+    } else if (result === "queued") {
+      writeSessionItem(CATEGORY_QUEUED_SIGNATURE_KEY, signature);
     }
   } finally {
     sendInFlight = false;
@@ -240,3 +273,11 @@ window.addEventListener("load", () => {
 window.setInterval(() => {
   void maybeSendOnResults();
 }, RESULT_SEND_CHECK_MS);
+
+window.agsUsageDebug = () => ({
+  step: currentStep(),
+  counts: readCategoryCounts(),
+  confirmedSignature: readSessionItem(CATEGORY_SENT_SIGNATURE_KEY),
+  queuedSignature: readSessionItem(CATEGORY_QUEUED_SIGNATURE_KEY),
+  resultSkip: readSessionItem(RESULT_SKIP_USED_KEY) === "1",
+});
