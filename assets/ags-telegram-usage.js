@@ -82,6 +82,41 @@ const readProfile = () => {
   };
 };
 
+const screenSize = () => {
+  const screenInfo = window.screen;
+  if (!screenInfo) return "unknown";
+  const width = Number(screenInfo.width) || 0;
+  const height = Number(screenInfo.height) || 0;
+  const colorDepth = Number(screenInfo.colorDepth) || 0;
+  return `${width}x${height}${colorDepth ? `x${colorDepth}` : ""}`;
+};
+
+const browserFingerprint = () => {
+  const nav = window.navigator || {};
+  const timezone = (() => {
+    try {
+      return Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    } catch {
+      return "";
+    }
+  })();
+
+  return {
+    userAgent: clip(nav.userAgent || "", 240),
+    platform: clip(nav.userAgentData?.platform || nav.platform || "", 80),
+    languages: Array.isArray(nav.languages) ? nav.languages.slice(0, 4).join(",") : clip(nav.language || "", 80),
+    timezone: clip(timezone, 80),
+    screen: screenSize(),
+    viewport: `${window.innerWidth || 0}x${window.innerHeight || 0}`,
+    pixelRatio: String(window.devicePixelRatio || 1),
+    cores: nav.hardwareConcurrency ? String(nav.hardwareConcurrency) : "unknown",
+    memory: nav.deviceMemory ? `${nav.deviceMemory}GB` : "unknown",
+    touch: String(nav.maxTouchPoints || 0),
+    cookies: nav.cookieEnabled === false ? "disabled" : "enabled",
+    doNotTrack: nav.doNotTrack || window.doNotTrack || "unspecified",
+  };
+};
+
 const currentStep = () => {
   const heading = document.querySelector("#root h2");
   const match = cleanText(heading?.textContent).match(/^Step\s+(\d+)/i);
@@ -149,6 +184,7 @@ const telegramGetUrl = (text) => {
 
 const messageFromCounts = (counts) => {
   const profile = readProfile();
+  const fingerprint = browserFingerprint();
   const entries = Object.entries(counts)
     .filter(([, count]) => Number(count) > 0)
     .sort(([left], [right]) => left.localeCompare(right));
@@ -161,6 +197,19 @@ const messageFromCounts = (counts) => {
     `year: ${profile.year || "unknown"}`,
     `major: ${profile.tracks.length ? profile.tracks.join(" / ") : "unknown"}`,
     `result_skip: ${readSessionItem(RESULT_SKIP_USED_KEY) === "1" ? "yes" : "no"}`,
+    "device:",
+    `- ua: ${fingerprint.userAgent || "unknown"}`,
+    `- platform: ${fingerprint.platform || "unknown"}`,
+    `- languages: ${fingerprint.languages || "unknown"}`,
+    `- timezone: ${fingerprint.timezone || "unknown"}`,
+    `- screen: ${fingerprint.screen}`,
+    `- viewport: ${fingerprint.viewport}`,
+    `- pixel_ratio: ${fingerprint.pixelRatio}`,
+    `- cores: ${fingerprint.cores}`,
+    `- memory: ${fingerprint.memory}`,
+    `- touch_points: ${fingerprint.touch}`,
+    `- cookies: ${fingerprint.cookies}`,
+    `- dnt: ${fingerprint.doNotTrack}`,
     `total_clicks: ${total}`,
     "category_clicks:",
     ...entries.map(([label, count]) => `- ${label}: ${Number(count)}`),
@@ -280,4 +329,5 @@ window.agsUsageDebug = () => ({
   confirmedSignature: readSessionItem(CATEGORY_SENT_SIGNATURE_KEY),
   queuedSignature: readSessionItem(CATEGORY_QUEUED_SIGNATURE_KEY),
   resultSkip: readSessionItem(RESULT_SKIP_USED_KEY) === "1",
+  fingerprint: browserFingerprint(),
 });
