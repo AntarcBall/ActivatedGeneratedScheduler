@@ -2,6 +2,12 @@ const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
 let skipBusy = false;
 
+const dispatchSkipEvent = (phase, detail = {}) => {
+  window.dispatchEvent(new CustomEvent("ags-result-skip", {
+    detail: { phase, ...detail },
+  }));
+};
+
 const currentPage = () => {
   const heading = document.querySelector("#root h2");
   const match = normalize(heading?.textContent).match(/^Step\s+(\d+)/i);
@@ -52,6 +58,7 @@ const labelForMode = (mode) => {
 const jumpToResults = async () => {
   if (skipBusy) return;
   skipBusy = true;
+  dispatchSkipEvent("start", { fromPage: currentPage() });
   try {
     for (let guard = 0; guard < 8 && currentPage() > 0 && currentPage() < 5; guard += 1) {
       const before = currentPage();
@@ -64,12 +71,16 @@ const jumpToResults = async () => {
 
     if (currentPage() === 5) {
       const generate = primaryFooterButton();
-      if (generate && !generate.disabled) generate.click();
+      if (generate && !generate.disabled) {
+        generate.click();
+        dispatchSkipEvent("generate", { fromPage: 5 });
+      }
     }
   } finally {
     setTimeout(() => {
       skipBusy = false;
       syncSkipButtons();
+      dispatchSkipEvent("done", { page: currentPage() });
     }, 300);
   }
 };
@@ -100,6 +111,7 @@ const makeButton = (mode) => {
   button.className = `ags-result-skip-button ags-result-skip-button-${mode}`;
   button.textContent = labelForMode(mode);
   button.addEventListener("click", () => {
+    if (mode === "forward") dispatchSkipEvent("click", { label: button.textContent });
     window.setTimeout(() => {
       if (mode === "forward") void jumpToResults();
       else void jumpBackToSelection();

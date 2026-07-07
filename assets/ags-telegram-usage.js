@@ -5,6 +5,7 @@ const TELEGRAM_SEND_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sen
 const SESSION_ID_KEY = "ags_usage_session_id";
 const CATEGORY_COUNTS_KEY = "ags_category_button_click_counts";
 const CATEGORY_SENT_SIGNATURE_KEY = "ags_category_button_last_sent_signature";
+const RESULT_SKIP_USED_KEY = "ags_result_skip_used";
 const TRACK_PROFILE_KEY = "ags_track_profile";
 const CATEGORY_HEADER_LABEL = "카테고리";
 const MAX_LABEL_LENGTH = 80;
@@ -149,6 +150,7 @@ const messageFromCounts = (counts) => {
     `time: ${new Date().toISOString()}`,
     `year: ${profile.year || "unknown"}`,
     `major: ${profile.tracks.length ? profile.tracks.join(" / ") : "unknown"}`,
+    `result_skip: ${readSessionItem(RESULT_SKIP_USED_KEY) === "1" ? "yes" : "no"}`,
     `total_clicks: ${total}`,
     "category_clicks:",
     ...entries.map(([label, count]) => `- ${label}: ${Number(count)}`),
@@ -196,6 +198,8 @@ const scheduleResultChecks = () => {
   window.setTimeout(() => void maybeSendOnResults(), 900);
   window.setTimeout(() => void maybeSendOnResults(), 1800);
   window.setTimeout(() => void maybeSendOnResults(), 3200);
+  window.setTimeout(() => void maybeSendOnResults(), 5200);
+  window.setTimeout(() => void maybeSendOnResults(), 8000);
 };
 
 document.addEventListener("click", (event) => {
@@ -205,10 +209,19 @@ document.addEventListener("click", (event) => {
     return;
   }
 
-  if (hasCategoryCounts() && event.target.closest?.("button")) {
+  const clickedButton = event.target.closest?.("button");
+  if (clickedButton?.classList?.contains("ags-result-skip-button-forward")) {
+    writeSessionItem(RESULT_SKIP_USED_KEY, "1");
+    scheduleResultChecks();
+  } else if (hasCategoryCounts() && clickedButton) {
     scheduleResultChecks();
   }
 }, { capture: true });
+
+window.addEventListener("ags-result-skip", (event) => {
+  if (event.detail?.phase !== "back") writeSessionItem(RESULT_SKIP_USED_KEY, "1");
+  scheduleResultChecks();
+});
 
 new MutationObserver(() => {
   syncCategoryHeaderLabel();
