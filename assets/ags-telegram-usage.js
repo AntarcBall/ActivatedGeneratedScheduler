@@ -18,7 +18,11 @@ const MAX_LABEL_LENGTH = 80;
 const MAX_EVENT_COUNT = 200;
 const MAX_TELEGRAM_MESSAGE_LENGTH = 3900;
 const RESULT_SEND_CHECK_MS = 1200;
-const PUBLIC_IP_URL = "https://api64.ipify.org?format=json";
+const PUBLIC_IP_URLS = [
+  "https://api64.ipify.org?format=json",
+  "https://api.ipify.org?format=json",
+];
+const PUBLIC_IP_JSONP_URL = "https://api.ipify.org?format=jsonp";
 const PUBLIC_IP_TIMEOUT_MS = 2500;
 
 const cleanText = (value) => String(value || "").replace(/\s+/g, " ").trim();
@@ -207,34 +211,83 @@ const browserFingerprint = () => {
 };
 
 let cachedPublicIp = "unknown";
-let publicIpReady = false;
 let publicIpPromise = null;
 
+const validPublicIp = (value) => {
+  const ip = cleanText(value);
+  return /^[0-9a-f:.]{3,45}$/i.test(ip) ? ip : "";
+};
+
+const fetchPublicIp = (url) => new Promise((resolve) => {
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), PUBLIC_IP_TIMEOUT_MS);
+  fetch(url, {
+    headers: { accept: "application/json" },
+    cache: "no-store",
+    signal: controller.signal,
+  })
+    .then((response) => response.ok ? response.json() : null)
+    .then((result) => resolve(validPublicIp(result?.ip)))
+    .catch(() => resolve(""))
+    .finally(() => window.clearTimeout(timeoutId));
+});
+
+const fetchFirstPublicIp = () => new Promise((resolve) => {
+  let pending = PUBLIC_IP_URLS.length;
+  let settled = false;
+  const finish = (ip) => {
+    if (settled) return;
+    if (ip) {
+      settled = true;
+      resolve(ip);
+      return;
+    }
+    pending -= 1;
+    if (pending === 0) {
+      settled = true;
+      resolve("");
+    }
+  };
+  PUBLIC_IP_URLS.forEach((url) => void fetchPublicIp(url).then(finish));
+});
+
+const fetchPublicIpJsonp = () => new Promise((resolve) => {
+  const callbackName = `agsIpCallback_${randomId()}`;
+  const script = document.createElement("script");
+  let settled = false;
+  const finish = (value = "") => {
+    if (settled) return;
+    settled = true;
+    window.clearTimeout(timeoutId);
+    script.remove();
+    try {
+      delete window[callbackName];
+    } catch {
+      window[callbackName] = undefined;
+    }
+    resolve(validPublicIp(value));
+  };
+  const timeoutId = window.setTimeout(() => finish(), PUBLIC_IP_TIMEOUT_MS);
+  window[callbackName] = (result) => finish(result?.ip);
+  script.async = true;
+  script.onerror = () => finish();
+  script.src = `${PUBLIC_IP_JSONP_URL}&callback=${encodeURIComponent(callbackName)}&_=${Date.now()}`;
+  document.head.appendChild(script);
+});
+
 const resolvePublicIp = () => {
-  if (publicIpReady) return Promise.resolve(cachedPublicIp);
+  if (cachedPublicIp !== "unknown") return Promise.resolve(cachedPublicIp);
   if (publicIpPromise) return publicIpPromise;
 
   publicIpPromise = (async () => {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), PUBLIC_IP_TIMEOUT_MS);
-    try {
-      const response = await fetch(PUBLIC_IP_URL, {
-        headers: { accept: "application/json" },
-        cache: "no-store",
-        signal: controller.signal,
-      });
-      if (!response.ok) return cachedPublicIp;
-      const result = await response.json();
-      const ip = cleanText(result?.ip);
-      if (/^[0-9a-f:.]{3,45}$/i.test(ip)) cachedPublicIp = ip;
-    } catch {
-      // IP lookup can be blocked by content blockers or restricted in-app browsers.
-    } finally {
-      window.clearTimeout(timeoutId);
-      publicIpReady = true;
-    }
+    const fetchedIp = await fetchFirstPublicIp();
+    const ip = fetchedIp || await fetchPublicIpJsonp();
+    if (ip) cachedPublicIp = ip;
     return cachedPublicIp;
-  })();
+  })().finally(() => {
+    // Keep successful values, but allow a later retry after an in-app browser blocks the initial lookup.
+    publicIpPromise = null;
+  });
 
   return publicIpPromise;
 };
