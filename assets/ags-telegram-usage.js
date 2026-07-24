@@ -18,6 +18,8 @@ const MAX_LABEL_LENGTH = 80;
 const MAX_EVENT_COUNT = 200;
 const MAX_TELEGRAM_MESSAGE_LENGTH = 3900;
 const RESULT_SEND_CHECK_MS = 1200;
+const PUBLIC_IP_URL = "https://api64.ipify.org?format=json";
+const PUBLIC_IP_TIMEOUT_MS = 2500;
 
 const cleanText = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
@@ -202,6 +204,39 @@ const browserFingerprint = () => {
     saveData: connection?.saveData ? "yes" : "no",
     ...classification,
   };
+};
+
+let cachedPublicIp = "unknown";
+let publicIpReady = false;
+let publicIpPromise = null;
+
+const resolvePublicIp = () => {
+  if (publicIpReady) return Promise.resolve(cachedPublicIp);
+  if (publicIpPromise) return publicIpPromise;
+
+  publicIpPromise = (async () => {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), PUBLIC_IP_TIMEOUT_MS);
+    try {
+      const response = await fetch(PUBLIC_IP_URL, {
+        headers: { accept: "application/json" },
+        cache: "no-store",
+        signal: controller.signal,
+      });
+      if (!response.ok) return cachedPublicIp;
+      const result = await response.json();
+      const ip = cleanText(result?.ip);
+      if (/^[0-9a-f:.]{3,45}$/i.test(ip)) cachedPublicIp = ip;
+    } catch {
+      // IP lookup can be blocked by content blockers or restricted in-app browsers.
+    } finally {
+      window.clearTimeout(timeoutId);
+      publicIpReady = true;
+    }
+    return cachedPublicIp;
+  })();
+
+  return publicIpPromise;
 };
 
 const currentStep = () => {
@@ -443,7 +478,7 @@ const eventLine = (event) => {
   return `- #${event.seq} +${event.at_ms}ms ${event.type}${details ? ` ${details}` : ""}`;
 };
 
-const messageHeaderLines = (reason) => {
+const messageHeaderLines = (reason, publicIp = cachedPublicIp) => {
   const counts = readCategoryCounts();
   const profile = readProfile();
   const fingerprint = browserFingerprint();
@@ -464,6 +499,7 @@ const messageHeaderLines = (reason) => {
     `major: ${profile.tracks.length ? profile.tracks.join(" / ") : "unknown"}`,
     `result_skip: ${readSessionItem(RESULT_SKIP_USED_KEY) === "1" ? "yes" : "no"}`,
     `result_errors: ${readErrorCount()}`,
+    `public_ip: ${publicIp}`,
     "device:",
     `- type: ${fingerprint.deviceType}`,
     `- os: ${fingerprint.os}`,
@@ -493,9 +529,9 @@ const messageHeaderLines = (reason) => {
   ];
 };
 
-const messagesForTelemetry = (reason) => {
+const messagesForTelemetry = (reason, publicIp = cachedPublicIp) => {
   const events = readEvents();
-  const header = messageHeaderLines(reason);
+  const header = messageHeaderLines(reason, publicIp);
   const messages = [];
   let lines = [...header, "events:"];
 
@@ -555,8 +591,9 @@ const postTelegram = async (text, preferBeacon = false) => {
 };
 
 const postTelemetry = async (reason, preferBeacon = false) => {
+  const publicIp = preferBeacon ? cachedPublicIp : await resolvePublicIp();
   let result = "confirmed";
-  for (const message of messagesForTelemetry(reason)) {
+  for (const message of messagesForTelemetry(reason, publicIp)) {
     const messageResult = await postTelegram(message, preferBeacon);
     if (messageResult !== "confirmed") result = messageResult;
   }
@@ -697,6 +734,7 @@ window.addEventListener("load", () => {
 
 sessionId();
 sessionStartedAt();
+void resolvePublicIp();
 observePerformance();
 checkPageTransition();
 
@@ -715,6 +753,7 @@ window.agsUsageDebug = () => ({
   confirmedSignature: readSessionItem(CATEGORY_SENT_SIGNATURE_KEY),
   queuedSignature: readSessionItem(CATEGORY_QUEUED_SIGNATURE_KEY),
   resultSkip: readSessionItem(RESULT_SKIP_USED_KEY) === "1",
+  publicIp: cachedPublicIp,
   fingerprint: browserFingerprint(),
-  messages: messagesForTelemetry("debug"),
+  messages: messagesForTelemetry("debug", cachedPublicIp),
 });
