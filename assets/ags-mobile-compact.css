@@ -1,10 +1,48 @@
+.ags-footer-extras {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.ags-result-skip-button {
+  position: static;
+  right: auto;
+  bottom: auto;
+  z-index: auto;
+  flex: 0 0 auto;
+  box-shadow: none;
+}
+
+.ags-privacy-policy-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #94a3b8;
+  padding: 0.2rem 0.1rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 0.14rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ags-privacy-policy-button:hover,
+.ags-privacy-policy-button:focus-visible {
+  color: #475569;
+}
+
 @media (max-width: 640px) {
   .ags-app-footer {
-    min-height: 3.65rem !important;
-    height: 3.65rem !important;
+    position: relative !important;
+    min-height: 4.15rem !important;
+    height: 4.15rem !important;
     align-items: center !important;
     gap: 0.35rem !important;
-    padding: 0.35rem 0.5rem calc(0.35rem + env(safe-area-inset-bottom)) !important;
+    padding: 0.25rem 0.5rem calc(0.85rem + env(safe-area-inset-bottom)) !important;
     overflow: visible !important;
   }
 
@@ -40,19 +78,44 @@
   }
 
   .ags-bottom-selection-summary {
+    display: none !important;
+  }
+
+  .ags-sort-priority-control {
     flex: 1 1 auto !important;
     min-width: 0 !important;
-    padding: 0 0.15rem !important;
-    text-align: left !important;
-    font-size: 0.78rem !important;
-    line-height: 1.25 !important;
+    max-width: none !important;
+    overflow-x: auto !important;
+    scrollbar-width: none;
+  }
+
+  .ags-sort-priority-control::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ags-sort-label {
+    display: none !important;
   }
 
   .ags-result-skip-button {
-    right: 4.55rem !important;
-    bottom: calc(0.58rem + env(safe-area-inset-bottom)) !important;
-    z-index: 10000 !important;
-    box-shadow: 0 10px 20px -16px rgb(30 64 175 / 0.7) !important;
+    position: static !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: auto !important;
+    box-shadow: none !important;
+  }
+
+  .ags-footer-extras {
+    gap: 0.25rem;
+  }
+
+  .ags-privacy-policy-button {
+    position: absolute;
+    left: 50%;
+    bottom: calc(0.12rem + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    padding: 0.08rem 0.2rem;
+    font-size: 0.54rem;
   }
 
   .ags-track-profile-trigger {

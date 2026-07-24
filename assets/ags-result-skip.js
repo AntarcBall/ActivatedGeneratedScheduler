@@ -1,4 +1,5 @@
 const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const PRIVACY_NOTICE = "서비스의 안정적인 운영, 오류 분석, 보안 및 이용 통계 산출을 위해  브라우저 정보, 서비스 이용 방식  등이 자동으로 수집·이용될 수 있습니다.";
 
 let skipBusy = false;
 
@@ -25,7 +26,10 @@ const appFooter = () => {
 
 const footerButtons = () => {
   const footer = appFooter();
-  return footer ? Array.from(footer.querySelectorAll("button")).filter((button) => !button.classList.contains("ags-result-skip-button")) : [];
+  return footer ? Array.from(footer.querySelectorAll("button")).filter((button) => (
+    !button.classList.contains("ags-result-skip-button")
+    && !button.classList.contains("ags-privacy-policy-button")
+  )) : [];
 };
 
 const primaryFooterButton = () => {
@@ -120,13 +124,45 @@ const makeButton = (mode) => {
   return button;
 };
 
+const makePrivacyButton = () => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "ags-privacy-policy-button";
+  button.textContent = "개인정보처리방침";
+  button.setAttribute("aria-label", "개인정보처리방침 안내 보기");
+  button.addEventListener("click", () => window.alert(PRIVACY_NOTICE));
+  return button;
+};
+
+const ensureFooterExtras = (footer) => {
+  let extras = footer.querySelector(":scope > .ags-footer-extras");
+  if (!extras) {
+    extras = document.createElement("div");
+    extras.className = "ags-footer-extras";
+  }
+
+  let privacyButton = extras.querySelector(".ags-privacy-policy-button");
+  if (!privacyButton) {
+    privacyButton = makePrivacyButton();
+    extras.appendChild(privacyButton);
+  }
+
+  const primary = primaryFooterButton();
+  if (extras.parentElement !== footer || extras.nextElementSibling !== primary) {
+    footer.insertBefore(extras, primary || null);
+  }
+  return extras;
+};
+
 const syncSkipButtons = () => {
   const footer = appFooter();
   const existing = document.querySelector(".ags-result-skip-button");
   if (!footer) {
     existing?.remove();
+    document.querySelector(".ags-footer-extras")?.remove();
     return;
   }
+  const extras = ensureFooterExtras(footer);
 
   const page = currentPage();
   const mode = page === 6 ? "back" : page > 0 && page < 6 ? "forward" : null;
@@ -141,13 +177,14 @@ const syncSkipButtons = () => {
     const nextLabel = labelForMode(mode);
     if (existing.textContent !== nextLabel) existing.textContent = nextLabel;
     existing.disabled = skipBusy;
+    if (existing.parentElement !== extras) extras.appendChild(existing);
     return;
   }
 
   existing?.remove();
   const button = makeButton(mode);
   button.disabled = skipBusy;
-  document.body.appendChild(button);
+  extras.appendChild(button);
 };
 
 new MutationObserver(() => syncSkipButtons()).observe(document.body, {
