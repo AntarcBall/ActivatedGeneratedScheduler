@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "label": "동의 기반 AGS 이용 로그",
+    "periodStart": "2026-07-07T11:34:45.542000+09:00",
+    "periodEnd": "2026-07-26T13:08:43.230000+09:00",
+    "timezone": "Asia/Seoul",
+    "legacySessions": 75,
+    "detailedSessions": 71,
+    "notes": [
+      "같은 세션의 반복 Telegram 스냅샷과 이어진 이벤트 메시지를 합쳐 중복을 제거했습니다.",
+      "사람 수가 아닌 브라우저 세션을 기본 단위로 사용합니다.",
+      "IP, User-Agent, 세션 ID 등 원본 식별 정보는 결과 파일에 포함하지 않습니다."
+    ]
+  },
+  "overview": {
+    "sessions": 146,
+    "detailedSessions": 71,
+    "estimatedEnvironments": 55,
+    "funnelSessions": 59,
+    "completedSessions": 38,
+    "completionRate": 64.4,
+    "mobileSessions": 40,
+    "mobileShare": 56.3,
+    "skipSessions": 25,
+    "skipShare": 35.2,
+    "errorSessions": 0,
+    "generationMedianMs": 32,
+    "generationP75Ms": 244
+  },
+  "timeline": [
+    {
+      "date": "2026-07-07",
+      "sessions": 4,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-08",
+      "sessions": 4,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-09",
+      "sessions": 3,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-10",
+      "sessions": 2,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-11",
+      "sessions": 0,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-12",
+      "sessions": 0,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-13",
+      "sessions": 3,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-14",
+      "sessions": 0,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-15",
+      "sessions": 2,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-16",
+      "sessions": 2,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-17",
+      "sessions": 2,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-18",
+      "sessions": 2,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-19",
+      "sessions": 0,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-20",
+      "sessions": 5,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-21",
+      "sessions": 5,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-22",
+      "sessions": 18,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-23",
+      "sessions": 16,
+      "detailedSessions": 0
+    },
+    {
+      "date": "2026-07-24",
+      "sessions": 38,
+      "detailedSessions": 32
+    },
+    {
+      "date": "2026-07-25",
+      "sessions": 21,
+      "detailedSessions": 20
+    },
+    {
+      "date": "2026-07-26",
+      "sessions": 19,
+      "detailedSessions": 19
+    }
+  ],
+  "funnel": [
+    {
+      "label": "시작·선택 화면 도달",
+      "count": 59,
+      "shareOfStart": 100.0
+    },
+    {
+      "label": "강의 선택 화면 이용",
+      "count": 57,
+      "shareOfStart": 96.6
+    },
+    {
+      "label": "생성 경로 진입",
+      "count": 41,
+      "shareOfStart": 69.5
+    },
+    {
+      "label": "시간표 생성 완료",
+      "count": 38,
+      "shareOfStart": 64.4
+    }
+  ],
+  "devices": {
+    "types": [
+      {
+        "label": "mobile",
+        "count": 40,
+        "share": 56.3
+      },
+      {
+        "label": "desktop",
+        "count": 31,
+        "share": 43.7
+      }
+    ],
+    "operatingSystems": [
+      {
+        "label": "Windows",
+        "count": 29,
+        "share": 40.8
+      },
+      {
+        "label": "iOS",
+        "count": 21,
+        "share": 29.6
+      },
+      {
+        "label": "Android",
+        "count": 16,
+        "share": 22.5
+      },
+      {
+        "label": "macOS",
+        "count": 5,
+        "share": 7.0
+      }
+    ],
+    "browsers": [
+      {
+        "label": "Chrome",
+        "count": 33,
+        "share": 46.5
+      },
+      {
+        "label": "Other",
+        "count": 12,
+        "share": 16.9
+      },
+      {
+        "label": "Safari",
+        "count": 9,
+        "share": 12.7
+      },
+      {
+        "label": "Edge",
+        "count": 7,
+        "share": 9.9
+      },
+      {
+        "label": "KakaoTalk",
+        "count": 7,
+        "share": 9.9
+      },
+      {
+        "label": "Firefox",
+        "count": 2,
+        "share": 2.8
+      },
+      {
+        "label": "Samsung Internet",
+        "count": 1,
+        "share": 1.4
+      }
+    ],
+    "contexts": [
+      {
+        "label": "general_browser",
+        "count": 64,
+        "share": 90.1
+      },
+      {
+        "label": "kakao_in_app",
+        "count": 7,
+        "share": 9.9
+      }
+    ]
+  },
+  "audience": {
+    "years": [
+      {
+        "label": "1",
+        "count": 89,
+        "share": 61.0
+      },
+      {
+        "label": "2",
+        "count": 43,
+        "share": 29.5
+      },
+      {
+        "label": "3",
+        "count": 7,
+        "share": 4.8
+      },
+      {
+        "label": "4",
+        "count": 4,
+        "share": 2.7
+      },
+      {
+        "label": "unknown",
+        "count": 3,
+        "share": 2.1
+      }
+    ],
+    "tracks": [
+      {
+        "label": "전자공학",
+        "count": 69,
+        "share": 47.3
+      },
+      {
+        "label": "뇌과학",
+        "count": 26,
+        "share": 17.8
+      },
+      {
+        "label": "화학공학",
+        "count": 26,
+        "share": 17.8
+      },
+      {
+        "label": "기계공학",
+        "count": 24,
+        "share": 16.4
+      },
+      {
+        "label": "컴퓨터공학",
+        "count": 21,
+        "share": 14.4
+      },
+      {
+        "label": "생명과학",
+        "count": 19,
+        "share": 13.0
+      },
+      {
+        "label": "재료공학",
+        "count": 19,
+        "share": 13.0
+      },
+      {
+        "label": "화학",
+        "count": 13,
+        "share": 8.9
+      },
+      {
+        "label": "물리학",
+        "count": 11,
+        "share": 7.5
+      },
+      {
+        "label": "반도체공학",
+        "count": 8,
+        "share": 5.5
+      }
+    ],
+    "trackCombinations": [
+      {
+        "label": "전자공학",
+        "count": 22,
+        "share": 15.1
+      },
+      {
+        "label": "뇌과학 / 전자공학",
+        "count": 11,
+        "share": 7.5
+      },
+      {
+        "label": "기계공학",
+        "count": 9,
+        "share": 6.2
+      },
+      {
+        "label": "뇌과학 / 컴퓨터공학",
+        "count": 9,
+        "share": 6.2
+      },
+      {
+        "label": "물리학 / 전자공학",
+        "count": 9,
+        "share": 6.2
+      },
+      {
+        "label": "재료공학 / 전자공학",
+        "count": 9,
+        "share": 6.2
+      },
+      {
+        "label": "기계공학 / 전자공학",
+        "count": 8,
+        "share": 5.5
+      },
+      {
+        "label": "반도체공학",
+        "count": 8,
+        "share": 5.5
+      }
+    ]
+  },
+  "categories": [
+    {
+      "label": "기초필수",
+      "sessions": 49,
+      "share": 33.6,
+      "clicks": 151
+    },
+    {
+      "label": "비트랙/융합",
+      "sessions": 28,
+      "share": 19.2,
+      "clicks": 71
+    },
+    {
+      "label": "쓰기·읽기 중점",
+      "sessions": 27,
+      "share": 18.5,
+      "clicks": 67
+    },
+    {
+      "label": "생명과학",
+      "sessions": 22,
+      "share": 15.1,
+      "clicks": 50
+    },
+    {
+      "label": "화학",
+      "sessions": 19,
+      "share": 13.0,
+      "clicks": 44
+    },
+    {
+      "label": "수학",
+      "sessions": 16,
+      "share": 11.0,
+      "clicks": 28
+    },
+    {
+      "label": "물리",
+      "sessions": 15,
+      "share": 10.3,
+      "clicks": 34
+    },
+    {
+      "label": "화학공학",
+      "sessions": 10,
+      "share": 6.8,
+      "clicks": 13
+    },
+    {
+      "label": "전자공학",
+      "sessions": 9,
+      "share": 6.2,
+      "clicks": 28
+    },
+    {
+      "label": "트랙 전체",
+      "sessions": 9,
+      "share": 6.2,
+      "clicks": 23
+    },
+    {
+      "label": "기계공학",
+      "sessions": 8,
+      "share": 5.5,
+      "clicks": 21
+    },
+    {
+      "label": "컴퓨터공학",
+      "sessions": 8,
+      "share": 5.5,
+      "clicks": 20
+    }
+  ],
+  "stageDurations": [
+    {
+      "id": "landing",
+      "label": "시작",
+      "medianSeconds": 4.8,
+      "p75Seconds": 8.8,
+      "sessions": 34
+    },
+    {
+      "id": "step_1",
+      "label": "강의 선택",
+      "medianSeconds": 31.6,
+      "p75Seconds": 93.6,
+      "sessions": 57
+    },
+    {
+      "id": "step_2",
+      "label": "공강 설정",
+      "medianSeconds": 0.6,
+      "p75Seconds": 2.8,
+      "sessions": 41
+    },
+    {
+      "id": "step_3",
+      "label": "연강 설정",
+      "medianSeconds": 0.4,
+      "p75Seconds": 1.3,
+      "sessions": 41
+    },
+    {
+      "id": "step_4",
+      "label": "점심 설정",
+      "medianSeconds": 0.3,
+      "p75Seconds": 0.6,
+      "sessions": 41
+    },
+    {
+      "id": "step_5",
+      "label": "생성 설정",
+      "medianSeconds": 0.6,
+      "p75Seconds": 1.2,
+      "sessions": 42
+    },
+    {
+      "id": "step_6",
+      "label": "결과",
+      "medianSeconds": 14.9,
+      "p75Seconds": 51.4,
+      "sessions": 30
+    }
+  ],
+  "performance": [
+    {
+      "id": "landing",
+      "label": "시작 화면",
+      "lcp": {
+        "median": 1113,
+        "p75": 1132,
+        "samples": 9
+      },
+      "inp": {
+        "median": 192,
+        "p75": 216,
+        "samples": 9
+      },
+      "cls": {
+        "median": 0.011,
+        "p75": 0.016,
+        "samples": 9
+      }
+    },
+    {
+      "id": "step_1",
+      "label": "강의 선택",
+      "lcp": {
+        "median": 832,
+        "p75": 1062,
+        "samples": 19
+      },
+      "inp": {
+        "median": 128,
+        "p75": 300,
+        "samples": 19
+      },
+      "cls": {
+        "median": 0.053,
+        "p75": 0.148,
+        "samples": 19
+      }
+    }
+  ],
+  "findings": [
+    {
+      "eyebrow": "전환",
+      "title": "강의 선택 화면이 핵심 이탈 구간입니다",
+      "evidence": "선택 흐름에 들어온 59개 세션 중 38개가 시간표 생성까지 완료했습니다.",
+      "action": "강의 선택 직후의 다음 행동과 바로 생성 기능을 더 명확하게 안내합니다."
+    },
+    {
+      "eyebrow": "모바일",
+      "title": "모바일을 기본 화면으로 설계해야 합니다",
+      "evidence": "상세 로그 71개 중 모바일은 40개(56.3%)입니다.",
+      "action": "하단 핵심 버튼의 짧은 문구, 터치 영역, 인앱 브라우저 호환성을 우선합니다."
+    },
+    {
+      "eyebrow": "빠른 경로",
+      "title": "상당수 사용자가 중간 설정을 건너뜁니다",
+      "evidence": "25개 세션(35.2%)이 바로 결과 보기 동작을 사용했습니다.",
+      "action": "‘결과’보다 목적이 선명한 ‘시간표 만들기’ 문구를 사용합니다."
+    },
+    {
+      "eyebrow": "안정성",
+      "title": "생성 자체는 빠르고 안정적입니다",
+      "evidence": "완료 이벤트 기준 생성 중앙값은 32ms이며 수집된 클라이언트 오류 세션은 0개입니다.",
+      "action": "생성 엔진보다 선택 경험과 첫 사용 안내에 개선 역량을 집중합니다."
+    }
+  ]
+}

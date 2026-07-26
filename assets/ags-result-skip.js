@@ -55,8 +55,8 @@ const waitForPageChange = async (fromPage, timeout = 1600) => {
 const isCompactMobile = () => window.matchMedia?.("(max-width: 640px)")?.matches;
 
 const labelForMode = (mode) => {
-  if (isCompactMobile()) return mode === "forward" ? "결과" : "선택";
-  return mode === "forward" ? "결과 바로보기" : "강의 선택으로";
+  if (isCompactMobile()) return mode === "forward" ? "시간표" : "강의 선택";
+  return mode === "forward" ? "바로 시간표 만들기" : "강의 선택으로";
 };
 
 const jumpToResults = async () => {

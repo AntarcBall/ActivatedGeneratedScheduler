@@ -73,14 +73,19 @@ const cleanHome = () => {
   hideRouteLinks();
 
   Array.from(hero.children).forEach((child) => {
-    if (child === title || child === startButton || child.contains(startButton)) return;
+    if (
+      child === title
+      || child === startButton
+      || child.contains(startButton)
+      || child.classList.contains("ags-home-support")
+    ) return;
     addHidden(child);
   });
 
   const routeLinkWrap = startButton.parentElement;
   if (routeLinkWrap) {
     Array.from(routeLinkWrap.children).forEach((child) => {
-      if (child !== startButton) addHidden(child);
+      if (child !== startButton && !child.classList.contains("ags-home-support")) addHidden(child);
     });
   }
 

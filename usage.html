@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="시간표 생성기 이용 흐름을 중복 제거한 집계 데이터로 살펴보는 사용 현황 대시보드"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>사용 현황 · 시간표 생성기</title>
+    <link rel="stylesheet" href="assets/ags-usage-dashboard.css?v=20260726-2" />
+    <script type="module" src="assets/ags-usage-dashboard.js?v=20260726-2"></script>
+  </head>
+  <body>
+    <div class="usage-noise" aria-hidden="true"></div>
+
+    <header class="usage-nav">
+      <a class="usage-brand" href="./">
+        <img src="favicon.png" alt="" />
+        <span>AGS</span>
+        <span class="usage-brand-divider"></span>
+        <strong>사용 현황</strong>
+      </a>
+      <a class="usage-back" href="./">
+        <span aria-hidden="true">←</span>
+        시간표 만들기
+      </a>
+    </header>
+
+    <main>
+      <section class="usage-hero">
+        <div class="usage-hero-copy">
+          <p class="usage-kicker">
+            <span class="usage-live-dot"></span>
+            실제 이용 흐름을 읽는 대시보드
+          </p>
+          <h1>사람들은 어떻게<br /><em>시간표를 만들었을까?</em></h1>
+          <p class="usage-hero-description">
+            반복 전송된 로그는 한 번만 세고, 이어진 행동은 하나의 여정으로
+            연결했습니다. 숫자를 나열하는 대신 다음 개선을 결정할 수 있는
+            신호만 골랐습니다.
+          </p>
+          <div class="usage-period" id="usage-period">데이터를 불러오는 중입니다</div>
+        </div>
+
+        <div class="usage-hero-visual" aria-hidden="true">
+          <div class="usage-orbit usage-orbit-one"></div>
+          <div class="usage-orbit usage-orbit-two"></div>
+          <div class="usage-hero-number">
+            <span id="hero-session-count">—</span>
+            <small>중복 제거 세션</small>
+          </div>
+          <span class="usage-floating-tag usage-tag-mobile">MOBILE FIRST</span>
+          <span class="usage-floating-tag usage-tag-fast">32 ms</span>
+          <span class="usage-floating-tag usage-tag-choice">STEP 1</span>
+        </div>
+      </section>
+
+      <section class="usage-kpis" aria-label="핵심 지표">
+        <article class="usage-kpi usage-kpi-primary">
+          <span class="usage-kpi-index">01</span>
+          <p>전체 이용 세션</p>
+          <strong id="kpi-sessions">—</strong>
+          <small>초기 로그와 상세 로그를 합산</small>
+        </article>
+        <article class="usage-kpi">
+          <span class="usage-kpi-index">02</span>
+          <p>시간표 생성 완료율</p>
+          <strong id="kpi-completion">—</strong>
+          <small id="kpi-completion-detail">선택 흐름 기준</small>
+        </article>
+        <article class="usage-kpi">
+          <span class="usage-kpi-index">03</span>
+          <p>모바일 이용 비중</p>
+          <strong id="kpi-mobile">—</strong>
+          <small id="kpi-mobile-detail">상세 로그 기준</small>
+        </article>
+        <article class="usage-kpi">
+          <span class="usage-kpi-index">04</span>
+          <p>생성 시간 중앙값</p>
+          <strong id="kpi-speed">—</strong>
+          <small>시간표 계산 완료 이벤트 기준</small>
+        </article>
+      </section>
+
+      <section class="usage-section usage-story-section">
+        <div class="usage-section-heading">
+          <div>
+            <p class="usage-section-number">01 / MOMENTUM</p>
+            <h2>이용은 개강 준비와 함께<br />빠르게 늘었습니다</h2>
+          </div>
+          <p>
+            각 막대는 해당 날짜에 처음 관측된 세션입니다. 상세 행동 로그가
+            도입된 시점은 진한 색으로 겹쳐 표시합니다.
+          </p>
+        </div>
+        <article class="usage-panel usage-timeline-panel">
+          <div class="usage-panel-topline">
+            <div>
+              <span class="usage-panel-label">DAILY SESSIONS</span>
+              <strong id="timeline-peak">—</strong>
+            </div>
+            <div class="usage-chart-legend">
+              <span><i class="usage-legend-all"></i>전체 세션</span>
+              <span><i class="usage-legend-detail"></i>상세 행동 로그</span>
+            </div>
+          </div>
+          <div class="usage-timeline-wrap" id="timeline-wrap">
+            <svg
+              id="timeline-chart"
+              class="usage-timeline"
+              viewBox="0 0 960 300"
+              role="img"
+              aria-label="날짜별 이용 세션 추이"
+            ></svg>
+            <div class="usage-chart-tooltip" id="timeline-tooltip" hidden></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="usage-section">
+        <div class="usage-section-heading">
+          <div>
+            <p class="usage-section-number">02 / JOURNEY</p>
+            <h2>강의 선택이<br />가장 중요한 순간입니다</h2>
+          </div>
+          <p>
+            상세 로그의 페이지 진입과 생성 완료 이벤트를 세션별로 합쳤습니다.
+            중간 설정을 건너뛴 경우도 정상적인 생성 여정으로 포함합니다.
+          </p>
+        </div>
+
+        <div class="usage-two-column usage-journey-grid">
+          <article class="usage-panel usage-funnel-panel">
+            <div class="usage-panel-heading">
+              <span class="usage-panel-label">SESSION FUNNEL</span>
+              <strong>선택에서 결과까지</strong>
+            </div>
+            <div class="usage-funnel" id="funnel-chart"></div>
+          </article>
+
+          <article class="usage-panel usage-dwell-panel">
+            <div class="usage-panel-heading">
+              <span class="usage-panel-label">MEDIAN ACTIVE TIME</span>
+              <strong>화면별 머문 시간</strong>
+            </div>
+            <div class="usage-dwell-chart" id="dwell-chart"></div>
+            <p class="usage-panel-note">
+              중간 단계의 짧은 시간은 오류가 아니라 ‘바로 시간표 만들기’가
+              자동으로 통과한 행동을 반영합니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="usage-section">
+        <div class="usage-section-heading">
+          <div>
+            <p class="usage-section-number">03 / PEOPLE</p>
+            <h2>모바일과 1학년이<br />경험의 중심입니다</h2>
+          </div>
+          <p>
+            기기 정보는 상세 로그에서, 학년과 트랙은 전체 세션의 마지막
+            프로필에서 집계했습니다.
+          </p>
+        </div>
+
+        <div class="usage-audience-grid">
+          <article class="usage-panel usage-device-panel">
+            <div class="usage-panel-heading">
+              <span class="usage-panel-label">DEVICE MIX</span>
+              <strong>손안에서 만드는 시간표</strong>
+            </div>
+            <div class="usage-device-content">
+              <div class="usage-donut" id="device-donut">
+                <div>
+                  <strong id="device-donut-value">—</strong>
+                  <span>모바일</span>
+                </div>
+              </div>
+              <div class="usage-device-bars" id="device-bars"></div>
+            </div>
+          </article>
+
+          <article class="usage-panel usage-year-panel">
+            <div class="usage-panel-heading">
+              <span class="usage-panel-label">YEAR</span>
+              <strong>학년별 이용 세션</strong>
+            </div>
+            <div class="usage-year-stack" id="year-stack"></div>
+            <div class="usage-year-list" id="year-list"></div>
+          </article>
+
+          <article class="usage-panel usage-track-panel">
+            <div class="usage-panel-heading">
+              <span class="usage-panel-label">TRACK INTEREST</span>
+              <strong>프로필에 담긴 관심 트랙</strong>
+            </div>
+            <div class="usage-track-list" id="track-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="usage-section">
+        <div class="usage-section-heading">
+          <div>
+            <p class="usage-section-number">04 / INTENT</p>
+            <h2>어떤 강의군을<br />가장 많이 살펴봤을까?</h2>
+          </div>
+          <p>
+            단순 클릭 수 대신 해당 분류를 한 번이라도 연 세션 수로 순위를
+            정했습니다. 한 명의 반복 탐색이 전체 순위를 왜곡하지 않습니다.
+          </p>
+        </div>
+
+        <article class="usage-panel usage-category-panel">
+          <div class="usage-category-chart" id="category-chart"></div>
+        </article>
+      </section>
+
+      <section class="usage-section">
+        <div class="usage-section-heading">
+          <div>
+            <p class="usage-section-number">05 / NEXT</p>
+            <h2>데이터가 제안한<br />다음 네 가지 개선</h2>
+          </div>
+          <p>
+            상관관계를 인과로 단정하지 않고, 현재 로그로 직접 확인 가능한
+            행동과 성능 신호만 사용했습니다.
+          </p>
+        </div>
+        <div class="usage-findings" id="findings"></div>
+      </section>
+
+      <section class="usage-method">
+        <div>
+          <p class="usage-section-number">METHODOLOGY</p>
+          <h2>숫자를 세는 방식</h2>
+        </div>
+        <ol id="method-notes"></ol>
+        <div class="usage-method-stamp">
+          <span>DATA THROUGH</span>
+          <strong id="data-through">—</strong>
+          <small>Asia/Seoul</small>
+        </div>
+      </section>
+    </main>
+
+    <footer class="usage-footer">
+      <p>Activated Generated Scheduler · Usage signals, carefully curated.</p>
+      <a href="./">시간표 생성기로 돌아가기 →</a>
+    </footer>
+
+    <div class="usage-error" id="usage-error" hidden>
+      사용 현황 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.
+    </div>
+  </body>
+</html>
