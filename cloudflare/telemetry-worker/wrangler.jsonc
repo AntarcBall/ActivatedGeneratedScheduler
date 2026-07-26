@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ags-telemetry",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-25",
+  "account_id": "c0101f20bdb37f213ee8dac9b65d3e77",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": false
+  },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://antarcball.github.io,http://localhost:8000,http://127.0.0.1:8000"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ags-telemetry-prod",
+      "database_id": "5bf63792-c57e-470b-86cb-2833779229e9",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

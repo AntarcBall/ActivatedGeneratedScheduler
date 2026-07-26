@@ -1,8 +1,10 @@
-const TELEGRAM_BOT_TOKEN = "8803852488:AAGFFiDTacqqmMFHH-ahpNmYNvqomuFfHIo";
-const TELEGRAM_CHAT_ID = "5635199149";
-const TELEGRAM_SEND_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+const TELEMETRY_API_URL = "https://ags-telemetry.bouncy272.workers.dev";
+const TURNSTILE_SITEKEY = "0x4AAAAAAD-GenM3VpG8dMXE";
+const TURNSTILE_SCRIPT_URL = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
 
 const SESSION_ID_KEY = "ags_usage_session_id";
+const WORKER_SESSION_TOKEN_KEY = "ags_worker_session_token_v1";
+const WORKER_SESSION_ISSUED_AT_KEY = "ags_worker_session_issued_at_v1";
 const SESSION_STARTED_AT_KEY = "ags_usage_session_started_at_v3";
 const CATEGORY_COUNTS_KEY = "ags_category_button_click_counts";
 const EVENT_LOG_KEY = "ags_usage_event_log_v3";
@@ -16,14 +18,9 @@ const TRACK_PROFILE_KEY = "ags_track_profile";
 const CATEGORY_HEADER_LABEL = "카테고리";
 const MAX_LABEL_LENGTH = 80;
 const MAX_EVENT_COUNT = 200;
-const MAX_TELEGRAM_MESSAGE_LENGTH = 3900;
+const MAX_TELEMETRY_BODY_BYTES = 60 * 1024;
+const MAX_DEBUG_MESSAGE_LENGTH = 3900;
 const RESULT_SEND_CHECK_MS = 1200;
-const PUBLIC_IP_URLS = [
-  "https://api64.ipify.org?format=json",
-  "https://api.ipify.org?format=json",
-];
-const PUBLIC_IP_JSONP_URL = "https://api.ipify.org?format=jsonp";
-const PUBLIC_IP_TIMEOUT_MS = 2500;
 
 const cleanText = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
@@ -144,9 +141,12 @@ const screenSize = () => {
   return `${width}x${height}${colorDepth ? `x${colorDepth}` : ""}`;
 };
 
-const deviceClassification = (userAgent) => {
+const deviceClassification = (userAgent, platform = "") => {
   const ua = userAgent || "";
-  const os = /Android/i.test(ua)
+  const appleMobilePlatform = /iPhone|iPad|iPod/i.test(platform);
+  const os = appleMobilePlatform
+    ? "iOS"
+    : /Android/i.test(ua)
     ? "Android"
     : /iPhone|iPad|iPod/i.test(ua)
       ? "iOS"
@@ -157,24 +157,34 @@ const deviceClassification = (userAgent) => {
           : /Linux/i.test(ua)
             ? "Linux"
             : "Other";
-  const browser = /KAKAOTALK/i.test(ua)
-    ? "KakaoTalk"
-    : /SamsungBrowser/i.test(ua)
-      ? "Samsung Internet"
-      : /Edg\//i.test(ua)
-        ? "Edge"
-        : /CriOS|Chrome/i.test(ua)
-          ? "Chrome"
-          : /FxiOS|Firefox/i.test(ua)
-            ? "Firefox"
-            : /Safari/i.test(ua)
-              ? "Safari"
-              : "Other";
+  const browser = /everytimeApp/i.test(ua)
+    ? "Everytime"
+    : /KAKAOTALK/i.test(ua)
+      ? "KakaoTalk"
+      : /SamsungBrowser/i.test(ua)
+        ? "Samsung Internet"
+        : /Edg\//i.test(ua)
+          ? "Edge"
+          : /CriOS|Chrome/i.test(ua)
+            ? "Chrome"
+            : /FxiOS|Firefox/i.test(ua)
+              ? "Firefox"
+              : /Safari/i.test(ua)
+                ? "Safari"
+                : "Other";
   return {
-    deviceType: /Mobi|Android|iPhone|iPad|iPod/i.test(ua) || window.innerWidth <= 768 ? "mobile" : "desktop",
+    deviceType: appleMobilePlatform
+      || /Mobi|Android|iPhone|iPad|iPod/i.test(ua)
+      || window.innerWidth <= 768
+      ? "mobile"
+      : "desktop",
     os,
     browser,
-    browserContext: browser === "KakaoTalk" ? "kakao_in_app" : "general_browser",
+    browserContext: browser === "Everytime"
+      ? "everytime_in_app"
+      : browser === "KakaoTalk"
+        ? "kakao_in_app"
+        : "general_browser",
   };
 };
 
@@ -187,12 +197,13 @@ const browserFingerprint = () => {
       return "";
     }
   })();
-  const classification = deviceClassification(nav.userAgent || "");
+  const platform = nav.userAgentData?.platform || nav.platform || "";
+  const classification = deviceClassification(nav.userAgent || "", platform);
   const connection = nav.connection || nav.mozConnection || nav.webkitConnection;
 
   return {
     userAgent: clip(nav.userAgent || "", 240),
-    platform: clip(nav.userAgentData?.platform || nav.platform || "", 80),
+    platform: clip(platform, 80),
     languages: Array.isArray(nav.languages) ? nav.languages.slice(0, 4).join(",") : clip(nav.language || "", 80),
     timezone: clip(timezone, 80),
     screen: screenSize(),
@@ -210,86 +221,95 @@ const browserFingerprint = () => {
   };
 };
 
-let cachedPublicIp = "unknown";
-let publicIpPromise = null;
+let telemetrySessionPromise = null;
 
-const validPublicIp = (value) => {
-  const ip = cleanText(value);
-  return /^[0-9a-f:.]{3,45}$/i.test(ip) ? ip : "";
+const loadTurnstile = () => {
+  if (window.turnstile) return Promise.resolve(window.turnstile);
+  return new Promise((resolve, reject) => {
+    const existing = document.querySelector(`script[src="${TURNSTILE_SCRIPT_URL}"]`);
+    const script = existing || document.createElement("script");
+    const timeoutId = window.setTimeout(() => reject(new Error("turnstile_timeout")), 8000);
+    const finish = () => {
+      if (!window.turnstile) return;
+      window.clearTimeout(timeoutId);
+      resolve(window.turnstile);
+    };
+    script.addEventListener("load", finish, { once: true });
+    script.addEventListener("error", () => {
+      window.clearTimeout(timeoutId);
+      reject(new Error("turnstile_load_failed"));
+    }, { once: true });
+    if (!existing) {
+      script.src = TURNSTILE_SCRIPT_URL;
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+    window.setTimeout(finish, 0);
+  });
 };
 
-const fetchPublicIp = (url) => new Promise((resolve) => {
-  const controller = new AbortController();
-  const timeoutId = window.setTimeout(() => controller.abort(), PUBLIC_IP_TIMEOUT_MS);
-  fetch(url, {
-    headers: { accept: "application/json" },
-    cache: "no-store",
-    signal: controller.signal,
-  })
-    .then((response) => response.ok ? response.json() : null)
-    .then((result) => resolve(validPublicIp(result?.ip)))
-    .catch(() => resolve(""))
-    .finally(() => window.clearTimeout(timeoutId));
-});
-
-const fetchFirstPublicIp = () => new Promise((resolve) => {
-  let pending = PUBLIC_IP_URLS.length;
-  let settled = false;
-  const finish = (ip) => {
-    if (settled) return;
-    if (ip) {
-      settled = true;
-      resolve(ip);
-      return;
-    }
-    pending -= 1;
-    if (pending === 0) {
-      settled = true;
-      resolve("");
-    }
-  };
-  PUBLIC_IP_URLS.forEach((url) => void fetchPublicIp(url).then(finish));
-});
-
-const fetchPublicIpJsonp = () => new Promise((resolve) => {
-  const callbackName = `agsIpCallback_${randomId()}`;
-  const script = document.createElement("script");
-  let settled = false;
-  const finish = (value = "") => {
-    if (settled) return;
-    settled = true;
-    window.clearTimeout(timeoutId);
-    script.remove();
-    try {
-      delete window[callbackName];
-    } catch {
-      window[callbackName] = undefined;
-    }
-    resolve(validPublicIp(value));
-  };
-  const timeoutId = window.setTimeout(() => finish(), PUBLIC_IP_TIMEOUT_MS);
-  window[callbackName] = (result) => finish(result?.ip);
-  script.async = true;
-  script.onerror = () => finish();
-  script.src = `${PUBLIC_IP_JSONP_URL}&callback=${encodeURIComponent(callbackName)}&_=${Date.now()}`;
-  document.head.appendChild(script);
-});
-
-const resolvePublicIp = () => {
-  if (cachedPublicIp !== "unknown") return Promise.resolve(cachedPublicIp);
-  if (publicIpPromise) return publicIpPromise;
-
-  publicIpPromise = (async () => {
-    const fetchedIp = await fetchFirstPublicIp();
-    const ip = fetchedIp || await fetchPublicIpJsonp();
-    if (ip) cachedPublicIp = ip;
-    return cachedPublicIp;
-  })().finally(() => {
-    // Keep successful values, but allow a later retry after an in-app browser blocks the initial lookup.
-    publicIpPromise = null;
+const requestTurnstileToken = async () => {
+  const turnstile = await loadTurnstile();
+  const container = document.createElement("div");
+  container.setAttribute("aria-hidden", "true");
+  container.style.cssText = "position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden";
+  document.body.appendChild(container);
+  return new Promise((resolve, reject) => {
+    const timeoutId = window.setTimeout(() => {
+      container.remove();
+      reject(new Error("turnstile_timeout"));
+    }, 10_000);
+    turnstile.render(container, {
+      sitekey: TURNSTILE_SITEKEY,
+      action: "telemetry_session",
+      callback: (token) => {
+        window.clearTimeout(timeoutId);
+        container.remove();
+        resolve(token);
+      },
+      "error-callback": () => {
+        window.clearTimeout(timeoutId);
+        container.remove();
+        reject(new Error("turnstile_failed"));
+      },
+      "expired-callback": () => {
+        window.clearTimeout(timeoutId);
+        container.remove();
+        reject(new Error("turnstile_expired"));
+      },
+    });
   });
+};
 
-  return publicIpPromise;
+const cachedWorkerSessionToken = () => {
+  const token = readSessionItem(WORKER_SESSION_TOKEN_KEY, "");
+  const issuedAt = Number(readSessionItem(WORKER_SESSION_ISSUED_AT_KEY));
+  if (!token || !Number.isFinite(issuedAt) || Date.now() - issuedAt > 23 * 60 * 60 * 1000) return "";
+  return token;
+};
+
+const ensureTelemetrySession = () => {
+  const cached = cachedWorkerSessionToken();
+  if (cached) return Promise.resolve(cached);
+  if (telemetrySessionPromise) return telemetrySessionPromise;
+  telemetrySessionPromise = (async () => {
+    const turnstileToken = await requestTurnstileToken();
+    const response = await fetch(`${TELEMETRY_API_URL}/v1/session`, {
+      method: "POST",
+      headers: { "content-type": "text/plain;charset=UTF-8" },
+      body: JSON.stringify({ sessionId: sessionId(), turnstileToken }),
+      cache: "no-store",
+    });
+    const result = await response.json().catch(() => null);
+    if (!response.ok || !result?.ok || !result.token) throw new Error(result?.error || "session_failed");
+    writeSessionItem(WORKER_SESSION_TOKEN_KEY, result.token);
+    writeSessionItem(WORKER_SESSION_ISSUED_AT_KEY, String(Date.now()));
+    return result.token;
+  })().finally(() => {
+    telemetrySessionPromise = null;
+  });
+  return telemetrySessionPromise;
 };
 
 const currentStep = () => {
@@ -386,15 +406,6 @@ const categoryCountsSignature = (counts) => {
 };
 
 const hasCategoryCounts = () => categoryCountsSignature(readCategoryCounts()) !== "[]";
-
-const telegramGetUrl = (text) => {
-  const params = new URLSearchParams({
-    chat_id: TELEGRAM_CHAT_ID,
-    text,
-    disable_web_page_preview: "true",
-  });
-  return `${TELEGRAM_SEND_URL}?${params.toString()}`;
-};
 
 const pageMetrics = new Map();
 const clsWindows = new Map();
@@ -531,7 +542,7 @@ const eventLine = (event) => {
   return `- #${event.seq} +${event.at_ms}ms ${event.type}${details ? ` ${details}` : ""}`;
 };
 
-const messageHeaderLines = (reason, publicIp = cachedPublicIp) => {
+const messageHeaderLines = (reason, publicIp = "server-managed") => {
   const counts = readCategoryCounts();
   const profile = readProfile();
   const fingerprint = browserFingerprint();
@@ -541,7 +552,7 @@ const messageHeaderLines = (reason, publicIp = cachedPublicIp) => {
   const total = entries.reduce((sum, [, count]) => sum + Number(count || 0), 0);
 
   return [
-    "AGS usage telemetry v3",
+    "AGS usage telemetry v4 (debug only)",
     `reason: ${reason}`,
     `session: ${sessionId()}`,
     `time: ${new Date().toISOString()}`,
@@ -582,7 +593,7 @@ const messageHeaderLines = (reason, publicIp = cachedPublicIp) => {
   ];
 };
 
-const messagesForTelemetry = (reason, publicIp = cachedPublicIp) => {
+const messagesForTelemetry = (reason, publicIp = "server-managed") => {
   const events = readEvents();
   const header = messageHeaderLines(reason, publicIp);
   const messages = [];
@@ -590,10 +601,10 @@ const messagesForTelemetry = (reason, publicIp = cachedPublicIp) => {
 
   events.forEach((event) => {
     const line = eventLine(event);
-    if ([...lines, line].join("\n").length > MAX_TELEGRAM_MESSAGE_LENGTH) {
+    if ([...lines, line].join("\n").length > MAX_DEBUG_MESSAGE_LENGTH) {
       messages.push(lines.join("\n"));
       lines = [
-        "AGS usage telemetry v3 (events continued)",
+        "AGS usage telemetry v4 (debug events continued)",
         `reason: ${reason}`,
         `session: ${sessionId()}`,
         "events:",
@@ -607,57 +618,79 @@ const messagesForTelemetry = (reason, publicIp = cachedPublicIp) => {
   return messages;
 };
 
-const telegramGetFallback = (text) => new Promise((resolve) => {
-  const image = new Image();
-  const done = () => resolve("queued");
-  image.onload = done;
-  image.onerror = done;
-  image.src = telegramGetUrl(text);
-  window.setTimeout(done, 1800);
-});
-
-const postTelegram = async (text, preferBeacon = false) => {
-  const body = new URLSearchParams({
-    chat_id: TELEGRAM_CHAT_ID,
-    text,
-    disable_web_page_preview: "true",
-  });
-  const beaconBody = new Blob([body.toString()], { type: "application/x-www-form-urlencoded;charset=UTF-8" });
-
-  if (preferBeacon && navigator.sendBeacon?.(TELEGRAM_SEND_URL, beaconBody)) return "queued";
-
-  try {
-    const response = await fetch(TELEGRAM_SEND_URL, {
-      method: "POST",
-      headers: { "content-type": "application/x-www-form-urlencoded" },
-      body,
-      keepalive: true,
-    });
-    const result = await response.json().catch(() => null);
-    if (response.ok && result?.ok === true) return "confirmed";
-  } catch {
-    // Browser extensions or privacy settings can block direct API fetches.
-  }
-
-  if (navigator.sendBeacon?.(TELEGRAM_SEND_URL, beaconBody)) return "queued";
-  return telegramGetFallback(text);
+const telemetryPayload = (reason) => {
+  const counts = readCategoryCounts();
+  const profile = readProfile();
+  const sequence = Number(readSessionItem(EVENT_SEQUENCE_KEY)) || 0;
+  return {
+    version: 4,
+    eventId: `${sessionId()}:${reason}:${sequence}`,
+    reason,
+    session: sessionId(),
+    clientTime: new Date().toISOString(),
+    pageId: currentPageId(),
+    tabState: document.hidden ? "hidden" : "visible",
+    pageActiveMs: pageActiveMs(),
+    profile,
+    resultSkip: readSessionItem(RESULT_SKIP_USED_KEY) === "1",
+    resultErrors: readErrorCount(),
+    device: browserFingerprint(),
+    navigation: navigationTiming(),
+    categoryClicks: Object.fromEntries(
+      Object.entries(counts)
+        .filter(([, count]) => Number(count) > 0)
+        .map(([label, count]) => [clip(label, 80), Number(count)]),
+    ),
+    webVitalsByPage: Object.fromEntries(
+      Array.from(pageMetrics.entries()).map(([pageId, metrics]) => [
+        pageId,
+        {
+          lcp: metrics.lcp,
+          inp: metrics.inp === null ? null : Math.round(metrics.inp),
+          cls: Number(metrics.cls.toFixed(3)),
+        },
+      ]),
+    ),
+    events: readEvents(),
+  };
 };
 
 const postTelemetry = async (reason, preferBeacon = false) => {
-  const publicIp = preferBeacon ? cachedPublicIp : await resolvePublicIp();
-  let result = "confirmed";
-  for (const message of messagesForTelemetry(reason, publicIp)) {
-    const messageResult = await postTelegram(message, preferBeacon);
-    if (messageResult !== "confirmed") result = messageResult;
+  let token = cachedWorkerSessionToken();
+  if (!token && !preferBeacon) {
+    try {
+      token = await ensureTelemetrySession();
+    } catch {
+      return "failed";
+    }
   }
-  return result;
+  if (!token) return "failed";
+  const body = JSON.stringify({ token, payload: telemetryPayload(reason) });
+  if (new TextEncoder().encode(body).byteLength > MAX_TELEMETRY_BODY_BYTES) return "failed";
+  const beaconBody = new Blob([body], { type: "text/plain;charset=UTF-8" });
+  if (preferBeacon && navigator.sendBeacon?.(`${TELEMETRY_API_URL}/v1/events`, beaconBody)) {
+    return "queued";
+  }
+  try {
+    const response = await fetch(`${TELEMETRY_API_URL}/v1/events`, {
+      method: "POST",
+      headers: { "content-type": "text/plain;charset=UTF-8" },
+      body,
+      keepalive: true,
+      cache: "no-store",
+    });
+    const result = await response.json().catch(() => null);
+    return response.ok && result?.ok ? "confirmed" : "failed";
+  } catch {
+    return "failed";
+  }
 };
 
 let sendInFlight = false;
 
 const deliverySignature = () => {
   const counts = categoryCountsSignature(readCategoryCounts());
-  return `telemetry_v3|${counts}`;
+  return `telemetry_v4|${counts}`;
 };
 
 const maybeSendOnResults = async () => {
@@ -787,7 +820,7 @@ window.addEventListener("load", () => {
 
 sessionId();
 sessionStartedAt();
-void resolvePublicIp();
+void ensureTelemetrySession().catch(() => {});
 observePerformance();
 checkPageTransition();
 
@@ -806,7 +839,8 @@ window.agsUsageDebug = () => ({
   confirmedSignature: readSessionItem(CATEGORY_SENT_SIGNATURE_KEY),
   queuedSignature: readSessionItem(CATEGORY_QUEUED_SIGNATURE_KEY),
   resultSkip: readSessionItem(RESULT_SKIP_USED_KEY) === "1",
-  publicIp: cachedPublicIp,
+  workerSessionReady: Boolean(cachedWorkerSessionToken()),
   fingerprint: browserFingerprint(),
-  messages: messagesForTelemetry("debug", cachedPublicIp),
+  payload: telemetryPayload("pagehide"),
+  messages: messagesForTelemetry("debug"),
 });

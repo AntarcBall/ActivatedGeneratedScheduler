@@ -1,3 +1,10 @@
 .env
+.env.*
+.dev.vars
+.dev.vars.*
+node_modules/
+.wrangler/
 selected_lectures_cache.json
 __pycache__/
+cloudflare/telemetry-worker/.wrangler/
+cloudflare/telemetry-worker/exports/
