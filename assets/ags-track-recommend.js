@@ -36,6 +36,7 @@ const readProfile = () => {
 const writeProfile = (profile) => {
   window.localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
   window.sessionStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+  window.dispatchEvent(new CustomEvent("ags-profile-saved", { detail: profile }));
 };
 
 const isSpecialRoute = () => SPECIAL_ROUTE.test(window.location.hash);
