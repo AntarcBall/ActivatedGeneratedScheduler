@@ -55,6 +55,40 @@ const readProfile = () => {
   return ALLOWED_YEARS.has(year) && majors.length ? { year, majors } : null;
 };
 
+const deviceSummary = () => {
+  const nav = window.navigator || {};
+  const userAgent = String(nav.userAgent || "");
+  const platform = String(nav.userAgentData?.platform || nav.platform || "");
+  const touchPoints = Number(nav.maxTouchPoints || 0);
+  const ipadLike = /iPad/i.test(userAgent)
+    || (/MacIntel|Macintosh/i.test(`${platform} ${userAgent}`) && touchPoints > 1);
+  const iphoneLike = /iPhone|iPod/i.test(`${platform} ${userAgent}`);
+  const android = /Android/i.test(userAgent);
+  const mobileAndroid = android && (/Mobile/i.test(userAgent) || nav.userAgentData?.mobile === true);
+
+  const os = ipadLike || iphoneLike
+    ? "iOS"
+    : android
+      ? "Android"
+      : /Windows/i.test(`${platform} ${userAgent}`)
+        ? "Windows"
+        : /CrOS/i.test(userAgent)
+          ? "ChromeOS"
+          : /Mac/i.test(`${platform} ${userAgent}`)
+            ? "macOS"
+            : /Linux/i.test(`${platform} ${userAgent}`)
+              ? "Linux"
+              : "Other";
+
+  const deviceType = ipadLike || (android && !mobileAndroid)
+    ? "tablet"
+    : iphoneLike || mobileAndroid || nav.userAgentData?.mobile === true
+      ? "mobile"
+      : "desktop";
+
+  return { os, deviceType };
+};
+
 const loadTurnstile = () => {
   if (window.turnstile) return Promise.resolve(window.turnstile);
   return new Promise((resolve, reject) => {
@@ -116,6 +150,7 @@ const sendSessionSummary = () => {
   if (sendPromise) return sendPromise;
 
   sendPromise = (async () => {
+    const device = deviceSummary();
     const turnstileToken = await requestTurnstileToken();
     const response = await fetch(`${TELEMETRY_API_URL}/v1/session`, {
       method: "POST",
@@ -124,6 +159,8 @@ const sendSessionSummary = () => {
         turnstileToken,
         year: profile.year,
         majors: profile.majors,
+        os: device.os,
+        deviceType: device.deviceType,
       }),
       cache: "no-store",
     });
@@ -145,5 +182,6 @@ void sendSessionSummary();
 window.agsUsageDebug = () => ({
   sessionSummarySent: readSessionItem(SESSION_SENT_KEY) === "1",
   profileReady: Boolean(readProfile()),
-  collectedFields: ["estimated_region", "year", "major"],
+  device: deviceSummary(),
+  collectedFields: ["estimated_region", "year", "major", "os", "device_type"],
 });

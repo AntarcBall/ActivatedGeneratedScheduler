@@ -13,6 +13,12 @@ const ALLOWED_MAJORS = new Set([
   "화학공학",
   "반도체공학",
 ]);
+const ALLOWED_OS = new Set(["iOS", "Android", "Windows", "ChromeOS", "macOS", "Linux", "Other"]);
+const DEVICE_TYPE_LABELS = {
+  mobile: "모바일",
+  tablet: "태블릿",
+  desktop: "데스크톱",
+};
 
 const jsonResponse = (body, status = 200, origin = "") => {
   const headers = {
@@ -66,8 +72,13 @@ const normalizedProfile = (body) => {
   const majors = Array.isArray(body.majors)
     ? [...new Set(body.majors.map(String).filter((major) => ALLOWED_MAJORS.has(major)))].slice(0, 2)
     : [];
-  if (!ALLOWED_YEARS.has(year) || majors.length === 0) return null;
-  return { year, major: majors.join(" / ") };
+  const os = String(body.os || "");
+  const deviceType = String(body.deviceType || "");
+  if (!ALLOWED_YEARS.has(year)
+      || majors.length === 0
+      || !ALLOWED_OS.has(os)
+      || !Object.hasOwn(DEVICE_TYPE_LABELS, deviceType)) return null;
+  return { year, major: majors.join(" / "), os, deviceType };
 };
 
 const estimatedRegion = (request) => {
@@ -89,6 +100,8 @@ const sendTelegramSummary = async (env, summary) => {
     `추정 지역: ${summary.estimatedRegion}`,
     `학년: ${summary.year}학년`,
     `전공: ${summary.major}`,
+    `OS: ${summary.os}`,
+    `기기 종류: ${DEVICE_TYPE_LABELS[summary.deviceType]}`,
   ].join("\n");
   const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
@@ -126,16 +139,20 @@ const recordSession = async (request, env, origin) => {
     estimatedRegion: estimatedRegion(request),
     year: profile.year,
     major: profile.major,
+    os: profile.os,
+    deviceType: profile.deviceType,
   };
   await sendTelegramSummary(env, summary);
   await env.DB.prepare(
     `INSERT INTO telemetry_sessions (
-      estimated_region, year, major
-    ) VALUES (?, ?, ?)`,
+      estimated_region, year, major, os, device_type
+    ) VALUES (?, ?, ?, ?, ?)`,
   ).bind(
     summary.estimatedRegion,
     summary.year,
     summary.major,
+    summary.os,
+    summary.deviceType,
   ).run();
   return jsonResponse({ ok: true, notified: true }, 201, origin);
 };
