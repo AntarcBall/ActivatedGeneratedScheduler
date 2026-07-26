@@ -78,6 +78,31 @@ const estimatedRegion = (request) => {
   return [...new Set(values)].join(" / ") || "unknown";
 };
 
+const sendTelegramSummary = async (env, summary) => {
+  const token = String(env.TELEGRAM_BOT_TOKEN || "").trim();
+  const chatId = String(env.TELEGRAM_CHAT_ID || "").trim();
+  if (!/^[0-9]+:[A-Za-z0-9_-]+$/.test(token) || !/^(?:-?[0-9]+|@[A-Za-z0-9_]+)$/.test(chatId)) {
+    throw new Error("telegram_secret_invalid");
+  }
+  const text = [
+    "새 세션",
+    `추정 지역: ${summary.estimatedRegion}`,
+    `학년: ${summary.year}학년`,
+    `전공: ${summary.major}`,
+  ].join("\n");
+  const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text,
+      disable_web_page_preview: true,
+    }),
+  });
+  const result = await response.json().catch(() => null);
+  if (!response.ok || result?.ok !== true) throw new Error("telegram_send_failed");
+};
+
 const recordSession = async (request, env, origin) => {
   let body;
   try {
@@ -97,16 +122,22 @@ const recordSession = async (request, env, origin) => {
     return jsonResponse({ ok: false, error: "challenge_failed" }, 403, origin);
   }
 
+  const summary = {
+    estimatedRegion: estimatedRegion(request),
+    year: profile.year,
+    major: profile.major,
+  };
+  await sendTelegramSummary(env, summary);
   await env.DB.prepare(
     `INSERT INTO telemetry_sessions (
       estimated_region, year, major
     ) VALUES (?, ?, ?)`,
   ).bind(
-    estimatedRegion(request),
-    profile.year,
-    profile.major,
+    summary.estimatedRegion,
+    summary.year,
+    summary.major,
   ).run();
-  return jsonResponse({ ok: true }, 201, origin);
+  return jsonResponse({ ok: true, notified: true }, 201, origin);
 };
 
 export default {
@@ -118,6 +149,7 @@ export default {
         service: "ags-telemetry",
         storage: "d1",
         collection: "session_summary",
+        notification: "telegram",
       });
     }
     const origin = allowedOrigin(request, env);

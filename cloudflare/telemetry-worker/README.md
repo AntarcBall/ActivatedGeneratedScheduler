@@ -4,7 +4,8 @@ Free-only Cloudflare Worker and D1 ingestion service for one summary per browser
 session.
 
 - `POST /v1/session`: validates an invisible Turnstile challenge and stores one
-  row containing estimated region, year, and major.
+  row containing estimated region, year, and major, then sends the same three
+  values to Telegram.
 - `GET /health`: public health check without telemetry data.
 - No public read or export endpoint is exposed.
 - IP addresses, IP hashes, user agents, city, device data, screens, clicks,
@@ -14,13 +15,24 @@ session.
   `major`.
 - Rows are retained until manually removed.
 
-Required Worker secret:
+Required Worker secrets:
 
 - `TURNSTILE_SECRET`
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
 
 The public Turnstile sitekey is configured in `assets/ags-usage.js`, not in the
 Worker. The earlier `telemetry_events` table is retained for history but the
 current Worker never writes to it.
+
+Telegram notifications contain only:
+
+```text
+새 세션
+추정 지역: US / California
+학년: 3학년
+전공: 컴퓨터공학 / 전자공학
+```
 
 ## Free-tier operations
 
