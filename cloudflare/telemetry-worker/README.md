@@ -1,21 +1,22 @@
-# AGS minimal session telemetry Worker
+# AGS full session telemetry Worker
 
-Free-only Cloudflare Worker and D1 ingestion service for one summary per browser
-session.
+Cloudflare Worker and D1 ingestion service for detailed browser-session
+telemetry.
 
-- `POST /v1/session`: validates an invisible Turnstile challenge and stores one
-  row containing estimated region, year, major, categorized OS, and categorized
-  device type, then sends the same five values to Telegram.
+- `POST /v1/session`: validates an invisible Turnstile challenge, stores a full
+  `session_start` snapshot in `telemetry_events`, stores a summary row in
+  `telemetry_sessions`, sends one session-start notification to Telegram, and
+  returns a signed 24-hour ingestion token.
+- `POST /v1/events`: validates the signed token and stores the full result or
+  page-exit payload in `telemetry_events`.
 - `GET /health`: public health check without telemetry data.
 - No public read or export endpoint is exposed.
-- IP addresses, IP hashes, raw user agents, city, screen details, clicks,
-  performance metrics, and navigation events are not stored.
-- The estimated region is Cloudflare's country and first-level region only.
-- OS is restricted to `iOS`, `Android`, `Windows`, `ChromeOS`, `macOS`,
-  `Linux`, or `Other`.
-- Device type is restricted to `mobile`, `tablet`, or `desktop`.
-- The active table has exactly five columns: `estimated_region`, `year`,
-  `major`, `os`, and `device_type`.
+- Full payloads include the submitted profile, browser/device details, screen
+  and viewport, language and timezone, coarse network information, navigation
+  timing, category interactions, page transitions, client errors, and Web
+  Vitals where supported.
+- The connecting IP is HMAC-hashed before storage. Raw IP addresses are not
+  stored. Cloudflare country, region, city, and colo values are stored.
 - Rows are retained until manually removed.
 
 Required Worker secrets:
@@ -23,12 +24,14 @@ Required Worker secrets:
 - `TURNSTILE_SECRET`
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
+- `IP_HASH_SECRET`
+- `SESSION_SIGNING_SECRET`
 
 The public Turnstile sitekey is configured in `assets/ags-usage.js`, not in the
-Worker. The earlier `telemetry_events` table is retained for history but the
-current Worker never writes to it.
+Worker.
 
-Telegram notifications contain only:
+Telegram receives only one session-start summary. Detailed events are never
+sent to Telegram:
 
 ```text
 새 세션

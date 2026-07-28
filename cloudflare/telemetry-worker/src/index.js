@@ -1,5 +1,10 @@
 const encoder = new TextEncoder();
-const MAX_BODY_BYTES = 8 * 1024;
+const SESSION_TTL_SECONDS = 24 * 60 * 60;
+const MAX_BODY_BYTES = 64 * 1024;
+const MAX_EVENTS_PER_MINUTE = 60;
+const SESSION_ID_RE = /^[a-f0-9]{24}$/;
+const EVENT_ID_RE = /^[a-zA-Z0-9:_-]{16,160}$/;
+const ALLOWED_REASONS = new Set(["session_start", "results", "pagehide", "pagehide_bfcache"]);
 const ALLOWED_YEARS = new Set(["1", "2", "3", "4"]);
 const ALLOWED_MAJORS = new Set([
   "물리학",
@@ -18,6 +23,66 @@ const DEVICE_TYPE_LABELS = {
   mobile: "모바일",
   tablet: "태블릿",
   desktop: "데스크톱",
+};
+
+const base64UrlEncode = (bytes) => {
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
+};
+
+const base64UrlDecode = (value) => {
+  const padded = value.replaceAll("-", "+").replaceAll("_", "/")
+    + "=".repeat((4 - value.length % 4) % 4);
+  const binary = atob(padded);
+  return Uint8Array.from(binary, (character) => character.charCodeAt(0));
+};
+
+const importHmacKey = (secret) => crypto.subtle.importKey(
+  "raw",
+  encoder.encode(secret),
+  { name: "HMAC", hash: "SHA-256" },
+  false,
+  ["sign", "verify"],
+);
+
+const hmac = async (secret, value) => {
+  const key = await importHmacKey(secret);
+  return new Uint8Array(await crypto.subtle.sign("HMAC", key, encoder.encode(value)));
+};
+
+const hashIp = async (request, env) => {
+  const ip = request.headers.get("cf-connecting-ip") || "unknown";
+  return base64UrlEncode(await hmac(env.IP_HASH_SECRET, ip));
+};
+
+const signSession = async (claims, env) => {
+  const encodedClaims = base64UrlEncode(encoder.encode(JSON.stringify(claims)));
+  const signature = base64UrlEncode(await hmac(env.SESSION_SIGNING_SECRET, encodedClaims));
+  return `${encodedClaims}.${signature}`;
+};
+
+const verifySession = async (token, env) => {
+  if (typeof token !== "string" || token.length > 2048) return null;
+  const [encodedClaims, encodedSignature, extra] = token.split(".");
+  if (!encodedClaims || !encodedSignature || extra) return null;
+  try {
+    const key = await importHmacKey(env.SESSION_SIGNING_SECRET);
+    const valid = await crypto.subtle.verify(
+      "HMAC",
+      key,
+      base64UrlDecode(encodedSignature),
+      encoder.encode(encodedClaims),
+    );
+    if (!valid) return null;
+    const claims = JSON.parse(new TextDecoder().decode(base64UrlDecode(encodedClaims)));
+    if (!SESSION_ID_RE.test(claims.sid || "")) return null;
+    if (!Number.isFinite(claims.exp) || claims.exp <= Math.floor(Date.now() / 1000)) return null;
+    if (typeof claims.iph !== "string" || claims.iph.length < 32) return null;
+    return claims;
+  } catch {
+    return null;
+  }
 };
 
 const jsonResponse = (body, status = 200, origin = "") => {
@@ -51,11 +116,13 @@ const readJson = async (request) => {
   return JSON.parse(text);
 };
 
-const verifyTurnstile = async (token, env) => {
+const verifyTurnstile = async (token, request, env) => {
   if (typeof token !== "string" || token.length < 20 || token.length > 2048) return false;
   const form = new FormData();
   form.set("secret", env.TURNSTILE_SECRET);
   form.set("response", token);
+  const remoteIp = request.headers.get("cf-connecting-ip");
+  if (remoteIp) form.set("remoteip", remoteIp);
   const response = await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     { method: "POST", body: form },
@@ -79,6 +146,52 @@ const normalizedProfile = (body) => {
       || !ALLOWED_OS.has(os)
       || !Object.hasOwn(DEVICE_TYPE_LABELS, deviceType)) return null;
   return { year, major: majors.join(" / "), os, deviceType };
+};
+
+const validPayload = (payload, sessionId, reason) => (
+  payload
+  && typeof payload === "object"
+  && !Array.isArray(payload)
+  && String(payload.session || "") === sessionId
+  && String(payload.reason || "") === reason
+  && EVENT_ID_RE.test(String(payload.eventId || ""))
+  && Array.isArray(payload.events)
+  && payload.events.length <= 200
+);
+
+const insertEvent = async (request, env, payload, ipHash) => {
+  const now = Date.now();
+  const recent = await env.DB.prepare(
+    "SELECT COUNT(*) AS count FROM telemetry_events WHERE ip_hash = ? AND received_at_ms >= ?",
+  ).bind(ipHash, now - 60_000).first();
+  if (Number(recent?.count || 0) >= MAX_EVENTS_PER_MINUTE) {
+    throw new Error("rate_limited");
+  }
+  const cf = request.cf || {};
+  try {
+    await env.DB.prepare(
+      `INSERT INTO telemetry_events (
+        event_id, received_at_ms, session_id, reason, payload_json, ip_hash,
+        country, region, city, colo, user_agent
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    ).bind(
+      String(payload.eventId),
+      now,
+      String(payload.session),
+      String(payload.reason),
+      JSON.stringify(payload),
+      ipHash,
+      String(cf.country || ""),
+      String(cf.region || ""),
+      String(cf.city || ""),
+      String(cf.colo || ""),
+      String(request.headers.get("user-agent") || "").slice(0, 300),
+    ).run();
+    return false;
+  } catch (error) {
+    if (String(error?.message || error).includes("UNIQUE")) return true;
+    throw error;
+  }
 };
 
 const estimatedRegion = (request) => {
@@ -127,12 +240,19 @@ const recordSession = async (request, env, origin) => {
       origin,
     );
   }
+  const sessionId = String(body.sessionId || "");
+  if (!SESSION_ID_RE.test(sessionId)) {
+    return jsonResponse({ ok: false, error: "invalid_session" }, 400, origin);
+  }
   const profile = normalizedProfile(body);
   if (!profile) {
     return jsonResponse({ ok: false, error: "invalid_session_summary" }, 400, origin);
   }
-  if (!await verifyTurnstile(body.turnstileToken, env)) {
+  if (!await verifyTurnstile(body.turnstileToken, request, env)) {
     return jsonResponse({ ok: false, error: "challenge_failed" }, 403, origin);
+  }
+  if (!validPayload(body.payload, sessionId, "session_start")) {
+    return jsonResponse({ ok: false, error: "invalid_payload" }, 400, origin);
   }
 
   const summary = {
@@ -142,19 +262,69 @@ const recordSession = async (request, env, origin) => {
     os: profile.os,
     deviceType: profile.deviceType,
   };
-  await sendTelegramSummary(env, summary);
-  await env.DB.prepare(
-    `INSERT INTO telemetry_sessions (
-      estimated_region, year, major, os, device_type
-    ) VALUES (?, ?, ?, ?, ?)`,
-  ).bind(
-    summary.estimatedRegion,
-    summary.year,
-    summary.major,
-    summary.os,
-    summary.deviceType,
-  ).run();
-  return jsonResponse({ ok: true, notified: true }, 201, origin);
+  const now = Math.floor(Date.now() / 1000);
+  const ipHash = await hashIp(request, env);
+  const duplicate = await insertEvent(request, env, body.payload, ipHash);
+  if (!duplicate) {
+    await env.DB.prepare(
+      `INSERT INTO telemetry_sessions (
+        estimated_region, year, major, os, device_type
+      ) VALUES (?, ?, ?, ?, ?)`,
+    ).bind(
+      summary.estimatedRegion,
+      summary.year,
+      summary.major,
+      summary.os,
+      summary.deviceType,
+    ).run();
+    await sendTelegramSummary(env, summary);
+  }
+  const token = await signSession({
+    sid: sessionId,
+    iph: ipHash,
+    iat: now,
+    exp: now + SESSION_TTL_SECONDS,
+  }, env);
+  return jsonResponse({
+    ok: true,
+    token,
+    expiresIn: SESSION_TTL_SECONDS,
+    notified: !duplicate,
+    duplicate,
+  }, duplicate ? 200 : 201, origin);
+};
+
+const acceptEvent = async (request, env, origin) => {
+  let body;
+  try {
+    body = await readJson(request);
+  } catch (error) {
+    return jsonResponse(
+      { ok: false, error: error.message === "body_too_large" ? "body_too_large" : "invalid_json" },
+      error.message === "body_too_large" ? 413 : 400,
+      origin,
+    );
+  }
+  const claims = await verifySession(body.token, env);
+  const ipHash = await hashIp(request, env);
+  if (!claims || claims.iph !== ipHash) {
+    return jsonResponse({ ok: false, error: "invalid_token" }, 401, origin);
+  }
+  const reason = String(body.payload?.reason || "");
+  if (!ALLOWED_REASONS.has(reason)
+      || reason === "session_start"
+      || !validPayload(body.payload, claims.sid, reason)) {
+    return jsonResponse({ ok: false, error: "invalid_payload" }, 400, origin);
+  }
+  try {
+    const duplicate = await insertEvent(request, env, body.payload, ipHash);
+    return jsonResponse({ ok: true, duplicate }, duplicate ? 200 : 201, origin);
+  } catch (error) {
+    if (error.message === "rate_limited") {
+      return jsonResponse({ ok: false, error: "rate_limited" }, 429, origin);
+    }
+    throw error;
+  }
 };
 
 export default {
@@ -165,8 +335,8 @@ export default {
         ok: true,
         service: "ags-telemetry",
         storage: "d1",
-        collection: "session_summary",
-        notification: "telegram",
+        collection: "full_session_events",
+        notification: "telegram_session_start_only",
       });
     }
     const origin = allowedOrigin(request, env);
@@ -188,8 +358,12 @@ export default {
     }
     try {
       if (url.pathname === "/v1/session") return await recordSession(request, env, origin);
+      if (url.pathname === "/v1/events") return await acceptEvent(request, env, origin);
       return jsonResponse({ ok: false, error: "not_found" }, 404, origin);
-    } catch {
+    } catch (error) {
+      if (error.message === "rate_limited") {
+        return jsonResponse({ ok: false, error: "rate_limited" }, 429, origin);
+      }
       return jsonResponse({ ok: false, error: "internal_error" }, 500, origin);
     }
   },
