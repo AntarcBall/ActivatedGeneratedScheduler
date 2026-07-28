@@ -51,9 +51,24 @@ const hmac = async (secret, value) => {
   return new Uint8Array(await crypto.subtle.sign("HMAC", key, encoder.encode(value)));
 };
 
+const connectingIp = (request) => (
+  String(request.headers.get("cf-connecting-ip") || "unknown").slice(0, 45)
+);
+
 const hashIp = async (request, env) => {
-  const ip = request.headers.get("cf-connecting-ip") || "unknown";
-  return base64UrlEncode(await hmac(env.IP_HASH_SECRET, ip));
+  return base64UrlEncode(await hmac(env.IP_HASH_SECRET, connectingIp(request)));
+};
+
+const encodePayload = async (payload) => {
+  const json = JSON.stringify(payload);
+  const gzipStream = new Blob([json])
+    .stream()
+    .pipeThrough(new CompressionStream("gzip"));
+  const gzip = new Uint8Array(await new Response(gzipStream).arrayBuffer());
+  const compressed = base64UrlEncode(gzip);
+  return compressed.length < json.length
+    ? { value: compressed, encoding: "gzip+base64url" }
+    : { value: json, encoding: "json" };
 };
 
 const signSession = async (claims, env) => {
@@ -168,24 +183,27 @@ const insertEvent = async (request, env, payload, ipHash) => {
     throw new Error("rate_limited");
   }
   const cf = request.cf || {};
+  const encodedPayload = await encodePayload(payload);
   try {
     await env.DB.prepare(
       `INSERT INTO telemetry_events (
         event_id, received_at_ms, session_id, reason, payload_json, ip_hash,
-        country, region, city, colo, user_agent
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        country, region, city, colo, user_agent, ip_address, payload_encoding
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     ).bind(
       String(payload.eventId),
       now,
       String(payload.session),
       String(payload.reason),
-      JSON.stringify(payload),
+      encodedPayload.value,
       ipHash,
       String(cf.country || ""),
       String(cf.region || ""),
       String(cf.city || ""),
       String(cf.colo || ""),
       String(request.headers.get("user-agent") || "").slice(0, 300),
+      connectingIp(request),
+      encodedPayload.encoding,
     ).run();
     return false;
   } catch (error) {

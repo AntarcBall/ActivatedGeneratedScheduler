@@ -15,8 +15,12 @@ telemetry.
   and viewport, language and timezone, coarse network information, navigation
   timing, category interactions, page transitions, client errors, and Web
   Vitals where supported.
-- The connecting IP is HMAC-hashed before storage. Raw IP addresses are not
-  stored. Cloudflare country, region, city, and colo values are stored.
+- The connecting IP is stored in `ip_address`; its HMAC hash remains in
+  `ip_hash` for grouping and rate limiting. Cloudflare country, region, city,
+  and colo values are also stored.
+- Payload JSON is gzip-compressed and base64url encoded when that reduces its
+  stored size. `payload_encoding` is `gzip+base64url` for compressed rows and
+  `json` for uncompressed or legacy rows. Compression is lossless.
 - Rows are retained until manually removed.
 
 Required Worker secrets:
