@@ -30,6 +30,37 @@
   .ags-lecture-preview[hidden] {
     display: none !important;
   }
+
+  .ags-preview-busy {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  .ags-preview-busy:has(> span) {
+    z-index: 2;
+  }
+
+  .ags-preview-busy > span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 0.32rem !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+    text-overflow: clip !important;
+    line-height: var(--ags-preview-row-height, 1.18em) !important;
+  }
+
+  .ags-preview-busy > .ags-preview-label-compact {
+    padding-inline: 0.18rem !important;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    letter-spacing: -0.03em;
+  }
 }
 
 body.ags-home-clean #root > div {
@@ -393,11 +424,11 @@ body.ags-home-clean #root > div > div > div:first-child {
   font-size: 0.9rem;
   font-weight: 900;
   box-shadow: 0 8px 18px -14px rgb(37 99 235 / 0.9);
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition: none;
 }
 
 .ags-section-select-all:hover {
-  transform: translateY(-1px);
+  transform: none;
   border-color: #93c5fd;
   background: #dbeafe;
 }
@@ -513,6 +544,39 @@ body.ags-home-clean #root > div > div > div:first-child {
 
 .ags-section-detail-card {
   position: relative;
+  transition: none !important;
+}
+
+.ags-lecture-main [class~="group/item"] > button,
+.ags-lecture-main [class~="group/item"] > button .transition-colors {
+  transition: none !important;
+}
+
+.ags-section-schedule-hidden {
+  display: none !important;
+}
+
+.ags-section-rating {
+  margin-left: auto;
+  margin-right: 0.45rem;
+  color: #2563eb;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ags-section-rating-low {
+  color: #dc2626;
+}
+
+.ags-lecture-main .ags-step1-conflict-option .ags-section-rating {
+  color: #2563eb !important;
+}
+
+.ags-lecture-main .ags-step1-conflict-option .ags-section-rating-low {
+  color: #dc2626 !important;
 }
 
 .ags-section-detail-button {
@@ -533,11 +597,11 @@ body.ags-home-clean #root > div > div > div:first-child {
   font-weight: 900;
   line-height: 1;
   box-shadow: 0 8px 16px -14px rgb(37 99 235 / 0.9);
-  transition: opacity 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
+  transition: none;
 }
 
 .ags-section-detail-button:hover {
-  transform: translateY(-1px);
+  transform: none;
   background: #dbeafe;
 }
 

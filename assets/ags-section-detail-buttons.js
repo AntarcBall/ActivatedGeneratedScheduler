@@ -1,5 +1,5 @@
 const COURSE_GROUP_SELECTOR = ".ags-lecture-main [class~='group/item']";
-const SECTION_CARD_SELECTOR = ":scope > div.grid .cursor-pointer";
+const SECTION_CARD_GLOBAL_SELECTOR = ".ags-lecture-main [class~='group/item'] > div.grid .cursor-pointer";
 const BASE_PATH = "/ActivatedGeneratedScheduler/";
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
@@ -36,8 +36,10 @@ let lectures = [];
 let detailMap = new Map();
 let openCourseMeta = new Map();
 let lectureMap = new Map();
+let ratingLowerHalfCutoff = null;
 let detailSyncScheduled = false;
 let detailDataReady = false;
+const pendingDetailRoots = new Set();
 
 const loadJson = async (path) => {
   const response = await fetch(`${BASE_PATH}${path}`, { cache: "no-cache" });
@@ -54,6 +56,21 @@ const rebuildLectureMap = () => {
 };
 
 const detailKey = (lecture) => `${lecture.course_number}#${sectionText(lecture.section)}`;
+
+const lectureRate = (lecture) => {
+  const rate = Number(lecture?.everytime?.lecture_rate);
+  return Number.isFinite(rate) && rate > 0 ? rate : 0;
+};
+
+const formattedLectureRate = (rate) => (
+  Math.round((rate + Number.EPSILON) * 10) / 10
+).toFixed(1);
+
+const lowerHalfCutoff = (lectureData) => {
+  const rates = lectureData.map(lectureRate).filter((rate) => rate > 0).sort((a, b) => a - b);
+  if (!rates.length) return null;
+  return rates[Math.ceil(rates.length * 0.5) - 1];
+};
 
 const fallbackDetailRecord = (lecture) => {
   const meta = openCourseMeta.get(detailKey(lecture));
@@ -103,6 +120,43 @@ const lectureFromCard = (card) => {
   const name = courseNameFromGroup(group);
   const section = sectionText(card.querySelector("span")?.textContent);
   return lectureMap.get(`${name}#${section}`) || null;
+};
+
+const hideSchedule = (card) => {
+  const schedulePattern = /^(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun|월|화|수|목|금|토|일)\s+)?\d{1,2}:\d{2}\s*[~–-]\s*\d{1,2}:\d{2}$/i;
+  Array.from(card.children).forEach((container) => {
+    if (container.tagName !== "DIV") return;
+    const lines = Array.from(container.children);
+    if (!lines.some((line) => schedulePattern.test(normalizeText(line.textContent)))) return;
+    container.classList.add("ags-section-schedule-hidden");
+  });
+};
+
+const ensureRating = (card, lecture) => {
+  const rate = lectureRate(lecture);
+  const existing = card.querySelector(":scope > div:first-child > .ags-section-rating");
+  if (!rate) {
+    existing?.remove();
+    return;
+  }
+
+  const meta = card.querySelector(":scope > div:first-child");
+  if (!meta) return;
+  const rating = existing || document.createElement("span");
+  const language = currentLanguage();
+  if (!existing) rating.className = "ags-section-rating";
+  rating.classList.toggle(
+    "ags-section-rating-low",
+    ratingLowerHalfCutoff !== null && rate <= ratingLowerHalfCutoff,
+  );
+  const formattedRate = formattedLectureRate(rate);
+  const ratingText = `★ ${formattedRate}`;
+  if (rating.textContent !== ratingText) rating.textContent = ratingText;
+  rating.title = language === "en"
+    ? `Average course rating: ${formattedRate} out of 5`
+    : `강의평 평균: 5점 만점에 ${formattedRate}`;
+  rating.setAttribute("aria-label", rating.title);
+  if (!existing) meta.insertBefore(rating, meta.lastElementChild);
 };
 
 const paragraph = (label, value) => {
@@ -195,6 +249,8 @@ const openDetailModal = (lecture, record) => {
 
 const ensureButton = (card) => {
   const lecture = lectureFromCard(card);
+  hideSchedule(card);
+  ensureRating(card, lecture);
   const record = lecture
     ? currentLanguage() === "en"
       ? fallbackDetailRecord(lecture)
@@ -203,6 +259,7 @@ const ensureButton = (card) => {
   const available = Boolean(record);
   const copy = DETAIL_COPY[currentLanguage()];
 
+  card.classList.add("ags-section-detail-card");
   const existing = card.querySelector(":scope > .ags-section-detail-button");
   if (existing) {
     existing.title = available ? copy.title : copy.unavailable;
@@ -210,7 +267,6 @@ const ensureButton = (card) => {
     return;
   }
 
-  card.classList.add("ags-section-detail-card");
   const button = document.createElement("button");
   button.type = "button";
   button.className = "ags-section-detail-button";
@@ -231,12 +287,20 @@ const ensureButton = (card) => {
 const syncDetailButtons = () => {
   detailSyncScheduled = false;
   if (!detailDataReady) return;
-  document.querySelectorAll(COURSE_GROUP_SELECTOR).forEach((group) => {
-    group.querySelectorAll(SECTION_CARD_SELECTOR).forEach(ensureButton);
-  });
+  const roots = pendingDetailRoots.size ? Array.from(pendingDetailRoots) : [document];
+  pendingDetailRoots.clear();
+  const cards = new Set();
+  for (const root of roots) {
+    if (root !== document && (!root.isConnected || root.nodeType !== Node.ELEMENT_NODE)) continue;
+    if (root !== document && root.matches?.(SECTION_CARD_GLOBAL_SELECTOR)) cards.add(root);
+    root.querySelectorAll?.(SECTION_CARD_GLOBAL_SELECTOR).forEach((card) => cards.add(card));
+  }
+  cards.forEach(ensureButton);
 };
 
-const scheduleDetailSync = () => {
+const scheduleDetailSync = (root = document) => {
+  if (!detailDataReady) return;
+  pendingDetailRoots.add(root);
   if (detailSyncScheduled) return;
   detailSyncScheduled = true;
   requestAnimationFrame(syncDetailButtons);
@@ -250,6 +314,7 @@ const init = async () => {
       loadJson("assets/ags-section-details.json"),
       loadJson("assets/ags-open-course-metadata.json"),
     ]);
+    ratingLowerHalfCutoff = lowerHalfCutoff(lectureDataKo);
     lectures = [...lectureDataKo, ...lectureDataEn];
     rebuildLectureMap();
     detailMap = new Map((detailData.records || []).map((record) => [record.key, record]));
@@ -261,10 +326,27 @@ const init = async () => {
   }
 };
 
-new MutationObserver(scheduleDetailSync).observe(document.body, {
+new MutationObserver((mutations) => {
+  if (!detailDataReady) return;
+  for (const mutation of mutations) {
+    if (mutation.target?.nodeType === Node.ELEMENT_NODE) pendingDetailRoots.add(mutation.target);
+    mutation.addedNodes.forEach((node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) pendingDetailRoots.add(node);
+    });
+  }
+  if (pendingDetailRoots.size) scheduleDetailSync(pendingDetailRoots.values().next().value);
+}).observe(document.body, {
   childList: true,
   subtree: true,
 });
+
+document.addEventListener("click", (event) => {
+  const group = event.target.closest?.(COURSE_GROUP_SELECTOR);
+  if (!group) return;
+  requestAnimationFrame(() => {
+    if (group.isConnected) scheduleDetailSync(group);
+  });
+}, true);
 
 window.addEventListener("load", () => {
   void init();

@@ -346,10 +346,21 @@ const start = async () => {
   syncRecommendations();
 };
 
-new MutationObserver(() => {
-  syncProfileTrigger();
-  syncRecommendations();
-}).observe(document.body, { childList: true, subtree: true });
+let recommendationSyncScheduled = false;
+const scheduleRecommendationSync = () => {
+  if (recommendationSyncScheduled) return;
+  recommendationSyncScheduled = true;
+  requestAnimationFrame(() => {
+    recommendationSyncScheduled = false;
+    syncProfileTrigger();
+    syncRecommendations();
+  });
+};
+
+new MutationObserver(scheduleRecommendationSync).observe(document.body, {
+  childList: true,
+  subtree: true,
+});
 
 window.addEventListener("hashchange", () => {
   syncProfileTrigger();

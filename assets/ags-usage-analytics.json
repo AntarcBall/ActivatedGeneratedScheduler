@@ -190,13 +190,13 @@
     "browsers": [
       {
         "label": "Chrome",
-        "count": 33,
-        "share": 46.5
+        "count": 23,
+        "share": 32.4
       },
       {
-        "label": "Other",
-        "count": 12,
-        "share": 16.9
+        "label": "Everytime",
+        "count": 22,
+        "share": 31.0
       },
       {
         "label": "Safari",
@@ -227,8 +227,13 @@
     "contexts": [
       {
         "label": "general_browser",
-        "count": 64,
-        "share": 90.1
+        "count": 42,
+        "share": 59.2
+      },
+      {
+        "label": "everytime_in_app",
+        "count": 22,
+        "share": 31.0
       },
       {
         "label": "kakao_in_app",

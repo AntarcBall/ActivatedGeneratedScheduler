@@ -286,6 +286,8 @@ def build_lecture_data(
             "credit": float(ko_row["credit"]) if "." in ko_row["credit"] else int(ko_row["credit"]),
             "time_slots": schedule_slots(ko_row["schedule"]),
         }
+        current_lecture = current_by_key.get(key_for(ko_row), {})
+        everytime = current_lecture.get("everytime")
         korean.append(
             {
                 **base,
@@ -295,6 +297,7 @@ def build_lecture_data(
                 "classification": ko_row["classification"],
                 "category": category,
                 "major_tracks": tracks,
+                **({"everytime": everytime} if everytime else {}),
             }
         )
         english.append(
@@ -306,6 +309,7 @@ def build_lecture_data(
                 "classification": en_row["classification"],
                 "category": CATEGORY_EN.get(category, en_row["area"]),
                 "major_tracks": [TRACK_EN.get(track, track) for track in tracks],
+                **({"everytime": everytime} if everytime else {}),
             }
         )
     return korean, english

@@ -12,6 +12,7 @@ let openLecturesKo = [];
 let openLecturesEn = [];
 let enhancementReady = false;
 let enhancementSyncScheduled = false;
+let summarySyncScheduled = false;
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const isEnglish = () => (
@@ -189,6 +190,15 @@ const scheduleEnhancementSync = () => {
   requestAnimationFrame(syncEnhancements);
 };
 
+const scheduleSummarySync = () => {
+  if (summarySyncScheduled) return;
+  summarySyncScheduled = true;
+  requestAnimationFrame(() => {
+    summarySyncScheduled = false;
+    if (enhancementReady) syncBottomSummary();
+  });
+};
+
 const initEnhancements = async () => {
   try {
     const [metadata, tags, lecturesKo, lecturesEn] = await Promise.all([
@@ -209,13 +219,20 @@ const initEnhancements = async () => {
   }
 };
 
-new MutationObserver(scheduleEnhancementSync).observe(document.body, {
+new MutationObserver((mutations) => {
+  const rowsAdded = mutations.some((mutation) => (
+    Array.from(mutation.addedNodes).some((node) => (
+      node.nodeType === Node.ELEMENT_NODE
+      && (node.matches?.(COURSE_ROW_SELECTOR) || node.querySelector?.(COURSE_ROW_SELECTOR))
+    ))
+  ));
+  if (rowsAdded) scheduleEnhancementSync();
+}).observe(document.body, {
   childList: true,
   subtree: true,
-  attributes: true,
-  attributeFilter: ["class"],
 });
 
+document.addEventListener("click", scheduleSummarySync, true);
 window.addEventListener("storage", scheduleEnhancementSync);
 window.addEventListener("load", scheduleEnhancementSync);
 void initEnhancements();

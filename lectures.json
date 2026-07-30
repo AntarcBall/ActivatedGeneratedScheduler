@@ -18,7 +18,13 @@
     ],
     "classification": "기초필수",
     "category": "컴퓨터공학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186398,
+      "lecture_id": 2991060,
+      "lecture_rate": 3.65,
+      "popular": 52
+    }
   },
   {
     "id": 185,
@@ -44,7 +50,13 @@
     ],
     "classification": "기초필수",
     "category": "컴퓨터공학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186399,
+      "lecture_id": 3158448,
+      "lecture_rate": 0,
+      "popular": 28
+    }
   },
   {
     "id": 2,
@@ -72,7 +84,13 @@
     "category": "공학선택",
     "major_tracks": [
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186400,
+      "lecture_id": 2988170,
+      "lecture_rate": 5,
+      "popular": 33
+    }
   },
   {
     "id": 3,
@@ -95,7 +113,13 @@
     "category": "공학선택",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186401,
+      "lecture_id": 3158449,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 4,
@@ -118,7 +142,13 @@
     "category": "공학선택",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186402,
+      "lecture_id": 2292221,
+      "lecture_rate": 5,
+      "popular": 14
+    }
   },
   {
     "id": 5,
@@ -141,7 +171,13 @@
     "category": "공학선택",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186403,
+      "lecture_id": 2292220,
+      "lecture_rate": 5,
+      "popular": 15
+    }
   },
   {
     "id": 6,
@@ -164,7 +200,13 @@
     "category": "공학선택",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186404,
+      "lecture_id": 2511503,
+      "lecture_rate": 4,
+      "popular": 6
+    }
   },
   {
     "id": 7,
@@ -187,7 +229,13 @@
     "category": "공학선택",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186405,
+      "lecture_id": 2418951,
+      "lecture_rate": 4.5,
+      "popular": 16
+    }
   },
   {
     "id": 8,
@@ -210,7 +258,13 @@
     "category": "공학선택",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186406,
+      "lecture_id": 3158450,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 9,
@@ -241,7 +295,13 @@
     "major_tracks": [
       "뇌과학",
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186407,
+      "lecture_id": 3106474,
+      "lecture_rate": 4,
+      "popular": 4
+    }
   },
   {
     "id": 10,
@@ -272,7 +332,13 @@
     "major_tracks": [
       "뇌과학",
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186408,
+      "lecture_id": 3088366,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 11,
@@ -301,7 +367,13 @@
     "category": "트랙",
     "major_tracks": [
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186409,
+      "lecture_id": 2988171,
+      "lecture_rate": 5,
+      "popular": 8
+    }
   },
   {
     "id": 12,
@@ -326,7 +398,13 @@
     "category": "트랙",
     "major_tracks": [
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186410,
+      "lecture_id": 2988172,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 13,
@@ -355,7 +433,13 @@
     "category": "트랙",
     "major_tracks": [
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186411,
+      "lecture_id": 2988173,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 14,
@@ -384,7 +468,13 @@
     "major_tracks": [
       "뇌과학",
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186412,
+      "lecture_id": 3158451,
+      "lecture_rate": 0,
+      "popular": 19
+    }
   },
   {
     "id": 15,
@@ -412,7 +502,13 @@
     "category": "트랙",
     "major_tracks": [
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186413,
+      "lecture_id": 3158452,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 16,
@@ -441,7 +537,13 @@
     "category": "트랙",
     "major_tracks": [
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186414,
+      "lecture_id": 3158453,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 17,
@@ -469,7 +571,13 @@
     "category": "트랙",
     "major_tracks": [
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186415,
+      "lecture_id": 3158454,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 18,
@@ -495,7 +603,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186416,
+      "lecture_id": 2161016,
+      "lecture_rate": 4.43,
+      "popular": 7
+    }
   },
   {
     "id": 19,
@@ -521,7 +635,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186417,
+      "lecture_id": 2161013,
+      "lecture_rate": 4.44,
+      "popular": 6
+    }
   },
   {
     "id": 20,
@@ -547,7 +667,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186418,
+      "lecture_id": 2161014,
+      "lecture_rate": 4,
+      "popular": 8
+    }
   },
   {
     "id": 21,
@@ -573,7 +699,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186419,
+      "lecture_id": 2603201,
+      "lecture_rate": 5,
+      "popular": 12
+    }
   },
   {
     "id": 22,
@@ -599,7 +731,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186420,
+      "lecture_id": 2603201,
+      "lecture_rate": 5,
+      "popular": 52
+    }
   },
   {
     "id": 23,
@@ -625,7 +763,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186421,
+      "lecture_id": 2914876,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 24,
@@ -654,7 +798,13 @@
     "major_tracks": [
       "물리학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186422,
+      "lecture_id": 2988176,
+      "lecture_rate": 5,
+      "popular": 26
+    }
   },
   {
     "id": 25,
@@ -683,7 +833,13 @@
     "major_tracks": [
       "물리학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186423,
+      "lecture_id": 2988176,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 26,
@@ -712,7 +868,13 @@
     "major_tracks": [
       "물리학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186424,
+      "lecture_id": 2988176,
+      "lecture_rate": 5,
+      "popular": 27
+    }
   },
   {
     "id": 27,
@@ -741,7 +903,13 @@
     "major_tracks": [
       "물리학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186425,
+      "lecture_id": 3158455,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 28,
@@ -764,7 +932,13 @@
     "category": "물리",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186426,
+      "lecture_id": 2988177,
+      "lecture_rate": 5,
+      "popular": 7
+    }
   },
   {
     "id": 29,
@@ -787,7 +961,13 @@
     "category": "물리",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186427,
+      "lecture_id": 2988177,
+      "lecture_rate": 5,
+      "popular": 6
+    }
   },
   {
     "id": 30,
@@ -810,7 +990,13 @@
     "category": "물리",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186428,
+      "lecture_id": 2988177,
+      "lecture_rate": 5,
+      "popular": 11
+    }
   },
   {
     "id": 31,
@@ -833,7 +1019,13 @@
     "category": "물리",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186429,
+      "lecture_id": 2988177,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 32,
@@ -856,7 +1048,13 @@
     "category": "물리",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186430,
+      "lecture_id": 2988177,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 33,
@@ -879,7 +1077,13 @@
     "category": "물리",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186431,
+      "lecture_id": 3158456,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 34,
@@ -902,7 +1106,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186432,
+      "lecture_id": 2988178,
+      "lecture_rate": 5,
+      "popular": 2
+    }
   },
   {
     "id": 35,
@@ -925,7 +1135,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186433,
+      "lecture_id": 2988178,
+      "lecture_rate": 5,
+      "popular": 0
+    }
   },
   {
     "id": 36,
@@ -948,7 +1164,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186434,
+      "lecture_id": 2988178,
+      "lecture_rate": 5,
+      "popular": 9
+    }
   },
   {
     "id": 37,
@@ -971,7 +1193,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186435,
+      "lecture_id": 2988178,
+      "lecture_rate": 5,
+      "popular": 4
+    }
   },
   {
     "id": 38,
@@ -994,7 +1222,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186436,
+      "lecture_id": 2988178,
+      "lecture_rate": 5,
+      "popular": 23
+    }
   },
   {
     "id": 39,
@@ -1017,7 +1251,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186437,
+      "lecture_id": 3158457,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 40,
@@ -1040,7 +1280,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186438,
+      "lecture_id": 3158457,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 41,
@@ -1063,7 +1309,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186439,
+      "lecture_id": 3158457,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 42,
@@ -1091,7 +1343,13 @@
     "category": "생명과학",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186440,
+      "lecture_id": 2220979,
+      "lecture_rate": 4.72,
+      "popular": 19
+    }
   },
   {
     "id": 43,
@@ -1119,7 +1377,13 @@
     "category": "생명과학",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186441,
+      "lecture_id": 3158458,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 44,
@@ -1140,7 +1404,13 @@
     ],
     "classification": "기초필수",
     "category": "생명과학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186442,
+      "lecture_id": 2777818,
+      "lecture_rate": 4,
+      "popular": 1
+    }
   },
   {
     "id": 45,
@@ -1161,7 +1431,13 @@
     ],
     "classification": "기초필수",
     "category": "생명과학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186443,
+      "lecture_id": 2988180,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 46,
@@ -1182,7 +1458,13 @@
     ],
     "classification": "기초필수",
     "category": "생명과학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186444,
+      "lecture_id": 2355840,
+      "lecture_rate": 4.31,
+      "popular": 1
+    }
   },
   {
     "id": 47,
@@ -1203,7 +1485,13 @@
     ],
     "classification": "기초필수",
     "category": "생명과학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186445,
+      "lecture_id": 2355840,
+      "lecture_rate": 4.31,
+      "popular": 9
+    }
   },
   {
     "id": 48,
@@ -1224,7 +1512,13 @@
     ],
     "classification": "기초필수",
     "category": "생명과학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186446,
+      "lecture_id": 2355840,
+      "lecture_rate": 4.31,
+      "popular": 17
+    }
   },
   {
     "id": 49,
@@ -1245,7 +1539,13 @@
     ],
     "classification": "기초필수",
     "category": "생명과학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186447,
+      "lecture_id": 2355840,
+      "lecture_rate": 4.31,
+      "popular": 0
+    }
   },
   {
     "id": 50,
@@ -1274,7 +1574,13 @@
     "category": "생명과학",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186448,
+      "lecture_id": 3016687,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 51,
@@ -1303,7 +1609,13 @@
     "category": "생명과학",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186449,
+      "lecture_id": 2988182,
+      "lecture_rate": 4,
+      "popular": 10
+    }
   },
   {
     "id": 52,
@@ -1332,7 +1644,13 @@
     "category": "생명과학",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186450,
+      "lecture_id": 3158459,
+      "lecture_rate": 0,
+      "popular": 17
+    }
   },
   {
     "id": 53,
@@ -1360,7 +1678,13 @@
     "category": "화학",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186451,
+      "lecture_id": 3088330,
+      "lecture_rate": 5,
+      "popular": 1
+    }
   },
   {
     "id": 54,
@@ -1389,7 +1713,13 @@
     "major_tracks": [
       "화학",
       "재료공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186452,
+      "lecture_id": 3158460,
+      "lecture_rate": 0,
+      "popular": 16
+    }
   },
   {
     "id": 55,
@@ -1418,7 +1748,13 @@
     "major_tracks": [
       "화학",
       "재료공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186453,
+      "lecture_id": 3158460,
+      "lecture_rate": 0,
+      "popular": 16
+    }
   },
   {
     "id": 56,
@@ -1447,7 +1783,13 @@
     "major_tracks": [
       "화학",
       "재료공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186454,
+      "lecture_id": 2829380,
+      "lecture_rate": 5,
+      "popular": 42
+    }
   },
   {
     "id": 57,
@@ -1473,7 +1815,13 @@
     ],
     "classification": "기초선택",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186455,
+      "lecture_id": 2691105,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 58,
@@ -1499,7 +1847,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186456,
+      "lecture_id": 2603208,
+      "lecture_rate": 3.67,
+      "popular": 6
+    }
   },
   {
     "id": 59,
@@ -1525,7 +1879,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186457,
+      "lecture_id": 3088332,
+      "lecture_rate": 3,
+      "popular": 5
+    }
   },
   {
     "id": 60,
@@ -1551,7 +1911,13 @@
     ],
     "classification": "기초필수",
     "category": "수학",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186458,
+      "lecture_id": 2292458,
+      "lecture_rate": 4.73,
+      "popular": 21
+    }
   },
   {
     "id": 61,
@@ -1583,7 +1949,13 @@
     "category": "트랙",
     "major_tracks": [
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186459,
+      "lecture_id": 3158461,
+      "lecture_rate": 0,
+      "popular": 20
+    }
   },
   {
     "id": 62,
@@ -1611,7 +1983,13 @@
     "category": "트랙",
     "major_tracks": [
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186460,
+      "lecture_id": 2221019,
+      "lecture_rate": 4.33,
+      "popular": 16
+    }
   },
   {
     "id": 63,
@@ -1639,7 +2017,13 @@
     "category": "트랙",
     "major_tracks": [
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186461,
+      "lecture_id": 2988186,
+      "lecture_rate": 3.5,
+      "popular": 6
+    }
   },
   {
     "id": 64,
@@ -1669,7 +2053,13 @@
       "화학",
       "재료공학",
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186462,
+      "lecture_id": 3158462,
+      "lecture_rate": 0,
+      "popular": 28
+    }
   },
   {
     "id": 65,
@@ -1699,7 +2089,13 @@
       "화학",
       "재료공학",
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186463,
+      "lecture_id": 3158463,
+      "lecture_rate": 0,
+      "popular": 26
+    }
   },
   {
     "id": 66,
@@ -1728,7 +2124,13 @@
     "major_tracks": [
       "화학",
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186464,
+      "lecture_id": 3158464,
+      "lecture_rate": 0,
+      "popular": 20
+    }
   },
   {
     "id": 67,
@@ -1752,7 +2154,13 @@
     "category": "트랙",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186465,
+      "lecture_id": 3158465,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 68,
@@ -1781,7 +2189,13 @@
     "major_tracks": [
       "화학",
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186466,
+      "lecture_id": 2988191,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 69,
@@ -1810,7 +2224,13 @@
     "major_tracks": [
       "화학",
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186467,
+      "lecture_id": 3158466,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 70,
@@ -1838,7 +2258,13 @@
     "category": "트랙",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186468,
+      "lecture_id": 2603213,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 71,
@@ -1866,7 +2292,13 @@
     "category": "트랙",
     "major_tracks": [
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186469,
+      "lecture_id": 3158467,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 72,
@@ -1895,7 +2327,13 @@
     "major_tracks": [
       "컴퓨터공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186470,
+      "lecture_id": 2988194,
+      "lecture_rate": 4,
+      "popular": 30
+    }
   },
   {
     "id": 73,
@@ -1924,7 +2362,13 @@
     "major_tracks": [
       "컴퓨터공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186471,
+      "lecture_id": 2988195,
+      "lecture_rate": 4.88,
+      "popular": 39
+    }
   },
   {
     "id": 74,
@@ -1952,7 +2396,13 @@
     "category": "트랙",
     "major_tracks": [
       "컴퓨터공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186472,
+      "lecture_id": 3158468,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 75,
@@ -1980,7 +2430,13 @@
     "category": "트랙",
     "major_tracks": [
       "컴퓨터공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186473,
+      "lecture_id": 3158469,
+      "lecture_rate": 0,
+      "popular": 8
+    }
   },
   {
     "id": 76,
@@ -2008,7 +2464,13 @@
     "category": "트랙",
     "major_tracks": [
       "컴퓨터공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186474,
+      "lecture_id": 3158470,
+      "lecture_rate": 0,
+      "popular": 16
+    }
   },
   {
     "id": 77,
@@ -2037,7 +2499,13 @@
     "major_tracks": [
       "컴퓨터공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186475,
+      "lecture_id": 3158471,
+      "lecture_rate": 0,
+      "popular": 26
+    }
   },
   {
     "id": 78,
@@ -2066,7 +2534,13 @@
     "major_tracks": [
       "컴퓨터공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186476,
+      "lecture_id": 2991061,
+      "lecture_rate": 5,
+      "popular": 24
+    }
   },
   {
     "id": 80,
@@ -2093,7 +2567,13 @@
     "major_tracks": [
       "컴퓨터공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186478,
+      "lecture_id": 3158473,
+      "lecture_rate": 0,
+      "popular": 7
+    }
   },
   {
     "id": 81,
@@ -2122,7 +2602,13 @@
     "major_tracks": [
       "전자공학",
       "컴퓨터공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186479,
+      "lecture_id": 2221001,
+      "lecture_rate": 3.53,
+      "popular": 43
+    }
   },
   {
     "id": 83,
@@ -2150,7 +2636,13 @@
     "category": "트랙",
     "major_tracks": [
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186480,
+      "lecture_id": 2221017,
+      "lecture_rate": 4.33,
+      "popular": 18
+    }
   },
   {
     "id": 85,
@@ -2179,7 +2671,13 @@
     "major_tracks": [
       "전자공학",
       "컴퓨터공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186481,
+      "lecture_id": 2988200,
+      "lecture_rate": 5,
+      "popular": 7
+    }
   },
   {
     "id": 88,
@@ -2200,7 +2698,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186482,
+      "lecture_id": 2355859,
+      "lecture_rate": 3.77,
+      "popular": 1
+    }
   },
   {
     "id": 89,
@@ -2221,7 +2725,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186483,
+      "lecture_id": 2355861,
+      "lecture_rate": 4.81,
+      "popular": 5
+    }
   },
   {
     "id": 90,
@@ -2242,7 +2752,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186484,
+      "lecture_id": 2355859,
+      "lecture_rate": 3.77,
+      "popular": 1
+    }
   },
   {
     "id": 91,
@@ -2263,7 +2779,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186485,
+      "lecture_id": 2355859,
+      "lecture_rate": 3.77,
+      "popular": 11
+    }
   },
   {
     "id": 92,
@@ -2284,7 +2806,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186486,
+      "lecture_id": 2355861,
+      "lecture_rate": 4.81,
+      "popular": 12
+    }
   },
   {
     "id": 93,
@@ -2305,7 +2833,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186487,
+      "lecture_id": 2355861,
+      "lecture_rate": 4.81,
+      "popular": 16
+    }
   },
   {
     "id": 94,
@@ -2326,7 +2860,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186488,
+      "lecture_id": 2355861,
+      "lecture_rate": 4.81,
+      "popular": 11
+    }
   },
   {
     "id": 95,
@@ -2347,7 +2887,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186489,
+      "lecture_id": 2355863,
+      "lecture_rate": 4.42,
+      "popular": 6
+    }
   },
   {
     "id": 96,
@@ -2368,7 +2914,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186490,
+      "lecture_id": 2355863,
+      "lecture_rate": 4.42,
+      "popular": 2
+    }
   },
   {
     "id": 97,
@@ -2389,7 +2941,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186491,
+      "lecture_id": 2355863,
+      "lecture_rate": 4.42,
+      "popular": 6
+    }
   },
   {
     "id": 98,
@@ -2410,7 +2968,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186492,
+      "lecture_id": 2355863,
+      "lecture_rate": 4.42,
+      "popular": 11
+    }
   },
   {
     "id": 99,
@@ -2429,7 +2993,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186493,
+      "lecture_id": 2988203,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 100,
@@ -2448,7 +3018,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186494,
+      "lecture_id": 2988203,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 101,
@@ -2469,7 +3045,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186495,
+      "lecture_id": 2355859,
+      "lecture_rate": 3.77,
+      "popular": 0
+    }
   },
   {
     "id": 102,
@@ -2490,7 +3072,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186496,
+      "lecture_id": 2355859,
+      "lecture_rate": 3.77,
+      "popular": 2
+    }
   },
   {
     "id": 103,
@@ -2509,7 +3097,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186497,
+      "lecture_id": 2988203,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 190,
@@ -2528,7 +3122,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186498,
+      "lecture_id": 2988203,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 191,
@@ -2549,7 +3149,13 @@
     ],
     "classification": "기초필수",
     "category": "영어",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186499,
+      "lecture_id": 2355863,
+      "lecture_rate": 4.42,
+      "popular": 1
+    }
   },
   {
     "id": 104,
@@ -2570,7 +3176,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186501,
+      "lecture_id": 2777827,
+      "lecture_rate": 5,
+      "popular": 6
+    }
   },
   {
     "id": 105,
@@ -2591,7 +3203,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186502,
+      "lecture_id": 3158474,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 106,
@@ -2612,7 +3230,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186503,
+      "lecture_id": 2885264,
+      "lecture_rate": 5,
+      "popular": 8
+    }
   },
   {
     "id": 107,
@@ -2633,7 +3257,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186504,
+      "lecture_id": 3158475,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 108,
@@ -2659,7 +3289,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186505,
+      "lecture_id": 2418979,
+      "lecture_rate": 4.33,
+      "popular": 10
+    }
   },
   {
     "id": 109,
@@ -2680,7 +3316,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186506,
+      "lecture_id": 2885265,
+      "lecture_rate": 4.75,
+      "popular": 7
+    }
   },
   {
     "id": 110,
@@ -2701,7 +3343,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186507,
+      "lecture_id": 2885265,
+      "lecture_rate": 4.75,
+      "popular": 8
+    }
   },
   {
     "id": 111,
@@ -2722,7 +3370,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186508,
+      "lecture_id": 2612339,
+      "lecture_rate": 4.47,
+      "popular": 8
+    }
   },
   {
     "id": 112,
@@ -2743,7 +3397,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186509,
+      "lecture_id": 2612339,
+      "lecture_rate": 4.47,
+      "popular": 8
+    }
   },
   {
     "id": 113,
@@ -2764,7 +3424,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186510,
+      "lecture_id": 2996522,
+      "lecture_rate": 1,
+      "popular": 1
+    }
   },
   {
     "id": 114,
@@ -2790,7 +3456,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186511,
+      "lecture_id": 2292261,
+      "lecture_rate": 5,
+      "popular": 0
+    }
   },
   {
     "id": 115,
@@ -2809,7 +3481,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186512,
+      "lecture_id": 3158476,
+      "lecture_rate": 0,
+      "popular": 20
+    }
   },
   {
     "id": 116,
@@ -2828,7 +3506,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186513,
+      "lecture_id": 3158477,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 117,
@@ -2849,7 +3533,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186514,
+      "lecture_id": 2988206,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 118,
@@ -2870,7 +3560,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186515,
+      "lecture_id": 3158478,
+      "lecture_rate": 0,
+      "popular": 17
+    }
   },
   {
     "id": 119,
@@ -2891,7 +3587,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186516,
+      "lecture_id": 3158479,
+      "lecture_rate": 0,
+      "popular": 51
+    }
   },
   {
     "id": 120,
@@ -2912,7 +3614,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186517,
+      "lecture_id": 3158480,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 121,
@@ -2933,7 +3641,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186518,
+      "lecture_id": 2988210,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 122,
@@ -2954,7 +3668,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186519,
+      "lecture_id": 2770875,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 123,
@@ -2975,7 +3695,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186520,
+      "lecture_id": 3088356,
+      "lecture_rate": 0,
+      "popular": 12
+    }
   },
   {
     "id": 124,
@@ -2994,7 +3720,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186521,
+      "lecture_id": 2511517,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 125,
@@ -3017,7 +3749,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186522,
+      "lecture_id": 3158481,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 126,
@@ -3038,7 +3776,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186523,
+      "lecture_id": 2996523,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 127,
@@ -3059,7 +3803,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186524,
+      "lecture_id": 2885266,
+      "lecture_rate": 5,
+      "popular": 10
+    }
   },
   {
     "id": 128,
@@ -3085,7 +3835,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186525,
+      "lecture_id": 3158482,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 129,
@@ -3106,7 +3862,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186526,
+      "lecture_id": 3158483,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 130,
@@ -3132,7 +3894,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186527,
+      "lecture_id": 3158484,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 131,
@@ -3158,7 +3926,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186528,
+      "lecture_id": 3158485,
+      "lecture_rate": 0,
+      "popular": 8
+    }
   },
   {
     "id": 132,
@@ -3177,7 +3951,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186529,
+      "lecture_id": 3158486,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 133,
@@ -3196,7 +3976,13 @@
     "professors": [],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186530,
+      "lecture_id": 3158487,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 136,
@@ -3222,7 +4008,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186531,
+      "lecture_id": 3158488,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 137,
@@ -3248,7 +4040,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186532,
+      "lecture_id": 2161328,
+      "lecture_rate": 4.8,
+      "popular": 0
+    }
   },
   {
     "id": 138,
@@ -3274,7 +4072,13 @@
     ],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186533,
+      "lecture_id": 2221087,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 139,
@@ -3306,7 +4110,13 @@
     "major_tracks": [
       "생명과학",
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186544,
+      "lecture_id": 2988220,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 140,
@@ -3338,7 +4148,13 @@
     "major_tracks": [
       "생명과학",
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186545,
+      "lecture_id": 2988220,
+      "lecture_rate": 0,
+      "popular": 13
+    }
   },
   {
     "id": 141,
@@ -3368,7 +4184,13 @@
     "major_tracks": [
       "생명과학",
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186546,
+      "lecture_id": 2988221,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 142,
@@ -3398,7 +4220,13 @@
     "category": "트랙",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186547,
+      "lecture_id": 3158495,
+      "lecture_rate": 0,
+      "popular": 7
+    }
   },
   {
     "id": 143,
@@ -3428,7 +4256,13 @@
     "major_tracks": [
       "생명과학",
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186548,
+      "lecture_id": 2777842,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 144,
@@ -3459,7 +4293,13 @@
     "major_tracks": [
       "생명과학",
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186549,
+      "lecture_id": 2161057,
+      "lecture_rate": 5,
+      "popular": 15
+    }
   },
   {
     "id": 145,
@@ -3488,7 +4328,13 @@
     "major_tracks": [
       "생명과학",
       "뇌과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186550,
+      "lecture_id": 3158496,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 146,
@@ -3511,7 +4357,13 @@
     "category": "트랙",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186551,
+      "lecture_id": 2603231,
+      "lecture_rate": 5,
+      "popular": 7
+    }
   },
   {
     "id": 147,
@@ -3540,7 +4392,13 @@
     "category": "트랙",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186552,
+      "lecture_id": 2988224,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 148,
@@ -3569,7 +4427,13 @@
     "category": "트랙",
     "major_tracks": [
       "생명과학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186553,
+      "lecture_id": 2445355,
+      "lecture_rate": 5,
+      "popular": 10
+    }
   },
   {
     "id": 149,
@@ -3597,7 +4461,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186554,
+      "lecture_id": 2221002,
+      "lecture_rate": 4.22,
+      "popular": 12
+    }
   },
   {
     "id": 150,
@@ -3625,7 +4495,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186555,
+      "lecture_id": 3158497,
+      "lecture_rate": 0,
+      "popular": 9
+    }
   },
   {
     "id": 151,
@@ -3657,7 +4533,13 @@
     "major_tracks": [
       "기계공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186556,
+      "lecture_id": 3158498,
+      "lecture_rate": 0,
+      "popular": 26
+    }
   },
   {
     "id": 152,
@@ -3680,7 +4562,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186557,
+      "lecture_id": 2161063,
+      "lecture_rate": 5,
+      "popular": 6
+    }
   },
   {
     "id": 186,
@@ -3704,7 +4592,13 @@
     "major_tracks": [
       "기계공학",
       "전자공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186558,
+      "lecture_id": 3158499,
+      "lecture_rate": 0,
+      "popular": 8
+    }
   },
   {
     "id": 153,
@@ -3732,7 +4626,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186559,
+      "lecture_id": 3158500,
+      "lecture_rate": 0,
+      "popular": 11
+    }
   },
   {
     "id": 154,
@@ -3760,7 +4660,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186560,
+      "lecture_id": 2988228,
+      "lecture_rate": 0,
+      "popular": 0
+    }
   },
   {
     "id": 155,
@@ -3784,7 +4690,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186561,
+      "lecture_id": 3158501,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 156,
@@ -3807,7 +4719,13 @@
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186562,
+      "lecture_id": 2603235,
+      "lecture_rate": 0,
+      "popular": 4
+    }
   },
   {
     "id": 157,
@@ -3831,7 +4749,13 @@
     "major_tracks": [
       "재료공학",
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186563,
+      "lecture_id": 2988230,
+      "lecture_rate": 0,
+      "popular": 8
+    }
   },
   {
     "id": 187,
@@ -3860,7 +4784,13 @@
     "major_tracks": [
       "재료공학",
       "화학공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186564,
+      "lecture_id": 2221014,
+      "lecture_rate": 4.14,
+      "popular": 25
+    }
   },
   {
     "id": 158,
@@ -3888,7 +4818,13 @@
     "category": "트랙",
     "major_tracks": [
       "재료공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186565,
+      "lecture_id": 2355891,
+      "lecture_rate": 0,
+      "popular": 18
+    }
   },
   {
     "id": 159,
@@ -3916,7 +4852,13 @@
     "category": "트랙",
     "major_tracks": [
       "재료공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186566,
+      "lecture_id": 3158502,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 160,
@@ -3944,7 +4886,13 @@
     "category": "트랙",
     "major_tracks": [
       "재료공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186567,
+      "lecture_id": 3158503,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 161,
@@ -3974,7 +4922,13 @@
       "재료공학",
       "화학공학",
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186568,
+      "lecture_id": 2777851,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 162,
@@ -4004,7 +4958,13 @@
       "재료공학",
       "물리학",
       "화학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186569,
+      "lecture_id": 2988231,
+      "lecture_rate": 1,
+      "popular": 5
+    }
   },
   {
     "id": 163,
@@ -4032,7 +4992,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186570,
+      "lecture_id": 2988232,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 164,
@@ -4060,7 +5026,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186571,
+      "lecture_id": 2988233,
+      "lecture_rate": 3.33,
+      "popular": 10
+    }
   },
   {
     "id": 165,
@@ -4088,7 +5060,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186572,
+      "lecture_id": 2777854,
+      "lecture_rate": 5,
+      "popular": 3
+    }
   },
   {
     "id": 166,
@@ -4119,7 +5097,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186573,
+      "lecture_id": 3158504,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 167,
@@ -4147,7 +5131,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186574,
+      "lecture_id": 2988235,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   },
   {
     "id": 168,
@@ -4175,7 +5165,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186575,
+      "lecture_id": 2445365,
+      "lecture_rate": 5,
+      "popular": 2
+    }
   },
   {
     "id": 188,
@@ -4203,7 +5199,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186576,
+      "lecture_id": 3158505,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 169,
@@ -4231,7 +5233,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186577,
+      "lecture_id": 2777855,
+      "lecture_rate": 5,
+      "popular": 4
+    }
   },
   {
     "id": 170,
@@ -4259,7 +5267,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186578,
+      "lecture_id": 3158506,
+      "lecture_rate": 0,
+      "popular": 1
+    }
   },
   {
     "id": 171,
@@ -4287,7 +5301,13 @@
     "category": "트랙",
     "major_tracks": [
       "물리학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186579,
+      "lecture_id": 3158507,
+      "lecture_rate": 0,
+      "popular": 3
+    }
   },
   {
     "id": 172,
@@ -4308,7 +5328,13 @@
     ],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186580,
+      "lecture_id": 2160535,
+      "lecture_rate": 3.9,
+      "popular": 1
+    }
   },
   {
     "id": 173,
@@ -4329,7 +5355,13 @@
     ],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186581,
+      "lecture_id": 2356063,
+      "lecture_rate": 2.75,
+      "popular": 5
+    }
   },
   {
     "id": 174,
@@ -4355,7 +5387,13 @@
     ],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186582,
+      "lecture_id": 3158508,
+      "lecture_rate": 0,
+      "popular": 39
+    }
   },
   {
     "id": 175,
@@ -4374,7 +5412,13 @@
     "professors": [],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186583,
+      "lecture_id": 2511725,
+      "lecture_rate": 0,
+      "popular": 9
+    }
   },
   {
     "id": 176,
@@ -4395,7 +5439,13 @@
     ],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186584,
+      "lecture_id": 2777913,
+      "lecture_rate": 5,
+      "popular": 8
+    }
   },
   {
     "id": 177,
@@ -4421,7 +5471,13 @@
     ],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186585,
+      "lecture_id": 3158509,
+      "lecture_rate": 0,
+      "popular": 11
+    }
   },
   {
     "id": 178,
@@ -4448,7 +5504,13 @@
     ],
     "classification": "심화필수",
     "category": "비트랙/융합",
-    "major_tracks": []
+    "major_tracks": [],
+    "everytime": {
+      "subject_id": 8186586,
+      "lecture_id": 3158510,
+      "lecture_rate": 0,
+      "popular": 7
+    }
   },
   {
     "id": 189,
@@ -4465,7 +5527,13 @@
     "category": "반도체공학",
     "major_tracks": [
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186587,
+      "lecture_id": 3158511,
+      "lecture_rate": 0,
+      "popular": 5
+    }
   },
   {
     "id": 180,
@@ -4493,7 +5561,13 @@
     "category": "반도체공학",
     "major_tracks": [
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186588,
+      "lecture_id": 3158512,
+      "lecture_rate": 0,
+      "popular": 9
+    }
   },
   {
     "id": 181,
@@ -4521,7 +5595,13 @@
     "category": "반도체공학",
     "major_tracks": [
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186589,
+      "lecture_id": 3158513,
+      "lecture_rate": 0,
+      "popular": 7
+    }
   },
   {
     "id": 182,
@@ -4549,7 +5629,13 @@
     "category": "반도체공학",
     "major_tracks": [
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186590,
+      "lecture_id": 3158514,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 183,
@@ -4577,7 +5663,13 @@
     "category": "반도체공학",
     "major_tracks": [
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186591,
+      "lecture_id": 3158515,
+      "lecture_rate": 0,
+      "popular": 6
+    }
   },
   {
     "id": 184,
@@ -4605,6 +5697,12 @@
     "category": "반도체공학",
     "major_tracks": [
       "반도체공학"
-    ]
+    ],
+    "everytime": {
+      "subject_id": 8186592,
+      "lecture_id": 3158516,
+      "lecture_rate": 0,
+      "popular": 2
+    }
   }
 ]

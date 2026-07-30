@@ -1,0 +1,20 @@
+{
+  "name": "ags-live-report-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare-report-asset": "mkdir -p private-assets && cp ../../local-reports/people-usage-report.html private-assets/people-usage-report.html",
+    "precheck": "npm run prepare-report-asset",
+    "check": "wrangler deploy --dry-run",
+    "predeploy": "npm run prepare-report-asset",
+    "deploy": "wrangler deploy",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "jose": "6.2.4"
+  },
+  "devDependencies": {
+    "wrangler": "4.114.0"
+  }
+}

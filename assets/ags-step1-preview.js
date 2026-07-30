@@ -12,6 +12,7 @@ let renderedLectureKey = "";
 let renderedAvailabilityKey = "";
 let warningTimer = null;
 let mutationSyncScheduled = false;
+let previewResizeFrame = 0;
 
 const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const GROUP_SELECTOR = '[class~="group/item"]';
@@ -84,6 +85,49 @@ const ensurePreview = () => {
     main.appendChild(preview);
   }
   return preview;
+};
+
+const previewLineCount = (label, rowHeight) => {
+  const height = label.getBoundingClientRect().height;
+  return Math.max(1, Math.round(height / rowHeight));
+};
+
+const fitPreviewTitlesToRows = (preview, rowHeight) => {
+  preview.querySelectorAll(".ags-preview-busy > span").forEach((label) => {
+    const availableRows = Math.max(1, Number(label.dataset.previewRows) || 1);
+    label.classList.remove("ags-preview-label-compact");
+    label.style.removeProperty("font-size");
+    label.style.removeProperty("transform");
+    label.style.removeProperty("transform-origin");
+    label.style.removeProperty("width");
+    label.title = label.textContent;
+    label.setAttribute("aria-label", label.textContent);
+
+    if (previewLineCount(label, rowHeight) <= availableRows) return;
+    label.classList.add("ags-preview-label-compact");
+
+    let fontSize = Number.parseFloat(getComputedStyle(label).fontSize) || 8;
+    while (fontSize > 5 && previewLineCount(label, rowHeight) > availableRows) {
+      fontSize -= 0.25;
+      label.style.fontSize = `${fontSize}px`;
+    }
+
+    let horizontalScale = 1;
+    while (horizontalScale > 0.65 && previewLineCount(label, rowHeight) > availableRows) {
+      horizontalScale -= 0.05;
+      label.style.width = `${100 / horizontalScale}%`;
+      label.style.transform = `scaleX(${horizontalScale})`;
+      label.style.transformOrigin = "left top";
+    }
+  });
+};
+
+const syncPreviewRowHeight = (preview = currentMain()?.querySelector(".ags-lecture-preview")) => {
+  const row = preview?.querySelector(".ags-preview-grid > .ags-preview-cell:not(.ags-preview-header)");
+  const rowHeight = row?.getBoundingClientRect().height || 0;
+  if (rowHeight <= 0) return;
+  preview.style.setProperty("--ags-preview-row-height", `${rowHeight}px`);
+  fitPreviewTitlesToRows(preview, rowHeight);
 };
 
 const lectureKey = (lecture) => `${lecture.id}:${lecture.course_number}:${lecture.section}`;
@@ -258,11 +302,16 @@ const renderPreview = () => {
             cellItems.length > 1 ? "ags-preview-overlap" : "",
             conflicts.has(key) ? "ags-preview-conflict" : "",
           ].filter(Boolean).join(" ");
-          return `<div class="${classes}">${startItems.map(({ lecture, kind }) => `<span class="ags-preview-label-${kind}">${lecture.name}</span>`).join("")}</div>`;
+          return `<div class="${classes}">${startItems.map(({ lecture, kind }) => {
+            const slot = lecture.time_slots.find((item) => item.day === day && item.start_index === index);
+            const rowCount = slot ? slot.end_index - slot.start_index + 1 : 1;
+            return `<span class="ags-preview-label-${kind}" data-preview-rows="${rowCount}">${lecture.name}</span>`;
+          }).join("")}</div>`;
         }).join("")}
       `).join("")}
     </div>
   `;
+  syncPreviewRowHeight(preview);
 };
 
 const lectureFromCard = (card) => {
@@ -575,6 +624,11 @@ new MutationObserver((mutations) => {
   mutationSyncScheduled = true;
   requestAnimationFrame(syncFromMutation);
 }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
+
+window.addEventListener("resize", () => {
+  cancelAnimationFrame(previewResizeFrame);
+  previewResizeFrame = requestAnimationFrame(() => syncPreviewRowHeight());
+});
 
 loadLectures()
   .then(() => {

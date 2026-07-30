@@ -8,3 +8,4 @@ selected_lectures_cache.json
 __pycache__/
 cloudflare/telemetry-worker/.wrangler/
 cloudflare/telemetry-worker/exports/
+cloudflare/report-worker/private-assets/

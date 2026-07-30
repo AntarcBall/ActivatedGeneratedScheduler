@@ -157,6 +157,9 @@ def parse_snapshot(text: str) -> dict:
     snapshot["public_ip"] = parse_public_ip(text)
     snapshot["categories"] = parse_categories(text)
     snapshot["vitals"] = parse_vitals(text)
+    if "everytimeApp" in snapshot.get("ua", ""):
+        snapshot["browser"] = "Everytime"
+        snapshot["context"] = "everytime_in_app"
     if navigation:
         snapshot["navigation"] = [int(value) for value in navigation.groups()]
     return snapshot

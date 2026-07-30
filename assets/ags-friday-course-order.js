@@ -93,11 +93,17 @@ const initFridayRows = async () => {
   }
 };
 
-new MutationObserver(scheduleFridaySync).observe(document.body, {
+new MutationObserver((mutations) => {
+  const rowsAdded = mutations.some((mutation) => (
+    Array.from(mutation.addedNodes).some((node) => (
+      node.nodeType === Node.ELEMENT_NODE
+      && (node.matches?.(FRIDAY_COURSE_ROW_SELECTOR) || node.querySelector?.(FRIDAY_COURSE_ROW_SELECTOR))
+    ))
+  ));
+  if (rowsAdded) scheduleFridaySync();
+}).observe(document.body, {
   childList: true,
   subtree: true,
-  attributes: true,
-  attributeFilter: ["class"],
 });
 
 window.addEventListener("load", scheduleFridaySync);

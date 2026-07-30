@@ -264,11 +264,17 @@ const scheduleSortSync = () => {
   });
 };
 
-new MutationObserver(scheduleSortSync).observe(document.body, {
+new MutationObserver((mutations) => {
+  const groupsAdded = mutations.some((mutation) => (
+    Array.from(mutation.addedNodes).some((node) => (
+      node.nodeType === Node.ELEMENT_NODE
+      && (node.matches?.(COURSE_GROUP_SELECTOR) || node.querySelector?.(COURSE_GROUP_SELECTOR))
+    ))
+  ));
+  if (groupsAdded) scheduleSortSync();
+}).observe(document.body, {
   childList: true,
   subtree: true,
-  attributes: true,
-  attributeFilter: ["class"],
 });
 
 window.addEventListener("load", scheduleSortSync);

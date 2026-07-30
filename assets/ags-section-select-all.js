@@ -2,6 +2,7 @@ const COURSE_GROUP_SELECTOR = ".ags-lecture-main [class~='group/item']";
 const SECTION_CARD_SELECTOR = ":scope > div.grid .cursor-pointer";
 
 let selectAllSyncScheduled = false;
+const pendingSelectAllRoots = new Set();
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const isEnglish = () => {
@@ -68,10 +69,21 @@ const ensureButton = (group) => {
 
 const syncSelectAllButtons = () => {
   selectAllSyncScheduled = false;
-  document.querySelectorAll(COURSE_GROUP_SELECTOR).forEach(ensureButton);
+  const roots = pendingSelectAllRoots.size ? Array.from(pendingSelectAllRoots) : [document];
+  pendingSelectAllRoots.clear();
+  const groups = new Set();
+  for (const root of roots) {
+    if (root !== document && (!root.isConnected || root.nodeType !== Node.ELEMENT_NODE)) continue;
+    if (root !== document && root.matches?.(COURSE_GROUP_SELECTOR)) groups.add(root);
+    root.querySelectorAll?.(COURSE_GROUP_SELECTOR).forEach((group) => groups.add(group));
+    const closest = root !== document ? root.closest?.(COURSE_GROUP_SELECTOR) : null;
+    if (closest) groups.add(closest);
+  }
+  groups.forEach(ensureButton);
 };
 
-const scheduleSelectAllSync = () => {
+const scheduleSelectAllSync = (root = document) => {
+  pendingSelectAllRoots.add(root);
   if (selectAllSyncScheduled) return;
   selectAllSyncScheduled = true;
   requestAnimationFrame(syncSelectAllButtons);
@@ -112,12 +124,22 @@ document.addEventListener("keydown", (event) => {
   void selectAllSections(group);
 }, true);
 
-new MutationObserver(scheduleSelectAllSync).observe(document.body, {
+new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    if (mutation.target?.nodeType === Node.ELEMENT_NODE) pendingSelectAllRoots.add(mutation.target);
+    mutation.addedNodes.forEach((node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) pendingSelectAllRoots.add(node);
+    });
+  }
+  if (pendingSelectAllRoots.size) scheduleSelectAllSync(pendingSelectAllRoots.values().next().value);
+}).observe(document.body, {
   childList: true,
   subtree: true,
-  attributes: true,
-  attributeFilter: ["class"],
 });
 
-window.addEventListener("load", scheduleSelectAllSync);
+document.addEventListener("click", (event) => {
+  const group = event.target.closest?.(COURSE_GROUP_SELECTOR);
+  if (group) scheduleSelectAllSync(group);
+}, true);
+window.addEventListener("load", () => scheduleSelectAllSync());
 scheduleSelectAllSync();
