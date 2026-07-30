@@ -1,5 +1,6 @@
 const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const PRIVACY_NOTICE = "서비스의 안정적인 운영, 오류 분석, 보안 및 이용 통계 산출을 위해  브라우저 정보, 서비스 이용 방식  등이 자동으로 수집·이용될 수 있습니다.";
+const DIRECT_RESULT_PENDING_KEY = "ags_direct_result_pending";
 
 let skipBusy = false;
 
@@ -52,6 +53,35 @@ const waitForPageChange = async (fromPage, timeout = 1600) => {
   return false;
 };
 
+const renderedPage = () => {
+  const heading = document.querySelector("#root h2");
+  const match = normalize(heading?.textContent).match(/^Step\s+(\d+)/i);
+  return match ? Number(match[1]) : null;
+};
+
+const lecturesHaveLoaded = () => {
+  return performance.getEntriesByType?.("resource").some((entry) => {
+    try {
+      return /\/lectures(?:_eng)?\.json$/.test(new URL(entry.name).pathname) && entry.responseEnd > 0;
+    } catch {
+      return false;
+    }
+  });
+};
+
+const waitForDirectResultReady = async (timeout = 10000) => {
+  const start = performance.now();
+  while (performance.now() - start < timeout) {
+    if (renderedPage() === 5 && lecturesHaveLoaded()) {
+      await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      const generate = primaryFooterButton();
+      if (generate && !generate.disabled) return generate;
+    }
+    await sleep(80);
+  }
+  return null;
+};
+
 const isCompactMobile = () => window.matchMedia?.("(max-width: 640px)")?.matches;
 
 const labelForMode = (mode) => {
@@ -63,17 +93,18 @@ const jumpToResults = async () => {
   if (skipBusy) return;
   skipBusy = true;
   dispatchSkipEvent("start", { fromPage: currentPage() });
+  let isReloading = false;
   try {
-    for (let guard = 0; guard < 8 && currentPage() > 0 && currentPage() < 5; guard += 1) {
-      const before = currentPage();
-      const next = primaryFooterButton();
-      if (!next || next.disabled) break;
-      next.click();
-      const moved = await waitForPageChange(before);
-      if (!moved) break;
+    const page = currentPage();
+    if (page > 0 && page < 5) {
+      window.sessionStorage.setItem(DIRECT_RESULT_PENDING_KEY, "1");
+      window.localStorage.setItem("ags_current_page", "5");
+      isReloading = true;
+      window.location.reload();
+      return;
     }
 
-    if (currentPage() === 5) {
+    if (page === 5) {
       const generate = primaryFooterButton();
       if (generate && !generate.disabled) {
         generate.click();
@@ -81,11 +112,28 @@ const jumpToResults = async () => {
       }
     }
   } finally {
+    if (isReloading) return;
     setTimeout(() => {
       skipBusy = false;
       syncSkipButtons();
       dispatchSkipEvent("done", { page: currentPage() });
     }, 300);
+  }
+};
+
+const resumeDirectResultJump = async () => {
+  if (window.sessionStorage.getItem(DIRECT_RESULT_PENDING_KEY) !== "1") return;
+  skipBusy = true;
+  const generate = await waitForDirectResultReady();
+  window.sessionStorage.removeItem(DIRECT_RESULT_PENDING_KEY);
+
+  if (generate) {
+    generate.click();
+    dispatchSkipEvent("generate", { fromPage: 5, direct: true });
+  } else {
+    skipBusy = false;
+    syncSkipButtons();
+    dispatchSkipEvent("done", { page: currentPage(), direct: true, timedOut: true });
   }
 };
 
@@ -194,3 +242,4 @@ new MutationObserver(() => syncSkipButtons()).observe(document.body, {
 
 window.setInterval(syncSkipButtons, 500);
 syncSkipButtons();
+void resumeDirectResultJump();
