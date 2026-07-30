@@ -1,5 +1,24 @@
 const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
-const PRIVACY_NOTICE = "서비스의 안정적인 운영, 오류 분석, 보안 및 이용 통계 산출을 위해  브라우저 정보, 서비스 이용 방식  등이 자동으로 수집·이용될 수 있습니다.";
+const COPY = {
+  ko: {
+    privacyNotice: "서비스의 안정적인 운영, 오류 분석, 보안 및 이용 통계 산출을 위해 브라우저 정보, 서비스 이용 방식 등이 자동으로 수집·이용될 수 있습니다.",
+    privacy: "개인정보처리방침",
+    privacyAria: "개인정보처리방침 안내 보기",
+    forwardMobile: "시간표",
+    backMobile: "강의 선택",
+    forward: "바로 시간표 만들기",
+    back: "강의 선택으로",
+  },
+  en: {
+    privacyNotice: "Browser information and service usage data may be collected and used automatically to keep the service reliable, analyze errors, maintain security, and compile usage statistics.",
+    privacy: "Privacy Policy",
+    privacyAria: "View the privacy policy notice",
+    forwardMobile: "Schedule",
+    backMobile: "Courses",
+    forward: "Create Schedule Now",
+    back: "Back to Courses",
+  },
+};
 const DIRECT_RESULT_PENDING_KEY = "ags_direct_result_pending";
 
 let skipBusy = false;
@@ -84,9 +103,22 @@ const waitForDirectResultReady = async (timeout = 10000) => {
 
 const isCompactMobile = () => window.matchMedia?.("(max-width: 640px)")?.matches;
 
+const currentLanguage = () => {
+  const buttons = Array.from(document.querySelectorAll("#root button"));
+  const active = buttons.find((button) => (
+    /^(한국어|English)$/.test(normalize(button.textContent))
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ));
+  if (normalize(active?.textContent) === "English") return "en";
+  if (normalize(active?.textContent) === "한국어") return "ko";
+  const heading = normalize(document.querySelector("#root h2")?.textContent);
+  return /Select|Set|Good|Bad|Schedule|Result|View/i.test(heading) ? "en" : "ko";
+};
+
 const labelForMode = (mode) => {
-  if (isCompactMobile()) return mode === "forward" ? "시간표" : "강의 선택";
-  return mode === "forward" ? "바로 시간표 만들기" : "강의 선택으로";
+  const copy = COPY[currentLanguage()];
+  if (isCompactMobile()) return mode === "forward" ? copy.forwardMobile : copy.backMobile;
+  return mode === "forward" ? copy.forward : copy.back;
 };
 
 const jumpToResults = async () => {
@@ -173,12 +205,13 @@ const makeButton = (mode) => {
 };
 
 const makePrivacyButton = () => {
+  const copy = COPY[currentLanguage()];
   const button = document.createElement("button");
   button.type = "button";
   button.className = "ags-privacy-policy-button";
-  button.textContent = "개인정보처리방침";
-  button.setAttribute("aria-label", "개인정보처리방침 안내 보기");
-  button.addEventListener("click", () => window.alert(PRIVACY_NOTICE));
+  button.textContent = copy.privacy;
+  button.setAttribute("aria-label", copy.privacyAria);
+  button.addEventListener("click", () => window.alert(COPY[currentLanguage()].privacyNotice));
   return button;
 };
 
@@ -194,6 +227,9 @@ const ensureFooterExtras = (footer) => {
     privacyButton = makePrivacyButton();
     extras.appendChild(privacyButton);
   }
+  const copy = COPY[currentLanguage()];
+  if (privacyButton.textContent !== copy.privacy) privacyButton.textContent = copy.privacy;
+  privacyButton.setAttribute("aria-label", copy.privacyAria);
 
   const primary = primaryFooterButton();
   if (extras.parentElement !== footer || extras.nextElementSibling !== primary) {

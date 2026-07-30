@@ -15,7 +15,7 @@ const LAST_EXIT_SEQUENCE_KEY = "ags_usage_last_exit_sequence_v3";
 const RESULT_SKIP_USED_KEY = "ags_result_skip_used";
 const ERROR_COUNT_KEY = "ags_usage_error_count_v3";
 const TRACK_PROFILE_KEY = "ags_track_profile";
-const CATEGORY_HEADER_LABEL = "카테고리";
+const CATEGORY_HEADER_LABELS = { ko: "카테고리", en: "Categories" };
 const MAX_LABEL_LENGTH = 80;
 const MAX_EVENT_COUNT = 200;
 const MAX_TELEMETRY_BODY_BYTES = 60 * 1024;
@@ -23,6 +23,15 @@ const MAX_DEBUG_MESSAGE_LENGTH = 3900;
 const RESULT_SEND_CHECK_MS = 1200;
 
 const cleanText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const currentLanguage = () => {
+  const active = Array.from(document.querySelectorAll("#root button")).find((button) => (
+    /^(한국어|English)$/.test(cleanText(button.textContent))
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ));
+  if (cleanText(active?.textContent) === "English") return "en";
+  if (cleanText(active?.textContent) === "한국어") return "ko";
+  return /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(cleanText(document.querySelector("#root h2")?.textContent)) ? "en" : "ko";
+};
 
 const clip = (value, limit = MAX_LABEL_LENGTH) => {
   const text = cleanText(value);
@@ -353,8 +362,9 @@ const categoryHeaderButton = () => categoryPanel()?.querySelector(":scope > butt
 
 const syncCategoryHeaderLabel = () => {
   const button = categoryHeaderButton();
-  if (button && cleanText(button.textContent) !== CATEGORY_HEADER_LABEL) {
-    button.textContent = CATEGORY_HEADER_LABEL;
+  const label = CATEGORY_HEADER_LABELS[currentLanguage()];
+  if (button && cleanText(button.textContent) !== label) {
+    button.textContent = label;
   }
 };
 

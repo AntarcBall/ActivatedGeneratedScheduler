@@ -3,32 +3,54 @@
     "id": 1,
     "course_number": "BE101a",
     "section": 1,
-    "name": "프로그래밍",
-    "prof": "김기섭",
-    "classification": "기초필수",
-    "category": "컴퓨터공학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 9,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "프로그래밍",
+    "prof": "김기섭",
+    "professors": [
+      "김기섭"
+    ],
+    "classification": "기초필수",
+    "category": "컴퓨터공학",
+    "major_tracks": []
+  },
+  {
+    "id": 185,
+    "course_number": "BE201",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 5,
+        "end_index": 7
+      },
+      {
+        "day": "수",
+        "start_index": 5,
+        "end_index": 7
+      }
+    ],
+    "name": "인공지능기초",
+    "prof": "배인환",
+    "professors": [
+      "배인환"
+    ],
+    "classification": "기초필수",
+    "category": "컴퓨터공학",
+    "major_tracks": []
   },
   {
     "id": 2,
     "course_number": "BE204",
     "section": 1,
-    "name": "화학공학개론",
-    "prof": "김운혁",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -40,141 +62,161 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "화학공학개론",
+    "prof": "김운혁",
+    "professors": [
+      "김운혁"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "화학공학"
     ]
   },
   {
     "id": 3,
     "course_number": "BE206",
     "section": 1,
-    "name": "회로이론과 계측법(실습)",
-    "prof": "송민영",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "전자공학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 11,
         "end_index": 14
       }
+    ],
+    "name": "회로이론과 계측법(실습)",
+    "prof": "송민영",
+    "professors": [
+      "송민영"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "전자공학"
     ]
   },
   {
     "id": 4,
     "course_number": "BE206",
     "section": 2,
-    "name": "회로이론과 계측법(실습)",
-    "prof": "이정협",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "전자공학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 15,
         "end_index": 18
       }
+    ],
+    "name": "회로이론과 계측법(실습)",
+    "prof": "이정협",
+    "professors": [
+      "이정협"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "전자공학"
     ]
   },
   {
     "id": 5,
     "course_number": "BE206",
     "section": 3,
-    "name": "회로이론과 계측법(실습)",
-    "prof": "윤종혁",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "전자공학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 5,
         "end_index": 8
       }
+    ],
+    "name": "회로이론과 계측법(실습)",
+    "prof": "윤종혁",
+    "professors": [
+      "윤종혁"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "전자공학"
     ]
   },
   {
     "id": 6,
     "course_number": "BE206",
     "section": 4,
-    "name": "회로이론과 계측법(실습)",
-    "prof": "김가인",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "전자공학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 1,
         "end_index": 4
       }
+    ],
+    "name": "회로이론과 계측법(실습)",
+    "prof": "김가인",
+    "professors": [
+      "김가인"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "전자공학"
     ]
   },
   {
     "id": 7,
     "course_number": "BE206",
     "section": 5,
-    "name": "회로이론과 계측법(실습)",
-    "prof": "유재석",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "전자공학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 4,
         "end_index": 7
       }
+    ],
+    "name": "회로이론과 계측법(실습)",
+    "prof": "유재석",
+    "professors": [
+      "유재석"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "전자공학"
     ]
   },
   {
     "id": 8,
     "course_number": "BE206",
     "section": 6,
-    "name": "회로이론과 계측법(실습)",
-    "prof": "이경태",
-    "classification": "기초필수",
-    "category": "공학선택",
-    "major_tracks": [
-      "전자공학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 4,
         "end_index": 7
       }
+    ],
+    "name": "회로이론과 계측법(실습)",
+    "prof": "이경태",
+    "professors": [
+      "이경태"
+    ],
+    "classification": "기초필수",
+    "category": "공학선택",
+    "major_tracks": [
+      "전자공학"
     ]
   },
   {
     "id": 9,
     "course_number": "BR201",
     "section": 1,
-    "name": "신경과학Ⅰ(이)",
-    "prof": "서병창, 정한빈, 엄지원",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학",
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -186,21 +228,26 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "신경과학Ⅰ(이)",
+    "prof": "서병창, 정한빈, 엄지원",
+    "professors": [
+      "서병창",
+      "정한빈",
+      "엄지원"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학",
+      "생명과학"
     ]
   },
   {
     "id": 10,
     "course_number": "BR202",
     "section": 1,
-    "name": "신경과학Ⅱ(이)",
-    "prof": "현정호, 이효상, 최한경",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학",
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
@@ -212,20 +259,26 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "신경과학Ⅱ(이)",
+    "prof": "현정호, 이효상, 최한경",
+    "professors": [
+      "현정호",
+      "이효상",
+      "최한경"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학",
+      "생명과학"
     ]
   },
   {
     "id": 11,
     "course_number": "BR302",
     "section": 1,
-    "name": "뇌공학개론(이,공)",
-    "prof": "이광, 조용철",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -237,40 +290,49 @@
         "start_index": 16,
         "end_index": 18
       }
+    ],
+    "name": "뇌공학개론(이,공)",
+    "prof": "이광, 조용철",
+    "professors": [
+      "이광",
+      "조용철"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학"
     ]
   },
   {
     "id": 12,
     "course_number": "BR303",
     "section": 1,
-    "name": "뇌과학실험Ⅱ(이)",
-    "prof": "유우경, 이광, 최한경",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 9,
         "end_index": 14
       }
+    ],
+    "name": "뇌과학실험Ⅱ(이)",
+    "prof": "유우경, 이광, 최한경",
+    "professors": [
+      "유우경",
+      "이광",
+      "최한경"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학"
     ]
   },
   {
     "id": 13,
     "course_number": "BR306",
     "section": 1,
-    "name": "인지뇌과학개론(이)",
-    "prof": "현정호, 최한경",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -282,21 +344,24 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "인지뇌과학개론(이)",
+    "prof": "현정호, 최한경",
+    "professors": [
+      "현정호",
+      "최한경"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학"
     ]
   },
   {
     "id": 14,
     "course_number": "BR307",
     "section": 1,
-    "name": "뇌과학 특강(이)",
-    "prof": "최한경",
-    "classification": "심화선택",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학",
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -308,20 +373,24 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "뇌과학 특강(이)",
+    "prof": "최한경",
+    "professors": [
+      "최한경"
+    ],
+    "classification": "심화선택",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학",
+      "생명과학"
     ]
   },
   {
     "id": 15,
     "course_number": "BR402",
     "section": 1,
-    "name": "신경생리학(이)",
-    "prof": "박포정",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -333,20 +402,23 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "신경생리학(이)",
+    "prof": "박포정",
+    "professors": [
+      "박포정"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학"
     ]
   },
   {
     "id": 16,
     "course_number": "BR406",
     "section": 1,
-    "name": "시스템 뇌과학(이)",
-    "prof": "이효상, 오용석",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -358,20 +430,24 @@
         "start_index": 13,
         "end_index": 15
       }
+    ],
+    "name": "시스템 뇌과학(이)",
+    "prof": "이효상, 오용석",
+    "professors": [
+      "이효상",
+      "오용석"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학"
     ]
   },
   {
     "id": 17,
     "course_number": "BR407",
     "section": 1,
-    "name": "인공지능과 뇌과학(이)",
-    "prof": "김민환",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -383,18 +459,23 @@
         "start_index": 16,
         "end_index": 18
       }
+    ],
+    "name": "인공지능과 뇌과학(이)",
+    "prof": "김민환",
+    "professors": [
+      "김민환"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "뇌과학"
     ]
   },
   {
     "id": 18,
     "course_number": "BS101",
     "section": 1,
-    "name": "다변수 미적분학",
-    "prof": "이두석",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -406,18 +487,21 @@
         "start_index": 15,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "다변수 미적분학",
+    "prof": "이두석",
+    "professors": [
+      "이두석"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 19,
     "course_number": "BS101",
     "section": 2,
-    "name": "다변수 미적분학",
-    "prof": "안흥주",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -429,18 +513,21 @@
         "start_index": 11,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "다변수 미적분학",
+    "prof": "안흥주",
+    "professors": [
+      "안흥주"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 20,
     "course_number": "BS101",
     "section": 3,
-    "name": "다변수 미적분학",
-    "prof": "한강진",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -452,18 +539,21 @@
         "start_index": 4,
         "end_index": 7
       }
-    ]
+    ],
+    "name": "다변수 미적분학",
+    "prof": "한강진",
+    "professors": [
+      "한강진"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 21,
     "course_number": "BS101",
     "section": 4,
-    "name": "다변수 미적분학",
-    "prof": "Carlos Scarinci",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -475,18 +565,21 @@
         "start_index": 9,
         "end_index": 12
       }
-    ]
+    ],
+    "name": "다변수 미적분학",
+    "prof": "Carlos Scarinci",
+    "professors": [
+      "Carlos Scarinci"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 22,
     "course_number": "BS101",
     "section": 5,
-    "name": "다변수 미적분학",
-    "prof": "Carlos Scarinci",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -498,18 +591,21 @@
         "start_index": 15,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "다변수 미적분학",
+    "prof": "Carlos Scarinci",
+    "professors": [
+      "Carlos Scarinci"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 23,
     "course_number": "BS102a",
     "section": 1,
-    "name": "공학수학Ⅰ",
-    "prof": "Hudson Thomas Bryan",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -521,21 +617,21 @@
         "start_index": 1,
         "end_index": 4
       }
-    ]
+    ],
+    "name": "공학수학Ⅰ",
+    "prof": "Hudson Thomas Bryan",
+    "professors": [
+      "Hudson Thomas Bryan"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 24,
     "course_number": "BS105a",
     "section": 1,
-    "name": "일반물리Ⅱ",
-    "prof": "DEVECIOGLU DENIZ OLGU",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -547,21 +643,24 @@
         "start_index": 5,
         "end_index": 7
       }
+    ],
+    "name": "일반물리Ⅱ",
+    "prof": "DEVECIOGLU DENIZ OLGU",
+    "professors": [
+      "DEVECIOGLU DENIZ OLGU"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학",
+      "전자공학"
     ]
   },
   {
     "id": 25,
     "course_number": "BS105a",
     "section": 2,
-    "name": "일반물리Ⅱ",
-    "prof": "DEVECIOGLU DENIZ OLGU",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -573,21 +672,24 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "일반물리Ⅱ",
+    "prof": "DEVECIOGLU DENIZ OLGU",
+    "professors": [
+      "DEVECIOGLU DENIZ OLGU"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학",
+      "전자공학"
     ]
   },
   {
     "id": 26,
     "course_number": "BS105a",
     "section": 3,
-    "name": "일반물리Ⅱ",
-    "prof": "DEVECIOGLU DENIZ OLGU",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -599,21 +701,24 @@
         "start_index": 11,
         "end_index": 13
       }
+    ],
+    "name": "일반물리Ⅱ",
+    "prof": "DEVECIOGLU DENIZ OLGU",
+    "professors": [
+      "DEVECIOGLU DENIZ OLGU"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학",
+      "전자공학"
     ]
   },
   {
     "id": 27,
     "course_number": "BS105a",
     "section": 4,
-    "name": "일반물리Ⅱ",
-    "prof": "유천열",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -625,300 +730,346 @@
         "start_index": 14,
         "end_index": 16
       }
+    ],
+    "name": "일반물리Ⅱ",
+    "prof": "유천열",
+    "professors": [
+      "유천열"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학",
+      "전자공학"
     ]
   },
   {
     "id": 28,
     "course_number": "BS106a",
     "section": 1,
-    "name": "일반물리실험Ⅱ",
-    "prof": "김동렬",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 15,
         "end_index": 18
       }
+    ],
+    "name": "일반물리실험Ⅱ",
+    "prof": "김동렬",
+    "professors": [
+      "김동렬"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 29,
     "course_number": "BS106a",
     "section": 2,
-    "name": "일반물리실험Ⅱ",
-    "prof": "김동렬",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 3,
         "end_index": 6
       }
+    ],
+    "name": "일반물리실험Ⅱ",
+    "prof": "김동렬",
+    "professors": [
+      "김동렬"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 30,
     "course_number": "BS106a",
     "section": 3,
-    "name": "일반물리실험Ⅱ",
-    "prof": "김동렬",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 9,
         "end_index": 12
       }
+    ],
+    "name": "일반물리실험Ⅱ",
+    "prof": "김동렬",
+    "professors": [
+      "김동렬"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 31,
     "course_number": "BS106a",
     "section": 4,
-    "name": "일반물리실험Ⅱ",
-    "prof": "김동렬",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 3,
         "end_index": 6
       }
+    ],
+    "name": "일반물리실험Ⅱ",
+    "prof": "김동렬",
+    "professors": [
+      "김동렬"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 32,
     "course_number": "BS106a",
     "section": 5,
-    "name": "일반물리실험Ⅱ",
-    "prof": "김동렬",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 9,
         "end_index": 12
       }
+    ],
+    "name": "일반물리실험Ⅱ",
+    "prof": "김동렬",
+    "professors": [
+      "김동렬"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 33,
     "course_number": "BS106a",
     "section": 6,
-    "name": "일반물리실험Ⅱ",
-    "prof": "박기성",
-    "classification": "기초필수",
-    "category": "물리",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 9,
         "end_index": 12
       }
+    ],
+    "name": "일반물리실험Ⅱ",
+    "prof": "박기성",
+    "professors": [
+      "박기성"
+    ],
+    "classification": "기초필수",
+    "category": "물리",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 34,
     "course_number": "BS113",
     "section": 1,
-    "name": "일반화학실험Ⅰ",
-    "prof": "민은선",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 1,
         "end_index": 4
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "민은선",
+    "professors": [
+      "민은선"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 35,
     "course_number": "BS113",
     "section": 2,
-    "name": "일반화학실험Ⅰ",
-    "prof": "민은선",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 1,
         "end_index": 4
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "민은선",
+    "professors": [
+      "민은선"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 36,
     "course_number": "BS113",
     "section": 3,
-    "name": "일반화학실험Ⅰ",
-    "prof": "민은선",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 5,
         "end_index": 8
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "민은선",
+    "professors": [
+      "민은선"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 37,
     "course_number": "BS113",
     "section": 4,
-    "name": "일반화학실험Ⅰ",
-    "prof": "민은선",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 9,
         "end_index": 12
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "민은선",
+    "professors": [
+      "민은선"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 38,
     "course_number": "BS113",
     "section": 5,
-    "name": "일반화학실험Ⅰ",
-    "prof": "민은선",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 9,
         "end_index": 12
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "민은선",
+    "professors": [
+      "민은선"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 39,
     "course_number": "BS113",
     "section": 6,
-    "name": "일반화학실험Ⅰ",
-    "prof": "Desta Kebede Taye",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 13,
         "end_index": 16
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "Desta Kebede Taye",
+    "professors": [
+      "Desta Kebede Taye"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 40,
     "course_number": "BS113",
     "section": 7,
-    "name": "일반화학실험Ⅰ",
-    "prof": "Desta Kebede Taye",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 15,
         "end_index": 18
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "Desta Kebede Taye",
+    "professors": [
+      "Desta Kebede Taye"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 41,
     "course_number": "BS113",
     "section": 8,
-    "name": "일반화학실험Ⅰ",
-    "prof": "Desta Kebede Taye",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 1,
         "end_index": 4
       }
+    ],
+    "name": "일반화학실험Ⅰ",
+    "prof": "Desta Kebede Taye",
+    "professors": [
+      "Desta Kebede Taye"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 42,
     "course_number": "BS114",
     "section": 1,
-    "name": "생명과학개론",
-    "prof": "예경무",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -930,20 +1081,23 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "생명과학개론",
+    "prof": "예경무",
+    "professors": [
+      "예경무"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 43,
     "course_number": "BS114",
     "section": 2,
-    "name": "생명과학개론",
-    "prof": "Felix Jonas",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -955,128 +1109,149 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "생명과학개론",
+    "prof": "Felix Jonas",
+    "professors": [
+      "Felix Jonas"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 44,
     "course_number": "BS115",
     "section": 1,
-    "name": "일반생물학 실험",
-    "prof": "이석규",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 15,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "일반생물학 실험",
+    "prof": "이석규",
+    "professors": [
+      "이석규"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": []
   },
   {
     "id": 45,
     "course_number": "BS115",
     "section": 2,
-    "name": "일반생물학 실험",
-    "prof": "박포정",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 9,
         "end_index": 12
       }
-    ]
+    ],
+    "name": "일반생물학 실험",
+    "prof": "박포정",
+    "professors": [
+      "박포정"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": []
   },
   {
     "id": 46,
     "course_number": "BS115",
     "section": 3,
-    "name": "일반생물학 실험",
-    "prof": "조정아",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 12,
         "end_index": 15
       }
-    ]
+    ],
+    "name": "일반생물학 실험",
+    "prof": "조정아",
+    "professors": [
+      "조정아"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": []
   },
   {
     "id": 47,
     "course_number": "BS115",
     "section": 4,
-    "name": "일반생물학 실험",
-    "prof": "조정아",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 13,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "일반생물학 실험",
+    "prof": "조정아",
+    "professors": [
+      "조정아"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": []
   },
   {
     "id": 48,
     "course_number": "BS115",
     "section": 5,
-    "name": "일반생물학 실험",
-    "prof": "조정아",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 11,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "일반생물학 실험",
+    "prof": "조정아",
+    "professors": [
+      "조정아"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": []
   },
   {
     "id": 49,
     "course_number": "BS115",
     "section": 6,
-    "name": "일반생물학 실험",
-    "prof": "조정아",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 15,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "일반생물학 실험",
+    "prof": "조정아",
+    "professors": [
+      "조정아"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": []
   },
   {
     "id": 50,
     "course_number": "BS116",
     "section": 1,
-    "name": "일반생물학Ⅰ",
-    "prof": "이석규, 유성운",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
@@ -1088,20 +1263,24 @@
         "start_index": 5,
         "end_index": 7
       }
+    ],
+    "name": "일반생물학Ⅰ",
+    "prof": "이석규, 유성운",
+    "professors": [
+      "이석규",
+      "유성운"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 51,
     "course_number": "BS117",
     "section": 1,
-    "name": "일반생물학Ⅱ",
-    "prof": "서병창, 이상임",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1113,20 +1292,24 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "일반생물학Ⅱ",
+    "prof": "서병창, 이상임",
+    "professors": [
+      "서병창",
+      "이상임"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 52,
     "course_number": "BS117",
     "section": 2,
-    "name": "일반생물학Ⅱ",
-    "prof": "엄지원, 최일규",
-    "classification": "기초필수",
-    "category": "생명과학",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1138,20 +1321,24 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "일반생물학Ⅱ",
+    "prof": "엄지원, 최일규",
+    "professors": [
+      "엄지원",
+      "최일규"
+    ],
+    "classification": "기초필수",
+    "category": "생명과학",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 53,
     "course_number": "BS118",
     "section": 1,
-    "name": "일반화학Ⅰ",
-    "prof": "Desta Kebede Taye",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1163,21 +1350,23 @@
         "start_index": 11,
         "end_index": 13
       }
+    ],
+    "name": "일반화학Ⅰ",
+    "prof": "Desta Kebede Taye",
+    "professors": [
+      "Desta Kebede Taye"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 54,
     "course_number": "BS119",
     "section": 1,
-    "name": "일반화학Ⅱ",
-    "prof": "Desta Kebede Taye",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학",
-      "재료공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1189,21 +1378,24 @@
         "start_index": 16,
         "end_index": 18
       }
+    ],
+    "name": "일반화학Ⅱ",
+    "prof": "Desta Kebede Taye",
+    "professors": [
+      "Desta Kebede Taye"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학",
+      "재료공학"
     ]
   },
   {
     "id": 55,
     "course_number": "BS119",
     "section": 2,
-    "name": "일반화학Ⅱ",
-    "prof": "Desta Kebede Taye",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학",
-      "재료공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1215,21 +1407,24 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "일반화학Ⅱ",
+    "prof": "Desta Kebede Taye",
+    "professors": [
+      "Desta Kebede Taye"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학",
+      "재료공학"
     ]
   },
   {
     "id": 56,
     "course_number": "BS119",
     "section": 3,
-    "name": "일반화학Ⅱ",
-    "prof": "문혜원",
-    "classification": "기초필수",
-    "category": "화학",
-    "major_tracks": [
-      "화학",
-      "재료공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1241,18 +1436,24 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "일반화학Ⅱ",
+    "prof": "문혜원",
+    "professors": [
+      "문혜원"
+    ],
+    "classification": "기초필수",
+    "category": "화학",
+    "major_tracks": [
+      "화학",
+      "재료공학"
     ]
   },
   {
     "id": 57,
     "course_number": "BS120a",
     "section": 1,
-    "name": "일변수 미적분학",
-    "prof": "안흥주",
-    "classification": "기초선택",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1264,18 +1465,21 @@
         "start_index": 1,
         "end_index": 3
       }
-    ]
+    ],
+    "name": "일변수 미적분학",
+    "prof": "안흥주",
+    "professors": [
+      "안흥주"
+    ],
+    "classification": "기초선택",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 58,
     "course_number": "BS201b",
     "section": 1,
-    "name": "공학수학Ⅱ",
-    "prof": "이두석",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1287,18 +1491,21 @@
         "start_index": 4,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "공학수학Ⅱ",
+    "prof": "이두석",
+    "professors": [
+      "이두석"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 59,
     "course_number": "BS202a",
     "section": 1,
-    "name": "확률과 통계 및 실습",
-    "prof": "Carlos Scarinci",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1310,18 +1517,21 @@
         "start_index": 9,
         "end_index": 12
       }
-    ]
+    ],
+    "name": "확률과 통계 및 실습",
+    "prof": "Carlos Scarinci",
+    "professors": [
+      "Carlos Scarinci"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 60,
     "course_number": "BS203a",
     "section": 1,
-    "name": "선형대수학",
-    "prof": "한강진",
-    "classification": "기초필수",
-    "category": "수학",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1333,20 +1543,21 @@
         "start_index": 12,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "선형대수학",
+    "prof": "한강진",
+    "professors": [
+      "한강진"
+    ],
+    "classification": "기초필수",
+    "category": "수학",
+    "major_tracks": []
   },
   {
     "id": 61,
     "course_number": "CE201a",
     "section": 1,
-    "name": "화학공학기초실험(공)",
-    "prof": "김찬연, 김승현, 김운혁, 최종민, 호동해",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1358,20 +1569,27 @@
         "start_index": 15,
         "end_index": 18
       }
+    ],
+    "name": "화학공학기초실험(공)",
+    "prof": "김찬연, 김승현, 김운혁, 최종민, 호동해",
+    "professors": [
+      "김찬연",
+      "김승현",
+      "김운혁",
+      "최종민",
+      "호동해"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학공학"
     ]
   },
   {
     "id": 62,
     "course_number": "CE301",
     "section": 1,
-    "name": "반응공학(공)",
-    "prof": "양지웅",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1383,20 +1601,23 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "반응공학(공)",
+    "prof": "양지웅",
+    "professors": [
+      "양지웅"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학공학"
     ]
   },
   {
     "id": 63,
     "course_number": "CE302",
     "section": 1,
-    "name": "이동현상개론(공)",
-    "prof": "이종민",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1408,22 +1629,23 @@
         "start_index": 16,
         "end_index": 18
       }
+    ],
+    "name": "이동현상개론(공)",
+    "prof": "이종민",
+    "professors": [
+      "이종민"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학공학"
     ]
   },
   {
     "id": 64,
     "course_number": "CHEM202",
     "section": 1,
-    "name": "무기화학Ⅰ(이,공)",
-    "prof": "박진희",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학",
-      "재료공학",
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1435,22 +1657,25 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "무기화학Ⅰ(이,공)",
+    "prof": "박진희",
+    "professors": [
+      "박진희"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학",
+      "재료공학",
+      "화학공학"
     ]
   },
   {
     "id": 65,
     "course_number": "CHEM203",
     "section": 1,
-    "name": "물리화학Ⅰ(이,공)",
-    "prof": "장윤희",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학",
-      "재료공학",
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
@@ -1462,21 +1687,25 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "물리화학Ⅰ(이,공)",
+    "prof": "장윤희",
+    "professors": [
+      "장윤희"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학",
+      "재료공학",
+      "화학공학"
     ]
   },
   {
     "id": 66,
     "course_number": "CHEM204",
     "section": 1,
-    "name": "유기화학Ⅱ(이,공)",
-    "prof": "서상원",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학",
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1488,41 +1717,48 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "유기화학Ⅱ(이,공)",
+    "prof": "서상원",
+    "professors": [
+      "서상원"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학",
+      "화학공학"
     ]
   },
   {
     "id": 67,
     "course_number": "CHEM302",
     "section": 1,
-    "name": "심화화학실험Ⅱ(이)",
-    "prof": "김성균, 장윤희",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 13,
         "end_index": 20
       }
+    ],
+    "name": "심화화학실험Ⅱ(이)",
+    "prof": "김성균, 장윤희",
+    "professors": [
+      "김성균",
+      "장윤희"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 68,
     "course_number": "CHEM303",
     "section": 1,
-    "name": "유기화학Ⅲ(이,공)",
-    "prof": "이성기",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학",
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1534,21 +1770,24 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "유기화학Ⅲ(이,공)",
+    "prof": "이성기",
+    "professors": [
+      "이성기"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학",
+      "화학공학"
     ]
   },
   {
     "id": 69,
     "course_number": "CHEM304",
     "section": 1,
-    "name": "물리화학Ⅲ(이,공)",
-    "prof": "김종구",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학",
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1560,20 +1799,24 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "물리화학Ⅲ(이,공)",
+    "prof": "김종구",
+    "professors": [
+      "김종구"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학",
+      "화학공학"
     ]
   },
   {
     "id": 70,
     "course_number": "CHEM403",
     "section": 1,
-    "name": "광물리화학 개론(이)",
-    "prof": "성주영",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1585,20 +1828,23 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "광물리화학 개론(이)",
+    "prof": "성주영",
+    "professors": [
+      "성주영"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 71,
     "course_number": "CHEM406",
     "section": 1,
-    "name": "고분자화학(이,공)",
-    "prof": "홍선기",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "화학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
@@ -1610,21 +1856,23 @@
         "start_index": 13,
         "end_index": 15
       }
+    ],
+    "name": "고분자화학(이,공)",
+    "prof": "홍선기",
+    "professors": [
+      "홍선기"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "화학"
     ]
   },
   {
     "id": 72,
     "course_number": "CSE201",
     "section": 1,
-    "name": "객체지향 프로그래밍(이,공)",
-    "prof": "김백규",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1636,21 +1884,24 @@
         "start_index": 13,
         "end_index": 15
       }
+    ],
+    "name": "객체지향 프로그래밍(이,공)",
+    "prof": "김백규",
+    "professors": [
+      "김백규"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학",
+      "전자공학"
     ]
   },
   {
     "id": 73,
     "course_number": "CSE202",
     "section": 1,
-    "name": "이산수학(이,공)",
-    "prof": "신동훈",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1662,20 +1913,24 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "이산수학(이,공)",
+    "prof": "신동훈",
+    "professors": [
+      "신동훈"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학",
+      "전자공학"
     ]
   },
   {
     "id": 74,
     "course_number": "CSE204",
     "section": 1,
-    "name": "인공지능기초(공)",
-    "prof": "배인환",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1687,20 +1942,23 @@
         "start_index": 5,
         "end_index": 7
       }
+    ],
+    "name": "인공지능기초(공)",
+    "prof": "배인환",
+    "professors": [
+      "배인환"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학"
     ]
   },
   {
     "id": 75,
     "course_number": "CSE205",
     "section": 1,
-    "name": "계산이론(이,공)",
-    "prof": "전민석",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1712,20 +1970,23 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "계산이론(이,공)",
+    "prof": "전민석",
+    "professors": [
+      "전민석"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학"
     ]
   },
   {
     "id": 76,
     "course_number": "CSE301",
     "section": 1,
-    "name": "컴퓨터 알고리즘(이,공)",
-    "prof": "좌훈승",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1737,21 +1998,23 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "컴퓨터 알고리즘(이,공)",
+    "prof": "좌훈승",
+    "professors": [
+      "좌훈승"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학"
     ]
   },
   {
     "id": 77,
     "course_number": "CSE303",
     "section": 1,
-    "name": "딥러닝개론(공)",
-    "prof": "박대희",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1763,21 +2026,24 @@
         "start_index": 13,
         "end_index": 15
       }
+    ],
+    "name": "딥러닝개론(공)",
+    "prof": "박대희",
+    "professors": [
+      "박대희"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학",
+      "전자공학"
     ]
   },
   {
     "id": 78,
     "course_number": "CSE304",
     "section": 1,
-    "name": "운영체제(공)",
-    "prof": "이용우",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -1789,46 +2055,24 @@
         "start_index": 16,
         "end_index": 18
       }
-    ]
-  },
-  {
-    "id": 79,
-    "course_number": "CSE401",
-    "section": 1,
-    "name": "데이터베이스개론(공)",
-    "prof": "장준기",
+    ],
+    "name": "운영체제(공)",
+    "prof": "이용우",
+    "professors": [
+      "이용우"
+    ],
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
-      "컴퓨터공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 12,
-        "end_index": 14
-      },
-      {
-        "day": "목",
-        "start_index": 12,
-        "end_index": 14
-      }
+      "컴퓨터공학",
+      "전자공학"
     ]
   },
   {
     "id": 80,
     "course_number": "CSE403",
     "section": 1,
-    "name": "컴퓨터 네트워크(이,공)",
-    "prof": "미배정",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "컴퓨터공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1840,124 +2084,79 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "컴퓨터 네트워크(이,공)",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "컴퓨터공학",
+      "전자공학"
     ]
   },
   {
     "id": 81,
     "course_number": "EE201",
     "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "수",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ],
     "name": "디지털 논리회로(공)",
     "prof": "유재석",
+    "professors": [
+      "유재석"
+    ],
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
       "전자공학",
       "컴퓨터공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "수",
-        "start_index": 9,
-        "end_index": 11
-      }
-    ]
-  },
-  {
-    "id": 82,
-    "course_number": "EE302",
-    "section": 1,
-    "name": "전자소자개론(공)",
-    "prof": "한상윤",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "전자공학",
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "수",
-        "start_index": 4,
-        "end_index": 6
-      }
     ]
   },
   {
     "id": 83,
     "course_number": "EE305",
     "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "목",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ],
     "name": "통신의 기초(공)",
     "prof": "최지웅",
+    "professors": [
+      "최지웅"
+    ],
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
       "전자공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "목",
-        "start_index": 9,
-        "end_index": 11
-      }
-    ]
-  },
-  {
-    "id": 84,
-    "course_number": "EE306",
-    "section": 1,
-    "name": "아날로그 전자회로(공)",
-    "prof": "이경태",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "전자공학",
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 12,
-        "end_index": 14
-      },
-      {
-        "day": "목",
-        "start_index": 12,
-        "end_index": 14
-      }
     ]
   },
   {
     "id": 85,
     "course_number": "EE402",
     "section": 1,
-    "name": "디지털 영상처리(이,공)",
-    "prof": "이병권",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "전자공학",
-      "컴퓨터공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -1969,417 +2168,478 @@
         "start_index": 4,
         "end_index": 6
       }
-    ]
-  },
-  {
-    "id": 86,
-    "course_number": "EE405",
-    "section": 1,
-    "name": "반도체공정실습(공)",
-    "prof": "최상현",
+    ],
+    "name": "디지털 영상처리(이,공)",
+    "prof": "이병권",
+    "professors": [
+      "이병권"
+    ],
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
       "전자공학",
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 9,
-        "end_index": 14
-      }
-    ]
-  },
-  {
-    "id": 87,
-    "course_number": "ENT301",
-    "section": 1,
-    "name": "기업가 정신과 사회적 책임",
-    "prof": "권업",
-    "classification": "심화선택",
-    "category": "창업",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "금",
-        "start_index": 1,
-        "end_index": 6
-      }
+      "컴퓨터공학"
     ]
   },
   {
     "id": 88,
     "course_number": "GC102",
     "section": 1,
-    "name": "Academic English: Research and Writing",
-    "prof": "Aaron Cumberledge",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Aaron Cumberledge",
+    "professors": [
+      "Aaron Cumberledge"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 89,
     "course_number": "GC102",
     "section": 2,
-    "name": "Academic English: Research and Writing",
-    "prof": "Aaron Cumberledge",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 9,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Benjamin Wilson Riley",
+    "professors": [
+      "Benjamin Wilson Riley"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 90,
     "course_number": "GC102",
     "section": 3,
-    "name": "Academic English: Research and Writing",
-    "prof": "Aaron Cumberledge",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Aaron Cumberledge",
+    "professors": [
+      "Aaron Cumberledge"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 91,
     "course_number": "GC102",
     "section": 4,
-    "name": "Academic English: Research and Writing",
-    "prof": "Aaron Cumberledge",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 9,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Aaron Cumberledge",
+    "professors": [
+      "Aaron Cumberledge"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 92,
     "course_number": "GC102",
     "section": 5,
-    "name": "Academic English: Research and Writing",
-    "prof": "Benjamin Wilson Riley",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 11,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Benjamin Wilson Riley",
+    "professors": [
+      "Benjamin Wilson Riley"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 93,
     "course_number": "GC102",
     "section": 6,
-    "name": "Academic English: Research and Writing",
-    "prof": "Benjamin Wilson Riley",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Benjamin Wilson Riley",
+    "professors": [
+      "Benjamin Wilson Riley"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 94,
     "course_number": "GC102",
     "section": 7,
-    "name": "Academic English: Research and Writing",
-    "prof": "Benjamin Wilson Riley",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 9,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Benjamin Wilson Riley",
+    "professors": [
+      "Benjamin Wilson Riley"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 95,
     "course_number": "GC102",
     "section": 8,
-    "name": "Academic English: Research and Writing",
-    "prof": "Mark Silverlock",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 11,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Mark Silverlock",
+    "professors": [
+      "Mark Silverlock"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 96,
     "course_number": "GC102",
     "section": 9,
-    "name": "Academic English: Research and Writing",
-    "prof": "Mark Silverlock",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 12,
         "end_index": 17
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Mark Silverlock",
+    "professors": [
+      "Mark Silverlock"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 97,
     "course_number": "GC102",
     "section": 10,
-    "name": "Academic English: Research and Writing",
-    "prof": "Mark Silverlock",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Mark Silverlock",
+    "professors": [
+      "Mark Silverlock"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 98,
     "course_number": "GC102",
     "section": 11,
-    "name": "Academic English: Research and Writing",
-    "prof": "Mark Silverlock",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Mark Silverlock",
+    "professors": [
+      "Mark Silverlock"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 99,
     "course_number": "GC102",
     "section": 12,
-    "name": "Academic English: Research and Writing",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 11,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 100,
     "course_number": "GC102",
     "section": 13,
-    "name": "Academic English: Research and Writing",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 101,
     "course_number": "GC102",
     "section": 14,
-    "name": "Academic English: Research and Writing",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Aaron Cumberledge",
+    "professors": [
+      "Aaron Cumberledge"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 102,
     "course_number": "GC102",
     "section": 15,
-    "name": "Academic English: Research and Writing",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 9,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Aaron Cumberledge",
+    "professors": [
+      "Aaron Cumberledge"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 103,
     "course_number": "GC102",
     "section": 16,
-    "name": "Academic English: Research and Writing",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "영어",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
+  },
+  {
+    "id": 190,
+    "course_number": "GC102",
+    "section": 17,
+    "credit": 2.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 1,
+        "end_index": 6
+      }
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
+  },
+  {
+    "id": 191,
+    "course_number": "GC102",
+    "section": 18,
+    "credit": 2.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 1,
+        "end_index": 6
+      }
+    ],
+    "name": "Academic English: Research and Writing",
+    "prof": "Mark Silverlock",
+    "professors": [
+      "Mark Silverlock"
+    ],
+    "classification": "기초필수",
+    "category": "영어",
+    "major_tracks": []
   },
   {
     "id": 104,
     "course_number": "HSS101",
     "section": 1,
-    "name": "경제학 입문",
-    "prof": "김선구",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 3,
         "end_index": 8
       }
-    ]
+    ],
+    "name": "경제학 입문",
+    "prof": "김선구",
+    "professors": [
+      "김선구"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 105,
     "course_number": "HSS102",
     "section": 1,
-    "name": "과학기술과 현대사회",
-    "prof": "장하원",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 3,
         "end_index": 8
       }
-    ]
+    ],
+    "name": "과학기술과 현대사회",
+    "prof": "장하원",
+    "professors": [
+      "장하원"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 106,
     "course_number": "HSS103",
     "section": 1,
-    "name": "법과 사회",
-    "prof": "김현희",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "법과 사회",
+    "prof": "김현희",
+    "professors": [
+      "김현희"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 107,
     "course_number": "HSS108",
     "section": 1,
-    "name": "비교역사학",
-    "prof": "이원근",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
-        "day": "월",
-        "start_index": 4,
-        "end_index": 9
+        "day": "수",
+        "start_index": 3,
+        "end_index": 8
       }
-    ]
+    ],
+    "name": "비교역사학",
+    "prof": "이원근",
+    "professors": [
+      "이원근"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 108,
     "course_number": "HSS109a",
     "section": 1,
-    "name": "학술 글쓰기",
-    "prof": "배하은",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -2391,108 +2651,126 @@
         "start_index": 4,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "학술 글쓰기",
+    "prof": "배하은",
+    "professors": [
+      "배하은"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 109,
     "course_number": "HSS109a",
     "section": 2,
-    "name": "학술 글쓰기",
-    "prof": "임희현",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 2,
         "end_index": 7
       }
-    ]
+    ],
+    "name": "학술 글쓰기",
+    "prof": "임희현",
+    "professors": [
+      "임희현"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 110,
     "course_number": "HSS109a",
     "section": 3,
-    "name": "학술 글쓰기",
-    "prof": "임희현",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 11,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "학술 글쓰기",
+    "prof": "임희현",
+    "professors": [
+      "임희현"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 111,
     "course_number": "HSS109a",
     "section": 4,
-    "name": "학술 글쓰기",
-    "prof": "전계성",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "학술 글쓰기",
+    "prof": "전계성",
+    "professors": [
+      "전계성"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 112,
     "course_number": "HSS109a",
     "section": 5,
-    "name": "학술 글쓰기",
-    "prof": "전계성",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 11,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "학술 글쓰기",
+    "prof": "전계성",
+    "professors": [
+      "전계성"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 113,
     "course_number": "HSS112",
     "section": 1,
-    "name": "사회학의 이해",
-    "prof": "최태섭",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 2,
         "end_index": 7
       }
-    ]
+    ],
+    "name": "사회학의 이해",
+    "prof": "최태섭",
+    "professors": [
+      "최태섭"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 114,
     "course_number": "HSS113",
     "section": 1,
-    "name": "글로벌 문화와 의사소통",
-    "prof": "이정아",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -2504,252 +2782,290 @@
         "start_index": 1,
         "end_index": 3
       }
-    ]
+    ],
+    "name": "글로벌 문화와 의사소통",
+    "prof": "이정아",
+    "professors": [
+      "이정아"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 115,
     "course_number": "HSS115",
     "section": 1,
-    "name": "심리학으로의 여행",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 12,
         "end_index": 17
       }
-    ]
+    ],
+    "name": "심리학으로의 여행",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 116,
     "course_number": "HSS116",
     "section": 1,
-    "name": "인류학의 이해",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 13,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "인류학의 이해",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 117,
     "course_number": "HSS117",
     "section": 1,
-    "name": "인간과 종교",
-    "prof": "박범석",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 1,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "인간과 종교",
+    "prof": "박범석",
+    "professors": [
+      "박범석"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 118,
     "course_number": "HSS118",
     "section": 1,
-    "name": "미래소양강좌",
-    "prof": "서대원",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 9,
         "end_index": 10
       }
-    ]
+    ],
+    "name": "미래소양강좌",
+    "prof": "서대원",
+    "professors": [
+      "서대원"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 119,
     "course_number": "HSS120",
     "section": 1,
-    "name": "진로탐색 및 전공설계 II",
-    "prof": "서대원",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 1,
+    "credit": 1.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 9,
         "end_index": 10
       }
-    ]
+    ],
+    "name": "진로탐색 및 전공설계 II",
+    "prof": "서대원",
+    "professors": [
+      "서대원"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 120,
     "course_number": "HSS123",
     "section": 1,
-    "name": "Korea and International Relations",
-    "prof": "윤지성",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 11,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "Korea and International Relations",
+    "prof": "윤지성",
+    "professors": [
+      "윤지성"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 121,
     "course_number": "HSS201",
     "section": 1,
-    "name": "과학기술사의 주요 장면",
-    "prof": "장하원",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 11,
         "end_index": 16
       }
-    ]
+    ],
+    "name": "과학기술사의 주요 장면",
+    "prof": "장하원",
+    "professors": [
+      "장하원"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 122,
     "course_number": "HSS202",
     "section": 1,
-    "name": "과학철학의 쟁점",
-    "prof": "강유진",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 9,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "과학철학의 쟁점",
+    "prof": "강유진",
+    "professors": [
+      "강유진"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 123,
     "course_number": "HSS203",
     "section": 1,
-    "name": "근대 사회와 사상",
-    "prof": "이원근",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
-        "day": "월",
-        "start_index": 12,
-        "end_index": 17
+        "day": "수",
+        "start_index": 15,
+        "end_index": 20
       }
-    ]
+    ],
+    "name": "근대 사회와 사상",
+    "prof": "이원근",
+    "professors": [
+      "이원근"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 124,
     "course_number": "HSS207a",
     "section": 1,
-    "name": "커뮤니케이션 특강",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 12,
         "end_index": 17
       }
-    ]
+    ],
+    "name": "커뮤니케이션 특강",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 125,
     "course_number": "HSS210",
     "section": 1,
-    "name": "고전의 산책",
-    "prof": "이정아, 배하은, 윤지성",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
         "start_index": 19,
         "end_index": 24
       }
-    ]
+    ],
+    "name": "고전의 산책",
+    "prof": "이정아, 배하은, 윤지성",
+    "professors": [
+      "이정아",
+      "배하은",
+      "윤지성"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 126,
     "course_number": "HSS211",
     "section": 1,
-    "name": "젠더와 사회",
-    "prof": "최태섭",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "수",
         "start_index": 13,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "젠더와 사회",
+    "prof": "최태섭",
+    "professors": [
+      "최태섭"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 127,
     "course_number": "HSS212",
     "section": 1,
-    "name": "권리변동의 일반",
-    "prof": "함상범",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 2,
         "end_index": 7
       }
-    ]
+    ],
+    "name": "권리변동의 일반",
+    "prof": "함상범",
+    "professors": [
+      "함상범"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 128,
     "course_number": "HSS213",
     "section": 1,
-    "name": "영어 문학 텍스트 : 주제적 접근 읽기",
-    "prof": "이정아",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -2761,36 +3077,42 @@
         "start_index": 4,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "영어 문학 텍스트 : 주제적 접근 읽기",
+    "prof": "이정아",
+    "professors": [
+      "이정아"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 129,
     "course_number": "HSS218",
     "section": 1,
-    "name": "세계종교입문",
-    "prof": "박범석",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 9,
         "end_index": 14
       }
-    ]
+    ],
+    "name": "세계종교입문",
+    "prof": "박범석",
+    "professors": [
+      "박범석"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 130,
     "course_number": "HSS219",
     "section": 1,
-    "name": "인문학 특강Ⅰ - 한국문학과 한국사회",
-    "prof": "배하은",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -2802,18 +3124,21 @@
         "start_index": 16,
         "end_index": 18
       }
-    ]
+    ],
+    "name": "인문학 특강Ⅰ - 한국문학과 한국사회",
+    "prof": "배하은",
+    "professors": [
+      "배하은"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 131,
     "course_number": "HSS221",
     "section": 1,
-    "name": "사회과학 특강Ⅰ - 한국 민주주의와 정당정치",
-    "prof": "윤지성",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -2825,100 +3150,59 @@
         "start_index": 5,
         "end_index": 7
       }
-    ]
+    ],
+    "name": "사회과학 특강Ⅰ - 한국 민주주의와 정당정치",
+    "prof": "윤지성",
+    "professors": [
+      "윤지성"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 132,
     "course_number": "HSS221",
     "section": 2,
-    "name": "사회과학 특강Ⅰ - 인지심리학",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
-        "day": "금",
-        "start_index": 1,
-        "end_index": 6
+        "day": "화",
+        "start_index": 3,
+        "end_index": 8
       }
-    ]
+    ],
+    "name": "사회과학 특강Ⅰ - 인지심리학",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 133,
     "course_number": "HSS222",
     "section": 1,
-    "name": "사회과학 특강Ⅱ - World Geography",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
-        "start_index": 13,
-        "end_index": 15
-      },
-      {
-        "day": "수",
-        "start_index": 13,
-        "end_index": 15
+        "start_index": 3,
+        "end_index": 8
       }
-    ]
-  },
-  {
-    "id": 134,
-    "course_number": "HSS222",
-    "section": 2,
-    "name": "사회과학 특강Ⅱ - Cultural Geography",
-    "prof": "미배정",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 5,
-        "end_index": 7
-      },
-      {
-        "day": "수",
-        "start_index": 5,
-        "end_index": 7
-      }
-    ]
-  },
-  {
-    "id": 135,
-    "course_number": "HSS222",
-    "section": 3,
+    ],
     "name": "사회과학 특강Ⅱ - 북한사회와 문화",
     "prof": "미배정",
+    "professors": [],
     "classification": "기초필수",
     "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "금",
-        "start_index": 11,
-        "end_index": 16
-      }
-    ]
+    "major_tracks": []
   },
   {
     "id": 136,
     "course_number": "HSS224",
     "section": 1,
-    "name": "시 읽기의 즐거움",
-    "prof": "배하은",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -2930,18 +3214,21 @@
         "start_index": 1,
         "end_index": 3
       }
-    ]
+    ],
+    "name": "시 읽기의 즐거움",
+    "prof": "배하은",
+    "professors": [
+      "배하은"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 137,
     "course_number": "HSS301a",
     "section": 1,
-    "name": "Scientific Writing",
-    "prof": "이정아",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -2953,18 +3240,21 @@
         "start_index": 15,
         "end_index": 17
       }
-    ]
+    ],
+    "name": "Scientific Writing",
+    "prof": "이정아",
+    "professors": [
+      "이정아"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 138,
     "course_number": "HSS301a",
     "section": 2,
-    "name": "Scientific Writing",
-    "prof": "Benjamin Wilson Riley",
-    "classification": "기초필수",
-    "category": "쓰기·읽기 중점",
-    "major_tracks": [],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -2976,21 +3266,21 @@
         "start_index": 4,
         "end_index": 6
       }
-    ]
+    ],
+    "name": "Scientific Writing",
+    "prof": "Benjamin Wilson Riley",
+    "professors": [
+      "Benjamin Wilson Riley"
+    ],
+    "classification": "기초필수",
+    "category": "쓰기·읽기 중점",
+    "major_tracks": []
   },
   {
     "id": 139,
     "course_number": "LS202",
     "section": 1,
-    "name": "유전학(이)",
-    "prof": "우혜련, 이송이, 김규형, 이성배",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학",
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -3002,21 +3292,27 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "유전학(이)",
+    "prof": "우혜련, 이송이, 김규형, 이성배",
+    "professors": [
+      "우혜련",
+      "이송이",
+      "김규형",
+      "이성배"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학",
+      "뇌과학"
     ]
   },
   {
     "id": 140,
     "course_number": "LS202",
     "section": 2,
-    "name": "유전학(이)",
-    "prof": "우혜련, 이송이, 김규형, 이성배",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학",
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -3028,21 +3324,27 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "유전학(이)",
+    "prof": "우혜련, 이송이, 김규형, 이성배",
+    "professors": [
+      "우혜련",
+      "이송이",
+      "김규형",
+      "이성배"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학",
+      "뇌과학"
     ]
   },
   {
     "id": 141,
     "course_number": "LS205",
     "section": 1,
-    "name": "유전학 실험(이)",
-    "prof": "이송이, 조정아",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학",
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -3054,20 +3356,25 @@
         "start_index": 3,
         "end_index": 8
       }
+    ],
+    "name": "유전학 실험(이)",
+    "prof": "이송이, 조정아",
+    "professors": [
+      "이송이",
+      "조정아"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학",
+      "뇌과학"
     ]
   },
   {
     "id": 142,
     "course_number": "LS206",
     "section": 1,
-    "name": "생명분석화학(이,공)",
-    "prof": "김민식, 김유리, 김민석",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -3079,21 +3386,25 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "생명분석화학(이,공)",
+    "prof": "김민식, 김유리, 김민석",
+    "professors": [
+      "김민식",
+      "김유리",
+      "김민석"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 143,
     "course_number": "LS303b",
     "section": 1,
-    "name": "정량 생명과학(이)",
-    "prof": "이창훈, 유우경",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학",
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -3105,21 +3416,25 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "정량 생명과학(이)",
+    "prof": "이창훈, 유우경",
+    "professors": [
+      "이창훈",
+      "유우경"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학",
+      "뇌과학"
     ]
   },
   {
     "id": 144,
     "course_number": "LS307",
     "section": 1,
-    "name": "분자생물학(이)",
-    "prof": "엄지원, 김진해, 이영삼",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학",
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -3131,21 +3446,26 @@
         "start_index": 16,
         "end_index": 18
       }
+    ],
+    "name": "분자생물학(이)",
+    "prof": "엄지원, 김진해, 이영삼",
+    "professors": [
+      "엄지원",
+      "김진해",
+      "이영삼"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학",
+      "뇌과학"
     ]
   },
   {
     "id": 145,
     "course_number": "LS309",
     "section": 1,
-    "name": "생화학Ⅱ(이)",
-    "prof": "정한빈",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학",
-      "뇌과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -3157,40 +3477,47 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "생화학Ⅱ(이)",
+    "prof": "정한빈",
+    "professors": [
+      "정한빈"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학",
+      "뇌과학"
     ]
   },
   {
     "id": 146,
     "course_number": "LS311",
     "section": 1,
-    "name": "생명과학과 사회(이)",
-    "prof": "남창훈",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "목",
         "start_index": 1,
         "end_index": 6
       }
+    ],
+    "name": "생명과학과 사회(이)",
+    "prof": "남창훈",
+    "professors": [
+      "남창훈"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 147,
     "course_number": "LS313a",
     "section": 1,
-    "name": "분자생물학 실험(이)",
-    "prof": "이영삼, 이창훈",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 2,
+    "credit": 2.0,
     "time_slots": [
       {
         "day": "화",
@@ -3202,20 +3529,24 @@
         "start_index": 21,
         "end_index": 24
       }
+    ],
+    "name": "분자생물학 실험(이)",
+    "prof": "이영삼, 이창훈",
+    "professors": [
+      "이영삼",
+      "이창훈"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 148,
     "course_number": "LS401a",
     "section": 1,
-    "name": "면역학(이)",
-    "prof": "남창훈, 최일규",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "생명과학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -3227,20 +3558,24 @@
         "start_index": 12,
         "end_index": 14
       }
+    ],
+    "name": "면역학(이)",
+    "prof": "남창훈, 최일규",
+    "professors": [
+      "남창훈",
+      "최일규"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "생명과학"
     ]
   },
   {
     "id": 149,
     "course_number": "MECH203",
     "section": 1,
-    "name": "동역학(공)",
-    "prof": "박석호",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
@@ -3252,20 +3587,23 @@
         "start_index": 1,
         "end_index": 3
       }
+    ],
+    "name": "동역학(공)",
+    "prof": "박석호",
+    "professors": [
+      "박석호"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학"
     ]
   },
   {
     "id": 150,
     "course_number": "MECH204",
     "section": 1,
-    "name": "기계열역학(공)",
-    "prof": "김민수",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -3277,21 +3615,23 @@
         "start_index": 4,
         "end_index": 6
       }
+    ],
+    "name": "기계열역학(공)",
+    "prof": "김민수",
+    "professors": [
+      "김민수"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학"
     ]
   },
   {
     "id": 151,
     "course_number": "MECH205",
     "section": 1,
-    "name": "의공학개론(공)",
-    "prof": "송석호, 노어진, 김민수, 이아형",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -3303,831 +3643,201 @@
         "start_index": 9,
         "end_index": 11
       }
+    ],
+    "name": "의공학개론(공)",
+    "prof": "송석호, 노어진, 김민수, 이아형",
+    "professors": [
+      "송석호",
+      "노어진",
+      "김민수",
+      "이아형"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학",
+      "전자공학"
     ]
   },
   {
     "id": 152,
     "course_number": "MECH303",
     "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 9,
+        "end_index": 14
+      }
+    ],
     "name": "기구학(공)",
     "prof": "윤동원",
+    "professors": [
+      "윤동원"
+    ],
     "classification": "심화필수",
     "category": "트랙",
     "major_tracks": [
       "기계공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 9,
-        "end_index": 14
-      }
-    ]
-  },
-  {
-    "id": 153,
-    "course_number": "MECH307",
-    "section": 1,
-    "name": "인공지능개론(이,공)",
-    "prof": "문인규",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "수",
-        "start_index": 4,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 154,
-    "course_number": "MECH312",
-    "section": 1,
-    "name": "메카트로닉스(공)",
-    "prof": "송철",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "목",
-        "start_index": 4,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 155,
-    "course_number": "MECH404a",
-    "section": 1,
-    "name": "창의공학설계(공)",
-    "prof": "이성민, 김동욱",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "수",
-        "start_index": 9,
-        "end_index": 14
-      }
-    ]
-  },
-  {
-    "id": 156,
-    "course_number": "MECH406",
-    "section": 1,
-    "name": "기계재료학(이,공)",
-    "prof": "김봉훈",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "수",
-        "start_index": 1,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 157,
-    "course_number": "MSE302",
-    "section": 1,
-    "name": "재료열역학 개론(이,공)",
-    "prof": "인수일",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학",
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 18,
-        "end_index": 23
-      }
-    ]
-  },
-  {
-    "id": 158,
-    "course_number": "MSE306a",
-    "section": 1,
-    "name": "재료공학개론Ⅱ(이,공)",
-    "prof": "이신범",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "목",
-        "start_index": 9,
-        "end_index": 11
-      }
-    ]
-  },
-  {
-    "id": 159,
-    "course_number": "MSE308",
-    "section": 1,
-    "name": "데이터 기반 신소재 공학(공)",
-    "prof": "박인철",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "수",
-        "start_index": 9,
-        "end_index": 11
-      }
-    ]
-  },
-  {
-    "id": 160,
-    "course_number": "MSE309",
-    "section": 1,
-    "name": "세라믹개론(공)",
-    "prof": "이태훈",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "수",
-        "start_index": 4,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 161,
-    "course_number": "MSE403",
-    "section": 1,
-    "name": "전자재료학(공)",
-    "prof": "이성원",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학",
-      "화학공학",
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 10,
-        "end_index": 12
-      },
-      {
-        "day": "수",
-        "start_index": 10,
-        "end_index": 12
-      }
-    ]
-  },
-  {
-    "id": 162,
-    "course_number": "MSE404a",
-    "section": 1,
-    "name": "결정학 및 회절(이,공)",
-    "prof": "김진수",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학",
-      "물리학",
-      "화학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "수",
-        "start_index": 4,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 163,
-    "course_number": "PHY201a",
-    "section": 1,
-    "name": "열 및 통계 물리(이,공)",
-    "prof": "박기성",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "목",
-        "start_index": 4,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 164,
-    "course_number": "PHY203a",
-    "section": 1,
-    "name": "전기역학Ⅰ(이)",
-    "prof": "홍정일",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 1,
-        "end_index": 3
-      },
-      {
-        "day": "수",
-        "start_index": 1,
-        "end_index": 3
-      }
-    ]
-  },
-  {
-    "id": 165,
-    "course_number": "PHY204",
-    "section": 1,
-    "name": "해석역학Ⅱ(이,공)",
-    "prof": "서정필",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "수",
-        "start_index": 12,
-        "end_index": 14
-      }
-    ]
-  },
-  {
-    "id": 166,
-    "course_number": "PHY301",
-    "section": 1,
-    "name": "응용물리 실험(이.공)",
-    "prof": "박기성, 유천열, 김영욱, 조창희",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 2,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 1,
-        "end_index": 4
-      },
-      {
-        "day": "수",
-        "start_index": 1,
-        "end_index": 4
-      }
-    ]
-  },
-  {
-    "id": 167,
-    "course_number": "PHY303",
-    "section": 1,
-    "name": "고체물리Ⅰ(이,공)",
-    "prof": "김소연",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "목",
-        "start_index": 9,
-        "end_index": 11
-      }
-    ]
-  },
-  {
-    "id": 168,
-    "course_number": "PHY305",
-    "section": 1,
-    "name": "양자역학Ⅱ(이,공)",
-    "prof": "김아람",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 5,
-        "end_index": 7
-      },
-      {
-        "day": "수",
-        "start_index": 5,
-        "end_index": 7
-      }
-    ]
-  },
-  {
-    "id": 169,
-    "course_number": "PHY309",
-    "section": 1,
-    "name": "미분기하학과 일반상대론(이)",
-    "prof": "Carlos Scarinci",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 1,
-        "end_index": 3
-      },
-      {
-        "day": "목",
-        "start_index": 1,
-        "end_index": 3
-      }
-    ]
-  },
-  {
-    "id": 170,
-    "course_number": "PHY407",
-    "section": 1,
-    "name": "양자 컴퓨팅 개론(이,공)",
-    "prof": "권상일",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 1,
-        "end_index": 3
-      },
-      {
-        "day": "목",
-        "start_index": 1,
-        "end_index": 3
-      }
-    ]
-  },
-  {
-    "id": 171,
-    "course_number": "PHY409",
-    "section": 1,
-    "name": "입자물리개론(이)",
-    "prof": "DEVECIOGLU DENIZ OLGU",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 12,
-        "end_index": 14
-      },
-      {
-        "day": "목",
-        "start_index": 12,
-        "end_index": 14
-      }
-    ]
-  },
-  {
-    "id": 172,
-    "course_number": "TP101",
-    "section": 1,
-    "name": "디자인 사고",
-    "prof": "박종래",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 1,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 173,
-    "course_number": "TP201",
-    "section": 1,
-    "name": "디자인 기획과 전략",
-    "prof": "박종래",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "수",
-        "start_index": 1,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 174,
-    "course_number": "TP203",
-    "section": 1,
-    "name": "소리와 음악(이,공)",
-    "prof": "이기준",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 16,
-        "end_index": 18
-      },
-      {
-        "day": "목",
-        "start_index": 16,
-        "end_index": 18
-      }
-    ]
-  },
-  {
-    "id": 175,
-    "course_number": "TP301",
-    "section": 1,
-    "name": "커뮤니케이션과 현대사회",
-    "prof": "미배정",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 3,
-        "end_index": 8
-      }
-    ]
-  },
-  {
-    "id": 176,
-    "course_number": "TP305",
-    "section": 1,
-    "name": "게임이론",
-    "prof": "김선구",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "수",
-        "start_index": 12,
-        "end_index": 17
-      }
-    ]
-  },
-  {
-    "id": 177,
-    "course_number": "TP313",
-    "section": 1,
-    "name": "위상수학개론",
-    "prof": "Hudson Thomas Bryan",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 16,
-        "end_index": 18
-      },
-      {
-        "day": "수",
-        "start_index": 16,
-        "end_index": 18
-      }
-    ]
-  },
-  {
-    "id": 178,
-    "course_number": "TP314",
-    "section": 1,
-    "name": "생체분자역학개론(이,공)",
-    "prof": "김유리, 정소현",
-    "classification": "심화필수",
-    "category": "비트랙/융합",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 4,
-        "end_index": 6
-      },
-      {
-        "day": "수",
-        "start_index": 4,
-        "end_index": 6
-      }
-    ]
-  },
-  {
-    "id": 179,
-    "course_number": "RP303",
-    "section": 1,
-    "name": "반도체 연구실무 기초(공)",
-    "prof": "권혁준",
-    "classification": "심화선택",
-    "category": "반도체공학",
-    "major_tracks": [
-      "반도체공학"
-    ],
-    "credit": 4,
-    "time_slots": [],
-    "schedule_note": "토18:00-22:00(E7 - 236)"
-  },
-  {
-    "id": 180,
-    "course_number": "SM202",
-    "section": 1,
-    "name": "반도체 재료공학 개론(공)(반)",
-    "prof": "조창희",
-    "classification": "심화필수",
-    "category": "반도체공학",
-    "major_tracks": [
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 9,
-        "end_index": 11
-      },
-      {
-        "day": "목",
-        "start_index": 9,
-        "end_index": 11
-      }
-    ]
-  },
-  {
-    "id": 181,
-    "course_number": "SM203a",
-    "section": 1,
-    "name": "반도체물성 개론(공)(반)",
-    "prof": "이상훈",
-    "classification": "심화필수",
-    "category": "반도체공학",
-    "major_tracks": [
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 5,
-        "end_index": 7
-      },
-      {
-        "day": "목",
-        "start_index": 5,
-        "end_index": 7
-      }
-    ]
-  },
-  {
-    "id": 182,
-    "course_number": "SM306",
-    "section": 1,
-    "name": "반도체공정응용(공)(반)",
-    "prof": "권혁준",
-    "classification": "심화필수",
-    "category": "반도체공학",
-    "major_tracks": [
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 1,
-        "end_index": 3
-      },
-      {
-        "day": "수",
-        "start_index": 1,
-        "end_index": 3
-      }
-    ]
-  },
-  {
-    "id": 183,
-    "course_number": "SM307",
-    "section": 1,
-    "name": "디지털 전자회로(공)(반)",
-    "prof": "김가인",
-    "classification": "심화필수",
-    "category": "반도체공학",
-    "major_tracks": [
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 12,
-        "end_index": 14
-      },
-      {
-        "day": "수",
-        "start_index": 12,
-        "end_index": 14
-      }
-    ]
-  },
-  {
-    "id": 184,
-    "course_number": "SM308",
-    "section": 1,
-    "name": "아날로그 전자회로(공)(반)",
-    "prof": "송민영",
-    "classification": "심화필수",
-    "category": "반도체공학",
-    "major_tracks": [
-      "반도체공학"
-    ],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "화",
-        "start_index": 16,
-        "end_index": 18
-      },
-      {
-        "day": "목",
-        "start_index": 16,
-        "end_index": 18
-      }
-    ]
-  },
-  {
-    "id": 185,
-    "course_number": "BE201",
-    "section": 1,
-    "name": "인공지능기초",
-    "prof": "배인환",
-    "classification": "기초필수",
-    "category": "컴퓨터공학",
-    "major_tracks": [],
-    "credit": 3,
-    "time_slots": [
-      {
-        "day": "월",
-        "start_index": 5,
-        "end_index": 7
-      },
-      {
-        "day": "수",
-        "start_index": 5,
-        "end_index": 7
-      }
     ]
   },
   {
     "id": 186,
-    "course_number": "MECH304",
+    "course_number": "MECH304a",
     "section": 1,
-    "name": "시스템의 통합적 모델링(공)",
-    "prof": "박준혁",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "기계공학",
-      "전자공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "금",
         "start_index": 1,
         "end_index": 6
       }
+    ],
+    "name": "시스템의 통합적 모델링(공)",
+    "prof": "박준혁",
+    "professors": [
+      "박준혁"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학",
+      "전자공학"
+    ]
+  },
+  {
+    "id": 153,
+    "course_number": "MECH307",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 4,
+        "end_index": 6
+      },
+      {
+        "day": "수",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ],
+    "name": "인공지능개론(이,공)",
+    "prof": "문인규",
+    "professors": [
+      "문인규"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학"
+    ]
+  },
+  {
+    "id": 154,
+    "course_number": "MECH312",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 4,
+        "end_index": 6
+      },
+      {
+        "day": "목",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ],
+    "name": "메카트로닉스(공)",
+    "prof": "송철",
+    "professors": [
+      "송철"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학"
+    ]
+  },
+  {
+    "id": 155,
+    "course_number": "MECH404a",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "수",
+        "start_index": 9,
+        "end_index": 14
+      }
+    ],
+    "name": "창의공학설계(공)",
+    "prof": "이성민, 김동욱",
+    "professors": [
+      "이성민",
+      "김동욱"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학"
+    ]
+  },
+  {
+    "id": 156,
+    "course_number": "MECH406",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "수",
+        "start_index": 1,
+        "end_index": 6
+      }
+    ],
+    "name": "기계재료학(이,공)",
+    "prof": "김봉훈",
+    "professors": [
+      "김봉훈"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "기계공학"
+    ]
+  },
+  {
+    "id": 157,
+    "course_number": "MSE302",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 18,
+        "end_index": 23
+      }
+    ],
+    "name": "재료열역학 개론(이,공)",
+    "prof": "인수일",
+    "professors": [
+      "인수일"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학",
+      "물리학"
     ]
   },
   {
     "id": 187,
     "course_number": "MSE303",
     "section": 1,
-    "name": "나노재료학(공)",
-    "prof": "이종수",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "재료공학",
-      "화학공학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "화",
@@ -4139,26 +3849,762 @@
         "start_index": 15,
         "end_index": 17
       }
+    ],
+    "name": "나노재료학(공)",
+    "prof": "이종수",
+    "professors": [
+      "이종수"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학",
+      "화학공학"
+    ]
+  },
+  {
+    "id": 158,
+    "course_number": "MSE306a",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "목",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ],
+    "name": "재료공학개론Ⅱ(이,공)",
+    "prof": "이신범",
+    "professors": [
+      "이신범"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학"
+    ]
+  },
+  {
+    "id": 159,
+    "course_number": "MSE308",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "수",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ],
+    "name": "데이터 기반 신소재 공학(공)",
+    "prof": "박인철",
+    "professors": [
+      "박인철"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학"
+    ]
+  },
+  {
+    "id": 160,
+    "course_number": "MSE309",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 4,
+        "end_index": 6
+      },
+      {
+        "day": "수",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ],
+    "name": "세라믹개론(공)",
+    "prof": "이태훈",
+    "professors": [
+      "이태훈"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학"
+    ]
+  },
+  {
+    "id": 161,
+    "course_number": "MSE403",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 10,
+        "end_index": 12
+      },
+      {
+        "day": "수",
+        "start_index": 10,
+        "end_index": 12
+      }
+    ],
+    "name": "전자재료학(공)",
+    "prof": "이성원",
+    "professors": [
+      "이성원"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학",
+      "화학공학",
+      "반도체공학"
+    ]
+  },
+  {
+    "id": 162,
+    "course_number": "MSE404a",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 4,
+        "end_index": 6
+      },
+      {
+        "day": "수",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ],
+    "name": "결정학 및 회절(이,공)",
+    "prof": "김진수",
+    "professors": [
+      "김진수"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "재료공학",
+      "물리학",
+      "화학"
+    ]
+  },
+  {
+    "id": 163,
+    "course_number": "PHY201a",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 4,
+        "end_index": 6
+      },
+      {
+        "day": "목",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ],
+    "name": "열 및 통계 물리(이,공)",
+    "prof": "박기성",
+    "professors": [
+      "박기성"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 164,
+    "course_number": "PHY203a",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "day": "수",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ],
+    "name": "전기역학Ⅰ(이)",
+    "prof": "홍정일",
+    "professors": [
+      "홍정일"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 165,
+    "course_number": "PHY204",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "수",
+        "start_index": 12,
+        "end_index": 14
+      }
+    ],
+    "name": "해석역학Ⅱ(이,공)",
+    "prof": "서정필",
+    "professors": [
+      "서정필"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 166,
+    "course_number": "PHY301",
+    "section": 1,
+    "credit": 2.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 1,
+        "end_index": 4
+      },
+      {
+        "day": "수",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ],
+    "name": "응용물리 실험(이.공)",
+    "prof": "박기성, 유천열, 김영욱, 조창희",
+    "professors": [
+      "박기성",
+      "유천열",
+      "김영욱",
+      "조창희"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 167,
+    "course_number": "PHY303",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "목",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ],
+    "name": "고체물리Ⅰ(이,공)",
+    "prof": "김소연",
+    "professors": [
+      "김소연"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 168,
+    "course_number": "PHY305",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 5,
+        "end_index": 7
+      },
+      {
+        "day": "수",
+        "start_index": 5,
+        "end_index": 7
+      }
+    ],
+    "name": "양자역학Ⅱ(이,공)",
+    "prof": "김아람",
+    "professors": [
+      "김아람"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
     ]
   },
   {
     "id": 188,
     "course_number": "PHY307",
     "section": 1,
-    "name": "응용물리특론(이,공)",
-    "prof": "허승정",
-    "classification": "심화필수",
-    "category": "트랙",
-    "major_tracks": [
-      "물리학"
-    ],
-    "credit": 3,
+    "credit": 3.0,
     "time_slots": [
       {
         "day": "월",
         "start_index": 12,
         "end_index": 14
+      },
+      {
+        "day": "수",
+        "start_index": 12,
+        "end_index": 14
       }
+    ],
+    "name": "응용물리특론(이,공)",
+    "prof": "허승정",
+    "professors": [
+      "허승정"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 169,
+    "course_number": "PHY309",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "day": "목",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ],
+    "name": "미분기하학과 일반상대론(이)",
+    "prof": "Carlos Scarinci",
+    "professors": [
+      "Carlos Scarinci"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 170,
+    "course_number": "PHY407",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "day": "목",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ],
+    "name": "양자 컴퓨팅 개론(이,공)",
+    "prof": "권상일",
+    "professors": [
+      "권상일"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 171,
+    "course_number": "PHY409",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 12,
+        "end_index": 14
+      },
+      {
+        "day": "목",
+        "start_index": 12,
+        "end_index": 14
+      }
+    ],
+    "name": "입자물리개론(이)",
+    "prof": "DEVECIOGLU DENIZ OLGU",
+    "professors": [
+      "DEVECIOGLU DENIZ OLGU"
+    ],
+    "classification": "심화필수",
+    "category": "트랙",
+    "major_tracks": [
+      "물리학"
+    ]
+  },
+  {
+    "id": 172,
+    "course_number": "TP101",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 1,
+        "end_index": 6
+      }
+    ],
+    "name": "디자인 사고",
+    "prof": "박종래",
+    "professors": [
+      "박종래"
+    ],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 173,
+    "course_number": "TP201",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "수",
+        "start_index": 1,
+        "end_index": 6
+      }
+    ],
+    "name": "디자인 기획과 전략",
+    "prof": "박종래",
+    "professors": [
+      "박종래"
+    ],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 174,
+    "course_number": "TP203",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 16,
+        "end_index": 18
+      },
+      {
+        "day": "목",
+        "start_index": 16,
+        "end_index": 18
+      }
+    ],
+    "name": "소리와 음악(이,공)",
+    "prof": "이기준",
+    "professors": [
+      "이기준"
+    ],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 175,
+    "course_number": "TP301",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 3,
+        "end_index": 8
+      }
+    ],
+    "name": "커뮤니케이션과 현대사회",
+    "prof": "미배정",
+    "professors": [],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 176,
+    "course_number": "TP305",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "수",
+        "start_index": 12,
+        "end_index": 17
+      }
+    ],
+    "name": "게임이론",
+    "prof": "김선구",
+    "professors": [
+      "김선구"
+    ],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 177,
+    "course_number": "TP313",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 16,
+        "end_index": 18
+      },
+      {
+        "day": "수",
+        "start_index": 16,
+        "end_index": 18
+      }
+    ],
+    "name": "위상수학개론",
+    "prof": "Hudson Thomas Bryan",
+    "professors": [
+      "Hudson Thomas Bryan"
+    ],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 178,
+    "course_number": "TP314",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 4,
+        "end_index": 6
+      },
+      {
+        "day": "수",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ],
+    "name": "생체분자역학개론(이,공)",
+    "prof": "김유리, 정소현",
+    "professors": [
+      "김유리",
+      "정소현"
+    ],
+    "classification": "심화필수",
+    "category": "비트랙/융합",
+    "major_tracks": []
+  },
+  {
+    "id": 189,
+    "course_number": "RP303",
+    "section": 1,
+    "credit": 4.0,
+    "time_slots": [],
+    "name": "반도체 연구실무 기초(공)",
+    "prof": "권혁준",
+    "professors": [
+      "권혁준"
+    ],
+    "classification": "심화선택",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ]
+  },
+  {
+    "id": 180,
+    "course_number": "SM202",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 9,
+        "end_index": 11
+      },
+      {
+        "day": "목",
+        "start_index": 9,
+        "end_index": 11
+      }
+    ],
+    "name": "반도체 재료공학 개론(공)(반)",
+    "prof": "조창희",
+    "professors": [
+      "조창희"
+    ],
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ]
+  },
+  {
+    "id": 181,
+    "course_number": "SM203a",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 5,
+        "end_index": 7
+      },
+      {
+        "day": "목",
+        "start_index": 5,
+        "end_index": 7
+      }
+    ],
+    "name": "반도체물성 개론(공)(반)",
+    "prof": "이상훈",
+    "professors": [
+      "이상훈"
+    ],
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ]
+  },
+  {
+    "id": 182,
+    "course_number": "SM306",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "day": "수",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ],
+    "name": "반도체공정응용(공)(반)",
+    "prof": "권혁준",
+    "professors": [
+      "권혁준"
+    ],
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ]
+  },
+  {
+    "id": 183,
+    "course_number": "SM307",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "월",
+        "start_index": 12,
+        "end_index": 14
+      },
+      {
+        "day": "수",
+        "start_index": 12,
+        "end_index": 14
+      }
+    ],
+    "name": "디지털 전자회로(공)(반)",
+    "prof": "김가인",
+    "professors": [
+      "김가인"
+    ],
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
+    ]
+  },
+  {
+    "id": 184,
+    "course_number": "SM308",
+    "section": 1,
+    "credit": 3.0,
+    "time_slots": [
+      {
+        "day": "화",
+        "start_index": 16,
+        "end_index": 18
+      },
+      {
+        "day": "목",
+        "start_index": 16,
+        "end_index": 18
+      }
+    ],
+    "name": "아날로그 전자회로(공)(반)",
+    "prof": "송민영",
+    "professors": [
+      "송민영"
+    ],
+    "classification": "심화필수",
+    "category": "반도체공학",
+    "major_tracks": [
+      "반도체공학"
     ]
   }
 ]

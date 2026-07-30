@@ -20,6 +20,15 @@ let trackLabels = new Set();
 const filterGrids = () => Array.from(document.querySelectorAll(".ags-match-filter-grid"));
 
 const normalizeLabel = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const isEnglish = () => /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeLabel(document.querySelector("#root h2")?.textContent));
+
+const relabelCategoryHeader = () => {
+  document.querySelectorAll(".ags-lecture-sidebar button").forEach((button) => {
+    const label = normalizeLabel(button.textContent);
+    if (isEnglish() && label === "카테고리") button.textContent = "Categories";
+    if (!isEnglish() && label === "Categories") button.textContent = "카테고리";
+  });
+};
 
 const setIfChanged = (node, property, value) => {
   if (node.style.getPropertyValue(property) !== value) node.style.setProperty(property, value);
@@ -112,6 +121,7 @@ const setFrame = (grid, name, buttons) => {
 
 const syncBasicFilterFrames = () => {
   frameSyncScheduled = false;
+  relabelCategoryHeader();
   filterGrids().forEach((grid) => {
     const buttons = Array.from(grid.querySelectorAll(":scope > button"));
     const buckets = orderButtons(buttons);

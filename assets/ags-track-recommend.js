@@ -5,8 +5,39 @@ const SPECIAL_ROUTE = /^#\/(?:professor|room)\//i;
 let requirements = null;
 let profilePage = null;
 let profileTrigger = null;
+let courseNameAliases = new Map();
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const currentLanguage = () => {
+  const active = Array.from(document.querySelectorAll("#root button")).find((button) => (
+    /^(한국어|English)$/.test(normalizeText(button.textContent))
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ));
+  if (normalizeText(active?.textContent) === "English") return "en";
+  if (normalizeText(active?.textContent) === "한국어") return "ko";
+  return /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeText(document.querySelector("#root h2")?.textContent)) ? "en" : "ko";
+};
+const TRACK_EN = {
+  "물리학": "Physics",
+  "화학": "Chemistry",
+  "생명과학": "Biology",
+  "뇌과학": "Brain Sciences",
+  "기계공학": "Mechanical Engineering",
+  "재료공학": "Materials Science and Engineering",
+  "전자공학": "Electrical Engineering",
+  "컴퓨터공학": "Computer Science and Engineering",
+  "화학공학": "Chemical Engineering",
+  "반도체공학": "Semiconductor Engineering",
+};
+const TRACK_SHORT_EN = {
+  "물리학": "Physics", "화학": "Chemistry", "생명과학": "Biology", "뇌과학": "Brain Sci.",
+  "기계공학": "ME", "재료공학": "MSE", "전자공학": "EE", "컴퓨터공학": "CSE",
+  "화학공학": "ChemE", "반도체공학": "Semiconductor Eng.",
+};
+const displayTrack = (track, compact = false) => {
+  if (currentLanguage() !== "en") return track;
+  return (compact ? TRACK_SHORT_EN : TRACK_EN)[track] || track;
+};
 
 const normalizeCourseName = (value) => normalizeText(value)
   .replace(/\s*-\s*영어강의\s*$/i, "")
@@ -18,6 +49,7 @@ const normalizeCourseName = (value) => normalizeText(value)
   .replace(/이공/g, "")
   .replace(/공이/g, "")
   .toLowerCase();
+const requirementCourseKey = (value) => courseNameAliases.get(normalizeCourseName(value)) || normalizeCourseName(value);
 
 const readProfile = () => {
   try {
@@ -49,9 +81,9 @@ const requirementTracks = () => requirements?.tracks || [];
 
 const currentYearTracksForCourse = (courseName, year, tracks) => {
   if (!requirements || !year || !tracks?.length) return [];
-  const key = normalizeCourseName(courseName);
+  const key = requirementCourseKey(courseName);
   return tracks.filter((track) => requirementsFor(track, year)
-    .some((course) => normalizeCourseName(course) === key));
+    .some((course) => requirementCourseKey(course) === key));
 };
 
 const matchedTracksForCourse = (courseName, profile) => {
@@ -61,11 +93,11 @@ const matchedTracksForCourse = (courseName, profile) => {
 
 const requirementEntriesForTracks = (courseName, tracks) => {
   if (!requirements || !tracks?.length) return [];
-  const key = normalizeCourseName(courseName);
+  const key = requirementCourseKey(courseName);
   const entries = [];
   for (const track of tracks) {
     for (const year of requirements.years || []) {
-      if (requirementsFor(track, year).some((course) => normalizeCourseName(course) === key)) {
+      if (requirementsFor(track, year).some((course) => requirementCourseKey(course) === key)) {
         entries.push({ track, year });
       }
     }
@@ -78,8 +110,9 @@ const requirementEntriesForCourse = (courseName) => requirementEntriesForTracks(
 const unique = (items) => Array.from(new Set(items));
 
 const requirementLabelForTracks = (tracks) => {
-  if (tracks.length > 1) return `공통 필수: ${tracks.join(", ")}`;
-  if (tracks.length === 1) return `필수: ${tracks[0]}`;
+  const names = tracks.map((track) => displayTrack(track, true));
+  if (tracks.length > 1) return currentLanguage() === "en" ? `Required for: ${names.join(", ")}` : `공통 필수: ${names.join(", ")}`;
+  if (tracks.length === 1) return currentLanguage() === "en" ? `Required: ${names[0]}` : `필수: ${names[0]}`;
   return "";
 };
 
@@ -101,11 +134,15 @@ const requirementLabelForEntries = (entries) => {
   if (groups.length === 0) return "";
   if (groups.length === 1) {
     const [group] = groups;
-    return [`${group.year}학년`, requirementLabelForTracks(group.tracks)].filter(Boolean).join(" · ");
+    const year = currentLanguage() === "en" ? `Year ${group.year}` : `${group.year}학년`;
+    return [year, requirementLabelForTracks(group.tracks)].filter(Boolean).join(" · ");
   }
   return groups.map((group) => {
-    const trackLabel = group.tracks.length > 1 ? `공통: ${group.tracks.join(", ")}` : group.tracks[0];
-    return `${group.year}학년 ${trackLabel}`;
+    const names = group.tracks.map((track) => displayTrack(track, true));
+    const trackLabel = group.tracks.length > 1
+      ? (currentLanguage() === "en" ? `Shared: ${names.join(", ")}` : `공통: ${names.join(", ")}`)
+      : names[0];
+    return currentLanguage() === "en" ? `Year ${group.year} ${trackLabel}` : `${group.year}학년 ${trackLabel}`;
   }).join(" · ");
 };
 
@@ -178,26 +215,27 @@ const profileMarkup = () => {
   const profile = readProfile();
   const years = requirements?.years || ["1", "2", "3", "4"];
   const tracks = requirements?.tracks || [];
+  const english = currentLanguage() === "en";
   return `
-    <div class="ags-track-profile-panel">
+    <div class="ags-track-profile-panel" data-ags-language="${english ? "en" : "ko"}">
       <div class="ags-track-profile-head">
         <p class="ags-track-profile-kicker">Track Recommendation</p>
-        <h1>학년과 전공 트랙 선택</h1>
+        <h1>${english ? "Select Your Year and Major Track" : "학년과 전공 트랙 선택"}</h1>
       </div>
       <div class="ags-track-profile-section">
-        <p class="ags-track-profile-label">현재 학년</p>
+        <p class="ags-track-profile-label">${english ? "Current Year" : "현재 학년"}</p>
         <div class="ags-track-choice-grid ags-track-year-grid">
-          ${years.map((year) => `<button type="button" data-year="${year}" class="ags-track-choice ${profile?.year === year ? "ags-track-choice-selected" : ""}">${year}학년</button>`).join("")}
+          ${years.map((year) => `<button type="button" data-year="${year}" class="ags-track-choice ${profile?.year === year ? "ags-track-choice-selected" : ""}">${english ? `Year ${year}` : `${year}학년`}</button>`).join("")}
         </div>
       </div>
       <div class="ags-track-profile-section">
-        <p class="ags-track-profile-label">전공 트랙 <span>최대 2개</span></p>
+        <p class="ags-track-profile-label">${english ? "Major Track" : "전공 트랙"} <span>${english ? "Up to 2" : "최대 2개"}</span></p>
         <div class="ags-track-choice-grid ags-track-major-grid">
-          ${tracks.map((track) => `<button type="button" data-track="${track}" class="ags-track-choice ${profile?.tracks.includes(track) ? "ags-track-choice-selected" : ""}">${track}</button>`).join("")}
+          ${tracks.map((track) => `<button type="button" data-track="${track}" class="ags-track-choice ${profile?.tracks.includes(track) ? "ags-track-choice-selected" : ""}">${displayTrack(track)}</button>`).join("")}
         </div>
       </div>
       <div class="ags-track-profile-actions">
-        <button type="button" class="ags-track-profile-submit">저장하고 시작</button>
+        <button type="button" class="ags-track-profile-submit">${english ? "Save and Start" : "저장하고 시작"}</button>
       </div>
     </div>
   `;
@@ -206,6 +244,10 @@ const profileMarkup = () => {
 const showProfilePage = () => {
   if (!requirements || isSpecialRoute()) return;
   if (profilePage) {
+    const language = currentLanguage();
+    if (profilePage.querySelector(".ags-track-profile-panel")?.dataset.agsLanguage !== language) {
+      profilePage.innerHTML = profileMarkup();
+    }
     updateProfileSubmit();
     return;
   }
@@ -273,13 +315,29 @@ const syncProfileTrigger = () => {
     profileTrigger.addEventListener("click", showProfilePage);
     document.body.appendChild(profileTrigger);
   }
-  const label = `${profile.year}학년 · ${profile.tracks.join(" / ")}`;
+  const label = currentLanguage() === "en"
+    ? `Year ${profile.year} · ${profile.tracks.map(displayTrack).join(" / ")}`
+    : `${profile.year}학년 · ${profile.tracks.join(" / ")}`;
   if (profileTrigger.textContent !== label) profileTrigger.textContent = label;
 };
 
 const start = async () => {
   try {
-    requirements = await fetch(REQUIREMENTS_URL).then((response) => response.json());
+    const [requirementData, lecturesKo, lecturesEn] = await Promise.all([
+      fetch(REQUIREMENTS_URL).then((response) => response.json()),
+      fetch("/ActivatedGeneratedScheduler/lectures.json").then((response) => response.json()),
+      fetch("/ActivatedGeneratedScheduler/lectures_eng.json").then((response) => response.json()),
+    ]);
+    requirements = requirementData;
+    const koByKey = new Map(lecturesKo.map((lecture) => [`${lecture.course_number}#${lecture.section}`, lecture]));
+    courseNameAliases = new Map();
+    for (const lecture of lecturesEn) {
+      const korean = koByKey.get(`${lecture.course_number}#${lecture.section}`);
+      if (!korean) continue;
+      const canonical = normalizeCourseName(korean.name);
+      courseNameAliases.set(normalizeCourseName(lecture.name), canonical);
+      courseNameAliases.set(canonical, canonical);
+    }
   } catch (error) {
     console.error("Failed to load AGS track requirements:", error);
     return;

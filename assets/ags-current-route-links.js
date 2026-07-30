@@ -79,12 +79,15 @@ const topBySessions = (items) => Array.from(items.values())
     || right.courseCount - left.courseCount
     || left.name.localeCompare(right.name))[0] || null;
 
-const loadDefaultProfessor = async () => {
-  const lectures = await fetch(`${baseUrl()}lectures.json`).then((response) => response.json());
+const loadDefaultProfessor = async (language) => {
+  const lectures = await fetch(`${baseUrl()}${language === "en" ? "lectures_eng.json" : "lectures.json"}`).then((response) => response.json());
   const stats = new Map();
 
   for (const lecture of lectures) {
-    for (const name of professorNames(lecture.prof)) {
+    const names = Array.isArray(lecture.professors) && lecture.professors.length
+      ? lecture.professors.map(normalizeText).filter(Boolean)
+      : professorNames(lecture.prof);
+    for (const name of names) {
       const existing = stats.get(name) || { name, courseKeys: new Set(), sessionCount: 0 };
       existing.courseKeys.add(`${lecture.course_number || lecture.name}-${lecture.section}`);
       existing.sessionCount += Math.max((lecture.time_slots || []).length, 1);
@@ -141,14 +144,14 @@ const loadDefaultRoom = async () => {
 const loadRouteDirectory = () => {
   if (routeDirectory) return Promise.resolve(routeDirectory);
   if (!routeDirectoryPromise) {
-    routeDirectoryPromise = Promise.all([loadDefaultProfessor(), loadDefaultRoom()])
-      .then(([professor, room]) => {
-        routeDirectory = { professor, room };
+    routeDirectoryPromise = Promise.all([loadDefaultProfessor("ko"), loadDefaultProfessor("en"), loadDefaultRoom()])
+      .then(([professorKo, professorEn, room]) => {
+        routeDirectory = { professorKo, professorEn, room };
         return routeDirectory;
       })
       .catch((error) => {
         console.error("Failed to load AGS route directory:", error);
-        return { professor: null, room: null };
+        return { professorKo: null, professorEn: null, room: null };
       });
   }
   return routeDirectoryPromise;
@@ -156,13 +159,23 @@ const loadRouteDirectory = () => {
 
 const hintSpanFor = (link) => link.querySelector("span.text-left span:last-child");
 
+const currentLanguage = () => {
+  const active = Array.from(document.querySelectorAll("#root button")).find((button) => (
+    /^(한국어|English)$/.test(normalizeText(button.textContent))
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ));
+  if (normalizeText(active?.textContent) === "English") return "en";
+  if (normalizeText(active?.textContent) === "한국어") return "ko";
+  return /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeText(document.querySelector("#root h2")?.textContent)) ? "en" : "ko";
+};
+
 const updateLink = (link, kind, item) => {
   if (!link || !item?.name) return;
   const nextHref = routeHref(kind, item.name);
   if (link.href !== nextHref) link.href = nextHref;
   const hint = hintSpanFor(link);
   if (!hint) return;
-  const isKorean = /[가-힣]/.test(document.body.innerText.slice(0, 200));
+  const isKorean = currentLanguage() === "ko";
   const countLabel = isKorean ? `${item.courseCount}과목 · ${item.sessionCount}회` : `${item.courseCount} courses · ${item.sessionCount} sessions`;
   const nextText = kind === "professor"
     ? `${item.name} · ${countLabel}`
@@ -173,7 +186,8 @@ const updateLink = (link, kind, item) => {
 const syncRouteLinks = async () => {
   routeLinkSyncScheduled = false;
   const directory = await loadRouteDirectory();
-  updateLink(document.querySelector('a[href*="#/professor/"]'), "professor", directory.professor);
+  const professor = currentLanguage() === "en" ? directory.professorEn : directory.professorKo;
+  updateLink(document.querySelector('a[href*="#/professor/"]'), "professor", professor);
   updateLink(document.querySelector('a[href*="#/room/"]'), "room", directory.room);
 };
 
@@ -188,7 +202,8 @@ const redirectLegacyProfessorRoute = async () => {
   const lowerRoute = route.toLowerCase();
   if (lowerRoute !== "professor/kim-sohee" && route !== "professor/김소희") return;
   const directory = await loadRouteDirectory();
-  if (directory.professor?.name) window.location.replace(routeHref("professor", directory.professor.name));
+  const professor = currentLanguage() === "en" ? directory.professorEn : directory.professorKo;
+  if (professor?.name) window.location.replace(routeHref("professor", professor.name));
 };
 
 new MutationObserver(scheduleRouteLinkSync).observe(document.body, { childList: true, subtree: true });

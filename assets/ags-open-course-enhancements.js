@@ -8,20 +8,42 @@ const SELECTED_KEYS = "ags_selected_lecture_keys";
 
 let openCourseMeta = new Map();
 let semiconductorTags = new Map();
-let openLectures = [];
+let openLecturesKo = [];
+let openLecturesEn = [];
 let enhancementReady = false;
 let enhancementSyncScheduled = false;
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const isEnglish = () => (
+  Array.from(document.querySelectorAll("#root button")).some((button) => (
+    normalizeText(button.textContent) === "English"
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ))
+  || /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeText(document.querySelector("#root h2")?.textContent))
+);
+const englishTag = (tag) => {
+  const exact = {
+    "물성/소자": "Materials/Devices",
+    "회로": "Circuits",
+    "EE306 인정": "EE306 Credit",
+    "반도체": "Semiconductor",
+    "공정": "Fabrication",
+    "재료": "Materials",
+    "연구실무": "Research Practice",
+    "토요일": "Saturday",
+  };
+  return exact[tag] || tag.replace(/^선수:\s*/, "Prerequisite: ");
+};
 const normalizeSection = (value) => String(value || "").replace(/^S/i, "").padStart(2, "0");
 const lectureSelectionKey = (lecture) => `${lecture.course_number}#${lecture.section}`;
 const lectureCourseKey = (lecture) => lecture.course_number || normalizeText(lecture.name);
+const activeLectures = () => isEnglish() ? openLecturesEn : openLecturesKo;
 
 const courseNameFromRow = (row) => normalizeText(row?.querySelector(":scope > button h4")?.textContent);
 
 const rowLecture = (row) => {
   const name = courseNameFromRow(row);
-  return openLectures.find((lecture) => normalizeText(lecture.name) === name) || null;
+  return activeLectures().find((lecture) => normalizeText(lecture.name) === name) || null;
 };
 
 const rowTags = (row) => {
@@ -33,7 +55,7 @@ const rowTags = (row) => {
 const ensureCourseLabels = (row) => {
   const tags = rowTags(row);
   row.classList.toggle("ags-semiconductor-course", tags.length > 0);
-  let wrap = row.querySelector(":scope > .ags-open-course-labels");
+  let wrap = row.querySelector(":scope .ags-open-course-labels");
   if (!tags.length) {
     wrap?.remove();
     return;
@@ -41,16 +63,21 @@ const ensureCourseLabels = (row) => {
   if (!wrap) {
     wrap = document.createElement("div");
     wrap.className = "ags-open-course-labels";
+  }
+  const meta = row.querySelector(":scope > button .ags-course-row-meta");
+  if (meta && wrap.parentElement !== meta) {
+    meta.insertBefore(wrap, meta.querySelector(".ags-course-row-count"));
+  } else if (!meta && wrap.parentElement !== row) {
     row.appendChild(wrap);
   }
-  const signature = tags.join("|");
+  const signature = `${isEnglish() ? "en" : "ko"}|${tags.join("|")}`;
   if (wrap.dataset.agsTags === signature) return;
   wrap.dataset.agsTags = signature;
   wrap.textContent = "";
   for (const tag of tags) {
     const chip = document.createElement("span");
     chip.className = `ags-open-course-chip ags-open-course-chip-${tag.includes("선수") ? "prereq" : tag.includes("인정") ? "credit" : "semiconductor"}`;
-    chip.textContent = `[${tag}]`;
+    chip.textContent = `[${isEnglish() ? englishTag(tag) : tag}]`;
     wrap.appendChild(chip);
   }
 };
@@ -85,7 +112,7 @@ const visibleSelectedKeys = () => {
 const selectedLectures = () => {
   const keys = selectedStorageKeys();
   visibleSelectedKeys().forEach((key) => keys.add(key));
-  return openLectures.filter((lecture) => keys.has(lectureSelectionKey(lecture)));
+  return activeLectures().filter((lecture) => keys.has(lectureSelectionKey(lecture)));
 };
 
 const summaryText = () => {
@@ -102,7 +129,9 @@ const summaryText = () => {
   }
 
   const courseCount = countedCourses.size;
-  return `선택 ${courseCount}과목 · ${sectionCount}분반 · ${credits.toFixed(1)}학점`;
+  return isEnglish()
+    ? `Selected: ${courseCount} courses · ${sectionCount} sections · ${credits.toFixed(1)} credits`
+    : `선택 ${courseCount}과목 · ${sectionCount}분반 · ${credits.toFixed(1)}학점`;
 };
 
 const summaryCard = () => {
@@ -139,6 +168,11 @@ const relabelSemiconductorFilter = () => {
   document.querySelectorAll(".ags-match-filter-grid button").forEach((button) => {
     if (normalizeText(button.textContent) === "반도체공학") button.textContent = "반도체";
   });
+  document.querySelectorAll(".ags-lecture-sidebar button").forEach((button) => {
+    const label = normalizeText(button.textContent);
+    if (isEnglish() && label === "카테고리") button.textContent = "Categories";
+    if (!isEnglish() && label === "Categories") button.textContent = "카테고리";
+  });
 };
 
 const syncEnhancements = () => {
@@ -157,14 +191,16 @@ const scheduleEnhancementSync = () => {
 
 const initEnhancements = async () => {
   try {
-    const [metadata, tags, lectures] = await Promise.all([
+    const [metadata, tags, lecturesKo, lecturesEn] = await Promise.all([
       fetch(OPEN_META_URL, { cache: "no-cache" }).then((response) => response.json()),
       fetch(SEMICONDUCTOR_TAGS_URL, { cache: "no-cache" }).then((response) => response.json()),
       fetch(OPEN_LECTURES_URL, { cache: "no-cache" }).then((response) => response.json()),
+      fetch("/ActivatedGeneratedScheduler/lectures_eng.json", { cache: "no-cache" }).then((response) => response.json()),
     ]);
     openCourseMeta = new Map((metadata.courses || []).map((course) => [`${course.course_number}#${normalizeSection(course.section)}`, course]));
     semiconductorTags = new Map(Object.entries(tags.related_course_numbers || {}).map(([code, value]) => [code.toUpperCase(), value]));
-    openLectures = lectures;
+    openLecturesKo = lecturesKo;
+    openLecturesEn = lecturesEn;
     enhancementReady = true;
     window.agsOpenCourseMeta = openCourseMeta;
     scheduleEnhancementSync();

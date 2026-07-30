@@ -6,6 +6,13 @@ let fridaySyncScheduled = false;
 let fridayDataReady = false;
 
 const normalizeFridayText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const fridayIsEnglish = () => (
+  Array.from(document.querySelectorAll("#root button")).some((button) => (
+    normalizeFridayText(button.textContent) === "English"
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ))
+  || /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeFridayText(document.querySelector("#root h2")?.textContent))
+);
 
 const fridayCourseName = (group) => normalizeFridayText(group?.querySelector(":scope > button h4")?.textContent);
 
@@ -22,8 +29,11 @@ const ensureFridayLabel = (group, enabled) => {
   if (!label) {
     label = document.createElement("span");
     label.className = "ags-friday-course-label";
-    label.textContent = "[금]";
+    label.textContent = fridayIsEnglish() ? "[Fri]" : "[금]";
     group.appendChild(label);
+  } else {
+    const text = fridayIsEnglish() ? "[Fri]" : "[금]";
+    if (label.textContent !== text) label.textContent = text;
   }
 };
 
@@ -65,7 +75,11 @@ const scheduleFridaySync = () => {
 
 const initFridayRows = async () => {
   try {
-    const lectures = await fetch(FRIDAY_LECTURES_URL, { cache: "no-cache" }).then((response) => response.json());
+    const [lecturesKo, lecturesEn] = await Promise.all([
+      fetch(FRIDAY_LECTURES_URL, { cache: "no-cache" }).then((response) => response.json()),
+      fetch("/ActivatedGeneratedScheduler/lectures_eng.json", { cache: "no-cache" }).then((response) => response.json()),
+    ]);
+    const lectures = [...lecturesKo, ...lecturesEn];
     fridayCourseNames = new Set(
       lectures
         .filter(hasFridaySlot)

@@ -4,6 +4,13 @@ const SECTION_CARD_SELECTOR = ":scope > div.grid .cursor-pointer";
 let selectAllSyncScheduled = false;
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const isEnglish = () => {
+  const button = Array.from(document.querySelectorAll("#root button")).find((item) => (
+    normalizeText(item.textContent) === "English"
+    && (item.getAttribute("aria-pressed") === "true" || String(item.className).includes("bg-blue-600"))
+  ));
+  return Boolean(button) || /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeText(document.querySelector("#root h2")?.textContent));
+};
 
 const isSelectedCard = (card) => String(card.className || "").includes("border-blue-600");
 
@@ -38,6 +45,10 @@ const updateButtonState = (group) => {
 
 const ensureButton = (group) => {
   if (group.querySelector(":scope > .ags-section-select-all")) {
+    const button = group.querySelector(":scope > .ags-section-select-all");
+    const label = isEnglish() ? "Select all sections" : "분반 전체 선택";
+    button.title = label;
+    button.setAttribute("aria-label", label);
     updateButtonState(group);
     return;
   }
@@ -46,8 +57,9 @@ const ensureButton = (group) => {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "ags-section-select-all";
-  button.title = "분반 전체 선택";
-  button.setAttribute("aria-label", "분반 전체 선택");
+  const label = isEnglish() ? "Select all sections" : "분반 전체 선택";
+  button.title = label;
+  button.setAttribute("aria-label", label);
   button.setAttribute("aria-pressed", "false");
   button.innerHTML = '<span class="ags-section-select-all-icon" aria-hidden="true">✓</span>';
   group.appendChild(button);

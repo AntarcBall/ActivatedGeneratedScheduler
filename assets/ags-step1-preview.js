@@ -3,6 +3,8 @@ const DAY_LABELS = { "월": "Mon", "화": "Tue", "수": "Wed", "목": "Thu", "�
 const EXCLUDED = /URGP|UGRP|URP|인턴|Internship/i;
 
 let lectures = [];
+let lectureSets = { ko: [], en: [] };
+let activeLanguage = "";
 let activeLecture = null;
 let selectedLectures = [];
 let pinnedLectures = [];
@@ -13,6 +15,16 @@ let mutationSyncScheduled = false;
 
 const normalize = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const GROUP_SELECTOR = '[class~="group/item"]';
+const currentLanguage = () => {
+  const heading = normalize(document.querySelector("#root h2")?.textContent);
+  if (/^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(heading)) return "en";
+  if (/^Step\s+\d+:\s*(강의|선호|희망|기피|가중치|결과)/.test(heading)) return "ko";
+  try {
+    return window.localStorage.getItem("ags_language") === "en" ? "en" : "ko";
+  } catch {
+    return "ko";
+  }
+};
 
 const slotLabel = (index) => {
   const hour = 9 + Math.floor(index / 2);
@@ -34,10 +46,30 @@ const normalizeLecture = (lecture) => ({
 });
 
 const loadLectures = async () => {
-  const ko = await fetch("/ActivatedGeneratedScheduler/lectures.json").then((res) => res.json());
-  lectures = ko
-    .filter((lecture) => !EXCLUDED.test([lecture.course_number, lecture.name, lecture.category].filter(Boolean).join(" ")))
-    .map(normalizeLecture);
+  const [ko, en] = await Promise.all([
+    fetch("/ActivatedGeneratedScheduler/lectures.json").then((res) => res.json()),
+    fetch("/ActivatedGeneratedScheduler/lectures_eng.json").then((res) => res.json()),
+  ]);
+  lectureSets = Object.fromEntries(Object.entries({ ko, en }).map(([language, items]) => [
+    language,
+    items
+      .filter((lecture) => !EXCLUDED.test([lecture.course_number, lecture.name, lecture.category].filter(Boolean).join(" ")))
+      .map(normalizeLecture),
+  ]));
+  syncLectureLanguage();
+};
+
+const syncLectureLanguage = () => {
+  const language = currentLanguage();
+  if (activeLanguage === language && lectures === lectureSets[language]) return false;
+  activeLanguage = language;
+  lectures = lectureSets[language] || [];
+  activeLecture = null;
+  selectedLectures = [];
+  pinnedLectures = [];
+  renderedLectureKey = "";
+  renderedAvailabilityKey = "";
+  return true;
 };
 
 const currentMain = () => document.querySelector(".ags-lecture-main");
@@ -406,7 +438,15 @@ const ensureWarning = () => {
 
 const showConflictWarning = () => {
   const warning = ensureWarning();
-  warning.textContent = "시간이 겹치는 분반이 선택되어 있습니다. 빨간 칸을 확인한 뒤 충돌을 해제하세요.";
+  const heading = normalize(document.querySelector("#root h2")?.textContent);
+  const englishButton = Array.from(document.querySelectorAll("#root button")).find((button) => (
+    normalize(button.textContent) === "English"
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ));
+  const english = Boolean(englishButton) || /^Step\s+1:\s*Select/i.test(heading);
+  warning.textContent = english
+    ? "Some selected sections overlap. Check the red time slots and resolve the conflicts."
+    : "시간이 겹치는 분반이 선택되어 있습니다. 빨간 칸을 확인한 뒤 충돌을 해제하세요.";
   warning.classList.add("ags-conflict-warning-visible");
   clearTimeout(warningTimer);
   warningTimer = setTimeout(() => {
@@ -523,6 +563,7 @@ const syncFromMutation = () => {
     renderedAvailabilityKey = "";
     return;
   }
+  syncLectureLanguage();
   const changed = syncSelectionsFromDom();
   if (!main.querySelector(".ags-lecture-preview") || changed) update();
   else syncConflictAvailability();

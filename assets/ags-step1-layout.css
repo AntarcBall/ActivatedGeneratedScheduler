@@ -339,12 +339,13 @@ body.ags-home-clean #root > div > div > div:first-child {
 .ags-course-row-meta {
   display: flex !important;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.35rem;
   min-width: 0;
   max-width: min(34rem, calc(100vw - 10rem));
   margin-top: 0.15rem;
-  overflow: hidden;
-  white-space: nowrap;
+  overflow: visible;
+  white-space: normal;
 }
 
 .ags-course-row-label {
@@ -447,15 +448,13 @@ body.ags-home-clean #root > div > div > div:first-child {
 }
 
 .ags-open-course-labels {
-  position: absolute;
-  top: 0.73rem;
-  right: 5.45rem;
-  z-index: 4;
+  position: static;
+  z-index: auto;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 0.25rem;
-  max-width: min(24rem, 42%);
+  max-width: 100%;
   overflow: hidden;
   pointer-events: none;
 }
@@ -492,7 +491,11 @@ body.ags-home-clean #root > div > div > div:first-child {
 }
 
 .ags-semiconductor-course.ags-course-has-select-all > button:first-of-type {
-  padding-right: 12rem !important;
+  padding-right: 3.25rem !important;
+}
+
+.ags-semiconductor-course.ags-friday-course.ags-course-has-select-all > button:first-of-type {
+  padding-right: 5.6rem !important;
 }
 
 .ags-hidden-selection-summary-card {

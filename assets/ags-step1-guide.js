@@ -57,9 +57,14 @@ const showGuide = (button) => {
         <button type="button" class="ags-step1-guide-close" aria-label="닫기">×</button>
       </div>
       <div class="ags-step1-guide-update">
-        <p class="ags-step1-guide-update-kicker">업데이트 사항</p>
-        <h4>수강 사이트 재조회 결과, 일부 강의 시간이 바뀌었습니다.</h4>
+        <p class="ags-step1-guide-update-kicker">업데이트 사항 · 2026-07-29 (PDT)</p>
+        <h4>최신 한국어 개설강좌 XLS와 수강 사이트 재조회 결과를 반영했습니다.</h4>
         <ul>
+          <li><strong>Academic English: Research and Writing</strong> GC102 17·18분반 추가</li>
+          <li><strong>시스템의 통합적 모델링(공)</strong> 과목번호 MECH304 → MECH304a 정정</li>
+          <li><strong>폐강·삭제 분반</strong> 최신 XLS에서 제외된 8개 분반 제거</li>
+          <li><strong>담당교수 변경</strong> GC102 02·14·15분반 최신 정보 반영</li>
+          <li><strong>시간·과목명 변경</strong> HSS108, HSS203, HSS221, HSS222, PHY307 반영</li>
           <li><strong>디지털 논리회로(공)</strong> 월/수 16:30-18:00 → 월/수 13:00-14:30</li>
           <li><strong>디지털 영상처리(이,공)</strong> 화/목 13:00-14:30 → 화/목 10:30-12:00</li>
         </ul>

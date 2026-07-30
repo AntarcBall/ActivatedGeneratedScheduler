@@ -5,9 +5,9 @@ const COURSE_GROUP_SELECTOR = ".ags-lecture-main [class~='group/item']";
 const DEFAULT_ORDER = ["year", "korean", "fridayOff"];
 
 const CRITERIA = {
-  year: { label: "학년순", shortLabel: "학년" },
-  korean: { label: "한글순", shortLabel: "한글" },
-  fridayOff: { label: "금공강", shortLabel: "금공강" },
+  year: { ko: ["학년순", "학년"], en: ["Year order", "Year"] },
+  korean: { ko: ["한글순", "한글"], en: ["Alphabetical order", "A–Z"] },
+  fridayOff: { ko: ["금공강", "금공강"], en: ["Friday-free option", "Fri off"] },
 };
 
 let lecturesByName = new Map();
@@ -16,6 +16,15 @@ let syncScheduled = false;
 let dragKey = null;
 
 const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim();
+const currentLanguage = () => {
+  const active = Array.from(document.querySelectorAll("#root button")).find((button) => (
+    /^(한국어|English)$/.test(normalizeText(button.textContent))
+    && (button.getAttribute("aria-pressed") === "true" || String(button.className).includes("bg-blue-600"))
+  ));
+  if (normalizeText(active?.textContent) === "English") return "en";
+  if (normalizeText(active?.textContent) === "한국어") return "ko";
+  return /^Step\s+\d+:\s*(Select|Set|Good|Bad|Schedule|View)/i.test(normalizeText(document.querySelector("#root h2")?.textContent)) ? "en" : "ko";
+};
 
 const normalizeCourseName = (value) => normalizeText(value)
   .replace(/\s*-\s*영어강의\s*$/i, "")
@@ -161,6 +170,7 @@ const setButtonPosition = (order, key, direction) => {
 
 const renderSortControl = (control) => {
   const order = readSortOrder();
+  const language = currentLanguage();
   control.querySelectorAll(".ags-sort-chip").forEach((chip) => chip.remove());
 
   const chips = document.createElement("div");
@@ -172,8 +182,9 @@ const renderSortControl = (control) => {
     chip.draggable = true;
     chip.className = "ags-sort-chip";
     chip.dataset.agsSortKey = key;
-    chip.title = `${index + 1}순위: ${CRITERIA[key].label}`;
-    chip.innerHTML = `<span class="ags-sort-rank">${index + 1}</span><span>${CRITERIA[key].shortLabel}</span>`;
+    const [label, shortLabel] = CRITERIA[key][language];
+    chip.title = language === "en" ? `Priority ${index + 1}: ${label}` : `${index + 1}순위: ${label}`;
+    chip.innerHTML = `<span class="ags-sort-rank">${index + 1}</span><span>${shortLabel}</span>`;
 
     chip.addEventListener("dragstart", (event) => {
       dragKey = key;
@@ -223,17 +234,24 @@ const ensureSortControl = () => {
   oldAlphabeticalControl(footer)?.classList.add("ags-sort-hidden-old-control");
 
   let control = footer.querySelector(":scope > .ags-sort-priority-control");
+  const language = currentLanguage();
   if (!control) {
     control = document.createElement("div");
     control.className = "ags-sort-priority-control";
-    control.setAttribute("aria-label", "강의 정렬 우선순위");
+    control.setAttribute("aria-label", language === "en" ? "Course sorting priority" : "강의 정렬 우선순위");
     const label = document.createElement("span");
     label.className = "ags-sort-label";
-    label.textContent = "정렬";
+    label.textContent = language === "en" ? "Sort" : "정렬";
     control.appendChild(label);
     footer.insertBefore(control, footer.querySelector(".ags-bottom-selection-summary")?.nextSibling || footer.children[1] || null);
     renderSortControl(control);
+  } else if (control.dataset.agsLanguage !== language) {
+    control.setAttribute("aria-label", language === "en" ? "Course sorting priority" : "강의 정렬 우선순위");
+    const label = control.querySelector(".ags-sort-label");
+    if (label) label.textContent = language === "en" ? "Sort" : "정렬";
+    renderSortControl(control);
   }
+  control.dataset.agsLanguage = language;
 };
 
 const scheduleSortSync = () => {
@@ -261,11 +279,12 @@ window.addEventListener("storage", (event) => {
 
 Promise.all([
   fetch(LECTURES_URL).then((response) => response.json()),
+  fetch("/ActivatedGeneratedScheduler/lectures_eng.json").then((response) => response.json()),
   fetch(REQUIREMENTS_URL).then((response) => response.json()),
 ])
-  .then(([lectures, requirements]) => {
+  .then(([lecturesKo, lecturesEn, requirements]) => {
     const byName = new Map();
-    for (const lecture of lectures) {
+    for (const lecture of [...lecturesKo, ...lecturesEn]) {
       const name = normalizeText(lecture.name);
       if (!name) continue;
       if (!byName.has(name)) byName.set(name, []);
@@ -273,6 +292,12 @@ Promise.all([
     }
     lecturesByName = byName;
     requiredYearByCourse = buildRequiredYearMap(requirements);
+    const koByKey = new Map(lecturesKo.map((lecture) => [`${lecture.course_number}#${lecture.section}`, lecture]));
+    for (const lecture of lecturesEn) {
+      const korean = koByKey.get(`${lecture.course_number}#${lecture.section}`);
+      const year = korean ? requiredYearByCourse.get(normalizeCourseName(korean.name)) : null;
+      if (year) requiredYearByCourse.set(normalizeCourseName(lecture.name), year);
+    }
   })
   .catch(() => {
     lecturesByName = new Map();
