@@ -169,11 +169,7 @@ const paragraph = (label, value) => {
     </section>
   `;
 };
-const localizedDetailValue = (value, language) => {
-  const text = normalizeText(value);
-  if (language === "en" && /[가-힣]/.test(text)) return "";
-  return text;
-};
+const localizedDetailValue = (value) => normalizeText(value);
 
 const weeklyPlanText = (value) => {
   const text = normalizeText(value);
@@ -252,9 +248,7 @@ const ensureButton = (card) => {
   hideSchedule(card);
   ensureRating(card, lecture);
   const record = lecture
-    ? currentLanguage() === "en"
-      ? fallbackDetailRecord(lecture)
-      : detailMap.get(detailKey(lecture)) || fallbackDetailRecord(lecture)
+    ? detailMap.get(detailKey(lecture)) || fallbackDetailRecord(lecture)
     : null;
   const available = Boolean(record);
   const copy = DETAIL_COPY[currentLanguage()];
