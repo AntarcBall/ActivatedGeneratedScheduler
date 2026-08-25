@@ -4,8 +4,8 @@ Cloudflare Worker and D1 ingestion service for detailed browser-session
 telemetry.
 
 - `POST /v1/session`: validates an invisible Turnstile challenge, stores a full
-  `session_start` snapshot in `telemetry_events`, stores a summary row in
-  `telemetry_sessions`, sends one session-start notification to Telegram, and
+  `session_start` snapshot in `telemetry_events`, stores a timestamped summary
+  row in `telemetry_sessions`, sends one session-start notification to Telegram, and
   returns a signed 24-hour ingestion token.
 - `POST /v1/events`: validates the signed token and stores the full result or
   page-exit payload in `telemetry_events`.
@@ -22,6 +22,13 @@ telemetry.
   stored size. `payload_encoding` is `gzip+base64url` for compressed rows and
   `json` for uncompressed or legacy rows. Compression is lossless.
 - Rows are retained until manually removed.
+- `telemetry_users` and `telemetry_session_rollups` maintain indexed, incremental
+  summaries for the Access-protected person-level report. This avoids full event
+  scans during normal report use; raw payloads are read only for a selected session.
+- Migration `0006_session_timestamps.sql` restores existing summary timestamps
+  by matching the newest `session_start` events to the newest summary rows in
+  reverse insertion order. Unmatched legacy summaries keep an unknown date, and
+  new summaries store their collection timestamp directly.
 
 Required Worker secrets:
 

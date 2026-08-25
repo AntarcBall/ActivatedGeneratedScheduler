@@ -20,6 +20,12 @@ The Worker fails closed unless all three values are configured:
 `ADMIN_EMAIL` should be stored as a Worker secret. The other two values may be
 plain Worker variables, but keeping all three as secrets is also supported.
 
+The person-level report uses indexed rollup tables for a maximum of 50 recent
+users and 20 sessions per selected user. Legacy rollups missing display metadata
+read at most one indexed payload row per listed session. It reads and decompresses
+at most 12 raw event snapshots only after a session is selected; there is no
+detail polling or full-table grouping on normal page loads.
+
 ## Deploy and protect
 
 1. Install and deploy:
@@ -52,7 +58,8 @@ plain Worker variables, but keeping all three as secrets is also supported.
    return data only for the exact email configured in both the policy and the
    Worker secret.
 
-The dashboard reads only `estimated_region`, `year`, `major`, `os`, and
-`device_type`. It does not read the legacy `telemetry_events.payload_json`
+The dashboard reads only `created_at_ms`, `estimated_region`, `year`, `major`,
+`os`, and `device_type`. It uses the timestamp for a 60-day KST daily-session
+chart that can be split by each summary category. It does not read the legacy `telemetry_events.payload_json`
 column. Responses are private, uncached, non-indexable, same-origin only, and
 cannot be framed.

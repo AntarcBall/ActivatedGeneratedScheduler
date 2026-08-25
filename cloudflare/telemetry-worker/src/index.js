@@ -174,6 +174,76 @@ const validPayload = (payload, sessionId, reason) => (
   && payload.events.length <= 200
 );
 
+const peopleRollupStatements = (request, env, payload, ipHash, receivedAtMs) => {
+  const cf = request.cf || {};
+  const profile = payload.profile && typeof payload.profile === "object" ? payload.profile : {};
+  const device = payload.device && typeof payload.device === "object" ? payload.device : {};
+  const major = Array.isArray(profile.tracks) ? profile.tracks.map(String).slice(0, 2).join(" / ") : "";
+  const sessionId = String(payload.session);
+  const identityKey = `${ipHash}\n${String(request.headers.get("user-agent") || "").slice(0, 300)}`;
+  return [
+    env.DB.prepare(
+      `INSERT INTO telemetry_users (
+        identity_key, ip_hash, first_seen_ms, last_seen_ms, latest_session_id,
+        event_count, session_count, ip_address, country, region, city, colo
+      ) VALUES (?, ?, ?, ?, ?, 1, 1, ?, ?, ?, ?, ?)
+      ON CONFLICT(identity_key) DO UPDATE SET
+        last_seen_ms = excluded.last_seen_ms,
+        latest_session_id = excluded.latest_session_id,
+        event_count = telemetry_users.event_count + 1,
+        session_count = telemetry_users.session_count
+          + CASE WHEN ? = 'session_start' THEN 1 ELSE 0 END,
+        ip_address = excluded.ip_address,
+        country = excluded.country,
+        region = excluded.region,
+        city = excluded.city,
+        colo = excluded.colo`,
+    ).bind(
+      identityKey,
+      ipHash,
+      receivedAtMs,
+      receivedAtMs,
+      sessionId,
+      connectingIp(request),
+      String(cf.country || ""),
+      String(cf.region || ""),
+      String(cf.city || ""),
+      String(cf.colo || ""),
+      String(payload.reason),
+    ),
+    env.DB.prepare(
+      `INSERT INTO telemetry_session_rollups (
+        session_id, user_id, started_at_ms, last_seen_ms, latest_reason,
+        event_row_count, year, major, os, device_type, browser, browser_context
+      ) VALUES (
+        ?, (SELECT user_id FROM telemetry_users WHERE identity_key = ?), ?, ?, ?,
+        1, ?, ?, ?, ?, ?, ?
+      ) ON CONFLICT(session_id) DO UPDATE SET
+        last_seen_ms = excluded.last_seen_ms,
+        latest_reason = excluded.latest_reason,
+        event_row_count = telemetry_session_rollups.event_row_count + 1,
+        year = COALESCE(NULLIF(excluded.year, ''), telemetry_session_rollups.year),
+        major = COALESCE(NULLIF(excluded.major, ''), telemetry_session_rollups.major),
+        os = COALESCE(NULLIF(excluded.os, ''), telemetry_session_rollups.os),
+        device_type = COALESCE(NULLIF(excluded.device_type, ''), telemetry_session_rollups.device_type),
+        browser = COALESCE(NULLIF(excluded.browser, ''), telemetry_session_rollups.browser),
+        browser_context = COALESCE(NULLIF(excluded.browser_context, ''), telemetry_session_rollups.browser_context)`,
+    ).bind(
+      sessionId,
+      identityKey,
+      receivedAtMs,
+      receivedAtMs,
+      String(payload.reason),
+      String(profile.year || ""),
+      major,
+      String(device.os || ""),
+      String(device.deviceType || ""),
+      String(device.browser || ""),
+      String(device.browserContext || ""),
+    ),
+  ];
+};
+
 const insertEvent = async (request, env, payload, ipHash) => {
   const now = Date.now();
   const recent = await env.DB.prepare(
@@ -185,7 +255,7 @@ const insertEvent = async (request, env, payload, ipHash) => {
   const cf = request.cf || {};
   const encodedPayload = await encodePayload(payload);
   try {
-    await env.DB.prepare(
+    const insert = env.DB.prepare(
       `INSERT INTO telemetry_events (
         event_id, received_at_ms, session_id, reason, payload_json, ip_hash,
         country, region, city, colo, user_agent, ip_address, payload_encoding
@@ -204,10 +274,16 @@ const insertEvent = async (request, env, payload, ipHash) => {
       String(request.headers.get("user-agent") || "").slice(0, 300),
       connectingIp(request),
       encodedPayload.encoding,
-    ).run();
-    return false;
+    );
+    await env.DB.batch([
+      insert,
+      ...peopleRollupStatements(request, env, payload, ipHash, now),
+    ]);
+    return { duplicate: false, receivedAtMs: now };
   } catch (error) {
-    if (String(error?.message || error).includes("UNIQUE")) return true;
+    if (String(error?.message || error).includes("UNIQUE")) {
+      return { duplicate: true, receivedAtMs: now };
+    }
     throw error;
   }
 };
@@ -281,14 +357,16 @@ const recordSession = async (request, env, origin) => {
     deviceType: profile.deviceType,
   };
   const now = Math.floor(Date.now() / 1000);
+  const createdAtMs = Date.now();
   const ipHash = await hashIp(request, env);
-  const duplicate = await insertEvent(request, env, body.payload, ipHash);
-  if (!duplicate) {
+  const eventResult = await insertEvent(request, env, body.payload, ipHash);
+  if (!eventResult.duplicate) {
     await env.DB.prepare(
       `INSERT INTO telemetry_sessions (
-        estimated_region, year, major, os, device_type
-      ) VALUES (?, ?, ?, ?, ?)`,
+        created_at_ms, estimated_region, year, major, os, device_type
+      ) VALUES (?, ?, ?, ?, ?, ?)`,
     ).bind(
+      createdAtMs,
       summary.estimatedRegion,
       summary.year,
       summary.major,
@@ -307,9 +385,9 @@ const recordSession = async (request, env, origin) => {
     ok: true,
     token,
     expiresIn: SESSION_TTL_SECONDS,
-    notified: !duplicate,
-    duplicate,
-  }, duplicate ? 200 : 201, origin);
+    notified: !eventResult.duplicate,
+    duplicate: eventResult.duplicate,
+  }, eventResult.duplicate ? 200 : 201, origin);
 };
 
 const acceptEvent = async (request, env, origin) => {
@@ -335,8 +413,12 @@ const acceptEvent = async (request, env, origin) => {
     return jsonResponse({ ok: false, error: "invalid_payload" }, 400, origin);
   }
   try {
-    const duplicate = await insertEvent(request, env, body.payload, ipHash);
-    return jsonResponse({ ok: true, duplicate }, duplicate ? 200 : 201, origin);
+    const eventResult = await insertEvent(request, env, body.payload, ipHash);
+    return jsonResponse(
+      { ok: true, duplicate: eventResult.duplicate },
+      eventResult.duplicate ? 200 : 201,
+      origin,
+    );
   } catch (error) {
     if (error.message === "rate_limited") {
       return jsonResponse({ ok: false, error: "rate_limited" }, 429, origin);

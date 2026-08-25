@@ -9,3 +9,4 @@ __pycache__/
 cloudflare/telemetry-worker/.wrangler/
 cloudflare/telemetry-worker/exports/
 cloudflare/report-worker/private-assets/
+serve.py

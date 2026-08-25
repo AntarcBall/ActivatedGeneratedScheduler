@@ -132,7 +132,7 @@ const syncPreviewRowHeight = (preview = currentMain()?.querySelector(".ags-lectu
 
 const lectureKey = (lecture) => `${lecture.id}:${lecture.course_number}:${lecture.section}`;
 const selectionKey = (lecture) => lecture.course_number ? `${lecture.course_number}#${lecture.section}` : `id:${lecture.id}`;
-const courseKey = (lecture) => lecture.course_number || normalize(lecture.name);
+const courseKey = (lecture) => lecture ? (lecture.course_number ? `${lecture.course_number}:${normalize(lecture.name)}` : normalize(lecture.name)) : "";
 
 const uniqueLectures = (items) => {
   const seen = new Set();
@@ -198,15 +198,26 @@ const isBlockedBySelectedCourse = (candidate, selectedByCourse) => {
   return false;
 };
 
+const derivePinnedLectures = (items = selectedLectures) => {
+  const byCourse = selectedLecturesByCourse(items);
+  const pinned = [];
+  for (const [, options] of byCourse) {
+    if (options.length === 1) {
+      pinned.push(options[0]);
+    }
+  }
+  return uniqueLectures(pinned);
+};
+
 const isSingleSectionLecture = (lecture) => {
-  return !!lecture && lectures.filter((candidate) => candidate.name === lecture.name).length === 1;
+  return !!lecture && lectures.filter((candidate) => courseKey(candidate) === courseKey(lecture)).length === 1;
 };
 
 const displayLectures = () => {
   const selected = [];
   const fixedLectures = uniqueLectures(pinnedLectures);
   for (const lecture of fixedLectures) selected.push({ lecture, kind: "pinned" });
-  if (isSingleSectionLecture(activeLecture) && !fixedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
+  if (activeLecture && !fixedLectures.some((lecture) => lectureKey(lecture) === lectureKey(activeLecture))) {
     selected.push({ lecture: activeLecture, kind: "active" });
   }
   return selected;
@@ -247,10 +258,6 @@ const removeStoredSelectionKey = (key) => {
 const lecturesFromSelectionKeys = (keys) => {
   const keySet = new Set(keys);
   return lectures.filter((lecture) => keySet.has(selectionKey(lecture)));
-};
-
-const singleSectionLectures = (items) => {
-  return items.filter(isSingleSectionLecture);
 };
 
 const renderPreview = () => {
@@ -382,6 +389,7 @@ const setSelectedLecture = (lecture, selected) => {
   selectedLectures = selected
     ? uniqueLectures([...selectedLectures, lecture])
     : selectedLectures.filter((item) => lectureKey(item) !== key);
+  pinnedLectures = derivePinnedLectures(selectedLectures);
 };
 
 const setPinnedLecture = (lecture, selected) => {
@@ -455,14 +463,9 @@ const syncSelectionsFromDom = () => {
   if (!main) return false;
   const selectedCards = Array.from(main.querySelectorAll(".cursor-pointer")).filter(isSelected);
   const storedSelected = lecturesFromSelectionKeys(storedSelectionKeys());
-  const domSelected = selectedCards.map(lectureFromCard);
+  const domSelected = selectedCards.map(lectureFromCard).filter(Boolean);
   const nextSelected = uniqueLectures([...storedSelected, ...domSelected]);
-  const nextPinned = uniqueLectures([
-    ...singleSectionLectures(storedSelected),
-    ...selectedCards
-      .filter((card) => groupSectionCount(card) === 1)
-      .map(lectureFromCard)
-  ]);
+  const nextPinned = derivePinnedLectures(nextSelected);
   const changed = !sameLectureSet(selectedLectures, nextSelected) || !sameLectureSet(pinnedLectures, nextPinned);
   if (changed) {
     selectedLectures = nextSelected;
@@ -544,11 +547,9 @@ document.addEventListener("click", (event) => {
   const card = event.target.closest?.(".ags-lecture-main .cursor-pointer");
   if (!card) return;
   const lecture = lectureFromCard(card);
-  const singleSection = groupSectionCount(card) === 1;
   afterReactSelectionUpdate(() => {
     const selected = isSelected(card);
     setSelectedLecture(lecture, selected);
-    if (singleSection) setPinnedLecture(lecture, selected);
     syncSelectionsFromDom();
     update();
   });
@@ -574,7 +575,7 @@ document.addEventListener("click", (event) => {
   }
 
   selectedLectures = selectedLectures.filter((item) => selectionKey(item) !== key);
-  pinnedLectures = pinnedLectures.filter((item) => selectionKey(item) !== key);
+  pinnedLectures = derivePinnedLectures(selectedLectures);
   if (activeLecture && selectionKey(activeLecture) === key) activeLecture = null;
   update();
   window.location.reload();
