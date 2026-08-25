@@ -406,6 +406,86 @@ const sameLectureSet = (left, right) => {
   return leftKeys === rightKeys;
 };
 
+const HIDE_CONFLICTS_KEY = "ags_hide_conflicts";
+
+const isHideConflictsEnabled = () => {
+  try {
+    return window.sessionStorage.getItem(HIDE_CONFLICTS_KEY) === "true"
+      || window.localStorage.getItem(HIDE_CONFLICTS_KEY) === "true";
+  } catch {
+    return false;
+  }
+};
+
+const setHideConflictsEnabled = (enabled) => {
+  try {
+    const val = enabled ? "true" : "false";
+    window.sessionStorage.setItem(HIDE_CONFLICTS_KEY, val);
+    window.localStorage.setItem(HIDE_CONFLICTS_KEY, val);
+  } catch {
+    // Storage unavailable
+  }
+  document.body.classList.toggle("ags-hide-conflicts", enabled);
+};
+
+const ensureHideConflictsControl = () => {
+  const footer = document.querySelector(".ags-app-footer")
+    || Array.from(document.querySelectorAll(".border-t.bg-gray-50, [class*='border-t'][class*='bg-gray-50']")).find((n) => n.querySelector("button"));
+  if (!footer || !currentMain()) return;
+
+  const language = currentLanguage();
+  const enabled = isHideConflictsEnabled();
+  document.body.classList.toggle("ags-hide-conflicts", enabled);
+
+  let control = footer.querySelector(".ags-hide-conflicts-control");
+  const labelText = language === "en" ? "Hide conflicts" : "충돌 강의 숨기기";
+
+  if (!control) {
+    control = document.createElement("label");
+    control.className = "ags-hide-conflicts-control";
+    control.setAttribute("title", language === "en" ? "Hide unavailable courses that collide with selected times" : "선택한 시간표와 겹치는 불가능한 강의 숨기기");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "ags-hide-conflicts-checkbox";
+    checkbox.checked = enabled;
+
+    const textSpan = document.createElement("span");
+    textSpan.className = "ags-hide-conflicts-label";
+    textSpan.textContent = labelText;
+
+    checkbox.addEventListener("change", (e) => {
+      const isChecked = e.target.checked;
+      setHideConflictsEnabled(isChecked);
+      control.classList.toggle("ags-hide-conflicts-active", isChecked);
+    });
+
+    control.appendChild(checkbox);
+    control.appendChild(textSpan);
+    control.classList.toggle("ags-hide-conflicts-active", enabled);
+
+    const sortControl = footer.querySelector(".ags-sort-priority-control");
+    const summary = footer.querySelector(".ags-bottom-selection-summary");
+    if (sortControl && sortControl.nextSibling) {
+      footer.insertBefore(control, sortControl.nextSibling);
+    } else if (summary) {
+      footer.insertBefore(control, summary);
+    } else {
+      footer.appendChild(control);
+    }
+  } else {
+    const textSpan = control.querySelector(".ags-hide-conflicts-label");
+    if (textSpan && textSpan.textContent !== labelText) {
+      textSpan.textContent = labelText;
+    }
+    const checkbox = control.querySelector(".ags-hide-conflicts-checkbox");
+    if (checkbox && checkbox.checked !== enabled) {
+      checkbox.checked = enabled;
+    }
+    control.classList.toggle("ags-hide-conflicts-active", enabled);
+  }
+};
+
 const syncConflictAvailability = () => {
   const main = currentMain();
   if (!main) {
@@ -433,7 +513,10 @@ const syncConflictAvailability = () => {
       group.dataset.agsConflictKey === nextKey &&
       group.classList.contains("ags-step1-conflict-group") === (group.dataset.agsConflictBlocked === "1")
     );
-  if (alreadySynced) return;
+  if (alreadySynced) {
+    ensureHideConflictsControl();
+    return;
+  }
   renderedAvailabilityKey = nextKey;
 
   const selectedByCourse = selectedLecturesByCourse();
@@ -449,13 +532,21 @@ const syncConflictAvailability = () => {
 
   for (const { group, lecture } of groupEntries) {
     const groupCards = Array.from(group.querySelectorAll(".cursor-pointer"));
+    const courseName = normalize(group.querySelector("h4")?.textContent);
+    const courseLectures = lectures.filter((l) => normalize(l.name) === courseName);
+    const isSelectedCourse = groupCards.some(isSelected) || selectedLectures.some((l) => normalize(l.name) === courseName);
+
     const cardBlocked = groupCards.length > 0 && groupCards.every((card) => blockedCards.has(card));
-    const foldedSingleBlocked = groupCards.length === 0 && isBlockedBySelectedCourse(lecture, pinnedByCourse);
-    const blocked = cardBlocked || foldedSingleBlocked;
+    const foldedBlocked = groupCards.length === 0 && courseLectures.length > 0 && courseLectures.every((l) => isBlockedBySelectedCourse(l, selectedByCourse));
+    const blocked = cardBlocked || foldedBlocked;
+
     group.classList.toggle("ags-step1-conflict-group", blocked);
+    group.classList.toggle("ags-step1-selected-group", isSelectedCourse);
     group.dataset.agsConflictKey = nextKey;
     group.dataset.agsConflictBlocked = blocked ? "1" : "0";
   }
+
+  ensureHideConflictsControl();
 };
 
 const syncSelectionsFromDom = () => {
@@ -527,6 +618,7 @@ const afterReactSelectionUpdate = (callback) => {
 const update = () => {
   renderPreview();
   syncConflictAvailability();
+  ensureHideConflictsControl();
 };
 
 document.addEventListener("mouseover", (event) => {

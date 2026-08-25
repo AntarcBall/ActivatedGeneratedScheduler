@@ -741,3 +741,57 @@ body.ags-home-clean #root > div > div > div:first-child {
   line-height: 1.65;
   white-space: normal;
 }
+
+body.ags-hide-conflicts .ags-lecture-main [class~="group/item"].ags-step1-conflict-group:not(.ags-step1-selected-group) {
+  display: none !important;
+}
+
+.ags-hide-conflicts-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 1.75rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.55rem;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.ags-hide-conflicts-control:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.ags-hide-conflicts-control.ags-hide-conflicts-active {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.ags-hide-conflicts-checkbox {
+  width: 0.85rem;
+  height: 0.85rem;
+  accent-color: #be123c;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ags-hide-conflicts-label {
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .ags-hide-conflicts-control {
+    padding: 0.18rem 0.4rem !important;
+    font-size: 0.65rem !important;
+  }
+}

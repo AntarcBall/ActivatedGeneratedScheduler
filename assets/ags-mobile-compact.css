@@ -82,7 +82,7 @@
   }
 
   .ags-app-footer > button[class*="text-red"],
-  .ags-app-footer label {
+  .ags-app-footer label:not(.ags-hide-conflicts-control) {
     display: none !important;
   }
 
